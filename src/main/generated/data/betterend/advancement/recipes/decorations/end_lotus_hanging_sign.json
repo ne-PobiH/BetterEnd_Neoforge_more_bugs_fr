@@ -11,11 +11,11 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_end_lotus_stripped_log": {
+    "has_stripped_end_lotus_log": {
       "conditions": {
         "items": [
           {
-            "items": "betterend:end_lotus_stripped_log"
+            "items": "betterend:stripped_end_lotus_log"
           }
         ]
       },
@@ -32,7 +32,7 @@
     [
       "has_the_recipe",
       "has_chain",
-      "has_end_lotus_stripped_log"
+      "has_stripped_end_lotus_log"
     ]
   ],
   "rewards": {

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_end_lotus_bark": {
+    "has_end_lotus_wood": {
       "conditions": {
         "items": [
           {
-            "items": "betterend:end_lotus_bark"
+            "items": "betterend:end_lotus_wood"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_end_lotus_bark"
+      "has_end_lotus_wood"
     ]
   ],
   "rewards": {

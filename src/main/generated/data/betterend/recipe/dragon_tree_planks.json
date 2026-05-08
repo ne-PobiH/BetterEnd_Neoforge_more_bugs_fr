@@ -8,13 +8,13 @@
         "item": "betterend:dragon_tree_log"
       },
       {
-        "item": "betterend:dragon_tree_bark"
+        "item": "betterend:dragon_tree_wood"
       },
       {
-        "item": "betterend:dragon_tree_stripped_log"
+        "item": "betterend:stripped_dragon_tree_log"
       },
       {
-        "item": "betterend:dragon_tree_stripped_bark"
+        "item": "betterend:stripped_dragon_tree_wood"
       }
     ]
   ],

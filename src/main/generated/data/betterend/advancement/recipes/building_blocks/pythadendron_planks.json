@@ -1,20 +1,20 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_pythadendron_log_pythadendron_bark_pyt": {
+    "has_pythadendron_log_pythadendron_wood_str": {
       "conditions": {
         "items": [
           {
             "items": "betterend:pythadendron_log"
           },
           {
-            "items": "betterend:pythadendron_bark"
+            "items": "betterend:pythadendron_wood"
           },
           {
-            "items": "betterend:pythadendron_stripped_log"
+            "items": "betterend:stripped_pythadendron_log"
           },
           {
-            "items": "betterend:pythadendron_stripped_bark"
+            "items": "betterend:stripped_pythadendron_wood"
           }
         ]
       },
@@ -30,7 +30,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_pythadendron_log_pythadendron_bark_pyt"
+      "has_pythadendron_log_pythadendron_wood_str"
     ]
   ],
   "rewards": {

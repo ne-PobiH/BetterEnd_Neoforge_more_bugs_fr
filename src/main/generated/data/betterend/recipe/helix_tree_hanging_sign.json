@@ -4,7 +4,7 @@
   "group": "sign",
   "key": {
     "#": {
-      "item": "betterend:helix_tree_stripped_log"
+      "item": "betterend:stripped_helix_tree_log"
     },
     "I": {
       "item": "minecraft:chain"

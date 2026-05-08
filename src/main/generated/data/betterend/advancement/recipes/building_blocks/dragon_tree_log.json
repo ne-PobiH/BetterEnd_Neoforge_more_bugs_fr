@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_dragon_tree_bark": {
+    "has_dragon_tree_wood": {
       "conditions": {
         "items": [
           {
-            "items": "betterend:dragon_tree_bark"
+            "items": "betterend:dragon_tree_wood"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_dragon_tree_bark"
+      "has_dragon_tree_wood"
     ]
   ],
   "rewards": {

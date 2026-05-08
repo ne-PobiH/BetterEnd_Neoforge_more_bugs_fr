@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lucernia_bark": {
+    "has_lucernia_wood": {
       "conditions": {
         "items": [
           {
-            "items": "betterend:lucernia_bark"
+            "items": "betterend:lucernia_wood"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_lucernia_bark"
+      "has_lucernia_wood"
     ]
   ],
   "rewards": {

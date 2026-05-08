@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_jellyshroom_bark": {
+    "has_jellyshroom_wood": {
       "conditions": {
         "items": [
           {
-            "items": "betterend:jellyshroom_bark"
+            "items": "betterend:jellyshroom_wood"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_jellyshroom_bark"
+      "has_jellyshroom_wood"
     ]
   ],
   "rewards": {

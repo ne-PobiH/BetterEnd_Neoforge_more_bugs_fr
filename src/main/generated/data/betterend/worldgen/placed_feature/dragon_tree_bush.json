@@ -16,7 +16,7 @@
       "stem": {
         "type": "minecraft:simple_state_provider",
         "state": {
-          "Name": "betterend:dragon_tree_bark",
+          "Name": "betterend:dragon_tree_wood",
           "Properties": {
             "axis": "y"
           }

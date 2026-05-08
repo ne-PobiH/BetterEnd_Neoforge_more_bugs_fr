@@ -1,20 +1,20 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lucernia_log_lucernia_bark_lucernia_st": {
+    "has_lucernia_log_lucernia_wood_stripped_lu": {
       "conditions": {
         "items": [
           {
             "items": "betterend:lucernia_log"
           },
           {
-            "items": "betterend:lucernia_bark"
+            "items": "betterend:lucernia_wood"
           },
           {
-            "items": "betterend:lucernia_stripped_log"
+            "items": "betterend:stripped_lucernia_log"
           },
           {
-            "items": "betterend:lucernia_stripped_bark"
+            "items": "betterend:stripped_lucernia_wood"
           }
         ]
       },
@@ -30,7 +30,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_lucernia_log_lucernia_bark_lucernia_st"
+      "has_lucernia_log_lucernia_wood_stripped_lu"
     ]
   ],
   "rewards": {

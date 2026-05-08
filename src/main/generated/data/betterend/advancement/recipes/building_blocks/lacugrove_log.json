@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lacugrove_bark": {
+    "has_lacugrove_wood": {
       "conditions": {
         "items": [
           {
-            "items": "betterend:lacugrove_bark"
+            "items": "betterend:lacugrove_wood"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_lacugrove_bark"
+      "has_lacugrove_wood"
     ]
   ],
   "rewards": {

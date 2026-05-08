@@ -8,13 +8,13 @@
         "item": "betterend:lacugrove_log"
       },
       {
-        "item": "betterend:lacugrove_bark"
+        "item": "betterend:lacugrove_wood"
       },
       {
-        "item": "betterend:lacugrove_stripped_log"
+        "item": "betterend:stripped_lacugrove_log"
       },
       {
-        "item": "betterend:lacugrove_stripped_bark"
+        "item": "betterend:stripped_lacugrove_wood"
       }
     ]
   ],

@@ -21,11 +21,11 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_lucernia_stripped_log": {
+    "has_stripped_lucernia_log": {
       "conditions": {
         "items": [
           {
-            "items": "betterend:lucernia_stripped_log"
+            "items": "betterend:stripped_lucernia_log"
           }
         ]
       },
@@ -41,7 +41,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_lucernia_stripped_log",
+      "has_stripped_lucernia_log",
       "has_chain",
       "has_jellyshroom_log"
     ]

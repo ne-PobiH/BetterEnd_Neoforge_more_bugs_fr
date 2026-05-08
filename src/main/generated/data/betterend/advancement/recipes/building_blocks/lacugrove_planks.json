@@ -1,20 +1,20 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lacugrove_log_lacugrove_bark_lacugrove": {
+    "has_lacugrove_log_lacugrove_wood_stripped_": {
       "conditions": {
         "items": [
           {
             "items": "betterend:lacugrove_log"
           },
           {
-            "items": "betterend:lacugrove_bark"
+            "items": "betterend:lacugrove_wood"
           },
           {
-            "items": "betterend:lacugrove_stripped_log"
+            "items": "betterend:stripped_lacugrove_log"
           },
           {
-            "items": "betterend:lacugrove_stripped_bark"
+            "items": "betterend:stripped_lacugrove_wood"
           }
         ]
       },
@@ -30,7 +30,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_lacugrove_log_lacugrove_bark_lacugrove"
+      "has_lacugrove_log_lacugrove_wood_stripped_"
     ]
   ],
   "rewards": {

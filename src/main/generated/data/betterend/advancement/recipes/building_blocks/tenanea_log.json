@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_tenanea_bark": {
+    "has_tenanea_wood": {
       "conditions": {
         "items": [
           {
-            "items": "betterend:tenanea_bark"
+            "items": "betterend:tenanea_wood"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_tenanea_bark"
+      "has_tenanea_wood"
     ]
   ],
   "rewards": {
