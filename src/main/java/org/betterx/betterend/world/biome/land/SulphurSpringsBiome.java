@@ -85,15 +85,16 @@ public class SulphurSpringsBiome extends EndBiome.Config {
                                 brimstone()
                         )
                 );
-                return super
-                        .surface()
-                        .rule(SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, surfaceBlockRule), 2)
-                        .rule(
+                return SurfaceRuleBuilder
+                        .start()
+                        .rule(SurfaceRules.sequence(
+                                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, surfaceBlockRule),
                                 SurfaceRules.ifTrue(
                                         SurfaceRules.stoneDepthCheck(5, false, CaveSurface.FLOOR),
                                         surfaceBlockRule
-                                ), 2
-                        );
+                                ),
+                                SurfaceRules.state(getUnderMaterial())
+                        ), 2);
             }
         };
     }
