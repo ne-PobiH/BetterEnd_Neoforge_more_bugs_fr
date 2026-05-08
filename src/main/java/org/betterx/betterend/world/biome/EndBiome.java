@@ -104,9 +104,9 @@ public class EndBiome extends WoverBiomeData implements SurfaceMaterialProvider 
 
             if (generateFloorRule() && getTopMaterial() != getUnderMaterial()) {
                 if (getTopMaterial() != getAltTopMaterial()) {
-                    builder.floor(getTopMaterial());
-                } else {
                     builder.chancedFloor(getTopMaterial(), getAltTopMaterial());
+                } else {
+                    builder.floor(getTopMaterial());
                 }
             }
             return builder.filler(getUnderMaterial());
