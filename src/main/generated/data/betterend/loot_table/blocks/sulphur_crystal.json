@@ -25,89 +25,6 @@
           "type": "minecraft:item",
           "functions": [
             {
-              "add": false,
-              "conditions": [
-                {
-                  "block": "betterend:sulphur_crystal",
-                  "condition": "minecraft:block_state_property",
-                  "properties": {
-                    "age": "3"
-                  }
-                }
-              ],
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 3.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "add": false,
-              "conditions": [
-                {
-                  "condition": "minecraft:inverted",
-                  "term": {
-                    "block": "betterend:sulphur_crystal",
-                    "condition": "minecraft:block_state_property",
-                    "properties": {
-                      "age": "3"
-                    }
-                  }
-                }
-              ],
-              "count": 1.0,
-              "function": "minecraft:set_count"
-            },
-            {
-              "conditions": [
-                {
-                  "block": "betterend:sulphur_crystal",
-                  "condition": "minecraft:block_state_property",
-                  "properties": {
-                    "age": "3"
-                  }
-                }
-              ],
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:ore_drops",
-              "function": "minecraft:apply_bonus"
-            },
-            {
-              "conditions": [
-                {
-                  "block": "betterend:sulphur_crystal",
-                  "condition": "minecraft:block_state_property",
-                  "properties": {
-                    "age": "2"
-                  }
-                }
-              ],
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:uniform_bonus_count",
-              "function": "minecraft:apply_bonus",
-              "parameters": {
-                "bonusMultiplier": 2
-              }
-            },
-            {
-              "conditions": [
-                {
-                  "block": "betterend:sulphur_crystal",
-                  "condition": "minecraft:block_state_property",
-                  "properties": {
-                    "age": "1"
-                  }
-                }
-              ],
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:uniform_bonus_count",
-              "function": "minecraft:apply_bonus",
-              "parameters": {
-                "bonusMultiplier": 1
-              }
-            },
-            {
               "function": "minecraft:explosion_decay"
             }
           ],
@@ -144,7 +61,7 @@
               "block": "betterend:sulphur_crystal",
               "condition": "minecraft:block_state_property",
               "properties": {
-                "age": "3"
+                "age": "2"
               }
             }
           ]
@@ -162,6 +79,11 @@
                 "min": 1.0
               },
               "function": "minecraft:set_count"
+            },
+            {
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:ore_drops",
+              "function": "minecraft:apply_bonus"
             },
             {
               "function": "minecraft:explosion_decay"

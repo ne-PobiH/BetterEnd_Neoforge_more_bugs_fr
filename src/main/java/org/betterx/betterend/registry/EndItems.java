@@ -56,7 +56,10 @@ public class EndItems {
     public final static Item RAW_AMBER = registerEndItem("raw_amber");
     public final static Item AMBER_GEM = registerEndItem("amber_gem");
     public final static Item GLOWING_BULB = registerEndItem("glowing_bulb");
-    public final static Item CRYSTALLINE_SULPHUR = registerEndItem("crystalline_sulphur");
+    public final static Item CRYSTALLINE_SULPHUR = registerEndItem(
+            "crystalline_sulphur",
+            new CrystallineSulphurItem(makeEndItemSettings())
+    );
     public final static Item HYDRALUX_PETAL = registerEndItem("hydralux_petal");
     public final static Item GELATINE = registerEndItem("gelatine");
     public static final Item ETERNAL_CRYSTAL = registerEndItem("eternal_crystal", new EternalCrystalItem());

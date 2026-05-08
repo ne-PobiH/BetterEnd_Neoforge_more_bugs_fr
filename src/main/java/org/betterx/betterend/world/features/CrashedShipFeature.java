@@ -4,24 +4,28 @@ import org.betterx.bclib.api.v2.levelgen.features.features.DefaultFeature;
 import org.betterx.bclib.util.MHelper;
 import org.betterx.bclib.util.StructureErode;
 import org.betterx.bclib.util.StructureHelper;
-import org.betterx.betterend.util.EndStructureHelper;
 import org.betterx.betterend.util.BlockFixer;
+import org.betterx.betterend.util.EndStructureHelper;
 import org.betterx.wover.tag.api.predefined.CommonBlockTags;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.block.ChestBlock;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.ChestBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.level.levelgen.structure.templatesystem.*;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo;
+import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 
 
 public class CrashedShipFeature extends NBTFeature<NBTFeatureConfig> {
@@ -122,8 +126,27 @@ public class CrashedShipFeature extends NBTFeature<NBTFeatureConfig> {
                 new BlockPos(bounds.minX(), bounds.minY(), bounds.minZ()),
                 new BlockPos(bounds.maxX(), bounds.maxY(), bounds.maxZ())
         );
+        addLootTables(world, bounds, random);
 
         return true;
+    }
+
+    private void addLootTables(WorldGenLevel world, BoundingBox bounds, RandomSource random) {
+        for (BlockPos pos : BlockPos.betweenClosed(
+                bounds.minX(),
+                bounds.minY(),
+                bounds.minZ(),
+                bounds.maxX(),
+                bounds.maxY(),
+                bounds.maxZ()
+        )) {
+            if (world.getBlockState(pos).getBlock() instanceof ChestBlock) {
+                BlockEntity blockEntity = world.getBlockEntity(pos);
+                if (blockEntity instanceof ChestBlockEntity chestEntity) {
+                    chestEntity.setLootTable(BuiltInLootTables.END_CITY_TREASURE, random.nextLong());
+                }
+            }
+        }
     }
 
     @Override

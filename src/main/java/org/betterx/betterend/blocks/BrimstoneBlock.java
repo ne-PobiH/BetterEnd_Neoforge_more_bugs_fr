@@ -3,7 +3,6 @@ package org.betterx.betterend.blocks;
 import org.betterx.bclib.blocks.BaseBlock;
 import org.betterx.wover.block.api.BlockProperties;
 import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.betterend.registry.EndBlocks;
 
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.BlockPos;
@@ -84,22 +83,6 @@ public class BrimstoneBlock extends BaseBlock.Stone {
         if (state.getValue(ACTIVATED)) {
             if (deactivate) {
                 world.setBlockAndUpdate(pos, defaultBlockState().setValue(ACTIVATED, false));
-            } else if (state.getValue(ACTIVATED) && random.nextInt(16) == 0) {
-                Direction dir = BlocksHelper.randomDirection(random);
-                BlockPos side = pos.relative(dir);
-                BlockState sideState = world.getBlockState(side);
-                if (sideState.getBlock() instanceof SulphurCrystalBlock) {
-                    if (sideState.getValue(SulphurCrystalBlock.AGE) < 2 && sideState.getValue(SulphurCrystalBlock.WATERLOGGED)) {
-                        int age = sideState.getValue(SulphurCrystalBlock.AGE) + 1;
-                        world.setBlockAndUpdate(side, sideState.setValue(SulphurCrystalBlock.AGE, age));
-                    }
-                } else if (sideState.getFluidState().getType() == Fluids.WATER) {
-                    BlockState crystal = EndBlocks.SULPHUR_CRYSTAL.defaultBlockState()
-                                                                  .setValue(SulphurCrystalBlock.FACING, dir)
-                                                                  .setValue(SulphurCrystalBlock.WATERLOGGED, true)
-                                                                  .setValue(SulphurCrystalBlock.AGE, 0);
-                    world.setBlockAndUpdate(side, crystal);
-                }
             }
         } else if (!deactivate && !state.getValue(ACTIVATED)) {
             world.setBlockAndUpdate(pos, defaultBlockState().setValue(ACTIVATED, true));
