@@ -1,20 +1,20 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_end_lotus_log_end_lotus_bark_end_lotus": {
+    "has_end_lotus_log_end_lotus_wood_stripped_": {
       "conditions": {
         "items": [
           {
             "items": "betterend:end_lotus_log"
           },
           {
-            "items": "betterend:end_lotus_bark"
+            "items": "betterend:end_lotus_wood"
           },
           {
-            "items": "betterend:end_lotus_stripped_log"
+            "items": "betterend:stripped_end_lotus_log"
           },
           {
-            "items": "betterend:end_lotus_stripped_bark"
+            "items": "betterend:stripped_end_lotus_wood"
           }
         ]
       },
@@ -30,7 +30,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_end_lotus_log_end_lotus_bark_end_lotus"
+      "has_end_lotus_log_end_lotus_wood_stripped_"
     ]
   ],
   "rewards": {

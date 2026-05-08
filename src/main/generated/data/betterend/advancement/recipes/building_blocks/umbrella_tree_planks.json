@@ -7,20 +7,20 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_umbrella_tree_log_umbrella_tree_bark_u": {
+    "has_umbrella_tree_log_umbrella_tree_wood_s": {
       "conditions": {
         "items": [
           {
             "items": "betterend:umbrella_tree_log"
           },
           {
-            "items": "betterend:umbrella_tree_bark"
+            "items": "betterend:umbrella_tree_wood"
           },
           {
-            "items": "betterend:umbrella_tree_stripped_log"
+            "items": "betterend:stripped_umbrella_tree_log"
           },
           {
-            "items": "betterend:umbrella_tree_stripped_bark"
+            "items": "betterend:stripped_umbrella_tree_wood"
           }
         ]
       },
@@ -30,7 +30,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_umbrella_tree_log_umbrella_tree_bark_u"
+      "has_umbrella_tree_log_umbrella_tree_wood_s"
     ]
   ],
   "rewards": {

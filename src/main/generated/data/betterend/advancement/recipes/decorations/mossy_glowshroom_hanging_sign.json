@@ -11,11 +11,11 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_mossy_glowshroom_stripped_log": {
+    "has_stripped_mossy_glowshroom_log": {
       "conditions": {
         "items": [
           {
-            "items": "betterend:mossy_glowshroom_stripped_log"
+            "items": "betterend:stripped_mossy_glowshroom_log"
           }
         ]
       },
@@ -31,7 +31,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_mossy_glowshroom_stripped_log",
+      "has_stripped_mossy_glowshroom_log",
       "has_chain"
     ]
   ],

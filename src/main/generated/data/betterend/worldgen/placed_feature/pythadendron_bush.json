@@ -16,7 +16,7 @@
       "stem": {
         "type": "minecraft:simple_state_provider",
         "state": {
-          "Name": "betterend:pythadendron_bark",
+          "Name": "betterend:pythadendron_wood",
           "Properties": {
             "axis": "y"
           }

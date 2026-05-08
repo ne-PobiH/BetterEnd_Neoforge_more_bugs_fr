@@ -8,13 +8,13 @@
         "item": "betterend:helix_tree_log"
       },
       {
-        "item": "betterend:helix_tree_bark"
+        "item": "betterend:helix_tree_wood"
       },
       {
-        "item": "betterend:helix_tree_stripped_log"
+        "item": "betterend:stripped_helix_tree_log"
       },
       {
-        "item": "betterend:helix_tree_stripped_bark"
+        "item": "betterend:stripped_helix_tree_wood"
       }
     ]
   ],

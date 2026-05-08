@@ -8,13 +8,13 @@
         "item": "betterend:tenanea_log"
       },
       {
-        "item": "betterend:tenanea_bark"
+        "item": "betterend:tenanea_wood"
       },
       {
-        "item": "betterend:tenanea_stripped_log"
+        "item": "betterend:stripped_tenanea_log"
       },
       {
-        "item": "betterend:tenanea_stripped_bark"
+        "item": "betterend:stripped_tenanea_wood"
       }
     ]
   ],

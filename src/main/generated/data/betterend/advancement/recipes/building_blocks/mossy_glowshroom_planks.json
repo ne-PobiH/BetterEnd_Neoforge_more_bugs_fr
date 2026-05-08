@@ -8,13 +8,13 @@
             "items": "betterend:mossy_glowshroom_log"
           },
           {
-            "items": "betterend:mossy_glowshroom_bark"
+            "items": "betterend:mossy_glowshroom_wood"
           },
           {
-            "items": "betterend:mossy_glowshroom_stripped_log"
+            "items": "betterend:stripped_mossy_glowshroom_log"
           },
           {
-            "items": "betterend:mossy_glowshroom_stripped_bark"
+            "items": "betterend:stripped_mossy_glowshroom_wood"
           }
         ]
       },

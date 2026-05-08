@@ -30,6 +30,10 @@ public class EndWoodenComplexMaterial extends WoodenComplexMaterial {
     @Override
     protected SlotMap<WoodenComplexMaterial> createMaterialSlots() {
         return super.createMaterialSlots()
+                    .replace(EndWoodSlots.STRIPPED_LOG)
+                    .replace(EndWoodSlots.STRIPPED_BARK)
+                    .replace(EndWoodSlots.LOG)
+                    .replace(EndWoodSlots.BARK)
                     .add(WoodSlots.HANGING_SIGN)
                     .add(WoodSlots.TABURET)
                     .add(WoodSlots.BAR_STOOL)

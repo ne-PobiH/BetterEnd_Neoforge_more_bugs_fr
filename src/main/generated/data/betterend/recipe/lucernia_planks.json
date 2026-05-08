@@ -8,13 +8,13 @@
         "item": "betterend:lucernia_log"
       },
       {
-        "item": "betterend:lucernia_bark"
+        "item": "betterend:lucernia_wood"
       },
       {
-        "item": "betterend:lucernia_stripped_log"
+        "item": "betterend:stripped_lucernia_log"
       },
       {
-        "item": "betterend:lucernia_stripped_bark"
+        "item": "betterend:stripped_lucernia_wood"
       }
     ]
   ],

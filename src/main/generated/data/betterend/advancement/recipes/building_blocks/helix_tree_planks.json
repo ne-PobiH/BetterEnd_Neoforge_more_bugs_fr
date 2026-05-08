@@ -1,20 +1,20 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_helix_tree_log_helix_tree_bark_helix_t": {
+    "has_helix_tree_log_helix_tree_wood_strippe": {
       "conditions": {
         "items": [
           {
             "items": "betterend:helix_tree_log"
           },
           {
-            "items": "betterend:helix_tree_bark"
+            "items": "betterend:helix_tree_wood"
           },
           {
-            "items": "betterend:helix_tree_stripped_log"
+            "items": "betterend:stripped_helix_tree_log"
           },
           {
-            "items": "betterend:helix_tree_stripped_bark"
+            "items": "betterend:stripped_helix_tree_wood"
           }
         ]
       },
@@ -30,7 +30,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_helix_tree_log_helix_tree_bark_helix_t"
+      "has_helix_tree_log_helix_tree_wood_strippe"
     ]
   ],
   "rewards": {

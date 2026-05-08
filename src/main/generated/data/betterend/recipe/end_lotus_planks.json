@@ -8,13 +8,13 @@
         "item": "betterend:end_lotus_log"
       },
       {
-        "item": "betterend:end_lotus_bark"
+        "item": "betterend:end_lotus_wood"
       },
       {
-        "item": "betterend:end_lotus_stripped_log"
+        "item": "betterend:stripped_end_lotus_log"
       },
       {
-        "item": "betterend:end_lotus_stripped_bark"
+        "item": "betterend:stripped_end_lotus_wood"
       }
     ]
   ],

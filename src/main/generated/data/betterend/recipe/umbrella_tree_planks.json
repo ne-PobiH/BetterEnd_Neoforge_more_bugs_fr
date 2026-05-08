@@ -8,13 +8,13 @@
         "item": "betterend:umbrella_tree_log"
       },
       {
-        "item": "betterend:umbrella_tree_bark"
+        "item": "betterend:umbrella_tree_wood"
       },
       {
-        "item": "betterend:umbrella_tree_stripped_log"
+        "item": "betterend:stripped_umbrella_tree_log"
       },
       {
-        "item": "betterend:umbrella_tree_stripped_bark"
+        "item": "betterend:stripped_umbrella_tree_wood"
       }
     ]
   ],

@@ -7,11 +7,11 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_umbrella_tree_bark": {
+    "has_umbrella_tree_wood": {
       "conditions": {
         "items": [
           {
-            "items": "betterend:umbrella_tree_bark"
+            "items": "betterend:umbrella_tree_wood"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_umbrella_tree_bark"
+      "has_umbrella_tree_wood"
     ]
   ],
   "rewards": {
