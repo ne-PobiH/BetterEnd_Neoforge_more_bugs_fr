@@ -1,9 +1,11 @@
 package org.betterx.betterend.blocks;
 
+import net.minecraft.client.color.item.ItemColor;
+
+import net.minecraft.client.color.block.BlockColor;
+
 import org.betterx.bclib.blocks.BaseVineBlock;
-import org.betterx.bclib.interfaces.BlockColorProvider;
 import org.betterx.bclib.interfaces.CustomColorProvider;
-import org.betterx.bclib.interfaces.ItemColorProvider;
 import org.betterx.bclib.util.MHelper;
 import org.betterx.betterend.registry.EndParticles;
 import org.betterx.ui.ColorUtil;
@@ -27,7 +29,7 @@ public class TenaneaFlowersBlock extends BaseVineBlock implements CustomColorPro
     }
 
     @Override
-    public BlockColorProvider getProvider() {
+    public BlockColor getProvider() {
         return (state, world, pos, tintIndex) -> {
             if (pos == null) {
                 pos = BlockPos.ZERO;
@@ -52,7 +54,7 @@ public class TenaneaFlowersBlock extends BaseVineBlock implements CustomColorPro
     }
 
     @Override
-    public ItemColorProvider getItemProvider() {
+    public ItemColor getItemProvider() {
         return (stack, tintIndex) -> ColorUtil.color(255, 255, 255);
     }
 

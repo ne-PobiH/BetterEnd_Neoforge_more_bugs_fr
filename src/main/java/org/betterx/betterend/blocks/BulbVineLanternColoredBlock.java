@@ -1,8 +1,10 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.interfaces.BlockColorProvider;
+import net.minecraft.client.color.item.ItemColor;
+
+import net.minecraft.client.color.block.BlockColor;
+
 import org.betterx.bclib.interfaces.CustomColorProvider;
-import org.betterx.bclib.interfaces.ItemColorProvider;
 import org.betterx.bclib.util.BlocksHelper;
 import org.betterx.ui.ColorUtil;
 
@@ -14,12 +16,12 @@ public class BulbVineLanternColoredBlock extends BulbVineLanternBlock implements
     }
 
     @Override
-    public BlockColorProvider getProvider() {
+    public BlockColor getProvider() {
         return (state, world, pos, tintIndex) -> getColor();
     }
 
     @Override
-    public ItemColorProvider getItemProvider() {
+    public ItemColor getItemProvider() {
         return (stack, tintIndex) -> getColor();
     }
 

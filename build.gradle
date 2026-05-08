@@ -129,14 +129,14 @@ dependencies {
     if (local_bclib) {
         implementation project(path: ":BCLib", configuration: 'dev')
     } else {
-        implementation "org.betterx:bclib:${project.bclib_version}"
+        implementation "maven.modrinth:bclib-neoforge:${project.bclib_version}"
     }
 
     println "Using local WunderLib: ${local_wunderlib}"
     if (local_wunderlib) {
         implementation project(path: ":wunderlib", configuration: 'dev')
-    } else if (local_wover) {
-        implementation "de.ambertation:wunderlib:${project.wunderlib_version}"
+    } else {
+        implementation "maven.modrinth:wunderlib-neoforge:${project.wunderlib_version}"
     }
 
     println "Using local WorldWeaver: ${local_wover}"
@@ -145,8 +145,8 @@ dependencies {
         gradle.knownWoverModules.each {
             implementation project(path: ":WorldWeaver:$it", configuration: 'dev')
         }
-    } else if (local_bclib) {
-        implementation "org.betterx:worldweaver:${project.wover_version}"
+    } else {
+        implementation "maven.modrinth:worldweaver-neoforge:${project.wover_version}"
     }
 }
 
@@ -376,7 +376,6 @@ tasks.register("generateMixinMappings") {
 
 tasks.register("fixMixinRefmap") {
     def refmapFile = layout.buildDirectory.file("resources/main/${refmapName}")
-    inputs.file(refmapFile).optional(true)
     outputs.file(refmapFile)
     dependsOn(tasks.named("processResources"))
     dependsOn(tasks.named("compileJava"))
@@ -457,31 +456,34 @@ jar {
 // Collect built jars for BetterEnd and its local BetterX libraries into one folder
 def distDir = new File(rootProject.projectDir.parentFile, "betterx-dist")
 def modrinthModsDir = new File("C:/Users/Redmi/AppData/Roaming/ModrinthApp/profiles/1.21.1 Server ArchiTech/mods")
+def localLibraryProjects = [
+        local_bclib ? findProject(":BCLib") : null,
+        local_wover ? findProject(":WorldWeaver") : null,
+        local_wunderlib ? findProject(":wunderlib") : null
+].findAll { it != null }
+
 tasks.register("copyDistJars", Copy) {
-    dependsOn(
-            tasks.named("jar"),
-            project(":BCLib").tasks.named("jar"),
-            project(":WorldWeaver").tasks.named("jar"),
-            project(":wunderlib").tasks.named("jar")
-    )
+    dependsOn(tasks.named("jar"))
+    localLibraryProjects.each { dependencyProject ->
+        dependsOn(dependencyProject.tasks.named("jar"))
+    }
     from(tasks.named("jar"))
-    from(project(":BCLib").tasks.named("jar"))
-    from(project(":WorldWeaver").tasks.named("jar"))
-    from(project(":wunderlib").tasks.named("jar"))
+    localLibraryProjects.each { dependencyProject ->
+        from(dependencyProject.tasks.named("jar"))
+    }
     into(distDir)
 }
 
 tasks.register("copyModrinthJars", Copy) {
-    dependsOn(
-            tasks.named("jar"),
-            project(":BCLib").tasks.named("jar"),
-            project(":WorldWeaver").tasks.named("jar"),
-            project(":wunderlib").tasks.named("jar")
-    )
+    onlyIf { modrinthModsDir.exists() }
+    dependsOn(tasks.named("jar"))
+    localLibraryProjects.each { dependencyProject ->
+        dependsOn(dependencyProject.tasks.named("jar"))
+    }
     from(tasks.named("jar"))
-    from(project(":BCLib").tasks.named("jar"))
-    from(project(":WorldWeaver").tasks.named("jar"))
-    from(project(":wunderlib").tasks.named("jar"))
+    localLibraryProjects.each { dependencyProject ->
+        from(dependencyProject.tasks.named("jar"))
+    }
     into(modrinthModsDir)
 }
 
