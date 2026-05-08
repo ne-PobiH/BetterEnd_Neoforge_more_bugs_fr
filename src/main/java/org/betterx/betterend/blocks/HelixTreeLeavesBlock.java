@@ -1,13 +1,11 @@
 package org.betterx.betterend.blocks;
 
-import net.minecraft.client.color.item.ItemColor;
-
-import net.minecraft.client.color.block.BlockColor;
-
 import org.betterx.bclib.behaviours.BehaviourBuilders;
 import org.betterx.bclib.behaviours.interfaces.BehaviourLeaves;
 import org.betterx.bclib.blocks.BaseBlock;
+import org.betterx.bclib.interfaces.BlockColorProvider;
 import org.betterx.bclib.interfaces.CustomColorProvider;
+import org.betterx.bclib.interfaces.ItemColorProvider;
 import org.betterx.bclib.interfaces.tools.AddMineableShears;
 import org.betterx.bclib.util.MHelper;
 import org.betterx.betterend.noise.OpenSimplexNoise;
@@ -43,12 +41,12 @@ public class HelixTreeLeavesBlock extends BaseBlock implements BehaviourLeaves, 
     }
 
     @Override
-    public BlockColor getProvider() {
+    public BlockColorProvider getProvider() {
         return (state, world, pos, tintIndex) -> ColorUtil.color(237, getGreen(state.getValue(COLOR)), 20);
     }
 
     @Override
-    public ItemColor getItemProvider() {
+    public ItemColorProvider getItemProvider() {
         return (stack, tintIndex) -> ColorUtil.color(237, getGreen(4), 20);
     }
 
