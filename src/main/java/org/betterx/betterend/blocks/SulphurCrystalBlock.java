@@ -4,7 +4,9 @@ import org.betterx.bclib.blocks.BaseAttachedBlock;
 import org.betterx.bclib.client.render.BCLRenderLayer;
 import org.betterx.bclib.interfaces.RenderLayerProvider;
 import org.betterx.betterend.interfaces.survives.SurvivesOnBrimstone;
+import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndItems;
+import org.betterx.wover.block.api.BlockProperties;
 import org.betterx.wover.loot.api.BlockLootProvider;
 import org.betterx.wover.loot.api.LootLookupProvider;
 
@@ -13,6 +15,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -36,7 +40,6 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.ApplyExplosionDecay;
-import net.minecraft.world.level.storage.loot.functions.LootItemConditionalFunction;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.AllOfCondition;
 import net.minecraft.world.level.storage.loot.predicates.InvertedLootItemCondition;
@@ -64,6 +67,8 @@ public class SulphurCrystalBlock extends BaseAttachedBlock.Glass implements Rend
                         .mapColor(MapColor.COLOR_YELLOW)
                         .sound(SoundType.GLASS)
                         .requiresCorrectToolForDrops()
+                        .strength(1.5F)
+                        .randomTicks()
                         .noCollission());
     }
 
@@ -77,12 +82,6 @@ public class SulphurCrystalBlock extends BaseAttachedBlock.Glass implements Rend
     @Override
     public BCLRenderLayer getRenderLayer() {
         return BCLRenderLayer.CUTOUT;
-    }
-
-    private LootItemConditionalFunction.@NotNull Builder<?> applyAgeBonus(@NotNull LootLookupProvider provider, int i) {
-        return ApplyBonusCount
-                .addUniformBonusCount(provider.fortune(), i)
-                .when(ageCondition(i));
     }
 
     private LootItemBlockStatePropertyCondition.@NotNull Builder ageCondition(int i) {
@@ -106,31 +105,19 @@ public class SulphurCrystalBlock extends BaseAttachedBlock.Glass implements Rend
                                 .when(provider.hasSilkTouch())
                                 .setRolls(ConstantValue.exactly(1))
                                 .add(LootItem.lootTableItem(this)
-                                             .apply(SetItemCountFunction
-                                                     .setCount(UniformGenerator.between(1, 3))
-                                                     .when(ageCondition(3))
-                                             )
-                                             .apply(SetItemCountFunction
-                                                     .setCount(ConstantValue.exactly(1))
-                                                     .when(InvertedLootItemCondition.invert(ageCondition(3)))
-                                             )
-                                             .apply(ApplyBonusCount
-                                                     .addOreBonusCount(provider.fortune())
-                                                     .when(ageCondition(3))
-                                             )
-                                             .apply(applyAgeBonus(provider, 2))
-                                             .apply(applyAgeBonus(provider, 1))
                                              .apply(ApplyExplosionDecay.explosionDecay())
                                 )
                 )
                 .withPool(
-                        LootPool.lootPool()
-                                .when(AllOfCondition.allOf(InvertedLootItemCondition.invert(provider.hasSilkTouch()), ageCondition(3)))
+                        LootPool
+                                .lootPool()
+                                .when(AllOfCondition.allOf(InvertedLootItemCondition.invert(provider.hasSilkTouch()), ageCondition(2)))
                                 .setRolls(ConstantValue.exactly(1))
                                 .add(LootItem.lootTableItem(EndItems.CRYSTALLINE_SULPHUR)
                                              .apply(SetItemCountFunction
                                                      .setCount(UniformGenerator.between(1, 3))
                                              )
+                                             .apply(ApplyBonusCount.addOreBonusCount(provider.fortune()))
                                              .apply(ApplyExplosionDecay.explosionDecay())
                                 )
                 );
@@ -159,7 +146,8 @@ public class SulphurCrystalBlock extends BaseAttachedBlock.Glass implements Rend
             LevelReader worldView = ctx.getLevel();
             BlockPos blockPos = ctx.getClickedPos();
             boolean water = worldView.getFluidState(blockPos).getType() == Fluids.WATER;
-            return state.setValue(WATERLOGGED, water);
+            BlockState placedState = state.setValue(WATERLOGGED, water);
+            return water && placedState.canSurvive(worldView, blockPos) ? placedState : null;
         }
         return null;
     }
@@ -175,10 +163,26 @@ public class SulphurCrystalBlock extends BaseAttachedBlock.Glass implements Rend
     }
 
     @Override
+    public void randomTick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
+        if (state.getValue(AGE) >= 2 || !state.getValue(WATERLOGGED) || random.nextInt(5) != 0) {
+            return;
+        }
+
+        BlockState terrain = world.getBlockState(pos.relative(state.getValue(FACING).getOpposite()));
+        if (isActiveBrimstone(terrain)) {
+            world.setBlockAndUpdate(pos, state.setValue(AGE, state.getValue(AGE) + 1));
+        }
+    }
+
+    @Override
     public boolean canSurvive(BlockState state, LevelReader world, BlockPos pos) {
         Direction direction = state.getValue(FACING);
         BlockPos blockPos = pos.relative(direction.getOpposite());
-        return isTerrain(world.getBlockState(blockPos));
+        return state.getValue(WATERLOGGED) && isActiveBrimstone(world.getBlockState(blockPos));
+    }
+
+    public static boolean isActiveBrimstone(BlockState state) {
+        return state.is(EndBlocks.BRIMSTONE) && state.hasProperty(BlockProperties.ACTIVE) && state.getValue(BlockProperties.ACTIVE);
     }
 
     static {
