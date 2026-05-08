@@ -1,7 +1,7 @@
 package org.betterx.betterend.particle;
 
-import org.betterx.bclib.interfaces.CustomColorProvider;
 import org.betterx.bclib.interfaces.BlockColorProvider;
+import org.betterx.bclib.interfaces.CustomColorProvider;
 import org.betterx.bclib.util.MHelper;
 import org.betterx.betterend.registry.EndBlocks;
 
