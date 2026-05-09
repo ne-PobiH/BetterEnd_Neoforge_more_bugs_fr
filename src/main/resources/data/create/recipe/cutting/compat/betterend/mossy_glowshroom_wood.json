@@ -11,10 +11,10 @@
                             "item":  "betterend:mossy_glowshroom_wood"
                         }
                     ],
-    "processingTime":  50,
+    "processing_time":  50,
     "results":  [
                     {
-                        "item":  "betterend:stripped_mossy_glowshroom_wood"
+                        "id":  "betterend:stripped_mossy_glowshroom_wood"
                     }
                 ]
 }

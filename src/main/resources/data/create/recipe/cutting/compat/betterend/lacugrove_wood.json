@@ -11,10 +11,10 @@
                             "item":  "betterend:lacugrove_wood"
                         }
                     ],
-    "processingTime":  50,
+    "processing_time":  50,
     "results":  [
                     {
-                        "item":  "betterend:stripped_lacugrove_wood"
+                        "id":  "betterend:stripped_lacugrove_wood"
                     }
                 ]
 }

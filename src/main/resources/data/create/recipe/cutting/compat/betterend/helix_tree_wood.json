@@ -11,10 +11,10 @@
                             "item":  "betterend:helix_tree_wood"
                         }
                     ],
-    "processingTime":  50,
+    "processing_time":  50,
     "results":  [
                     {
-                        "item":  "betterend:stripped_helix_tree_wood"
+                        "id":  "betterend:stripped_helix_tree_wood"
                     }
                 ]
 }

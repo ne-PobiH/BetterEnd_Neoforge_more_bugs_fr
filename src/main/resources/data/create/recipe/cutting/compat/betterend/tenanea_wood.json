@@ -11,10 +11,10 @@
                             "item":  "betterend:tenanea_wood"
                         }
                     ],
-    "processingTime":  50,
+    "processing_time":  50,
     "results":  [
                     {
-                        "item":  "betterend:stripped_tenanea_wood"
+                        "id":  "betterend:stripped_tenanea_wood"
                     }
                 ]
 }

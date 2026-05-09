@@ -11,10 +11,10 @@
                             "item":  "betterend:end_lotus_wood"
                         }
                     ],
-    "processingTime":  50,
+    "processing_time":  50,
     "results":  [
                     {
-                        "item":  "betterend:stripped_end_lotus_wood"
+                        "id":  "betterend:stripped_end_lotus_wood"
                     }
                 ]
 }

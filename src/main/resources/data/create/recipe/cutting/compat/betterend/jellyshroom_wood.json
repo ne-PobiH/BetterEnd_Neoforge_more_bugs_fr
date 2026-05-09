@@ -11,10 +11,10 @@
                             "item":  "betterend:jellyshroom_wood"
                         }
                     ],
-    "processingTime":  50,
+    "processing_time":  50,
     "results":  [
                     {
-                        "item":  "betterend:stripped_jellyshroom_wood"
+                        "id":  "betterend:stripped_jellyshroom_wood"
                     }
                 ]
 }

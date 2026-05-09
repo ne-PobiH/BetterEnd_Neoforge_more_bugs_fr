@@ -11,10 +11,10 @@
                             "item":  "betterend:umbrella_tree_log"
                         }
                     ],
-    "processingTime":  50,
+    "processing_time":  50,
     "results":  [
                     {
-                        "item":  "betterend:stripped_umbrella_tree_log"
+                        "id":  "betterend:stripped_umbrella_tree_log"
                     }
                 ]
 }

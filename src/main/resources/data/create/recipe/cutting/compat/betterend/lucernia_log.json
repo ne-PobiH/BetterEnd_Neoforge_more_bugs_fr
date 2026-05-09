@@ -11,10 +11,10 @@
                             "item":  "betterend:lucernia_log"
                         }
                     ],
-    "processingTime":  50,
+    "processing_time":  50,
     "results":  [
                     {
-                        "item":  "betterend:stripped_lucernia_log"
+                        "id":  "betterend:stripped_lucernia_log"
                     }
                 ]
 }
