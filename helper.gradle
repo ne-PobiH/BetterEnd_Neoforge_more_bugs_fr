@@ -1,0 +1,145 @@
+apply plugin: 'com.modrinth.minotaur'
+apply plugin: "com.matthewprenger.cursegradle"
+
+def getConfig(key, defVal) {
+    try {
+        def configFile = file('changelog.json')
+        def configJson = new groovy.json.JsonSlurper().parseText(configFile.text)
+        def value = configJson[key]
+        if (value == null) return defVal
+        return value
+    } catch (FileNotFoundException ignored) {
+        return defVal
+    }
+}
+
+def isReleaseMode = project.hasProperty("release_mode") && project.property("release_mode").toBoolean()
+def modDependenciesUrl = getConfig('mod_dependencies_url', "https://raw.githubusercontent.com/betterx/BetterX_Mod_Deps/main/mod_dependencies.json")
+def modDependenciesFile = getConfig('mod_dependencies_file', "${projectDir}/mod_dependencies.json")
+def modId = project.findProperty('mod_id') ?: project.archives_base_name
+
+def modLoader = "neoforge"
+def gameVersion = project.minecraft_version
+
+def parseDependencyList = { String propName ->
+    if (!project.hasProperty(propName)) return []
+    def raw = project.property(propName)
+    if (raw == null) return []
+    def s = raw.toString().trim()
+    if (s.isEmpty()) return []
+    // Accept old format: ["a", "b"] or ['a','b']
+    if ((s.startsWith('[') && s.endsWith(']')) || (s.startsWith('(') && s.endsWith(')'))) {
+        try {
+            def v = evaluate(s)
+            return (v instanceof Collection) ? v.toList() : [v]
+        } catch (ignored) {
+            // fall through
+        }
+    }
+    // Accept comma-separated: a,b,c
+    return s.split(',').collect { it.trim() }.findAll { it }
+}
+
+def requiredDependencies = parseDependencyList('required_dependencies')
+def optionalDependencies = parseDependencyList('optional_dependencies')
+
+println("-------------------------------------")
+println("Mod ID: ${modId}")
+println("Loader: ${modLoader}")
+println("Game Version: ${gameVersion}")
+println("Release Mode: ${isReleaseMode}")
+println("-------------------------------------")
+
+def modDependencies = [:]
+try {
+    if (!file(modDependenciesFile).exists()) {
+        println("Downloading mod dependencies from ${modDependenciesUrl}...")
+        def url = new URL(modDependenciesUrl)
+        def text = url.text
+        file(modDependenciesFile).text = text
+    }
+
+    def modDependenciesJson = new groovy.json.JsonSlurper().parseText(file(modDependenciesFile).text)
+    modDependencies = modDependenciesJson[modLoader][gameVersion]
+} catch (Exception e) {
+    println("Failed to load mod dependencies: ${e.getMessage()}")
+}
+
+def getDependencyInfo = { dep ->
+    def info = modDependencies[dep]
+    if (info == null) return null
+    return [
+            projectId: info.projectId,
+            fileId   : info.fileId,
+            modrinthId: info.modrinthId
+    ]
+}
+
+modrinth {
+    token = project.findProperty("modrinth_token") ?: ""
+    projectId = project.findProperty("modrinth_project_id") ?: ""
+    versionNumber = project.version
+    versionName = "${modId}-${project.version}"
+    versionType = isReleaseMode ? "release" : "beta"
+    uploadFile = jar
+
+    if (project.findProperty("modrinth_changelog") != null) {
+        changelog = project.findProperty("modrinth_changelog")
+    } else {
+        changelog = getConfig('changelog', "")
+    }
+
+    gameVersions = [gameVersion]
+    loaders = [modLoader]
+
+    dependencies {
+        requiredDependencies.each { dep ->
+            def info = getDependencyInfo(dep)
+            if (info?.modrinthId != null) {
+                required.project(info.modrinthId)
+            }
+        }
+        optionalDependencies.each { dep ->
+            def info = getDependencyInfo(dep)
+            if (info?.modrinthId != null) {
+                optional.project(info.modrinthId)
+            }
+        }
+    }
+}
+
+def curseforgeProjectId = project.findProperty("curseforge_project_id") ?: project.findProperty("curseforge_id")
+def curseforgeApiKey = project.findProperty("curseforge_api_key") ?: ""
+if (curseforgeProjectId) {
+    curseforge {
+        apiKey = curseforgeApiKey
+
+        project {
+            id = curseforgeProjectId
+        changelogType = 'markdown'
+        changelog = getConfig('changelog', "")
+        releaseType = isReleaseMode ? "release" : "beta"
+        addGameVersion gameVersion
+        addGameVersion modLoader.capitalize()
+
+        mainArtifact(jar) {
+            displayName = "${modId}-${project.version}"
+
+            relations {
+                requiredDependencies.each { dep ->
+                    def info = getDependencyInfo(dep)
+                    if (info?.projectId != null) {
+                        requiredDependency(dep)
+                    }
+                }
+                optionalDependencies.each { dep ->
+                    def info = getDependencyInfo(dep)
+                    if (info?.projectId != null) {
+                        optionalDependency(dep)
+                    }
+                }
+            }
+        }
+        }
+    }
+}
