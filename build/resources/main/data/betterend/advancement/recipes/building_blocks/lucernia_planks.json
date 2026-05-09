@@ -1,0 +1,41 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lucernia_log_lucernia_wood_stripped_lu": {
+      "conditions": {
+        "items": [
+          {
+            "items": "betterend:lucernia_log"
+          },
+          {
+            "items": "betterend:lucernia_wood"
+          },
+          {
+            "items": "betterend:stripped_lucernia_log"
+          },
+          {
+            "items": "betterend:stripped_lucernia_wood"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "betterend:lucernia_planks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lucernia_log_lucernia_wood_stripped_lu"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "betterend:lucernia_planks"
+    ]
+  }
+}

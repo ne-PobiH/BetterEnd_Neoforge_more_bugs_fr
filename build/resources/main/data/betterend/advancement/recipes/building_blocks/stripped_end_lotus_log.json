@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stripped_end_lotus_wood": {
+      "conditions": {
+        "items": [
+          {
+            "items": "betterend:stripped_end_lotus_wood"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "betterend:stripped_end_lotus_log"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stripped_end_lotus_wood"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "betterend:stripped_end_lotus_log"
+    ]
+  }
+}

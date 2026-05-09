@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    [
+      {
+        "item": "betterend:end_lotus_log"
+      },
+      {
+        "item": "betterend:end_lotus_wood"
+      },
+      {
+        "item": "betterend:stripped_end_lotus_log"
+      },
+      {
+        "item": "betterend:stripped_end_lotus_wood"
+      }
+    ]
+  ],
+  "result": {
+    "count": 4,
+    "id": "betterend:end_lotus_planks"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "type": "betterend:infusion",
+  "catalysts": {
+    "east": {
+      "item": {
+        "item": "betterend:crystal_shards"
+      }
+    },
+    "north": {
+      "item": {
+        "item": "betterend:amber_gem"
+      }
+    },
+    "west": {
+      "item": {
+        "item": "betterend:crystal_shards"
+      }
+    }
+  },
+  "input": {
+    "item": {
+      "item": "betterend:terminite_boots"
+    }
+  },
+  "result": {
+    "item": "betterend:crystalite_boots",
+    "nbt": {
+      "minecraft:attribute_modifiers": {
+        "modifiers": [
+          {
+            "type": "minecraft:generic.armor",
+            "amount": 2.4000000953674316,
+            "id": "betterend:armor_boost_boots",
+            "operation": "add_value",
+            "slot": "feet"
+          },
+          {
+            "type": "minecraft:generic.armor_toughness",
+            "amount": 0.9600000381469727,
+            "id": "betterend:toughness_boost_boots",
+            "operation": "add_value",
+            "slot": "feet"
+          }
+        ]
+      }
+    }
+  },
+  "time": 150
+}

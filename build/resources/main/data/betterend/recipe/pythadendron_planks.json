@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    [
+      {
+        "item": "betterend:pythadendron_log"
+      },
+      {
+        "item": "betterend:pythadendron_wood"
+      },
+      {
+        "item": "betterend:stripped_pythadendron_log"
+      },
+      {
+        "item": "betterend:stripped_pythadendron_wood"
+      }
+    ]
+  ],
+  "result": {
+    "count": 4,
+    "id": "betterend:pythadendron_planks"
+  }
+}

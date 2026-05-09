@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chain": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:chain"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stripped_mossy_glowshroom_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "betterend:stripped_mossy_glowshroom_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "betterend:mossy_glowshroom_hanging_sign"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stripped_mossy_glowshroom_log",
+      "has_chain"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "betterend:mossy_glowshroom_hanging_sign"
+    ]
+  }
+}

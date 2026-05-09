@@ -1,0 +1,29 @@
+org/betterx/betterend/mixin/client/MinecraftClientMixin player s
+org/betterx/betterend/mixin/client/MinecraftClientMixin screen y
+org/betterx/betterend/mixin/client/MinecraftClientMixin gui l
+org/betterx/betterend/mixin/client/MinecraftClientMixin level r
+org/betterx/betterend/mixin/client/MusicTrackerMixin minecraft c
+org/betterx/betterend/mixin/client/MusicTrackerMixin random b
+org/betterx/betterend/mixin/client/MusicTrackerMixin currentMusic d
+org/betterx/betterend/mixin/client/MusicTrackerMixin nextSongDelay e
+org/betterx/betterend/mixin/common/ChorusFlowerBlockMixin plant e
+org/betterx/betterend/mixin/common/CraftingMenuMixin access t
+org/betterx/betterend/mixin/common/EndDragonFightMixin respawnStage z
+org/betterx/betterend/mixin/common/EndDragonFightMixin dragonKilled t
+org/betterx/betterend/mixin/common/EndDragonFightMixin portalLocation y
+org/betterx/betterend/mixin/common/EndDragonFightMixin LOGGER d
+org/betterx/betterend/mixin/common/EndDragonFightMixin level l
+org/betterx/betterend/mixin/common/EndPodiumFeatureMixin active ap
+org/betterx/betterend/mixin/common/EndSpikeMixin height e
+org/betterx/betterend/mixin/common/NoiseChunkMixin interpolators i
+org/betterx/betterend/mixin/common/PlayerAdvancementsMixin player j
+org/betterx/betterend/mixin/common/WorldGenRegionMixin center c
+org/betterx/betterend/mixin/common/ChorusFlowerBlockMixin placeGrownFlower (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;I)V a
+org/betterx/betterend/mixin/common/EndDragonFightMixin findExitPortal ()Lnet/minecraft/world/level/block/state/pattern/BlockPattern$BlockPatternMatch; m
+org/betterx/betterend/mixin/common/EndDragonFightMixin spawnExitPortal (Z)V a
+org/betterx/betterend/mixin/common/EndDragonFightMixin respawnDragon (Ljava/util/List;)V a
+org/betterx/betterend/mixin/common/EndSpikeMixin getCenterX ()I a
+org/betterx/betterend/mixin/common/EndSpikeMixin getCenterZ ()I b
+org/betterx/betterend/mixin/common/LivingEntityMixin getAttributes ()Lnet/minecraft/world/entity/ai/attributes/AttributeMap; eS
+org/betterx/betterend/mixin/common/LivingEntityMixin getArmorSlots ()Ljava/lang/Iterable; eV
+org/betterx/betterend/mixin/common/SlimeMixin setSize (IZ)V a

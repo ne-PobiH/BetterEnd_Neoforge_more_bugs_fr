@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    [
+      {
+        "item": "betterend:helix_tree_log"
+      },
+      {
+        "item": "betterend:helix_tree_wood"
+      },
+      {
+        "item": "betterend:stripped_helix_tree_log"
+      },
+      {
+        "item": "betterend:stripped_helix_tree_wood"
+      }
+    ]
+  ],
+  "result": {
+    "count": 4,
+    "id": "betterend:helix_tree_planks"
+  }
+}

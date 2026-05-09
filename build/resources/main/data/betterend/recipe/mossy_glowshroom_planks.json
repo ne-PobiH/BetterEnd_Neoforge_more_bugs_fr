@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    [
+      {
+        "item": "betterend:mossy_glowshroom_log"
+      },
+      {
+        "item": "betterend:mossy_glowshroom_wood"
+      },
+      {
+        "item": "betterend:stripped_mossy_glowshroom_log"
+      },
+      {
+        "item": "betterend:stripped_mossy_glowshroom_wood"
+      }
+    ]
+  ],
+  "result": {
+    "count": 4,
+    "id": "betterend:mossy_glowshroom_planks"
+  }
+}

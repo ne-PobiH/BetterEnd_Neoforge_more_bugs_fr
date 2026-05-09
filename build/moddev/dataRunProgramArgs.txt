@@ -1,0 +1,29 @@
+# Main Class
+cpw.mods.bootstraplauncher.BootstrapLauncher
+
+# NeoForge Run-Type Program Arguments
+--launchTarget
+forgedatadev
+--assetIndex
+17
+--assetsDir
+C:\\Users\\Professional\\.gradle\\caches\\neoformruntime\\assets
+--gameDir
+.
+--fml.fmlVersion
+4.0.42
+--fml.mcVersion
+1.21.1
+--fml.neoForgeVersion
+21.1.228
+--fml.neoFormVersion
+20240808.144430
+
+# User Supplied Program Arguments
+--mod
+betterend
+--all
+--output
+C:\\Users\\Professional\\Documents\\GitHub\\BetterEnd_Neoforge_more_bugs_fr\\src\\main\\generated
+--existing
+C:\\Users\\Professional\\Documents\\GitHub\\BetterEnd_Neoforge_more_bugs_fr\\src\\main\\resources

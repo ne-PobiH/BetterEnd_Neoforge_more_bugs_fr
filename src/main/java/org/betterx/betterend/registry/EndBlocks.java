@@ -400,8 +400,8 @@ public class EndBlocks {
         EMERALD_ICE = registerBlock("emerald_ice", new EmeraldIceBlock());
         DENSE_EMERALD_ICE = registerBlock("dense_emerald_ice", new DenseEmeraldIceBlock());
         ANCIENT_EMERALD_ICE = registerBlock("ancient_emerald_ice", new AncientEmeraldIceBlock());
-        END_STONE_STALACTITE = registerBlock( "end_stone_stalactite", new StalactiteBlock.Stone(Blocks.END_STONE) );
-        END_STONE_STALACTITE_CAVEMOSS = registerBlock( "end_stone_stalactite_cavemoss", new StalactiteBlock.Stone(CAVE_MOSS) );
+        END_STONE_STALACTITE = registerBlock( "end_stone_stalactite", new EndStonePointedStalactiteBlock(Blocks.END_STONE) );
+        END_STONE_STALACTITE_CAVEMOSS = registerBlock( "end_stone_stalactite_cavemoss", new EndStonePointedStalactiteBlock(CAVE_MOSS) );
         MOSSY_GLOWSHROOM_SAPLING = registerBlock( "mossy_glowshroom_sapling", new MossyGlowshroomSaplingBlock() );
         MOSSY_GLOWSHROOM_CAP = registerBlock( "mossy_glowshroom_cap", new MossyGlowshroomCapBlock() );
         MOSSY_GLOWSHROOM_HYMENOPHORE = registerBlock( "mossy_glowshroom_hymenophore", new GlowingHymenophoreBlock() );

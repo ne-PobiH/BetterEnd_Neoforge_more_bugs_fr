@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <option name="defaultObfuscationEnv" value="searge" />
+        <option name="mappingTypes" value="tsrg" />
+        <option name="outRefMapFile" value="C:\Users\Professional\Documents\GitHub\BetterEnd_Neoforge_more_bugs_fr\build\resources\main\betterend.refmap.json" />
+        <option name="outTsrgFile" value="C:\Users\Professional\Documents\GitHub\BetterEnd_Neoforge_more_bugs_fr\build\mappings\betterend-mixin-out.tsrg" />
+        <option name="pluginVersion" value="0.8" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/3d051c66329d162a52fc062f7da912c37904a6a0/mixin-0.8.7-processor.jar" />
+        </processorPath>
+        <module name="BetterEnd.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="21" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-AoutRefMapFile=C:\Users\Professional\Documents\GitHub\BetterEnd_Neoforge_more_bugs_fr\build\resources\main\betterend.refmap.json -AoutTsrgFile=C:\Users\Professional\Documents\GitHub\BetterEnd_Neoforge_more_bugs_fr\build\mappings\betterend-mixin-out.tsrg -AmappingTypes=tsrg -ApluginVersion=0.8 -AdefaultObfuscationEnv=searge -Xmaxerrs 5000" />
+  </component>
+</project>
