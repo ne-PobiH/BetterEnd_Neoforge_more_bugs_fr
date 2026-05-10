@@ -6,6 +6,7 @@ import org.betterx.betterend.interfaces.survives.SurvivesOnShadowGrass;
 import org.betterx.wover.loot.api.BlockLootProvider;
 import org.betterx.wover.loot.api.LootLookupProvider;
 
+import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -20,6 +21,8 @@ import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyExplosionDecay;
+import net.minecraft.world.level.storage.loot.predicates.AnyOfCondition;
+import net.minecraft.world.level.storage.loot.predicates.MatchTool;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
@@ -51,7 +54,10 @@ public class NeedlegrassBlock extends EndPlantBlock implements SurvivesOnShadowG
     ) {
         return LootTable.lootTable().withPool(
                 LootPool.lootPool()
-                        .when(provider.hasSilkTouch())
+                        .when(AnyOfCondition.anyOf(
+                                MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.SHEARS)),
+                                provider.hasSilkTouch()
+                        ))
                         .setRolls(ConstantValue.exactly(1))
                         .add(LootItem.lootTableItem(this).apply(ApplyExplosionDecay.explosionDecay()))
         ).withPool(

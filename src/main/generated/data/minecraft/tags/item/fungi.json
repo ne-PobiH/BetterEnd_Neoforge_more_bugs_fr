@@ -1,0 +1,13 @@
+{
+  "values": [
+    {
+      "id": "betterend:jellyshroom",
+      "required": false
+    },
+    {
+      "id": "betterend:mossy_glowshroom",
+      "required": false
+    },
+    "betterend:small_jellyshroom"
+  ]
+}
