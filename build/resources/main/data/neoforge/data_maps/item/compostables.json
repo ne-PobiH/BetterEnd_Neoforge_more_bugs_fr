@@ -1,16 +1,16 @@
 {
   "values": {
     "betterend:aeridium": {
-      "chance": 0.65
+      "chance": 0.3
     },
     "betterend:amber_grass": {
       "chance": 0.3
     },
     "betterend:blossom_berry": {
-      "chance": 0.65
+      "chance": 0.3
     },
     "betterend:blooming_cooksonia": {
-      "chance": 0.65
+      "chance": 0.3
     },
     "betterend:bushy_grass": {
       "chance": 0.3
@@ -19,7 +19,7 @@
       "chance": 0.3
     },
     "betterend:clawfern": {
-      "chance": 0.65
+      "chance": 0.3
     },
     "betterend:creeping_moss": {
       "chance": 0.3
@@ -37,10 +37,10 @@
       "chance": 0.3
     },
     "betterend:fracturn": {
-      "chance": 0.65
+      "chance": 0.3
     },
     "betterend:globulagus": {
-      "chance": 0.65
+      "chance": 0.3
     },
     "betterend:helix_tree_leaves": {
       "chance": 0.3
@@ -49,7 +49,7 @@
       "chance": 0.3
     },
     "betterend:lamellarium": {
-      "chance": 0.65
+      "chance": 0.3
     },
     "betterend:lucernia_leaves": {
       "chance": 0.3
@@ -58,7 +58,7 @@
       "chance": 0.3
     },
     "betterend:lutebus": {
-      "chance": 0.65
+      "chance": 0.3
     },
     "betterend:mossy_glowshroom_sapling": {
       "chance": 0.3
@@ -70,7 +70,7 @@
       "chance": 0.3
     },
     "betterend:orango": {
-      "chance": 0.65
+      "chance": 0.3
     },
     "betterend:pythadendron_leaves": {
       "chance": 0.3
@@ -79,16 +79,16 @@
       "chance": 0.3
     },
     "betterend:salteago": {
-      "chance": 0.65
+      "chance": 0.3
     },
     "betterend:shadow_plant": {
-      "chance": 0.65
+      "chance": 0.3
     },
     "betterend:small_amaranita_mushroom": {
-      "chance": 0.65
+      "chance": 0.3
     },
     "betterend:small_jellyshroom": {
-      "chance": 0.65
+      "chance": 0.3
     },
     "betterend:tail_moss": {
       "chance": 0.3
@@ -112,7 +112,139 @@
       "chance": 0.3
     },
     "betterend:vaiolush_fern": {
-      "chance": 0.65
+      "chance": 0.3
+    },
+    "betterend:inflexia": {
+      "chance": 0.3
+    },
+    "betterend:end_lily_leaf_dried": {
+      "chance": 0.3
+    },
+    "betterend:umbrella_moss_tall": {
+      "chance": 0.3
+    },
+    "betterend:twisted_umbrella_moss_tall": {
+      "chance": 0.3
+    },
+    "betterend:glowing_pillar_seed": {
+      "chance": 0.3
+    },
+    "betterend:blossom_berry_seed": {
+      "chance": 0.3
+    },
+    "betterend:lanceleaf_seed": {
+      "chance": 0.3
+    },
+    "betterend:shadow_berry": {
+      "chance": 0.3
+    },
+    "betterend:amber_root_seed": {
+      "chance": 0.3
+    },
+    "betterend:flamaea": {
+      "chance": 0.3
+    },
+    "betterend:tube_worm": {
+      "chance": 0.3
+    },
+    "betterend:bulb_moss": {
+      "chance": 0.3
+    },
+    "betterend:jungle_fern": {
+      "chance": 0.3
+    },
+    "betterend:ruscus": {
+      "chance": 0.3
+    },
+    "betterend:pond_anemone": {
+      "chance": 0.3
+    },
+    "betterend:hydralux_sapling": {
+      "chance": 0.3
+    },
+    "betterend:end_lily_seed": {
+      "chance": 0.3
+    },
+    "betterend:charnia_green": {
+      "chance": 0.3
+    },
+    "betterend:charnia_cyan": {
+      "chance": 0.3
+    },
+    "betterend:charnia_light_blue": {
+      "chance": 0.3
+    },
+    "betterend:charnia_orange": {
+      "chance": 0.3
+    },
+    "betterend:charnia_purple": {
+      "chance": 0.3
+    },
+    "betterend:charnia_red": {
+      "chance": 0.3
+    },
+    "betterend:filalux_wings": {
+      "chance": 0.3
+    },
+    "betterend:bulb_vine": {
+      "chance": 0.3
+    },
+    "betterend:jungle_vine": {
+      "chance": 0.3
+    },
+    "betterend:rubinea": {
+      "chance": 0.3
+    },
+    "betterend:end_lotus_seed": {
+      "chance": 0.3
+    },
+    "betterend:mossy_glowshroom_fur": {
+      "chance": 0.3
+    },
+    "betterend:cave_pumpkin_seed": {
+      "chance": 0.3
+    },
+    "betterend:chorus_mushroom_seed": {
+      "chance": 0.3
+    },
+    "betterend:magnula": {
+      "chance": 0.3
+    },
+    "betterend:filalux": {
+      "chance": 0.3
+    },
+    "betterend:bulb_vine_seed": {
+      "chance": 0.3
+    },
+    "betterend:twisted_vine": {
+      "chance": 0.3
+    },
+    "betterend:dense_vine": {
+      "chance": 0.3
+    },
+    "betterend:crystal_moss_cover": {
+      "chance": 0.3
+    },
+    "betterend:lucernia_outer_leaves": {
+      "chance": 0.3
+    },
+    "betterend:tenanea_flowers": {
+      "chance": 0.3
+    },
+    "betterend:flammalix": {
+      "chance": 0.3
+    },
+    "betterend:lumecorn_seed": {
+      "chance": 0.3
+    },
+    "betterend:bolux_mushroom": {
+      "chance": 0.3
+    },
+    "betterend:blue_vine_seed": {
+      "chance": 0.3
+    },
+    "betterend:bubble_coral": {
+      "chance": 0.3
     }
   }
 }
