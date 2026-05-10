@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-08T21:05:33.9969681	Loot Tables
+// 1.21.1	2026-05-10T13:15:20.5353011	Loot Tables
 ac9a13367a61c43f6301dc19121418ed07e8275e data/betterend/loot_table/blocks/aeridium.json
 87892ca56aab0910b5df9d2062ed29fda4f92b08 data/betterend/loot_table/blocks/aeternium_block.json
 156dc6ab73da5599c452b663d4288c6901ac6491 data/betterend/loot_table/blocks/amaranita_cap.json
@@ -361,7 +361,7 @@ d5c48fdf0a9566fd21d458972afa1cff5941605d data/betterend/loot_table/blocks/mossy_
 a4191f48dd864a9818ce42618945f21ae7d5d897 data/betterend/loot_table/blocks/mossy_glowshroom_wood.json
 670e55286377c88351006cad6531aafbab0c9249 data/betterend/loot_table/blocks/mossy_obsidian.json
 ef8814385d863cbe8c66d99d603d8c332ca9ffd8 data/betterend/loot_table/blocks/murkweed.json
-bc2caff1d9dda51ce7a97fe55c06989d9f8e3145 data/betterend/loot_table/blocks/needlegrass.json
+bd3f1af85a6bb386f5babf9489edb5f5527d02b9 data/betterend/loot_table/blocks/needlegrass.json
 726219821b967d74923323d11afda6accc8f5498 data/betterend/loot_table/blocks/neon_cactus.json
 6cb35ee3189affb211c2bbd3c7cdd0e55d81dc6e data/betterend/loot_table/blocks/neon_cactus_block.json
 932c724a53d7f1eac7da5bd6267d4b84e8d2f361 data/betterend/loot_table/blocks/neon_cactus_slab.json
@@ -433,7 +433,7 @@ a45d95c2048f35618e44699898960b6a3d67adb2 data/betterend/loot_table/blocks/shadow
 b6bd0cca11597fc355db68b31e9604f9d0628442 data/betterend/loot_table/blocks/silk_moth_hive.json
 110012045936237601a9bc74d91ad34c9d75e3c9 data/betterend/loot_table/blocks/silk_moth_nest.json
 624516ce4ba08b97e3607fce780ecd56111ddcd7 data/betterend/loot_table/blocks/small_amaranita_mushroom.json
-e41ed7ed21923324e06e738b2f7b2426e60ba26b data/betterend/loot_table/blocks/small_jellyshroom.json
+c97508a79cac02a4fcacdbfb7e7628c86b341d00 data/betterend/loot_table/blocks/small_jellyshroom.json
 bf9dc74a4a07df604740f946a9fedbf8cce480b7 data/betterend/loot_table/blocks/smaragdant_crystal.json
 8539922d85483160faa618179ad4709dacfae03a data/betterend/loot_table/blocks/smaragdant_crystal_bricks.json
 6784fa77ecbdbc216e6eb26b08397583b90a8c2c data/betterend/loot_table/blocks/smaragdant_crystal_bricks_slab.json

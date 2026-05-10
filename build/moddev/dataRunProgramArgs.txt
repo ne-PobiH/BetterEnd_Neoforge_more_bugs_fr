@@ -7,7 +7,7 @@ forgedatadev
 --assetIndex
 17
 --assetsDir
-C:\\Users\\PobiH\\.gradle\\caches\\neoformruntime\\assets
+C:\\Users\\Professional\\.gradle\\caches\\neoformruntime\\assets
 --gameDir
 .
 --fml.fmlVersion
@@ -24,6 +24,6 @@ C:\\Users\\PobiH\\.gradle\\caches\\neoformruntime\\assets
 betterend
 --all
 --output
-C:\\Users\\PobiH\\Documents\\GitHub\\BetterEnd_Neoforge_more_bugs_fr\\src\\main\\generated
+C:\\Users\\Professional\\Documents\\GitHub\\BetterEnd_Neoforge_more_bugs_fr\\src\\main\\generated
 --existing
-C:\\Users\\PobiH\\Documents\\GitHub\\BetterEnd_Neoforge_more_bugs_fr\\src\\main\\resources
+C:\\Users\\Professional\\Documents\\GitHub\\BetterEnd_Neoforge_more_bugs_fr\\src\\main\\resources

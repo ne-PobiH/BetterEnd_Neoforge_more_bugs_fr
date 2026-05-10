@@ -67,7 +67,6 @@ public class BetterEnd {
         modBus.addListener(RegisterEvent.class, EndPotions::onRegister);
         modBus.addListener(RegisterEvent.class, BECriteria::onRegister);
         modBus.addListener(RegisterEvent.class, CreativeTabs::onRegister);
-        modBus.addListener(EndCompostables::register);
         if (BYG.isLoaded()) {
             modBus.addListener(RegisterEvent.class, BYGFeatures::onRegister);
         }

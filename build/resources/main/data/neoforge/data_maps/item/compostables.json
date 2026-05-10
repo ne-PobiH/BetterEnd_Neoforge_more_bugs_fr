@@ -1,0 +1,118 @@
+{
+  "values": {
+    "betterend:aeridium": {
+      "chance": 0.65
+    },
+    "betterend:amber_grass": {
+      "chance": 0.3
+    },
+    "betterend:blossom_berry": {
+      "chance": 0.65
+    },
+    "betterend:blooming_cooksonia": {
+      "chance": 0.65
+    },
+    "betterend:bushy_grass": {
+      "chance": 0.3
+    },
+    "betterend:chorus_grass": {
+      "chance": 0.3
+    },
+    "betterend:clawfern": {
+      "chance": 0.65
+    },
+    "betterend:creeping_moss": {
+      "chance": 0.3
+    },
+    "betterend:crystal_grass": {
+      "chance": 0.3
+    },
+    "betterend:cyan_moss": {
+      "chance": 0.3
+    },
+    "betterend:dragon_tree_leaves": {
+      "chance": 0.3
+    },
+    "betterend:end_lily_leaf": {
+      "chance": 0.3
+    },
+    "betterend:fracturn": {
+      "chance": 0.65
+    },
+    "betterend:globulagus": {
+      "chance": 0.65
+    },
+    "betterend:helix_tree_leaves": {
+      "chance": 0.3
+    },
+    "betterend:helix_tree_sapling": {
+      "chance": 0.3
+    },
+    "betterend:lamellarium": {
+      "chance": 0.65
+    },
+    "betterend:lucernia_leaves": {
+      "chance": 0.3
+    },
+    "betterend:lucernia_sapling": {
+      "chance": 0.3
+    },
+    "betterend:lutebus": {
+      "chance": 0.65
+    },
+    "betterend:mossy_glowshroom_sapling": {
+      "chance": 0.3
+    },
+    "betterend:murkweed": {
+      "chance": 0.3
+    },
+    "betterend:needlegrass": {
+      "chance": 0.3
+    },
+    "betterend:orango": {
+      "chance": 0.65
+    },
+    "betterend:pythadendron_leaves": {
+      "chance": 0.3
+    },
+    "betterend:pythadendron_sapling": {
+      "chance": 0.3
+    },
+    "betterend:salteago": {
+      "chance": 0.65
+    },
+    "betterend:shadow_plant": {
+      "chance": 0.65
+    },
+    "betterend:small_amaranita_mushroom": {
+      "chance": 0.65
+    },
+    "betterend:small_jellyshroom": {
+      "chance": 0.65
+    },
+    "betterend:tail_moss": {
+      "chance": 0.3
+    },
+    "betterend:tenanea_leaves": {
+      "chance": 0.3
+    },
+    "betterend:tenanea_sapling": {
+      "chance": 0.3
+    },
+    "betterend:twisted_moss": {
+      "chance": 0.3
+    },
+    "betterend:twisted_umbrella_moss": {
+      "chance": 0.3
+    },
+    "betterend:umbrella_moss": {
+      "chance": 0.3
+    },
+    "betterend:umbrella_tree_sapling": {
+      "chance": 0.3
+    },
+    "betterend:vaiolush_fern": {
+      "chance": 0.65
+    }
+  }
+}

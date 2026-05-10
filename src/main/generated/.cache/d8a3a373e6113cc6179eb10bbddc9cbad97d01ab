@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-09T21:46:51.8163402	Model Definitions - betterend
+// 1.21.1	2026-05-10T12:31:37.9915402	Model Definitions - betterend
 fdc1859f35bd4d76b450a333a9bc810128e90e67 assets/betterend/blockstates/aeternium_anvil.json
 3f0441ae6a2509b32b688df4df6249f3fac457fc assets/betterend/blockstates/aeternium_block.json
 e82a8d39ccf115aab206603f0f47dd27d53b3429 assets/betterend/blockstates/amaranita_cap.json
@@ -420,7 +420,6 @@ a83d4f2ced69410fa2fa43a3a3f58047498a9e77 assets/betterend/blockstates/tenanea_co
 2e458fc26e85554edf4b67f2f8881d0c9446d0b0 assets/betterend/blockstates/tenanea_hanging_sign.json
 47764f820930447c20dcfcbd1ad96e779ba68025 assets/betterend/blockstates/tenanea_ladder.json
 02673f1332b7c92c327e0de641fb493f41c1d3e2 assets/betterend/blockstates/tenanea_log.json
-cc5f06f67ee9f51bb27e6c125d7d3b9903080d40 assets/betterend/blockstates/tenanea_outer_leaves.json
 003a95cb4c87bb164ff2968de92356f546e7d75c assets/betterend/blockstates/tenanea_planks.json
 a09979aa1763d94dae09c887931c2dc3d6485987 assets/betterend/blockstates/tenanea_plate.json
 2e458fc26e85554edf4b67f2f8881d0c9446d0b0 assets/betterend/blockstates/tenanea_sign.json
@@ -1355,7 +1354,6 @@ fe70b1793ab939ef40db0c43f639d3c110c514bd assets/betterend/models/block/tenanea_g
 bf141ce9821f8eb09f5577befc8f078d1162a0ea assets/betterend/models/block/tenanea_ladder.json
 11d454f8ecbf93665e9bdf2079c2ccb4571a87af assets/betterend/models/block/tenanea_leaves_potted.json
 ebcf20eda0813460f723d80afee9fbad06197d34 assets/betterend/models/block/tenanea_log.json
-66f112b564ede46c2fa0d7c9ba73187fd5f5ee44 assets/betterend/models/block/tenanea_outer_leaves.json
 3490fc962ea06bd081b871509fb2ceb8b8b073de assets/betterend/models/block/tenanea_planks.json
 a1be8c34a2a7be40be73f7c7fe45ffcce3f1cc73 assets/betterend/models/block/tenanea_planks_particles.json
 07f297c9a17e9a78b41589ac615943387fe40fd9 assets/betterend/models/block/tenanea_plate.json
