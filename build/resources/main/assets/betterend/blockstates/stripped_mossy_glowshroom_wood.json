@@ -1,16 +1,25 @@
 {
-  "variants": {
-    "axis=x": {
-      "model": "betterend:block/stripped_mossy_glowshroom_wood",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y": {
-      "model": "betterend:block/stripped_mossy_glowshroom_wood"
-    },
-    "axis=z": {
-      "model": "betterend:block/stripped_mossy_glowshroom_wood",
-      "x": 90
-    }
-  }
+	"variants": {
+		"axis=x": [
+			{ "model": "betterend:block/stripped_mossy_glowshroom_wood", "x": 90, "y": 90 },
+			{ "model": "betterend:block/stripped_mossy_glowshroom_wood_2", "x": 90, "y": 90 },
+			{ "model": "betterend:block/stripped_mossy_glowshroom_wood_3", "x": 90, "y": 90 },
+			{ "model": "betterend:block/stripped_mossy_glowshroom_wood_4", "x": 90, "y": 90 },
+			{ "model": "betterend:block/stripped_mossy_glowshroom_wood_5", "x": 90, "y": 90 }
+		],
+		"axis=y": [
+			{ "model": "betterend:block/stripped_mossy_glowshroom_wood" },
+			{ "model": "betterend:block/stripped_mossy_glowshroom_wood_2" },
+			{ "model": "betterend:block/stripped_mossy_glowshroom_wood_3" },
+			{ "model": "betterend:block/stripped_mossy_glowshroom_wood_4" },
+			{ "model": "betterend:block/stripped_mossy_glowshroom_wood_5" }
+		],
+		"axis=z": [
+			{ "model": "betterend:block/stripped_mossy_glowshroom_wood", "x": 90 },
+			{ "model": "betterend:block/stripped_mossy_glowshroom_wood_2", "x": 90 },
+			{ "model": "betterend:block/stripped_mossy_glowshroom_wood_3", "x": 90 },
+			{ "model": "betterend:block/stripped_mossy_glowshroom_wood_4", "x": 90 },
+			{ "model": "betterend:block/stripped_mossy_glowshroom_wood_5", "x": 90 }
+		]
+	}
 }

@@ -15,6 +15,9 @@ public class EndWoodenComplexMaterial extends WoodenComplexMaterial {
     private Block bark;
     private Block log;
 
+    private Block strippedBark;
+    private Block strippedLog;
+
     public EndWoodenComplexMaterial(String name, MapColor woodColor, MapColor planksColor, Block furnitureCloth) {
         super(BetterEnd.C, name, name, woodColor, planksColor);
         this.setFurnitureCloth(furnitureCloth);
@@ -38,12 +41,11 @@ public class EndWoodenComplexMaterial extends WoodenComplexMaterial {
                     .add(WoodSlots.TABURET)
                     .add(WoodSlots.BAR_STOOL)
                     .add(WoodSlots.CHAIR)
-                    .add(WoodSlots.WALL)
-                ;
+                    .add(WoodSlots.WALL);
     }
 
     public boolean isTreeLog(Block block) {
-        return block == getLog() || block == getBark();
+        return block == getLog() || block == getBark() || block == getStrippedLog() || block == getStrippedBark();
     }
 
     public boolean isTreeLog(BlockState state) {
@@ -62,5 +64,19 @@ public class EndWoodenComplexMaterial extends WoodenComplexMaterial {
             bark = getBlock("bark");
         }
         return bark;
+    }
+
+    public Block getStrippedLog() {
+        if (strippedLog == null) {
+            strippedLog = getBlock("stripped_log");
+        }
+        return strippedLog;
+    }
+
+    public Block getStrippedBark() {
+        if (strippedBark == null) {
+            strippedBark = getBlock("stripped_bark");
+        }
+        return strippedBark;
     }
 }
