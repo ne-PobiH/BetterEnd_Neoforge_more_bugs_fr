@@ -1,136 +1,136 @@
-[10мая2026 14:48:09.225] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatadev, --assetIndex, 17, --assetsDir, C:\\Users\\PobiH\\.gradle\\caches\\neoformruntime\\assets, --gameDir, ., --fml.fmlVersion, 4.0.42, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.228, --fml.neoFormVersion, 20240808.144430, --mod, betterend, --all, --output, C:\\Users\\PobiH\\Documents\\GitHub\\BetterEnd_Neoforge_more_bugs_fr\\src\\main\\generated, --existing, C:\\Users\\PobiH\\Documents\\GitHub\\BetterEnd_Neoforge_more_bugs_fr\\src\\main\\resources]
-[10мая2026 14:48:09.229] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Microsoft OpenJDK 64-Bit Server VM 21.0.7+6-LTS
-[10мая2026 14:48:09.234] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.7 by Microsoft; OS Windows 10 arch amd64 version 10.0
-[10мая2026 14:48:09.344] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatadev
-[10мая2026 14:48:09.388] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/PobiH/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23138!/ Service=ModLauncher Env=CLIENT
-[10мая2026 14:48:09.785] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
-[10мая2026 14:48:09.787] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
+[10мая2026 16:57:51.629] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatadev, --assetIndex, 17, --assetsDir, C:\\Users\\PobiH\\.gradle\\caches\\neoformruntime\\assets, --gameDir, ., --fml.fmlVersion, 4.0.42, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.228, --fml.neoFormVersion, 20240808.144430, --mod, betterend, --all, --output, C:\\Users\\PobiH\\Documents\\GitHub\\BetterEnd_Neoforge_more_bugs_fr\\src\\main\\generated, --existing, C:\\Users\\PobiH\\Documents\\GitHub\\BetterEnd_Neoforge_more_bugs_fr\\src\\main\\resources]
+[10мая2026 16:57:51.633] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Microsoft OpenJDK 64-Bit Server VM 21.0.7+6-LTS
+[10мая2026 16:57:51.635] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.7 by Microsoft; OS Windows 10 arch amd64 version 10.0
+[10мая2026 16:57:51.744] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatadev
+[10мая2026 16:57:51.781] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/PobiH/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23138!/ Service=ModLauncher Env=CLIENT
+[10мая2026 16:57:52.134] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[10мая2026 16:57:52.136] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
      Mod List:
 		Name Version (Mod Id)
 
 		Bad Packets 0.8.1 (badpackets)
 		BCLib 21.0.20 (bclib)
-		Better End 21.0.24 (betterend)
+		Better End reimagined 21.0.26 (betterend)
 		EMI 1.1.8+1.21+neoforge (emi)
 		Minecraft 1.21.1 (minecraft)
 		NeoForge 21.1.228 (neoforge)
 		WorldWeaver 21.0.18 (wover)
 		wthit 12.8.3 (wthit)
 		WunderLib 21.0.10 (wunderlib)
-[10мая2026 14:48:11.033] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[10мая2026 14:48:11.038] [main/INFO] [mixin/]: Compatibility level set to JAVA_21
-[10мая2026 14:48:11.092] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatadev' with arguments [--gameDir, ., --assetsDir, C:\Users\PobiH\.gradle\caches\neoformruntime\assets, --assetIndex, 17, --mod, betterend, --all, --output, C:\\Users\\PobiH\\Documents\\GitHub\\BetterEnd_Neoforge_more_bugs_fr\\src\\main\\generated, --existing, C:\\Users\\PobiH\\Documents\\GitHub\\BetterEnd_Neoforge_more_bugs_fr\\src\\main\\resources]
-[10мая2026 14:48:11.430] [main/WARN] [mixin/]: Error loading class: mezz/jei/library/load/PluginCaller (java.lang.ClassNotFoundException: mezz.jei.library.load.PluginCaller)
-[10мая2026 14:48:11.726] [main/WARN] [mixin/]: Error loading class: com/teamabnormals/blueprint/common/world/modification/ModdedBiomeSource (java.lang.ClassNotFoundException: com.teamabnormals.blueprint.common.world.modification.ModdedBiomeSource)
-[10мая2026 14:48:12.066] [main/INFO] [net.neoforged.neoforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [betterend]
-[10мая2026 14:48:12.079] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
-[10мая2026 14:48:18.351] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.228, for MC 1.21.1
-[10мая2026 14:48:18.410] [modloading-worker-0/INFO] [wover-core/]: (DEBUG) Adding dynamic registry: wover:wover/world_preset_info
-[10мая2026 14:48:18.416] [modloading-worker-0/INFO] [wover-core/]: (DEBUG) Adding dynamic registry bootstrap: minecraft:worldgen/world_preset
-[10мая2026 14:48:18.418] [modloading-worker-0/INFO] [wover-core/]: (DEBUG) Adding dynamic registry bootstrap: minecraft:worldgen/flat_level_generator_preset
-[10мая2026 14:48:18.426] [modloading-worker-0/INFO] [wover-core/]: (DEBUG) Adding dynamic registry: wover:worldgen/surface_rules
-[10мая2026 14:48:18.442] [modloading-worker-0/INFO] [wover-core/]: (DEBUG) Adding dynamic registry bootstrap: minecraft:worldgen/structure
-[10мая2026 14:48:18.501] [modloading-worker-0/INFO] [wover-core/]: (DEBUG) Adding dynamic registry bootstrap: minecraft:worldgen/biome
-[10мая2026 14:48:18.504] [modloading-worker-0/INFO] [wover-core/]: (DEBUG) Creating registry: wover:wover/biome_codec_network
-[10мая2026 14:48:18.505] [modloading-worker-0/INFO] [wover-core/]: (DEBUG) Creating registry: wover:wover/biome_codec
-[10мая2026 14:48:18.524] [modloading-worker-0/INFO] [wover-core/]: (DEBUG) Adding dynamic registry: wover:worldgen/biome_modifications
-[10мая2026 14:48:18.630] [modloading-sync-worker/INFO] [wover-core/]: Processing wover.datapack.registry Entrypoints
-[10мая2026 14:48:18.631] [modloading-sync-worker/INFO] [wover-core/]:     - Processing Entrypoint: org.betterx.wover.entrypoint.BiomeDatapackRegistryEntrypoint
-[10мая2026 14:48:18.632] [modloading-sync-worker/INFO] [wover-core/]: (DEBUG) Adding dynamic registry: wover:worldgen/biome_data
-[10мая2026 14:48:18.632] [modloading-sync-worker/INFO] [wover-core/]:     - Processing Entrypoint: org.betterx.wover.entrypoint.FeatureDatapackRegistryEntrypoint
-[10мая2026 14:48:18.634] [modloading-sync-worker/INFO] [wover-core/]: (DEBUG) Adding dynamic registry bootstrap: minecraft:worldgen/configured_feature
-[10мая2026 14:48:18.635] [modloading-sync-worker/INFO] [wover-core/]: (DEBUG) Adding dynamic registry bootstrap: minecraft:worldgen/placed_feature
-[10мая2026 14:48:18.635] [modloading-sync-worker/INFO] [wover-core/]:     - Processing Entrypoint: org.betterx.wover.entrypoint.ItemDatapackRegistryEntrypoint
-[10мая2026 14:48:18.636] [modloading-sync-worker/INFO] [wover-core/]: (DEBUG) Adding dynamic registry bootstrap: minecraft:enchantment
-[10мая2026 14:48:18.636] [modloading-sync-worker/INFO] [wover-core/]:     - Processing Entrypoint: org.betterx.wover.entrypoint.StructureDatapackRegistryEntrypoint
-[10мая2026 14:48:18.637] [modloading-sync-worker/INFO] [wover-core/]: (DEBUG) Adding dynamic registry bootstrap: minecraft:worldgen/template_pool
-[10мая2026 14:48:18.638] [modloading-sync-worker/INFO] [wover-core/]: (DEBUG) Adding dynamic registry bootstrap: minecraft:worldgen/structure_set
-[10мая2026 14:48:18.638] [modloading-sync-worker/INFO] [wover-core/]:     - Processing Entrypoint: org.betterx.wover.entrypoint.SurfaceDatapackRegistryEntrypoint
-[10мая2026 14:48:18.657] [modloading-sync-worker/INFO] [wover-core/]: (DEBUG) Skipping WORLDGEN_REGISTRIES injection; DataPackRegistryEvent handles custom registries.
-[10мая2026 14:48:24.265] [modloading-sync-worker/WARN] [betterend/]: Generating Debug Helpers
-[10мая2026 14:48:24.288] [modloading-sync-worker/WARN] [betterend/]: Skip eternal_portal POI registration: Block{betterend:end_portal_block}[axis=x,portal=0] is defined in more than one PoI type
-[10мая2026 14:48:24.289] [modloading-sync-worker/WARN] [betterend/]: Skip eternal_portal_frame POI registration: Block{betterend:flavolite_runed_eternal}[active=false] is defined in more than one PoI type
-[10мая2026 14:48:24.971] [Worker-Main-1/WARN] [wover-core/]: DID NOT bootstrap VanillaRegistries.
-[10мая2026 14:48:25.009] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/PobiH/Documents/GitHub/BetterEnd_Neoforge_more_bugs_fr/build/moddev/artifacts/neoforge-21.1.228.jar%23189!/assets/.mcassetsroot' uses unexpected schema
-[10мая2026 14:48:25.009] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/PobiH/Documents/GitHub/BetterEnd_Neoforge_more_bugs_fr/build/moddev/artifacts/neoforge-21.1.228.jar%23189!/data/.mcassetsroot' uses unexpected schema
-[10мая2026 14:48:25.162] [main/INFO] [wover-datagen/]: (DEBUG) Ignoring run for BCLibDatagen for ModCore: bclib (bclib)
-[10мая2026 14:48:25.164] [main/INFO] [wover-datagen/]: (DEBUG) Initializing WoverDataGenEntryPoint:org.betterx.datagen.betterend.BetterEndDatagen for ModCore: betterend (betterend)
-[10мая2026 14:48:25.167] [main/INFO] [wover-datagen/]: (DEBUG) Instantiating auto provider: org.betterx.wover.datagen.impl.AutoBlockTagProvider
-[10мая2026 14:48:25.167] [main/INFO] [wover-datagen/]: (DEBUG) Instantiating auto provider: org.betterx.wover.datagen.impl.AutoItemTagProvider
-[10мая2026 14:48:25.167] [main/INFO] [wover-datagen/]: (DEBUG) Instantiating auto provider: org.betterx.wover.datagen.impl.AutoBiomeTagProvider
-[10мая2026 14:48:25.168] [main/INFO] [wover-datagen/]: (DEBUG) Instantiating auto provider: org.betterx.wover.item.impl.AutoItemRegistryTagProvider
-[10мая2026 14:48:25.168] [main/INFO] [wover-tag/]: (DEBUG) Redirecting org.betterx.wover.item.impl.AutoItemRegistryTagProvider to org.betterx.wover.datagen.impl.AutoItemTagProvider
-[10мая2026 14:48:25.169] [main/INFO] [wover-datagen/]: (DEBUG) Instantiating auto provider: org.betterx.wover.datagen.api.provider.AutoBlockRegistryTagProvider
-[10мая2026 14:48:25.169] [main/INFO] [wover-tag/]: (DEBUG) Redirecting org.betterx.wover.datagen.api.provider.AutoBlockRegistryTagProvider  to org.betterx.wover.datagen.impl.AutoBlockTagProvider ([betterend, betterend])
-[10мая2026 14:48:25.169] [main/INFO] [wover-datagen/]: (DEBUG) Instantiating auto provider: org.betterx.datagen.bclib.worldgen.BCLAutoBlockTagProvider
-[10мая2026 14:48:25.169] [main/INFO] [wover-tag/]: (DEBUG) Redirecting org.betterx.datagen.bclib.worldgen.BCLAutoBlockTagProvider  to org.betterx.wover.datagen.impl.AutoBlockTagProvider ([betterend, betterend])
-[10мая2026 14:48:25.169] [main/INFO] [wover-datagen/]: (DEBUG) Instantiating auto provider: org.betterx.datagen.bclib.worldgen.BCLAutoItemTagProvider
-[10мая2026 14:48:25.170] [main/INFO] [wover-tag/]: (DEBUG) Redirecting org.betterx.datagen.bclib.worldgen.BCLAutoItemTagProvider to org.betterx.wover.datagen.impl.AutoItemTagProvider
-[10мая2026 14:48:25.206] [main/INFO] [wover-tag/]: (DEBUG) Redirecting org.betterx.wover.datagen.api.provider.multi.WoverBiomeProvider$4 to org.betterx.wover.datagen.impl.AutoBiomeTagProvider
-[10мая2026 14:48:25.207] [main/INFO] [wover-tag/]: (DEBUG) Redirecting org.betterx.datagen.betterend.tags.BlockTagProvider  to org.betterx.wover.datagen.impl.AutoBlockTagProvider ([betterend, betterend, betterend, betterend])
-[10мая2026 14:48:25.209] [main/INFO] [wover-tag/]: (DEBUG) Redirecting org.betterx.datagen.betterend.tags.ItemTagProvider to org.betterx.wover.datagen.impl.AutoItemTagProvider
-[10мая2026 14:48:25.210] [main/INFO] [wover-tag/]: (DEBUG) Redirecting org.betterx.datagen.betterend.tags.BiomeTagProvider to org.betterx.wover.datagen.impl.AutoBiomeTagProvider
-[10мая2026 14:48:25.216] [main/INFO] [wover-tag/]: (DEBUG) Redirecting org.betterx.wover.datagen.api.provider.multi.WoverStructureProvider$5 to org.betterx.wover.datagen.impl.AutoBiomeTagProvider
-[10мая2026 14:48:25.242] [main/INFO] [betterend/]: Registering betterend:default (Biome)
-[10мая2026 14:48:25.243] [main/INFO] [betterend/]: Registering betterend:default (Biome Data)
-[10мая2026 14:48:25.243] [main/INFO] [betterend/]: Registering betterend:default (Surface Rules)
-[10мая2026 14:48:25.243] [main/INFO] [betterend/]: Registering BetterEnd - Jukebox
-[10мая2026 14:48:25.243] [main/INFO] [betterend/]: Registering betterend:default (Structures)
-[10мая2026 14:48:25.243] [main/INFO] [betterend/]: Registering betterend:default (Structure Sets)
-[10мая2026 14:48:25.243] [main/INFO] [betterend/]: Registering betterend:default (Structure Pools)
-[10мая2026 14:48:25.243] [main/INFO] [betterend/]: Registering betterend:default (Structure Processors)
-[10мая2026 14:48:25.243] [main/INFO] [betterend/]: Registering betterend:vegetation (Configured Features)
-[10мая2026 14:48:25.244] [main/INFO] [betterend/]: Registering betterend:vegetation (Placed Features)
-[10мая2026 14:48:25.244] [main/INFO] [betterend/]: Registering betterend:ores (Configured Features)
-[10мая2026 14:48:25.244] [main/INFO] [betterend/]: Registering betterend:ores (Placed Features)
-[10мая2026 14:48:25.244] [main/INFO] [betterend/]: Registering betterend:lakes (Configured Features)
-[10мая2026 14:48:25.244] [main/INFO] [betterend/]: Registering betterend:lakes (Placed Features)
-[10мая2026 14:48:25.245] [main/INFO] [betterend/]: Registering betterend:terrain (Configured Features)
-[10мая2026 14:48:25.245] [main/INFO] [betterend/]: Registering betterend:terrain (Placed Features)
-[10мая2026 14:48:25.245] [main/INFO] [betterend/]: Registering betterend:caves (Configured Features)
-[10мая2026 14:48:25.245] [main/INFO] [betterend/]: Registering betterend:caves (Placed Features)
-[10мая2026 14:48:25.245] [main/INFO] [betterend/]: Registering BetterEnd - Biome Modifications
-[10мая2026 14:48:25.245] [main/INFO] [betterend/]: Registering BetterEnd - Enchantments
-[10мая2026 14:48:25.272] [main/INFO] [wover-datagen/]: (DEBUG) Ignoring run for WoverTagDatagen for ModCore: wover-tag (wover)
-[10мая2026 14:48:25.273] [main/INFO] [wover-datagen/]: (DEBUG) Ignoring run for LibWoverItemDatagen for ModCore: wover-item (wover)
-[10мая2026 14:48:25.273] [main/INFO] [wover-datagen/]: (DEBUG) Ignoring run for LibWoverRecipeDatagen for ModCore: wover-recipe (wover)
-[10мая2026 14:48:25.273] [main/INFO] [wover-datagen/]: (DEBUG) Ignoring run for WoverWorldPresetDatagen for ModCore: wover-preset (wover)
-[10мая2026 14:48:25.273] [main/INFO] [wover-datagen/]: (DEBUG) Ignoring run for WoverSurfaceDatagen for ModCore: wover-surface (wover)
-[10мая2026 14:48:25.273] [main/INFO] [wover-datagen/]: (DEBUG) Ignoring run for WoverWorldGeneratorDatagen for ModCore: wover-generator (wover)
-[10мая2026 14:48:25.403] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[10мая2026 14:48:25.760] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 356 ms
-[10мая2026 14:48:25.760] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: betterend/AutoBlockTagProvider (Tags for minecraft:block mod id betterend)
-[10мая2026 14:48:25.766] [main/INFO] [wover-tag/]: (DEBUG)    AutoBlockTagProvider includes AutoBlockRegistryTagProvider for betterend
-[10мая2026 14:48:25.770] [main/INFO] [wover-tag/]: (DEBUG)    AutoBlockTagProvider includes BCLAutoBlockTagProvider for betterend
-[10мая2026 14:48:25.771] [main/INFO] [bclib/]: (DEBUG) Processing Blocks for betterend
-[10мая2026 14:48:25.774] [main/INFO] [wover-tag/]: (DEBUG)    AutoBlockTagProvider includes BlockTagProvider for betterend
-[10мая2026 14:48:25.809] [main/INFO] [wover-tag/]: (DEBUG)     ****> Writing tags for [betterend, betterend, betterend, betterend, betterend, betterend]
-[10мая2026 14:48:25.825] [main/INFO] [net.minecraft.data.DataGenerator/]: betterend/AutoBlockTagProvider (Tags for minecraft:block mod id betterend) finished after 64 ms
-[10мая2026 14:48:25.825] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: betterend/AutoItemTagProvider (Tags for minecraft:item mod id betterend)
-[10мая2026 14:48:25.828] [main/INFO] [wover-tag/]: (DEBUG)    AutoItemTagProvider includes AutoItemRegistryTagProvider for betterend
-[10мая2026 14:48:25.834] [main/INFO] [wover-tag/]: (DEBUG)    AutoItemTagProvider includes BCLAutoItemTagProvider for betterend
-[10мая2026 14:48:25.835] [main/INFO] [bclib/]: (DEBUG) Processing Items for betterend
-[10мая2026 14:48:25.839] [main/INFO] [wover-tag/]: (DEBUG)    AutoItemTagProvider includes ItemTagProvider for betterend
-[10мая2026 14:48:25.844] [main/INFO] [wover-tag/]: (DEBUG)     ****> Writing tags for [betterend, betterend, betterend, betterend, betterend, betterend]
-[10мая2026 14:48:25.853] [main/INFO] [net.minecraft.data.DataGenerator/]: betterend/AutoItemTagProvider (Tags for minecraft:item mod id betterend) finished after 27 ms
-[10мая2026 14:48:25.853] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: betterend/AutoBiomeTagProvider (Tags for minecraft:worldgen/biome mod id betterend)
-[10мая2026 14:48:25.853] [main/INFO] [wover-tag/]: (DEBUG)    AutoBiomeTagProvider includes  for betterend
-[10мая2026 14:48:25.854] [main/INFO] [wover-tag/]: (DEBUG)    AutoBiomeTagProvider includes BiomeTagProvider for betterend
-[10мая2026 14:48:25.854] [main/INFO] [wover-tag/]: (DEBUG)    AutoBiomeTagProvider includes  for betterend
-[10мая2026 14:48:25.854] [main/INFO] [wover-tag/]: (DEBUG)     ****> Writing tags for [betterend, betterend, betterend, betterend, betterend, betterend, betterend, betterend]
-[10мая2026 14:48:25.856] [main/INFO] [net.minecraft.data.DataGenerator/]: betterend/AutoBiomeTagProvider (Tags for minecraft:worldgen/biome mod id betterend) finished after 2 ms
-[10мая2026 14:48:25.856] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Model Definitions - betterend
-[10мая2026 14:48:26.110] [main/INFO] [net.minecraft.data.DataGenerator/]: Model Definitions - betterend finished after 253 ms
-[10мая2026 14:48:26.111] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
-[10мая2026 14:48:26.169] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 58 ms
-[10мая2026 14:48:26.169] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[10мая2026 14:48:26.285] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 114 ms
-[10мая2026 14:48:26.285] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: betterend Recipes
-[10мая2026 14:48:26.563] [main/INFO] [net.minecraft.data.DataGenerator/]: betterend Recipes finished after 278 ms
-[10мая2026 14:48:26.564] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Pack Metadata [betterend:nourish_extensions]
-[10мая2026 14:48:26.569] [main/INFO] [net.minecraft.data.DataGenerator/]: Pack Metadata [betterend:nourish_extensions] finished after 4 ms
-[10мая2026 14:48:26.569] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: nourish/NourishItemTagProvider (Tags for minecraft:item mod id nourish)
-[10мая2026 14:48:26.570] [main/INFO] [wover-tag/]: (DEBUG)     ****> Writing tags for [nourish, nourish]
-[10мая2026 14:48:26.571] [main/INFO] [net.minecraft.data.DataGenerator/]: nourish/NourishItemTagProvider (Tags for minecraft:item mod id nourish) finished after 1 ms
-[10мая2026 14:48:26.572] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 1169 ms
-[10мая2026 14:48:26.620] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 4990, old count: 4990, new count: 4991, removed stale: 0, written: 0
+[10мая2026 16:57:53.218] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[10мая2026 16:57:53.221] [main/INFO] [mixin/]: Compatibility level set to JAVA_21
+[10мая2026 16:57:53.268] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatadev' with arguments [--gameDir, ., --assetsDir, C:\Users\PobiH\.gradle\caches\neoformruntime\assets, --assetIndex, 17, --mod, betterend, --all, --output, C:\\Users\\PobiH\\Documents\\GitHub\\BetterEnd_Neoforge_more_bugs_fr\\src\\main\\generated, --existing, C:\\Users\\PobiH\\Documents\\GitHub\\BetterEnd_Neoforge_more_bugs_fr\\src\\main\\resources]
+[10мая2026 16:57:53.549] [main/WARN] [mixin/]: Error loading class: mezz/jei/library/load/PluginCaller (java.lang.ClassNotFoundException: mezz.jei.library.load.PluginCaller)
+[10мая2026 16:57:53.773] [main/WARN] [mixin/]: Error loading class: com/teamabnormals/blueprint/common/world/modification/ModdedBiomeSource (java.lang.ClassNotFoundException: com.teamabnormals.blueprint.common.world.modification.ModdedBiomeSource)
+[10мая2026 16:57:54.074] [main/INFO] [net.neoforged.neoforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [betterend]
+[10мая2026 16:57:54.090] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
+[10мая2026 16:57:59.111] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.228, for MC 1.21.1
+[10мая2026 16:57:59.162] [modloading-worker-0/INFO] [wover-core/]: (DEBUG) Adding dynamic registry: wover:wover/world_preset_info
+[10мая2026 16:57:59.165] [modloading-worker-0/INFO] [wover-core/]: (DEBUG) Adding dynamic registry bootstrap: minecraft:worldgen/world_preset
+[10мая2026 16:57:59.168] [modloading-worker-0/INFO] [wover-core/]: (DEBUG) Adding dynamic registry bootstrap: minecraft:worldgen/flat_level_generator_preset
+[10мая2026 16:57:59.175] [modloading-worker-0/INFO] [wover-core/]: (DEBUG) Adding dynamic registry: wover:worldgen/surface_rules
+[10мая2026 16:57:59.191] [modloading-worker-0/INFO] [wover-core/]: (DEBUG) Adding dynamic registry bootstrap: minecraft:worldgen/structure
+[10мая2026 16:57:59.230] [modloading-worker-0/INFO] [wover-core/]: (DEBUG) Adding dynamic registry bootstrap: minecraft:worldgen/biome
+[10мая2026 16:57:59.232] [modloading-worker-0/INFO] [wover-core/]: (DEBUG) Creating registry: wover:wover/biome_codec_network
+[10мая2026 16:57:59.234] [modloading-worker-0/INFO] [wover-core/]: (DEBUG) Creating registry: wover:wover/biome_codec
+[10мая2026 16:57:59.253] [modloading-worker-0/INFO] [wover-core/]: (DEBUG) Adding dynamic registry: wover:worldgen/biome_modifications
+[10мая2026 16:57:59.345] [modloading-sync-worker/INFO] [wover-core/]: Processing wover.datapack.registry Entrypoints
+[10мая2026 16:57:59.346] [modloading-sync-worker/INFO] [wover-core/]:     - Processing Entrypoint: org.betterx.wover.entrypoint.BiomeDatapackRegistryEntrypoint
+[10мая2026 16:57:59.346] [modloading-sync-worker/INFO] [wover-core/]: (DEBUG) Adding dynamic registry: wover:worldgen/biome_data
+[10мая2026 16:57:59.346] [modloading-sync-worker/INFO] [wover-core/]:     - Processing Entrypoint: org.betterx.wover.entrypoint.FeatureDatapackRegistryEntrypoint
+[10мая2026 16:57:59.347] [modloading-sync-worker/INFO] [wover-core/]: (DEBUG) Adding dynamic registry bootstrap: minecraft:worldgen/configured_feature
+[10мая2026 16:57:59.348] [modloading-sync-worker/INFO] [wover-core/]: (DEBUG) Adding dynamic registry bootstrap: minecraft:worldgen/placed_feature
+[10мая2026 16:57:59.349] [modloading-sync-worker/INFO] [wover-core/]:     - Processing Entrypoint: org.betterx.wover.entrypoint.ItemDatapackRegistryEntrypoint
+[10мая2026 16:57:59.352] [modloading-sync-worker/INFO] [wover-core/]: (DEBUG) Adding dynamic registry bootstrap: minecraft:enchantment
+[10мая2026 16:57:59.353] [modloading-sync-worker/INFO] [wover-core/]:     - Processing Entrypoint: org.betterx.wover.entrypoint.StructureDatapackRegistryEntrypoint
+[10мая2026 16:57:59.354] [modloading-sync-worker/INFO] [wover-core/]: (DEBUG) Adding dynamic registry bootstrap: minecraft:worldgen/template_pool
+[10мая2026 16:57:59.355] [modloading-sync-worker/INFO] [wover-core/]: (DEBUG) Adding dynamic registry bootstrap: minecraft:worldgen/structure_set
+[10мая2026 16:57:59.355] [modloading-sync-worker/INFO] [wover-core/]:     - Processing Entrypoint: org.betterx.wover.entrypoint.SurfaceDatapackRegistryEntrypoint
+[10мая2026 16:57:59.373] [modloading-sync-worker/INFO] [wover-core/]: (DEBUG) Skipping WORLDGEN_REGISTRIES injection; DataPackRegistryEvent handles custom registries.
+[10мая2026 16:58:04.396] [modloading-sync-worker/WARN] [betterend/]: Generating Debug Helpers
+[10мая2026 16:58:04.422] [modloading-sync-worker/WARN] [betterend/]: Skip eternal_portal POI registration: Block{betterend:end_portal_block}[axis=x,portal=0] is defined in more than one PoI type
+[10мая2026 16:58:04.424] [modloading-sync-worker/WARN] [betterend/]: Skip eternal_portal_frame POI registration: Block{betterend:flavolite_runed_eternal}[active=false] is defined in more than one PoI type
+[10мая2026 16:58:05.038] [Worker-Main-1/WARN] [wover-core/]: DID NOT bootstrap VanillaRegistries.
+[10мая2026 16:58:05.073] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/PobiH/Documents/GitHub/BetterEnd_Neoforge_more_bugs_fr/build/moddev/artifacts/neoforge-21.1.228.jar%23189!/assets/.mcassetsroot' uses unexpected schema
+[10мая2026 16:58:05.073] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/PobiH/Documents/GitHub/BetterEnd_Neoforge_more_bugs_fr/build/moddev/artifacts/neoforge-21.1.228.jar%23189!/data/.mcassetsroot' uses unexpected schema
+[10мая2026 16:58:05.159] [main/INFO] [wover-datagen/]: (DEBUG) Ignoring run for BCLibDatagen for ModCore: bclib (bclib)
+[10мая2026 16:58:05.159] [main/INFO] [wover-datagen/]: (DEBUG) Initializing WoverDataGenEntryPoint:org.betterx.datagen.betterend.BetterEndDatagen for ModCore: betterend (betterend)
+[10мая2026 16:58:05.160] [main/INFO] [wover-datagen/]: (DEBUG) Instantiating auto provider: org.betterx.wover.datagen.impl.AutoBlockTagProvider
+[10мая2026 16:58:05.161] [main/INFO] [wover-datagen/]: (DEBUG) Instantiating auto provider: org.betterx.wover.datagen.impl.AutoItemTagProvider
+[10мая2026 16:58:05.161] [main/INFO] [wover-datagen/]: (DEBUG) Instantiating auto provider: org.betterx.wover.datagen.impl.AutoBiomeTagProvider
+[10мая2026 16:58:05.161] [main/INFO] [wover-datagen/]: (DEBUG) Instantiating auto provider: org.betterx.wover.item.impl.AutoItemRegistryTagProvider
+[10мая2026 16:58:05.161] [main/INFO] [wover-tag/]: (DEBUG) Redirecting org.betterx.wover.item.impl.AutoItemRegistryTagProvider to org.betterx.wover.datagen.impl.AutoItemTagProvider
+[10мая2026 16:58:05.162] [main/INFO] [wover-datagen/]: (DEBUG) Instantiating auto provider: org.betterx.wover.datagen.api.provider.AutoBlockRegistryTagProvider
+[10мая2026 16:58:05.162] [main/INFO] [wover-tag/]: (DEBUG) Redirecting org.betterx.wover.datagen.api.provider.AutoBlockRegistryTagProvider  to org.betterx.wover.datagen.impl.AutoBlockTagProvider ([betterend, betterend])
+[10мая2026 16:58:05.162] [main/INFO] [wover-datagen/]: (DEBUG) Instantiating auto provider: org.betterx.datagen.bclib.worldgen.BCLAutoBlockTagProvider
+[10мая2026 16:58:05.162] [main/INFO] [wover-tag/]: (DEBUG) Redirecting org.betterx.datagen.bclib.worldgen.BCLAutoBlockTagProvider  to org.betterx.wover.datagen.impl.AutoBlockTagProvider ([betterend, betterend])
+[10мая2026 16:58:05.162] [main/INFO] [wover-datagen/]: (DEBUG) Instantiating auto provider: org.betterx.datagen.bclib.worldgen.BCLAutoItemTagProvider
+[10мая2026 16:58:05.163] [main/INFO] [wover-tag/]: (DEBUG) Redirecting org.betterx.datagen.bclib.worldgen.BCLAutoItemTagProvider to org.betterx.wover.datagen.impl.AutoItemTagProvider
+[10мая2026 16:58:05.221] [main/INFO] [wover-tag/]: (DEBUG) Redirecting org.betterx.wover.datagen.api.provider.multi.WoverBiomeProvider$4 to org.betterx.wover.datagen.impl.AutoBiomeTagProvider
+[10мая2026 16:58:05.222] [main/INFO] [wover-tag/]: (DEBUG) Redirecting org.betterx.datagen.betterend.tags.BlockTagProvider  to org.betterx.wover.datagen.impl.AutoBlockTagProvider ([betterend, betterend, betterend, betterend])
+[10мая2026 16:58:05.223] [main/INFO] [wover-tag/]: (DEBUG) Redirecting org.betterx.datagen.betterend.tags.ItemTagProvider to org.betterx.wover.datagen.impl.AutoItemTagProvider
+[10мая2026 16:58:05.224] [main/INFO] [wover-tag/]: (DEBUG) Redirecting org.betterx.datagen.betterend.tags.BiomeTagProvider to org.betterx.wover.datagen.impl.AutoBiomeTagProvider
+[10мая2026 16:58:05.228] [main/INFO] [wover-tag/]: (DEBUG) Redirecting org.betterx.wover.datagen.api.provider.multi.WoverStructureProvider$5 to org.betterx.wover.datagen.impl.AutoBiomeTagProvider
+[10мая2026 16:58:05.257] [main/INFO] [betterend/]: Registering betterend:default (Biome)
+[10мая2026 16:58:05.258] [main/INFO] [betterend/]: Registering betterend:default (Biome Data)
+[10мая2026 16:58:05.258] [main/INFO] [betterend/]: Registering betterend:default (Surface Rules)
+[10мая2026 16:58:05.259] [main/INFO] [betterend/]: Registering BetterEnd - Jukebox
+[10мая2026 16:58:05.259] [main/INFO] [betterend/]: Registering betterend:default (Structures)
+[10мая2026 16:58:05.259] [main/INFO] [betterend/]: Registering betterend:default (Structure Sets)
+[10мая2026 16:58:05.259] [main/INFO] [betterend/]: Registering betterend:default (Structure Pools)
+[10мая2026 16:58:05.259] [main/INFO] [betterend/]: Registering betterend:default (Structure Processors)
+[10мая2026 16:58:05.259] [main/INFO] [betterend/]: Registering betterend:vegetation (Configured Features)
+[10мая2026 16:58:05.260] [main/INFO] [betterend/]: Registering betterend:vegetation (Placed Features)
+[10мая2026 16:58:05.260] [main/INFO] [betterend/]: Registering betterend:ores (Configured Features)
+[10мая2026 16:58:05.260] [main/INFO] [betterend/]: Registering betterend:ores (Placed Features)
+[10мая2026 16:58:05.260] [main/INFO] [betterend/]: Registering betterend:lakes (Configured Features)
+[10мая2026 16:58:05.260] [main/INFO] [betterend/]: Registering betterend:lakes (Placed Features)
+[10мая2026 16:58:05.260] [main/INFO] [betterend/]: Registering betterend:terrain (Configured Features)
+[10мая2026 16:58:05.260] [main/INFO] [betterend/]: Registering betterend:terrain (Placed Features)
+[10мая2026 16:58:05.261] [main/INFO] [betterend/]: Registering betterend:caves (Configured Features)
+[10мая2026 16:58:05.261] [main/INFO] [betterend/]: Registering betterend:caves (Placed Features)
+[10мая2026 16:58:05.261] [main/INFO] [betterend/]: Registering BetterEnd - Biome Modifications
+[10мая2026 16:58:05.261] [main/INFO] [betterend/]: Registering BetterEnd - Enchantments
+[10мая2026 16:58:05.285] [main/INFO] [wover-datagen/]: (DEBUG) Ignoring run for WoverTagDatagen for ModCore: wover-tag (wover)
+[10мая2026 16:58:05.285] [main/INFO] [wover-datagen/]: (DEBUG) Ignoring run for LibWoverItemDatagen for ModCore: wover-item (wover)
+[10мая2026 16:58:05.285] [main/INFO] [wover-datagen/]: (DEBUG) Ignoring run for LibWoverRecipeDatagen for ModCore: wover-recipe (wover)
+[10мая2026 16:58:05.285] [main/INFO] [wover-datagen/]: (DEBUG) Ignoring run for WoverWorldPresetDatagen for ModCore: wover-preset (wover)
+[10мая2026 16:58:05.286] [main/INFO] [wover-datagen/]: (DEBUG) Ignoring run for WoverSurfaceDatagen for ModCore: wover-surface (wover)
+[10мая2026 16:58:05.286] [main/INFO] [wover-datagen/]: (DEBUG) Ignoring run for WoverWorldGeneratorDatagen for ModCore: wover-generator (wover)
+[10мая2026 16:58:05.368] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[10мая2026 16:58:05.619] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 250 ms
+[10мая2026 16:58:05.619] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: betterend/AutoBlockTagProvider (Tags for minecraft:block mod id betterend)
+[10мая2026 16:58:05.623] [main/INFO] [wover-tag/]: (DEBUG)    AutoBlockTagProvider includes AutoBlockRegistryTagProvider for betterend
+[10мая2026 16:58:05.625] [main/INFO] [wover-tag/]: (DEBUG)    AutoBlockTagProvider includes BCLAutoBlockTagProvider for betterend
+[10мая2026 16:58:05.625] [main/INFO] [bclib/]: (DEBUG) Processing Blocks for betterend
+[10мая2026 16:58:05.627] [main/INFO] [wover-tag/]: (DEBUG)    AutoBlockTagProvider includes BlockTagProvider for betterend
+[10мая2026 16:58:05.653] [main/INFO] [wover-tag/]: (DEBUG)     ****> Writing tags for [betterend, betterend, betterend, betterend, betterend, betterend]
+[10мая2026 16:58:05.668] [main/INFO] [net.minecraft.data.DataGenerator/]: betterend/AutoBlockTagProvider (Tags for minecraft:block mod id betterend) finished after 48 ms
+[10мая2026 16:58:05.668] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: betterend/AutoItemTagProvider (Tags for minecraft:item mod id betterend)
+[10мая2026 16:58:05.671] [main/INFO] [wover-tag/]: (DEBUG)    AutoItemTagProvider includes AutoItemRegistryTagProvider for betterend
+[10мая2026 16:58:05.672] [main/INFO] [wover-tag/]: (DEBUG)    AutoItemTagProvider includes BCLAutoItemTagProvider for betterend
+[10мая2026 16:58:05.672] [main/INFO] [bclib/]: (DEBUG) Processing Items for betterend
+[10мая2026 16:58:05.674] [main/INFO] [wover-tag/]: (DEBUG)    AutoItemTagProvider includes ItemTagProvider for betterend
+[10мая2026 16:58:05.678] [main/INFO] [wover-tag/]: (DEBUG)     ****> Writing tags for [betterend, betterend, betterend, betterend, betterend, betterend]
+[10мая2026 16:58:05.683] [main/INFO] [net.minecraft.data.DataGenerator/]: betterend/AutoItemTagProvider (Tags for minecraft:item mod id betterend) finished after 13 ms
+[10мая2026 16:58:05.683] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: betterend/AutoBiomeTagProvider (Tags for minecraft:worldgen/biome mod id betterend)
+[10мая2026 16:58:05.684] [main/INFO] [wover-tag/]: (DEBUG)    AutoBiomeTagProvider includes  for betterend
+[10мая2026 16:58:05.684] [main/INFO] [wover-tag/]: (DEBUG)    AutoBiomeTagProvider includes BiomeTagProvider for betterend
+[10мая2026 16:58:05.684] [main/INFO] [wover-tag/]: (DEBUG)    AutoBiomeTagProvider includes  for betterend
+[10мая2026 16:58:05.684] [main/INFO] [wover-tag/]: (DEBUG)     ****> Writing tags for [betterend, betterend, betterend, betterend, betterend, betterend, betterend, betterend]
+[10мая2026 16:58:05.685] [main/INFO] [net.minecraft.data.DataGenerator/]: betterend/AutoBiomeTagProvider (Tags for minecraft:worldgen/biome mod id betterend) finished after 2 ms
+[10мая2026 16:58:05.686] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Model Definitions - betterend
+[10мая2026 16:58:05.932] [main/INFO] [net.minecraft.data.DataGenerator/]: Model Definitions - betterend finished after 246 ms
+[10мая2026 16:58:05.933] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
+[10мая2026 16:58:05.973] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 39 ms
+[10мая2026 16:58:05.973] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[10мая2026 16:58:06.055] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 82 ms
+[10мая2026 16:58:06.056] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: betterend Recipes
+[10мая2026 16:58:06.265] [main/INFO] [net.minecraft.data.DataGenerator/]: betterend Recipes finished after 208 ms
+[10мая2026 16:58:06.265] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Pack Metadata [betterend:nourish_extensions]
+[10мая2026 16:58:06.272] [main/INFO] [net.minecraft.data.DataGenerator/]: Pack Metadata [betterend:nourish_extensions] finished after 6 ms
+[10мая2026 16:58:06.272] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: nourish/NourishItemTagProvider (Tags for minecraft:item mod id nourish)
+[10мая2026 16:58:06.272] [main/INFO] [wover-tag/]: (DEBUG)     ****> Writing tags for [nourish, nourish]
+[10мая2026 16:58:06.274] [main/INFO] [net.minecraft.data.DataGenerator/]: nourish/NourishItemTagProvider (Tags for minecraft:item mod id nourish) finished after 1 ms
+[10мая2026 16:58:06.274] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 906 ms
+[10мая2026 16:58:06.308] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 4990, old count: 4990, new count: 4991, removed stale: 0, written: 0

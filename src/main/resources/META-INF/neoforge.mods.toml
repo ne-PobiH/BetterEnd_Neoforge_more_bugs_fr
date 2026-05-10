@@ -1,14 +1,14 @@
 modLoader="javafml"
 loaderVersion="[1,)"
 license="MIT (CC BY-NC-SA 4.0 for some Assets)"
-issueTrackerURL="https://github.com/quiqueck/BetterEnd/issues"
+issueTrackerURL="https://github.com/ne-PobiH/BetterEnd_Neoforge_more_bugs_fr/tree/absolute"
 
 [[mods]]
 modId="${mod_id}"
 version="${version}"
-displayName="Better End"
+displayName="Better End reimagined"
 description="More content for The End dimension, including new biomes, plants, mobs, mechanics, terrain generation and more."
-authors="quiqueck, paulevs (original author), Bulldog83, Edos, Yuki, Seaward, Firel, Raijin"
+authors="quiqueck, paulevs (original author), Bulldog83, Edos, Yuki, Seaward, Firel, Raijin, mapih, kinron"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/betterend"
 logoFile="assets/betterend/icon.png"
 
