@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "betterend:flavolite"
+    }
+  ],
+  "processing_time": 250,
+  "results": [
+    {
+      "count": 2,
+      "id": "minecraft:bone_meal"
+    },
+    {
+      "chance": 0.5,
+      "id": "minecraft:bone_meal"
+    }
+  ]
+}
