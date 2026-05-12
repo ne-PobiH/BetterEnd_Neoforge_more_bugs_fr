@@ -216,7 +216,7 @@
     {
       "element": {
         "element_type": "wover:single_end_pool_element",
-        "location": "betterend:village/street_decoration/work_01",
+        "location": "betterend:village/decoration/work_01",
         "processors": "betterend:end_street",
         "projection": "rigid"
       },

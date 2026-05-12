@@ -27,6 +27,7 @@ import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.level.levelgen.structure.pieces.StructurePieceSerializationContext;
 
 public class CrystalMountainPiece extends MountainPiece {
+    private static final int CRYSTAL_Y_OFFSET = 5;
     private BlockState top;
 
     public CrystalMountainPiece(BlockPos center, float radius, float height, RandomSource random, Holder<Biome> biome) {
@@ -70,10 +71,11 @@ public class CrystalMountainPiece extends MountainPiece {
             int x = MHelper.randRange(radius, 15 - radius, random);
             int z = MHelper.randRange(radius, 15 - radius, random);
             int y = map.getFirstAvailable(x, z);
-            if (y > 60) {
+            if (y > 40) {
                 pos.set(x, y, z);
-                if (chunk.getBlockState(pos.below()).is(Blocks.END_STONE)) {
+                if (canGenerateCrystalOn(chunk.getBlockState(pos.below()))) {
                     int height = MHelper.floor(radius * MHelper.randRange(1.5F, 3F, random) + (y - 80) * 0.3F);
+                    pos.setY(y + CRYSTAL_Y_OFFSET);
                     crystal(chunk, pos, radius, height, fill, random);
                 }
             }
@@ -90,8 +92,9 @@ public class CrystalMountainPiece extends MountainPiece {
             int y = map.getFirstAvailable(x, z);
             if (y > 20) {
                 pos.set(x, y, z);
-                if (chunk.getBlockState(pos.below()).getBlock() == Blocks.END_STONE) {
+                if (canGenerateCrystalOn(chunk.getBlockState(pos.below()))) {
                     int height = MHelper.floor(radius * MHelper.randRange(1.5F, 3F, random) + (y - 80) * 0.3F);
+                    pos.setY(y + CRYSTAL_Y_OFFSET);
                     crystal(chunk, pos, radius, height, fill, random);
                 }
             }
@@ -181,6 +184,10 @@ public class CrystalMountainPiece extends MountainPiece {
                 }
             }
         }
+    }
+
+    private boolean canGenerateCrystalOn(BlockState state) {
+        return state.is(CommonBlockTags.END_STONES) || state.is(EndBlocks.CRYSTAL_MOSS);
     }
 
     private void crystal(ChunkAccess chunk, BlockPos pos, int radius, int height, float fill, RandomSource random) {

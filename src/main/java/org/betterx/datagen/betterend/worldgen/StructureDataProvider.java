@@ -85,7 +85,7 @@ public class StructureDataProvider extends WoverStructureProvider {
     protected void bootstrapPools(BootstrapContext<StructureTemplatePool> context) {
         VillagePools.TERMINATORS_KEY
                 .bootstrap(context)
-                .startSingleEnd(BetterEnd.C.mk("village/terminators/stree_terminator_01")).emptyProcessor().endElement()
+                .startSingleEnd(BetterEnd.C.mk("village/terminators/street_terminator_01")).emptyProcessor().endElement()
                 .projection(StructureTemplatePool.Projection.TERRAIN_MATCHING)
                 .register();
 
@@ -199,7 +199,7 @@ public class StructureDataProvider extends WoverStructureProvider {
                 .weight(1)
                 .processor(EndProcessors.END_STREET)
                 .endElement()
-                .startSingleEnd(BetterEnd.C.mk("village/street_decoration/work_01"))
+                .startSingleEnd(BetterEnd.C.mk("village/decoration/work_01"))
                 .weight(1)
                 .processor(EndProcessors.END_STREET)
                 .endElement()

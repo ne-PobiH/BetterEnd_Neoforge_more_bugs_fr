@@ -44,6 +44,11 @@
         "offset_y": 0,
         "path": "/data/betterend/structure/biome/blossoming_spires/ruins_8.nbt",
         "terrain_merger": "SURFACE"
+      },
+      {
+        "offset_y": 0,
+        "path": "/data/betterend/structure/biome/blossoming_spires/house.nbt",
+        "terrain_merger": "SURFACE"
       }
     ]
   }

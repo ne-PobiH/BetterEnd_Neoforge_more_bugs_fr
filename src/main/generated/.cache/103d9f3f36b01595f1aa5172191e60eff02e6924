@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-08T19:07:49.8058112	Registries
+// 1.21.1	2026-05-12T17:19:13.7201958	Registries
 1327bedc6fe9f1356c5f9d38c21f131aa52d2cb4 data/betterend/enchantment/end_veil.json
 4477287194f7586de1e9586e24a57636932ea348 data/betterend/jukebox_song/endseeker.json
 7af8cdef75cd731e675d57f2c49bccc987853478 data/betterend/jukebox_song/eo_dracona.json
@@ -30,7 +30,7 @@ e4aff022af25db7eaa28e2f4f494de97b21096b7 data/betterend/worldgen/biome/sulphur_s
 4407a748e9c4b83babab50d6a6b25b79fce888eb data/betterend/worldgen/biome/umbra_valley.json
 89b6e9586a3a303d0f80eb2b607e135eac31ae50 data/betterend/worldgen/biome/umbrella_jungle.json
 72da6e09658962e827058ff21b9da1743341f4fb data/betterend/worldgen/configured_feature/big_aurora_crystal.json
-46042be05ee33459466ec954c46ea95b69aeca21 data/betterend/worldgen/configured_feature/blossoming_spires_structures.json
+c0da50431be5f665f0bb7931e5d3ebebd2d8c2e0 data/betterend/worldgen/configured_feature/blossoming_spires_structures.json
 079fbf3cd8690f0e4187ed2d8e969f908b918f88 data/betterend/worldgen/configured_feature/cave_bush.json
 d070d07756b6c50c8c81dd853e7f9481b4b45549 data/betterend/worldgen/configured_feature/cave_grass.json
 b71d802b1ea1299829d0afb9f4d7b2abb3c7a8b9 data/betterend/worldgen/configured_feature/cave_pumpkin.json
@@ -220,10 +220,10 @@ c4d7b45ba91f9924bc2be34864b1176a91fde27e data/betterend/worldgen/structure_set/m
 e81b69d5cbfa35a4d29de9e9f14287eadddefc4e data/betterend/worldgen/structure_set/mountain.json
 8f61e27fc3bc91dc2c87343e36ea8f82e495b7cb data/betterend/worldgen/template_pool/village/center_piece.json
 84923f6f9b405cc79fbf21209b5abe483365a5db data/betterend/worldgen/template_pool/village/decorations.json
-a4d1e6a9acc6aa0d4a49b3489f426da48903d961 data/betterend/worldgen/template_pool/village/houses.json
+962f9e56e05bee08a9efaea43741ba2b18612b2d data/betterend/worldgen/template_pool/village/houses.json
 b45f158a1cdd0864e900028093dd9d0dd37bcae9 data/betterend/worldgen/template_pool/village/streets.json
 037b321949497d286d68168e7182c1d98190834d data/betterend/worldgen/template_pool/village/street_decorations.json
-ff793e3a41d3bc2db07ea1f61fd7ecd8794d0fe3 data/betterend/worldgen/template_pool/village/terminators.json
+b12dc36775cb8f0ff6d649ccd0a8dcd19f6647fa data/betterend/worldgen/template_pool/village/terminators.json
 5df1a2b281822a35d9e52cc2da0b44e363da34af data/betterend/wover/worldgen/biome_data/amber_land.json
 e8bf3d4a710f2780f11c96a8aa5700b593ce234e data/betterend/wover/worldgen/biome_data/blossoming_spires.json
 810fdc2a2610aacc724db3e8790985144618891b data/betterend/wover/worldgen/biome_data/chorus_forest.json
