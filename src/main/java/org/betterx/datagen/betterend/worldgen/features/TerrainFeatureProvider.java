@@ -61,7 +61,7 @@ public class TerrainFeatureProvider extends WoverFeatureProvider {
         registerChanced(context, EndTerrainFeatures.CRASHED_SHIP, EndFeatures.CRASHED_SHIP_FEATURE, new NBTFeatureConfig(EndBiome.Config.DEFAULT_MATERIAL.getTopMaterial()), 500);
         registerChanced(context, EndTerrainFeatures.SILK_MOTH_NEST, EndFeatures.SILK_MOTH_NEST_FEATURE, FeatureConfiguration.NONE, 2);
 
-        registerChanced(context, EndTerrainFeatures.ROUND_CAVE, EndFeatures.ROUND_CAVE_FEATURE, FeatureConfiguration.NONE, 2);
+        registerChanced(context, EndTerrainFeatures.ROUND_CAVE, EndFeatures.ROUND_CAVE_FEATURE, FeatureConfiguration.NONE, 8);
         registerChanced(context, EndTerrainFeatures.SPIRE, EndFeatures.SPIRE_FEATURE, FeatureConfiguration.NONE, 4);
         registerChanced(context, EndTerrainFeatures.FLOATING_SPIRE, EndFeatures.FLOATING_SPIRE_FEATURE, FeatureConfiguration.NONE, 8);
         registerChanced(context, EndTerrainFeatures.GEYSER, EndFeatures.GEYSER_FEATURE, FeatureConfiguration.NONE, 8);

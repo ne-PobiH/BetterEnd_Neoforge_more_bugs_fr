@@ -39,6 +39,12 @@ import java.util.Set;
 import java.util.stream.IntStream;
 
 public class TunelCaveFeature extends EndCaveFeatures {
+    private static final float TUNNEL_DENSITY_WEIGHT = 0.35F;
+    private static final float TUNNEL_SURFACE_PENALTY = 0.35F;
+    private static final float TUNNEL_SURFACE_OPENING_PENALTY = 0.05F;
+    private static final float TUNNEL_THRESHOLD = 0.2F;
+    private static final float TUNNEL_SURFACE_OPENING_THRESHOLD = 0.26F;
+    private static final float TUNNEL_SURFACE_OPENING_NOISE_THRESHOLD = 0.38F;
     private static int tunnelFloorErrCounter = 0;
     private static int tunnelCeilErrCounter = 0;
     private static int tunnelWallErrCounter = 0;
@@ -77,6 +83,7 @@ public class TunelCaveFeature extends EndCaveFeatures {
             float dz = z / 16F;
             pos.setX(x + x1);
             pos.setZ(z + z1);
+            boolean canOpenToSurface = noiseD.eval(pos.getX() * 0.035, pos.getZ() * 0.035) > TUNNEL_SURFACE_OPENING_NOISE_THRESHOLD;
             float da = Mth.lerp(dx, a, b);
             float db = Mth.lerp(dx, c, d);
             float density = 1 - Mth.lerp(dz, da, db);
@@ -84,17 +91,21 @@ public class TunelCaveFeature extends EndCaveFeatures {
                 for (int y = 0; y < wheight; y++) {
                     pos.setY(y);
                     float gradient = 1 - Mth.clamp((wheight - y) * 0.1F, 0F, 1F);
-                    if (gradient > 0.5) {
+                    if (!canOpenToSurface && gradient > 0.65F) {
                         break;
                     }
-                    float val = Mth.abs((float) noiseH.eval(pos.getX() * 0.02, y * 0.01, pos.getZ() * 0.02));
+                    float horizontal = Mth.abs((float) noiseH.eval(pos.getX() * 0.018, y * 0.008, pos.getZ() * 0.018));
+                    float detail = (float) noiseD.eval(pos.getX() * 0.11, y * 0.09, pos.getZ() * 0.11) * 0.08F;
                     float vert = Mth.sin((y + (float) noiseV.eval(
                             pos.getX() * 0.01,
                             pos.getZ() * 0.01
-                    ) * 20) * 0.1F) * 0.9F;
-                    float dist = (float) noiseD.eval(pos.getX() * 0.1, y * 0.1, pos.getZ() * 0.1) * 0.12F;
-                    val = (val + vert * vert + dist) + density + gradient;
-                    if (val < 0.15 && world.getBlockState(pos).is(CommonBlockTags.END_STONES) && noWaterNear(
+                    ) * 28) * 0.11F) * 0.75F;
+                    float surfacePenalty = gradient * (canOpenToSurface
+                                                       ? TUNNEL_SURFACE_OPENING_PENALTY
+                                                       : TUNNEL_SURFACE_PENALTY);
+                    float threshold = canOpenToSurface ? TUNNEL_SURFACE_OPENING_THRESHOLD : TUNNEL_THRESHOLD;
+                    float val = horizontal + vert * vert + detail + density * TUNNEL_DENSITY_WEIGHT + surfacePenalty;
+                    if (val < threshold && world.getBlockState(pos).is(CommonBlockTags.END_STONES) && noWaterNear(
                             world,
                             pos
                     )) {

@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-12T17:19:13.7201958	Registries
+// 1.21.1	2026-05-12T18:46:49.8322364	Registries
 1327bedc6fe9f1356c5f9d38c21f131aa52d2cb4 data/betterend/enchantment/end_veil.json
 4477287194f7586de1e9586e24a57636932ea348 data/betterend/jukebox_song/endseeker.json
 7af8cdef75cd731e675d57f2c49bccc987853478 data/betterend/jukebox_song/eo_dracona.json
@@ -161,7 +161,7 @@ dc937b9ff037ddc78163eed732224c8e0d656f8e data/betterend/worldgen/placed_feature/
 a8318b945535482a90bb863b01676e80ce84b5a8 data/betterend/worldgen/placed_feature/purple_polypore.json
 d96047a0e9d18345376593fc3dbfa9cfc240653b data/betterend/worldgen/placed_feature/pythadendron_bush.json
 8b3fc4d136717b6607d3ff6c3ae894c0b4d827b4 data/betterend/worldgen/placed_feature/pythadendron_tree.json
-8c7a2b4666837f2dca98b1bc29c0b49df8cab72e data/betterend/worldgen/placed_feature/round_cave.json
+01f55d89a27b33309f5162be89b1655ddab16555 data/betterend/worldgen/placed_feature/round_cave.json
 a0648c57c5bf850b292566c01706599b471bfa4f data/betterend/worldgen/placed_feature/ruscus.json
 f3b61b1250d84ee581b61c87226bf0f36164ee41 data/betterend/worldgen/placed_feature/ruscus_wood.json
 e4c4c1a2278b944ab2ff9962be0c663d9335b4ff data/betterend/worldgen/placed_feature/salteago.json
