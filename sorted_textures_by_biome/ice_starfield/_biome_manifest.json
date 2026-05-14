@@ -1,0 +1,39 @@
+{
+  "texture_count": 9,
+  "candidate_count": 7,
+  "candidates": [
+    "betterend.ambient.dust_wastelands",
+    "crashed_ship",
+    "ender_ore",
+    "ice_star",
+    "ice_star_small",
+    "snowflake",
+    "thallasium_ore"
+  ],
+  "structure_blocks": [],
+  "textures": [
+    "src/main/resources/assets/betterend/textures/block/ender_ore.png",
+    "src/main/resources/assets/betterend/textures/block/thallasium_ore.png",
+    "src/main/resources/assets/betterend/textures/particle/snowflake_0.png",
+    "src/main/resources/assets/betterend/textures/particle/snowflake_1.png",
+    "src/main/resources/assets/betterend/textures/particle/snowflake_2.png",
+    "src/main/resources/assets/betterend/textures/particle/snowflake_3.png",
+    "src/main/resources/assets/betterend/textures/particle/snowflake_4.png",
+    "src/main/resources/assets/betterend/textures/particle/snowflake_5.png",
+    "src/main/resources/assets/betterend/textures/particle/snowflake_6.png"
+  ],
+  "source_hints": [
+    "feature:betterend.ambient.dust_wastelands",
+    "feature:crashed_ship",
+    "feature:ender_ore",
+    "feature:ice_star",
+    "feature:ice_star_small",
+    "feature:snowflake",
+    "feature:thallasium_ore",
+    "placed:crashed_ship->crashed_ship",
+    "placed:ender_ore->ender_ore",
+    "placed:ice_star->ice_star",
+    "placed:ice_star_small->ice_star",
+    "placed:thallasium_ore->thallasium_ore"
+  ]
+}
