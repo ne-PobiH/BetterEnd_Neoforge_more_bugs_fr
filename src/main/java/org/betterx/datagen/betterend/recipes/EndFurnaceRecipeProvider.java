@@ -31,8 +31,20 @@ public class EndFurnaceRecipeProvider extends WoverRecipeProvider {
                      .input(EndItems.SHADOW_BERRY_RAW)
                      .build(context);
 
+        RecipeBuilder.smelting(BetterEnd.C.mk("end_berry"), EndItems.SHADOW_BERRY_COOKED)
+                     .input(EndItems.SHADOW_BERRY_RAW)
+                     .experience(0.35F)
+                     .cookingTime(200)
+                     .build(context);
+
         RecipeBuilder.cookableFood(BetterEnd.C.mk("end_fish"), EndItems.END_FISH_COOKED)
                      .input(EndItems.END_FISH_RAW)
+                     .build(context);
+
+        RecipeBuilder.smelting(BetterEnd.C.mk("end_fish"), EndItems.END_FISH_COOKED)
+                     .input(EndItems.END_FISH_RAW)
+                     .experience(0.35F)
+                     .cookingTime(200)
                      .build(context);
 
         RecipeBuilder.smelting(BetterEnd.C.mk("slime_ball"), Items.SLIME_BALL)
@@ -47,8 +59,20 @@ public class EndFurnaceRecipeProvider extends WoverRecipeProvider {
                      .input(EndItems.CHORUS_MUSHROOM_RAW)
                      .build(context);
 
+        RecipeBuilder.smelting(BetterEnd.C.mk("chorus_mushroom"), EndItems.CHORUS_MUSHROOM_COOKED)
+                     .input(EndItems.CHORUS_MUSHROOM_RAW)
+                     .experience(0.35F)
+                     .cookingTime(200)
+                     .build(context);
+
         RecipeBuilder.cookableFood(BetterEnd.C.mk("bolux_mushroom"), EndItems.BOLUX_MUSHROOM_COOKED)
                      .input(EndBlocks.BOLUX_MUSHROOM)
+                     .build(context);
+
+        RecipeBuilder.smelting(BetterEnd.C.mk("bolux_mushroom"), EndItems.BOLUX_MUSHROOM_COOKED)
+                     .input(EndBlocks.BOLUX_MUSHROOM)
+                     .experience(0.35F)
+                     .cookingTime(200)
                      .build(context);
     }
 }

@@ -178,16 +178,9 @@ public class RespawnObeliskBlock extends BaseBlock.Stone implements CustomColorP
             InteractionHand hand,
             BlockHitResult hit
     ) {
-        boolean canActivate = itemStack.getItem() == EndItems.AMBER_GEM && itemStack.getCount() > 5;
-        if (hand != InteractionHand.MAIN_HAND || !canActivate) {
-            if (!world.isClientSide && !(itemStack.getItem() instanceof BlockItem) && !player.isCreative()) {
-                ServerPlayer serverPlayerEntity = (ServerPlayer) player;
-                serverPlayerEntity.displayClientMessage(
-                        Component.translatable("message.betterend.fail_spawn"),
-                        true
-                );
-            }
-            return ItemInteractionResult.FAIL;
+        boolean canActivate = hand == InteractionHand.MAIN_HAND && !(itemStack.getItem() instanceof BlockItem);
+        if (!canActivate) {
+            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         } else if (!world.isClientSide) {
             ServerPlayer serverPlayerEntity = (ServerPlayer) player;
             serverPlayerEntity.setRespawnPosition(world.dimension(), pos, 0.0F, false, false);
@@ -212,12 +205,7 @@ public class RespawnObeliskBlock extends BaseBlock.Stone implements CustomColorP
                 ((ServerLevel) world).sendParticles(particle, px, py2, pz, 20, 0.14, 0.3, 0.14, 0.1);
             }
             world.playSound(null, px, py, py, SoundEvents.RESPAWN_ANCHOR_SET_SPAWN, SoundSource.BLOCKS, 1F, 1F);
-            if (!player.isCreative()) {
-                itemStack.shrink(6);
-            }
         }
-        return player.isCreative()
-                ? ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION
-                : ItemInteractionResult.sidedSuccess(world.isClientSide);
+        return ItemInteractionResult.sidedSuccess(world.isClientSide);
     }
 }

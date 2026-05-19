@@ -20,6 +20,7 @@ import org.betterx.betterend.item.tool.EndHammerItem;
 import org.betterx.betterend.item.tool.EndPickaxe;
 import org.betterx.betterend.util.DebugHelpers;
 import org.betterx.wover.complex.api.equipment.ArmorSlot;
+import org.betterx.wover.core.api.ModCore;
 import org.betterx.wover.item.api.ItemRegistry;
 import org.betterx.wover.tag.api.predefined.CommonItemTags;
 
@@ -362,7 +363,7 @@ public class EndItems {
 
     @ApiStatus.Internal
     public static void ensureStaticallyLoaded() {
-        if (BCLib.isDevEnvironment()) {
+        if (BCLib.isDevEnvironment() && !ModCore.isDatagen()) {
             DebugHelpers.generateDebugItems();
         }
     }

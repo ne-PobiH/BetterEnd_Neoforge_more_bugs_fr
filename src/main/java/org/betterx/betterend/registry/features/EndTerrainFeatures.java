@@ -72,6 +72,10 @@ public class EndTerrainFeatures {
             .createKey(BetterEnd.C.mk("overworld_island"))
             .setDecoration(GenerationStep.Decoration.RAW_GENERATION);
 
+    public static final PlacedFeatureKey CRYSTAL_MOUNTAINS_HOLE_FIX = PlacedFeatureManager
+            .createKey(BetterEnd.C.mk("crystal_mountains_hole_fix"))
+            .setDecoration(GenerationStep.Decoration.VEGETAL_DECORATION);
+
     public static final PlacedFeatureKey SULPHURIC_CAVE = PlacedFeatureManager
             .createKey(BetterEnd.C.mk("sulphuric_cave"))
             .setDecoration(GenerationStep.Decoration.RAW_GENERATION);

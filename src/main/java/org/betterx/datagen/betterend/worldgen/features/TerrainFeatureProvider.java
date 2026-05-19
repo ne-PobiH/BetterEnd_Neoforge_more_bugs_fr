@@ -92,6 +92,14 @@ public class TerrainFeatureProvider extends WoverFeatureProvider {
                 .onlyInBiome()
                 .register();
 
+        EndTerrainFeatures.CRYSTAL_MOUNTAINS_HOLE_FIX
+                .inlineConfiguration(context)
+                .withFeature(EndFeatures.CRYSTAL_MOUNTAINS_HOLE_FIX_FEATURE)
+                .inlinePlace()
+                .count(1)
+                .onlyInBiome()
+                .register();
+
         // Place chorus village
         VillagePools.CHORUS_VILLAGE
                 .place(context, net.minecraft.data.worldgen.features.EndFeatures.CHORUS_PLANT)

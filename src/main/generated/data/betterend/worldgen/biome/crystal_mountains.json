@@ -45,7 +45,8 @@
     [],
     [
       "betterend:crystal_grass",
-      "betterend:crystal_moss_cover"
+      "betterend:crystal_moss_cover",
+      "betterend:crystal_mountains_hole_fix"
     ]
   ],
   "has_precipitation": false,

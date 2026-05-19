@@ -194,7 +194,7 @@ public class EndCraftingRecipesProvider extends WoverRecipeProvider {
                      .build(context);
 
         CraftingRecipeBuilder craftingRecipeBuilder8 = RecipeBuilder
-                .crafting(BetterEnd.C.mk("sweet_berry_jelly_potion"), EndItems.SWEET_BERRY_JELLY)
+                .crafting(BetterEnd.C.mk("sweet_berry_jelly"), EndItems.SWEET_BERRY_JELLY)
                 .shapeless()
                 .addMaterial('J', EndItems.GELATINE)
                 .addMaterial('W', waterPotion())
@@ -204,7 +204,7 @@ public class EndCraftingRecipesProvider extends WoverRecipeProvider {
                               .build(context);
 
         CraftingRecipeBuilder craftingRecipeBuilder7 = RecipeBuilder
-                .crafting(BetterEnd.C.mk("shadow_berry_jelly_potion"), EndItems.SHADOW_BERRY_JELLY)
+                .crafting(BetterEnd.C.mk("shadow_berry_jelly"), EndItems.SHADOW_BERRY_JELLY)
                 .shapeless()
                 .addMaterial('J', EndItems.GELATINE)
                 .addMaterial('W', waterPotion())
@@ -214,43 +214,13 @@ public class EndCraftingRecipesProvider extends WoverRecipeProvider {
                               .build(context);
 
         CraftingRecipeBuilder craftingRecipeBuilder6 = RecipeBuilder
-                .crafting(BetterEnd.C.mk("blossom_berry_jelly_potion"), EndItems.BLOSSOM_BERRY_JELLY)
+                .crafting(BetterEnd.C.mk("blossom_berry_jelly"), EndItems.BLOSSOM_BERRY_JELLY)
                 .shapeless()
                 .addMaterial('J', EndItems.GELATINE)
                 .addMaterial('W', waterPotion())
                 .addMaterial('S', Items.SUGAR)
                 .addMaterial('B', EndItems.BLOSSOM_BERRY);
         craftingRecipeBuilder6.group("end_berries")
-                              .build(context);
-
-        CraftingRecipeBuilder craftingRecipeBuilder5 = RecipeBuilder
-                .crafting(BetterEnd.C.mk("sweet_berry_jelly"), EndItems.SWEET_BERRY_JELLY)
-                .shapeless()
-                .addMaterial('J', EndItems.GELATINE)
-                .addMaterial('W', CommonItemTags.WATER_BOTTLES)
-                .addMaterial('S', Items.SUGAR)
-                .addMaterial('B', Items.SWEET_BERRIES);
-        craftingRecipeBuilder5.group("end_berries")
-                              .build(context);
-
-        CraftingRecipeBuilder craftingRecipeBuilder4 = RecipeBuilder
-                .crafting(BetterEnd.C.mk("shadow_berry_jelly"), EndItems.SHADOW_BERRY_JELLY)
-                .shapeless()
-                .addMaterial('J', EndItems.GELATINE)
-                .addMaterial('W', CommonItemTags.WATER_BOTTLES)
-                .addMaterial('S', Items.SUGAR)
-                .addMaterial('B', EndItems.SHADOW_BERRY_COOKED);
-        craftingRecipeBuilder4.group("end_berries")
-                              .build(context);
-
-        CraftingRecipeBuilder craftingRecipeBuilder3 = RecipeBuilder
-                .crafting(BetterEnd.C.mk("blossom_berry_jelly"), EndItems.BLOSSOM_BERRY_JELLY)
-                .shapeless()
-                .addMaterial('J', EndItems.GELATINE)
-                .addMaterial('W', CommonItemTags.WATER_BOTTLES)
-                .addMaterial('S', Items.SUGAR)
-                .addMaterial('B', EndItems.BLOSSOM_BERRY);
-        craftingRecipeBuilder3.group("end_berries")
                               .build(context);
 
         RecipeBuilder.crafting(BetterEnd.C.mk("sulphur_gunpowder"), Items.GUNPOWDER)

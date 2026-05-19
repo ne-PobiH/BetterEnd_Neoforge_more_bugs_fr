@@ -58,6 +58,11 @@ public class TerrainGenerator {
     public static void initNoise(long seed, BiomeSource biomeSource, Sampler sampler) {
         TerrainGenerator.config = resolveEndConfig(biomeSource);
         if (config == null) {
+            largeIslands = null;
+            mediumIslands = null;
+            smallIslands = null;
+            noise1 = null;
+            noise2 = null;
             TerrainGenerator.biomeSource = null;
             TerrainGenerator.sampler = null;
             return;
@@ -93,52 +98,60 @@ public class TerrainGenerator {
         return null;
     }
 
+    public static boolean shouldUseBetterEndTerrain(@Nullable WoverEndConfig endConfig) {
+        return GeneratorOptions.useNewGenerator()
+                && endConfig != null
+                && endConfig.generatorVersion == WoverEndConfig.EndBiomeGeneratorType.PAULEVS;
+    }
+
     public static void fillTerrainDensity(double[] buffer, int posX, int posZ, int scaleXZ, int scaleY, int maxHeight) {
         LOCKER.lock();
-        final float fadeOutDist = 27.0f;
-        final float fadOutStart = maxHeight - (fadeOutDist + 1);
-        largeIslands.clearCache();
-        mediumIslands.clearCache();
-        smallIslands.clearCache();
+        try {
+            final float fadeOutDist = 27.0f;
+            final float fadOutStart = maxHeight - (fadeOutDist + 1);
+            largeIslands.clearCache();
+            mediumIslands.clearCache();
+            smallIslands.clearCache();
 
-        int x = posX / scaleXZ;
-        int z = posZ / scaleXZ;
-        double distortion1 = noise1.eval(x * 0.1, z * 0.1) * 20 + noise2.eval(
-                x * 0.2,
-                z * 0.2
-        ) * 10 + noise1.eval(x * 0.4, z * 0.4) * 5;
-        double distortion2 = noise2.eval(x * 0.1, z * 0.1) * 20 + noise1.eval(
-                x * 0.2,
-                z * 0.2
-        ) * 10 + noise2.eval(x * 0.4, z * 0.4) * 5;
-        double px = (double) x * scaleXZ + distortion1;
-        double pz = (double) z * scaleXZ + distortion2;
+            int x = posX / scaleXZ;
+            int z = posZ / scaleXZ;
+            double distortion1 = noise1.eval(x * 0.1, z * 0.1) * 20 + noise2.eval(
+                    x * 0.2,
+                    z * 0.2
+            ) * 10 + noise1.eval(x * 0.4, z * 0.4) * 5;
+            double distortion2 = noise2.eval(x * 0.1, z * 0.1) * 20 + noise1.eval(
+                    x * 0.2,
+                    z * 0.2
+            ) * 10 + noise2.eval(x * 0.4, z * 0.4) * 5;
+            double px = (double) x * scaleXZ + distortion1;
+            double pz = (double) z * scaleXZ + distortion2;
 
-        largeIslands.updatePositions(px, pz, maxHeight);
-        mediumIslands.updatePositions(px, pz, maxHeight);
-        smallIslands.updatePositions(px, pz, maxHeight);
+            largeIslands.updatePositions(px, pz, maxHeight);
+            mediumIslands.updatePositions(px, pz, maxHeight);
+            smallIslands.updatePositions(px, pz, maxHeight);
 
-        float height = getAverageDepth(x << 1, z << 1) * 0.5F;
+            float terrainHeight = getAverageDepth(x << 1, z << 1) * 0.5F;
 
-        for (int y = 0; y < buffer.length; y++) {
-            double py = (double) y * scaleY;
-            float dist = largeIslands.getDensity(px, py, pz, height);
-            dist = dist > 1 ? dist : MHelper.max(dist, mediumIslands.getDensity(px, py, pz, height));
-            dist = dist > 1 ? dist : MHelper.max(dist, smallIslands.getDensity(px, py, pz, height));
-            if (dist > -0.5F) {
-                dist += (float) (noise1.eval(px * 0.01, py * 0.01, pz * 0.01) * 0.02 + 0.02);
-                dist += (float) (noise2.eval(px * 0.05, py * 0.05, pz * 0.05) * 0.01 + 0.01);
-                dist += (float) (noise1.eval(px * 0.1, py * 0.1, pz * 0.1) * 0.005 + 0.005);
+            for (int y = 0; y < buffer.length; y++) {
+                double py = (double) y * scaleY;
+                float dist = largeIslands.getDensity(px, py, pz, terrainHeight);
+                dist = dist > 1 ? dist : MHelper.max(dist, mediumIslands.getDensity(px, py, pz, terrainHeight));
+                dist = dist > 1 ? dist : MHelper.max(dist, smallIslands.getDensity(px, py, pz, terrainHeight));
+                if (dist > -0.5F) {
+                    dist += (float) (noise1.eval(px * 0.01, py * 0.01, pz * 0.01) * 0.02 + 0.02);
+                    dist += (float) (noise2.eval(px * 0.05, py * 0.05, pz * 0.05) * 0.01 + 0.01);
+                    dist += (float) (noise1.eval(px * 0.1, py * 0.1, pz * 0.1) * 0.005 + 0.005);
+                }
+
+                if (py >= maxHeight) dist = -1;
+                else if (py > fadOutStart) {
+                    dist = (float) Mth.lerp((py - fadOutStart) / fadeOutDist, dist, -1);
+                }
+                buffer[y] = dist;
             }
-
-            if (py >= maxHeight) dist = -1;
-            else if (py > fadOutStart) {
-                dist = (float) Mth.lerp((py - fadOutStart) / fadeOutDist, dist, -1);
-            }
-            buffer[y] = dist;
+        } finally {
+            LOCKER.unlock();
         }
-
-        LOCKER.unlock();
     }
 
     private static float getAverageDepth(int x, int z) {
@@ -192,61 +205,62 @@ public class TerrainGenerator {
         int sectionZ = TerrainBoolCache.scaleCoordinate(z);
         final int stepY = (int) Math.ceil(maxHeight / SCALE_Y);
         LOCKER.lock();
-        POS.setLocation(sectionX, sectionZ);
+        try {
+            POS.setLocation(sectionX, sectionZ);
 
-        TerrainBoolCache section = TERRAIN_BOOL_CACHE_MAP.get(POS);
-        if (section == null) {
-            if (TERRAIN_BOOL_CACHE_MAP.size() > 64) {
-                TERRAIN_BOOL_CACHE_MAP.clear();
+            TerrainBoolCache section = TERRAIN_BOOL_CACHE_MAP.get(POS);
+            if (section == null) {
+                if (TERRAIN_BOOL_CACHE_MAP.size() > 64) {
+                    TERRAIN_BOOL_CACHE_MAP.clear();
+                }
+                section = new TerrainBoolCache();
+                TERRAIN_BOOL_CACHE_MAP.put(new Point(POS.x, POS.y), section);
             }
-            section = new TerrainBoolCache();
-            TERRAIN_BOOL_CACHE_MAP.put(new Point(POS.x, POS.y), section);
-        }
-        byte value = section.getData(x, z);
-        if (value > 0) {
+            byte value = section.getData(x, z);
+            if (value > 0) {
+                return value > 1;
+            }
+
+            double px = (x >> 1) + 0.5;
+            double pz = (z >> 1) + 0.5;
+
+            double distortion1 = noise1.eval(px * 0.1, pz * 0.1) * 20 + noise2.eval(px * 0.2, pz * 0.2) * 10 + noise1.eval(
+                    px * 0.4,
+                    pz * 0.4
+            ) * 5;
+            double distortion2 = noise2.eval(px * 0.1, pz * 0.1) * 20 + noise1.eval(px * 0.2, pz * 0.2) * 10 + noise2.eval(
+                    px * 0.4,
+                    pz * 0.4
+            ) * 5;
+            px = px * SCALE_XZ + distortion1;
+            pz = pz * SCALE_XZ + distortion2;
+
+            largeIslands.updatePositions(px, pz, maxHeight);
+            mediumIslands.updatePositions(px, pz, maxHeight);
+            smallIslands.updatePositions(px, pz, maxHeight);
+
+            boolean result = false;
+            for (int y = 0; y < stepY; y++) {
+                double py = (double) y * SCALE_Y;
+                float dist = largeIslands.getDensity(px, py, pz);
+                dist = dist > 1 ? dist : MHelper.max(dist, mediumIslands.getDensity(px, py, pz));
+                dist = dist > 1 ? dist : MHelper.max(dist, smallIslands.getDensity(px, py, pz));
+                if (dist > -0.5F) {
+                    dist += (float) (noise1.eval(px * 0.01, py * 0.01, pz * 0.01) * 0.02 + 0.02);
+                    dist += (float) (noise2.eval(px * 0.05, py * 0.05, pz * 0.05) * 0.01 + 0.01);
+                    dist += (float) (noise1.eval(px * 0.1, py * 0.1, pz * 0.1) * 0.005 + 0.005);
+                }
+                if (dist > -0.01) {
+                    result = true;
+                    break;
+                }
+            }
+
+            section.setData(x, z, (byte) (result ? 2 : 1));
+            return result;
+        } finally {
             LOCKER.unlock();
-            return value > 1;
         }
-
-        double px = (x >> 1) + 0.5;
-        double pz = (z >> 1) + 0.5;
-
-        double distortion1 = noise1.eval(px * 0.1, pz * 0.1) * 20 + noise2.eval(px * 0.2, pz * 0.2) * 10 + noise1.eval(
-                px * 0.4,
-                pz * 0.4
-        ) * 5;
-        double distortion2 = noise2.eval(px * 0.1, pz * 0.1) * 20 + noise1.eval(px * 0.2, pz * 0.2) * 10 + noise2.eval(
-                px * 0.4,
-                pz * 0.4
-        ) * 5;
-        px = px * SCALE_XZ + distortion1;
-        pz = pz * SCALE_XZ + distortion2;
-
-        largeIslands.updatePositions(px, pz, maxHeight);
-        mediumIslands.updatePositions(px, pz, maxHeight);
-        smallIslands.updatePositions(px, pz, maxHeight);
-
-        boolean result = false;
-        for (int y = 0; y < stepY; y++) {
-            double py = (double) y * SCALE_Y;
-            float dist = largeIslands.getDensity(px, py, pz);
-            dist = dist > 1 ? dist : MHelper.max(dist, mediumIslands.getDensity(px, py, pz));
-            dist = dist > 1 ? dist : MHelper.max(dist, smallIslands.getDensity(px, py, pz));
-            if (dist > -0.5F) {
-                dist += (float) (noise1.eval(px * 0.01, py * 0.01, pz * 0.01) * 0.02 + 0.02);
-                dist += (float) (noise2.eval(px * 0.05, py * 0.05, pz * 0.05) * 0.01 + 0.01);
-                dist += (float) (noise1.eval(px * 0.1, py * 0.1, pz * 0.1) * 0.005 + 0.005);
-            }
-            if (dist > -0.01) {
-                result = true;
-                break;
-            }
-        }
-
-        section.setData(x, z, (byte) (result ? 2 : 1));
-        LOCKER.unlock();
-
-        return result;
     }
 
     public static void onServerLevelInit(ServerLevel level, LevelStem levelStem, long seed) {
@@ -259,7 +273,7 @@ public class TerrainGenerator {
                 if (endConfig != null) {
                     BETargetChecker.class
                             .cast(sHolder.value())
-                            .be_setTarget(endConfig.generatorVersion == WoverEndConfig.EndBiomeGeneratorType.PAULEVS);
+                            .be_setTarget(shouldUseBetterEndTerrain(endConfig));
                 } else {
                     BETargetChecker.class
                             .cast(sHolder.value())

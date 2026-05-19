@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-12T18:46:49.8322364	Registries
+// 1.21.1	2026-05-16T00:30:35.5716212	Registries
 1327bedc6fe9f1356c5f9d38c21f131aa52d2cb4 data/betterend/enchantment/end_veil.json
 4477287194f7586de1e9586e24a57636932ea348 data/betterend/jukebox_song/endseeker.json
 7af8cdef75cd731e675d57f2c49bccc987853478 data/betterend/jukebox_song/eo_dracona.json
@@ -7,7 +7,7 @@
 eab00c78ac63981c30e003a03d1ee272d23c61ad data/betterend/worldgen/biome/amber_land.json
 1cb8e9c25a728aee33b9f7494f1554355bbbdfd3 data/betterend/worldgen/biome/blossoming_spires.json
 2718037cc50e33abe43fa42817bf49d7a779aca6 data/betterend/worldgen/biome/chorus_forest.json
-14ddd66e0d16ec40d9712b47b486bf97dc89e389 data/betterend/worldgen/biome/crystal_mountains.json
+66f2afbb6333cce0e92b4ad9337e436309df59b2 data/betterend/worldgen/biome/crystal_mountains.json
 e0f88062129583752686844e944e27735c651e40 data/betterend/worldgen/biome/dragon_graveyards.json
 6c031ae1046ea4de8f0001e3295794bc719e0b8b data/betterend/worldgen/biome/dry_shrubland.json
 6a917c3a31b97656f21e2376ece9c4c4f346234d data/betterend/worldgen/biome/dust_wastelands.json
@@ -96,6 +96,7 @@ b6fc8c706c59771e1bf2ea854fe74d991bb76b30 data/betterend/worldgen/placed_feature/
 1e798aa123eb44e7e7495aa878256df5c2ee1ef3 data/betterend/worldgen/placed_feature/creeping_moss_rare.json
 9cca2f320a99098a78818aa65fee7addb3601565 data/betterend/worldgen/placed_feature/crystal_grass.json
 de6c65d985f69f5a8cfabf614ac8dc72239d74b7 data/betterend/worldgen/placed_feature/crystal_moss_cover.json
+62f88eb48af61815875bd018387e45173ee9f028 data/betterend/worldgen/placed_feature/crystal_mountains_hole_fix.json
 79e5cadd82c163e953e3ace12c778799ee5d923c data/betterend/worldgen/placed_feature/cyan_moss.json
 3f89e93315bbbfef927e299a4f1a7b44e9769bad data/betterend/worldgen/placed_feature/cyan_moss_wood.json
 537aa61a154a57c462b020de3ba3c0e861fcbb24 data/betterend/worldgen/placed_feature/dense_vine.json
