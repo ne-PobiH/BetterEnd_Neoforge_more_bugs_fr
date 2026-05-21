@@ -1,6 +1,6 @@
 package org.betterx.betterend.client.render;
 
-import de.ambertation.wunderlib.ui.ColorHelper;
+import org.aiblib.wunderlib.ui.ColorHelper;
 import org.betterx.betterend.blocks.EternalPedestal;
 import org.betterx.betterend.blocks.basis.PedestalBlock;
 import org.betterx.betterend.blocks.entities.PedestalBlockEntity;

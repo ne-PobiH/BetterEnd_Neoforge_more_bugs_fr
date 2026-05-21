@@ -1,0 +1,54 @@
+package org.aiblib.bclib.complexmaterials.set.wood;
+
+import org.aiblib.bclib.complexmaterials.ComplexMaterial;
+import org.aiblib.bclib.complexmaterials.WoodenComplexMaterial;
+import org.aiblib.bclib.complexmaterials.entry.BlockEntry;
+import org.aiblib.bclib.complexmaterials.entry.SimpleMaterialSlot;
+import org.aiblib.bclib.furniture.block.BaseTaburet;
+import org.aiblib.wover.recipe.api.BaseRecipeBuilder;
+import org.aiblib.wover.recipe.api.CraftingRecipeBuilder;
+import org.aiblib.wover.recipe.api.RecipeBuilder;
+
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+public class Taburet extends SimpleMaterialSlot<WoodenComplexMaterial> {
+    public Taburet() {
+        super("taburet");
+    }
+
+    public static void makeTaburetRecipe(RecipeOutput context, ResourceLocation id, Block taburet, Block planks) {
+        CraftingRecipeBuilder craftingRecipeBuilder1 = RecipeBuilder.crafting(id, taburet);
+        CraftingRecipeBuilder craftingRecipeBuilder = craftingRecipeBuilder1.shape("##", "II")
+                                                                            .addMaterial('#', planks)
+                                                                            .addMaterial('I', Items.STICK);
+        BaseRecipeBuilder<CraftingRecipeBuilder> craftingRecipeBuilderBaseRecipeBuilder = craftingRecipeBuilder.group("taburet");
+        craftingRecipeBuilderBaseRecipeBuilder.category(RecipeCategory.DECORATIONS)
+                                              .build(context);
+    }
+
+    @Override
+    protected void modifyBlockEntry(WoodenComplexMaterial parentMaterial, @NotNull BlockEntry entry) {
+        entry.setBlockTags(BlockTags.MINEABLE_WITH_AXE);
+    }
+
+    @Override
+    protected @NotNull Block createBlock(
+            WoodenComplexMaterial parentMaterial, BlockBehaviour.Properties settings
+    ) {
+        return new BaseTaburet.Wood(parentMaterial.getBlock(WoodSlots.PLANKS));
+    }
+
+    @Override
+    protected @Nullable void makeRecipe(RecipeOutput context, ComplexMaterial parentMaterial, ResourceLocation id) {
+        Taburet.makeTaburetRecipe(context, id, parentMaterial.getBlock(suffix), parentMaterial.getBlock(WoodSlots.SLAB));
+    }
+}

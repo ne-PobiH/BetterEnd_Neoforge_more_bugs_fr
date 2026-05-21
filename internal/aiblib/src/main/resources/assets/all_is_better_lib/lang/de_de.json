@@ -1,0 +1,17 @@
+{
+  "description.config.wover.client.general.check_for_new_versions": "WorldWeaver enthГ¤lt eine einfache VersionsГјberprГјfung, die Dich benachrichtigen kann, wenn neue Updates unserer Mods verfГјgbar sind. Dazu mГјssen wir eine Ressource von einem unserer Webserver abrufen. Um die Anfrage zu bearbeiten versenden wir zusammen mit Deiner IP-Address (wir mГјssen ja wissen wohin die Antwort gehen soll) auch Deine Minecraft-Version (damit wir die richtige Mod-Version auswГ¤hlen kГ¶nnen). Die Гјbertragenen Daten werden von uns niemals fГјr andere Zwecke verwendet, verarbeitet oder weitergegeben, mГјssen aber aus rechtlichen GrГјnden fГјr 4 Wochen in unseren Log-Dateien gespeichert werden.",
+  "description.config.wover.client.general.force_betterx_world_type": "Der Welt-Typ bestimmt, wie eine Welt generiert wird. In den meisten FГ¤llen solltet BetterX als Standardeinstellung beibehalten werden (Du kannst den Typ jederzeit im Welt-Erstellen-Bildschirm Г¤ndern). Dieser Typ ist fГјr maximale KompatibilitГ¤t zwischen DataPacks, unserer Mod und anderen NeoForge-Mods optimiert. AuГџerdem bietet er einige einzigartige Funktionen fГјr BetterNether und BetterEnd. Du solltest diese Option nur deaktivieren, wenn Du einen Grund dazu hast!",
+  "description.config.wover.client.loading.disable_experimental_warning": "Der Warnbildschirm wird immer dann angezeigt, wenn Deine Welt nicht die Einstellungen der Vanilla-Version verwendet. Dies kann passieren, wenn Du eine Welt in einer Vorschauversion startest, aber auch wenn Du Mods verwendest, um die Welterzeugung zu verГ¤ndern. Wenn diese Option aktiviert ist, wird die Warnung Гјbersprungen, wenn Du eine bestehende Welt lГ¤dst. Sie wird weiterhin angezeigt (als Erinnerung), wenn eine neue Welt erstellt wird.",
+  "title.config.wover.client.general.check_for_new_versions": "VersionsprГјfung erlauben",
+  "title.config.wover.client.general.force_betterx_world_type": "BetterX als Standard-Welt-Typ verwenden",
+  "title.config.wover.client.loading.disable_experimental_warning": "Warnbildschirm beim Laden deaktivieren",
+  "warning.config.wover.client.general.force_betterx_world_type": "MOST LIKELY YOU WILL WANT TO KEEP THIS OPTION ENABLED.\n",
+  "wover.updates.description": "Einige der installierten Mods sind veraltet. Wir verbessern und erweitern unser Angebot kontinuierlich und bieten wichtige Fehlerbehebungen an.\nBitte erwГ¤ge, deine Mods Гјber die unten bereitgestellten Links zu aktualisieren.",
+  "wover.updates.disable_check": "Update-ГњberprГјfung deaktivieren",
+  "wover.updates.download_link": "Download",
+  "wover.updates.modrinth_link": "[Modrinth]",
+  "wover.updates.curseforge_link": "[Curseforge]",
+  "wover.updates.title": "Mod-Updates",
+  "wover.welcome.description": "... und ein riesiges herzliches **DankeschГ¶n** fГјr das Herunterladen und Spielen unserer Mods. Wir hoffen, dass sie euch genauso viel SpaГџ machen wie uns.\n\nBevor wir anfangen, gibt es ein paar Dinge, die wir einrichten mГјssen, also lest bitte den folgenden langweiligen Teil weiter.",
+  "wover.welcome.title": "Wilkommen bei "
+}

@@ -46,6 +46,11 @@
       "betterend:flavolite_layer",
       "betterend:thallasium_ore",
       "betterend:ender_ore"
+    ],
+    [],
+    [],
+    [
+      "betterend:dust_bush"
     ]
   ],
   "has_precipitation": false,

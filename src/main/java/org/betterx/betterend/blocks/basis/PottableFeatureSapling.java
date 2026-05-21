@@ -1,8 +1,8 @@
 package org.betterx.betterend.blocks.basis;
 
-import org.betterx.bclib.behaviours.interfaces.BehaviourSapling;
-import org.betterx.bclib.blocks.FeatureSaplingBlock;
-import org.betterx.bclib.interfaces.SurvivesOn;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourSapling;
+import org.aiblib.bclib.blocks.FeatureSaplingBlock;
+import org.aiblib.bclib.interfaces.SurvivesOn;
 import org.betterx.betterend.interfaces.PottablePlant;
 
 import net.minecraft.core.BlockPos;

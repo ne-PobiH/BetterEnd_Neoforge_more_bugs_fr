@@ -1,10 +1,10 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.behaviours.interfaces.BehaviourLeaves;
-import org.betterx.bclib.client.render.BCLRenderLayer;
-import org.betterx.bclib.interfaces.RenderLayerProvider;
-import org.betterx.bclib.interfaces.RuntimeBlockModelProvider;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourLeaves;
+import org.aiblib.bclib.client.render.BCLRenderLayer;
+import org.aiblib.bclib.interfaces.RenderLayerProvider;
+import org.aiblib.bclib.interfaces.RuntimeBlockModelProvider;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.noise.OpenSimplexNoise;
 import org.betterx.betterend.registry.EndBlocks;
 

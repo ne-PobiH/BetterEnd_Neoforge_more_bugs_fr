@@ -1,6 +1,6 @@
 package org.betterx.datagen.betterend;
 
-import org.betterx.bclib.blocks.BaseVineBlock;
+import org.aiblib.bclib.blocks.BaseVineBlock;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.blocks.EndBlockProperties;
 import org.betterx.betterend.blocks.FlowerPotBlock;
@@ -9,12 +9,12 @@ import org.betterx.betterend.blocks.basis.PottableLeavesBlock;
 import org.betterx.betterend.client.models.EndModels;
 import org.betterx.betterend.interfaces.PottablePlant;
 import org.betterx.betterend.registry.EndBlocks;
-import org.betterx.wover.block.api.BlockProperties;
-import org.betterx.wover.block.api.BlockRegistry;
-import org.betterx.wover.block.api.model.WoverBlockModelGenerators;
-import org.betterx.wover.core.api.IntegrationCore;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.datagen.api.provider.WoverModelProvider;
+import org.aiblib.wover.block.api.BlockProperties;
+import org.aiblib.wover.block.api.BlockRegistry;
+import org.aiblib.wover.block.api.model.WoverBlockModelGenerators;
+import org.aiblib.wover.core.api.IntegrationCore;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.datagen.api.provider.WoverModelProvider;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -187,6 +187,7 @@ public class EndModelProvider extends WoverModelProvider {
                              .ignore(EndBlocks.LUMECORN_SEED)
                              .ignore(EndBlocks.HYDRALUX_SAPLING)
                              .ignore(EndBlocks.CHORUS_GRASS)
+                             .ignore(EndBlocks.DUST_BUSH)
                              .ignore(EndBlocks.SMALL_JELLYSHROOM)
                              .ignore(EndBlocks.CAVE_GRASS)
                              .ignore(EndBlocks.GLOWING_PILLAR_SEED)

@@ -1,0 +1,6 @@
+{
+  "parent": "all_is_better_lib:block/tint_cube",
+  "textures": {
+    "texture": "%modid%:block/%texture%"
+  }
+}

@@ -1,7 +1,7 @@
 package org.betterx.datagen.betterend.worldgen;
 
-import org.betterx.bclib.BCLib;
-import org.betterx.bclib.util.JsonFactory;
+import org.aiblib.bclib.BCLib;
+import org.aiblib.bclib.util.JsonFactory;
 import org.betterx.betterend.registry.EndBiomes;
 import org.betterx.betterend.registry.EndFeatures;
 import org.betterx.betterend.registry.EndTags;
@@ -14,16 +14,16 @@ import org.betterx.betterend.world.biome.land.*;
 import org.betterx.betterend.world.features.BuildingListFeature;
 import org.betterx.betterend.world.features.BuildingListFeatureConfig;
 import org.betterx.betterend.world.features.NBTFeature;
-import org.betterx.wover.biome.api.builder.BiomeBootstrapContext;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.datagen.api.provider.multi.WoverBiomeProvider;
-import org.betterx.wover.feature.api.configured.ConfiguredFeatureKey;
-import org.betterx.wover.feature.api.configured.ConfiguredFeatureManager;
-import org.betterx.wover.feature.api.configured.configurators.WithConfiguration;
-import org.betterx.wover.feature.api.placed.PlacedConfiguredFeatureKey;
-import org.betterx.wover.feature.api.placed.PlacedFeatureManager;
-import org.betterx.wover.state.api.WorldState;
-import org.betterx.wover.tag.api.predefined.CommonBiomeTags;
+import org.aiblib.wover.biome.api.builder.BiomeBootstrapContext;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.datagen.api.provider.multi.WoverBiomeProvider;
+import org.aiblib.wover.feature.api.configured.ConfiguredFeatureKey;
+import org.aiblib.wover.feature.api.configured.ConfiguredFeatureManager;
+import org.aiblib.wover.feature.api.configured.configurators.WithConfiguration;
+import org.aiblib.wover.feature.api.placed.PlacedConfiguredFeatureKey;
+import org.aiblib.wover.feature.api.placed.PlacedFeatureManager;
+import org.aiblib.wover.state.api.WorldState;
+import org.aiblib.wover.tag.api.predefined.CommonBiomeTags;
 
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;

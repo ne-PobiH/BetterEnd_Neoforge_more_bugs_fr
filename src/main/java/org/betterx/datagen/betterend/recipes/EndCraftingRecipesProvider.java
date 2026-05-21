@@ -1,14 +1,14 @@
 package org.betterx.datagen.betterend.recipes;
 
-import org.betterx.bclib.complexmaterials.ComplexMaterial;
+import org.aiblib.bclib.complexmaterials.ComplexMaterial;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndItems;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.datagen.api.provider.WoverRecipeProvider;
-import org.betterx.wover.recipe.api.CraftingRecipeBuilder;
-import org.betterx.wover.recipe.api.RecipeBuilder;
-import org.betterx.wover.tag.api.predefined.CommonItemTags;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.datagen.api.provider.WoverRecipeProvider;
+import org.aiblib.wover.recipe.api.CraftingRecipeBuilder;
+import org.aiblib.wover.recipe.api.RecipeBuilder;
+import org.aiblib.wover.tag.api.predefined.CommonItemTags;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;

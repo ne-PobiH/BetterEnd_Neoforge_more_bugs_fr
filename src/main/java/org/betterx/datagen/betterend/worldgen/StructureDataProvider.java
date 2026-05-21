@@ -1,16 +1,16 @@
 package org.betterx.datagen.betterend.worldgen;
 
-import org.betterx.bclib.complexmaterials.set.stone.StoneSlots;
-import org.betterx.bclib.complexmaterials.set.wood.WoodSlots;
+import org.aiblib.bclib.complexmaterials.set.stone.StoneSlots;
+import org.aiblib.bclib.complexmaterials.set.wood.WoodSlots;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndProcessors;
 import org.betterx.betterend.registry.EndStructures;
 import org.betterx.betterend.world.structures.village.VillagePools;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.datagen.api.provider.multi.WoverStructureProvider;
-import org.betterx.wover.structure.api.sets.StructureSetManager;
-import org.betterx.wover.tag.api.event.context.TagBootstrapContext;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.datagen.api.provider.multi.WoverStructureProvider;
+import org.aiblib.wover.structure.api.sets.StructureSetManager;
+import org.aiblib.wover.tag.api.event.context.TagBootstrapContext;
 
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.world.level.biome.Biome;

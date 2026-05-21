@@ -1,9 +1,9 @@
 package org.betterx.betterend.blocks.basis;
 
-import org.betterx.bclib.blocks.BaseBlockNotFull;
-import org.betterx.wover.block.api.BlockProperties;
-import org.betterx.wover.block.api.model.BlockModelProvider;
-import org.betterx.wover.block.api.model.WoverBlockModelGenerators;
+import org.aiblib.bclib.blocks.BaseBlockNotFull;
+import org.aiblib.wover.block.api.BlockProperties;
+import org.aiblib.wover.block.api.model.BlockModelProvider;
+import org.aiblib.wover.block.api.model.WoverBlockModelGenerators;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

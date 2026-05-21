@@ -1,19 +1,19 @@
 package org.betterx.betterend.complexmaterials;
 
-import org.betterx.bclib.blocks.BaseBarkBlock;
-import org.betterx.bclib.blocks.BaseRotatedPillarBlock;
-import org.betterx.bclib.complexmaterials.ComplexMaterial;
-import org.betterx.bclib.complexmaterials.WoodenComplexMaterial;
-import org.betterx.bclib.complexmaterials.entry.BlockEntry;
-import org.betterx.bclib.complexmaterials.entry.RecipeEntry;
-import org.betterx.bclib.complexmaterials.entry.SimpleMaterialSlot;
-import org.betterx.bclib.complexmaterials.set.wood.WoodSlots;
+import org.aiblib.bclib.blocks.BaseBarkBlock;
+import org.aiblib.bclib.blocks.BaseRotatedPillarBlock;
+import org.aiblib.bclib.complexmaterials.ComplexMaterial;
+import org.aiblib.bclib.complexmaterials.WoodenComplexMaterial;
+import org.aiblib.bclib.complexmaterials.entry.BlockEntry;
+import org.aiblib.bclib.complexmaterials.entry.RecipeEntry;
+import org.aiblib.bclib.complexmaterials.entry.SimpleMaterialSlot;
+import org.aiblib.bclib.complexmaterials.set.wood.WoodSlots;
 import org.betterx.betterend.blocks.basis.EndStrippedBarkBlock;
 import org.betterx.betterend.blocks.basis.EndStrippedLogBlock;
 import org.betterx.betterend.blocks.basis.EndStrippableBarkBlock;
 import org.betterx.betterend.blocks.basis.EndStrippableLogBlock;
-import org.betterx.wover.recipe.api.CraftingRecipeBuilder;
-import org.betterx.wover.recipe.api.RecipeBuilder;
+import org.aiblib.wover.recipe.api.CraftingRecipeBuilder;
+import org.aiblib.wover.recipe.api.RecipeBuilder;
 
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
@@ -238,7 +238,7 @@ public class EndWoodSlots {
             RecipeOutput output,
             ComplexMaterial material,
             ResourceLocation id,
-            org.betterx.bclib.complexmaterials.entry.MaterialSlot<WoodenComplexMaterial> inputSlot
+            org.aiblib.bclib.complexmaterials.entry.MaterialSlot<WoodenComplexMaterial> inputSlot
     ) {
         String outputSuffix = inputSlot == WoodSlots.LOG
                 ? WoodSlots.BARK.suffix

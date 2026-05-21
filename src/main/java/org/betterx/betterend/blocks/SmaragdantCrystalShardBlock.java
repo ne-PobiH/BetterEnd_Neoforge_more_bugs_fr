@@ -1,10 +1,10 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.behaviours.BehaviourBuilders;
-import org.betterx.bclib.blocks.BaseAttachedBlock;
-import org.betterx.bclib.client.render.BCLRenderLayer;
-import org.betterx.bclib.interfaces.RenderLayerProvider;
-import org.betterx.bclib.interfaces.tools.AddMineablePickaxe;
+import org.aiblib.bclib.behaviours.BehaviourBuilders;
+import org.aiblib.bclib.blocks.BaseAttachedBlock;
+import org.aiblib.bclib.client.render.BCLRenderLayer;
+import org.aiblib.bclib.interfaces.RenderLayerProvider;
+import org.aiblib.bclib.interfaces.tools.AddMineablePickaxe;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

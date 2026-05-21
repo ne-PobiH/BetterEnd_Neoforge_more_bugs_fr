@@ -4,9 +4,9 @@ import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndItems;
 import org.betterx.betterend.registry.EndTemplates;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.datagen.api.provider.WoverRecipeProvider;
-import org.betterx.wover.recipe.api.RecipeBuilder;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.datagen.api.provider.WoverRecipeProvider;
+import org.aiblib.wover.recipe.api.RecipeBuilder;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeOutput;

@@ -1,6 +1,6 @@
 package org.betterx.betterend.util;
 
-import org.betterx.bclib.items.DebugDataItem;
+import org.aiblib.bclib.items.DebugDataItem;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.registry.EndItems;
 import org.betterx.betterend.world.structures.village.VillagePools;

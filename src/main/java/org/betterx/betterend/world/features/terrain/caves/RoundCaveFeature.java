@@ -1,9 +1,9 @@
 package org.betterx.betterend.world.features.terrain.caves;
 
-import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.util.BlocksHelper;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.noise.OpenSimplexNoise;
-import org.betterx.wover.tag.api.predefined.CommonBlockTags;
+import org.aiblib.wover.tag.api.predefined.CommonBlockTags;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.BlockPos.MutableBlockPos;
@@ -11,6 +11,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.Heightmap;
 
 import com.google.common.collect.Sets;
 
@@ -42,6 +43,7 @@ public class RoundCaveFeature extends EndCaveFeatures {
             int z = (index / dx) + z1;
             bpos.setX(x);
             bpos.setZ(z);
+            int surfaceY = world.getHeight(Heightmap.Types.WORLD_SURFACE_WG, x, z);
             int xsq = MHelper.sqr(x - center.getX());
             int zsq = MHelper.sqr(z - center.getZ());
             int dxz = xsq + zsq;
@@ -53,7 +55,7 @@ public class RoundCaveFeature extends EndCaveFeatures {
                 if (dist < r * r) {
                     bpos.setY(y);
                     state = world.getBlockState(bpos);
-                    if (isReplaceable(state) && !isWaterNear(world, bpos)) {
+                    if (y < surfaceY - 3 && isReplaceable(state) && !isWaterNear(world, bpos)) {
                         blocks.add(bpos.immutable());
 
                         while (state.is(BlockTags.LEAVES)) {

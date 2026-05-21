@@ -1,10 +1,10 @@
 package org.betterx.betterend.world.features.terrain;
 
-import org.betterx.bclib.sdf.SDF;
-import org.betterx.bclib.sdf.operator.SDFCoordModify;
-import org.betterx.bclib.sdf.operator.SDFScale3D;
-import org.betterx.bclib.sdf.primitive.SDFSphere;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.sdf.SDF;
+import org.aiblib.bclib.sdf.operator.SDFCoordModify;
+import org.aiblib.bclib.sdf.operator.SDFScale3D;
+import org.aiblib.bclib.sdf.primitive.SDFSphere;
+import org.aiblib.bclib.util.MHelper;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;

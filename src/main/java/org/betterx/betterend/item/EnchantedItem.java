@@ -1,7 +1,7 @@
 package org.betterx.betterend.item;
 
-import org.betterx.bclib.client.models.ModelsHelper;
-import org.betterx.bclib.items.ModelProviderItem;
+import org.aiblib.bclib.client.models.ModelsHelper;
+import org.aiblib.bclib.items.ModelProviderItem;
 import org.betterx.betterend.registry.EndItems;
 
 import net.minecraft.client.renderer.block.model.BlockModel;

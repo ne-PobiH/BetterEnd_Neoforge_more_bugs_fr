@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "all_is_better_lib:block/empty_test"
+    }
+  }
+}

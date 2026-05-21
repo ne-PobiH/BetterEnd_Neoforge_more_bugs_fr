@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks.basis;
 
-import org.betterx.bclib.behaviours.interfaces.BehaviourStone;
-import org.betterx.bclib.blocks.TripleTerrainBlock;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourStone;
+import org.aiblib.bclib.blocks.TripleTerrainBlock;
 import org.betterx.betterend.interfaces.PottableTerrain;
 
 import net.minecraft.world.level.block.Blocks;

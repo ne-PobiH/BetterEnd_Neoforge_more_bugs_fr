@@ -1,14 +1,14 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.behaviours.BehaviourBuilders;
-import org.betterx.bclib.behaviours.interfaces.BehaviourWaterPlant;
-import org.betterx.bclib.blocks.UnderwaterPlantBlock;
-import org.betterx.bclib.interfaces.tools.AddMineableShears;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.behaviours.BehaviourBuilders;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourWaterPlant;
+import org.aiblib.bclib.blocks.UnderwaterPlantBlock;
+import org.aiblib.bclib.interfaces.tools.AddMineableShears;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.blocks.EndBlockProperties.HydraluxShape;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndItems;
-import org.betterx.wover.tag.api.predefined.CommonBlockTags;
+import org.aiblib.wover.tag.api.predefined.CommonBlockTags;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;

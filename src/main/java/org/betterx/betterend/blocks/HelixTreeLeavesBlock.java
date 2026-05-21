@@ -1,17 +1,17 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.behaviours.BehaviourBuilders;
-import org.betterx.bclib.behaviours.interfaces.BehaviourLeaves;
-import org.betterx.bclib.blocks.BaseBlock;
-import org.betterx.bclib.interfaces.BlockColorProvider;
-import org.betterx.bclib.interfaces.CustomColorProvider;
-import org.betterx.bclib.interfaces.ItemColorProvider;
-import org.betterx.bclib.interfaces.tools.AddMineableShears;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.behaviours.BehaviourBuilders;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourLeaves;
+import org.aiblib.bclib.blocks.BaseBlock;
+import org.aiblib.bclib.interfaces.BlockColorProvider;
+import org.aiblib.bclib.interfaces.CustomColorProvider;
+import org.aiblib.bclib.interfaces.ItemColorProvider;
+import org.aiblib.bclib.interfaces.tools.AddMineableShears;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.noise.OpenSimplexNoise;
-import org.betterx.ui.ColorUtil;
-import org.betterx.wover.block.api.BlockTagProvider;
-import org.betterx.wover.tag.api.event.context.TagBootstrapContext;
+import org.aiblib.ui.ColorUtil;
+import org.aiblib.wover.block.api.BlockTagProvider;
+import org.aiblib.wover.tag.api.event.context.TagBootstrapContext;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;

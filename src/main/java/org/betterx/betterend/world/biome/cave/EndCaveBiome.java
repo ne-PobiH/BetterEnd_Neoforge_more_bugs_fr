@@ -1,18 +1,18 @@
 package org.betterx.betterend.world.biome.cave;
 
-import org.betterx.bclib.interfaces.SurfaceMaterialProvider;
-import org.betterx.bclib.util.WeightedList;
+import org.aiblib.bclib.interfaces.SurfaceMaterialProvider;
+import org.aiblib.bclib.util.WeightedList;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.registry.EndSounds;
 import org.betterx.betterend.world.biome.EndBiome;
 import org.betterx.betterend.world.biome.EndBiomeBuilder;
 import org.betterx.betterend.world.biome.EndBiomeKey;
 import org.betterx.betterend.world.features.terrain.caves.CaveChunkPopulatorFeatureConfig;
-import org.betterx.wover.biome.api.BiomeKey;
-import org.betterx.wover.biome.api.data.BiomeGenerationDataContainer;
-import org.betterx.wover.feature.api.placed.PlacedFeatureKey;
-import org.betterx.wover.feature.api.placed.PlacedFeatureManager;
-import org.betterx.wover.generator.api.biomesource.WoverBiomeData;
+import org.aiblib.wover.biome.api.BiomeKey;
+import org.aiblib.wover.biome.api.data.BiomeGenerationDataContainer;
+import org.aiblib.wover.feature.api.placed.PlacedFeatureKey;
+import org.aiblib.wover.feature.api.placed.PlacedFeatureManager;
+import org.aiblib.wover.generator.api.biomesource.WoverBiomeData;
 
 import com.mojang.datafixers.util.Function13;
 import com.mojang.serialization.Codec;
@@ -32,7 +32,7 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.betterx.wover.state.api.WorldState;
+import org.aiblib.wover.state.api.WorldState;
 
 public class EndCaveBiome extends EndBiome {
     private static final Codec<WeightedList<ResourceKey<ConfiguredFeature<?, ?>>>> FEATURE_KEY_LIST_CODEC =

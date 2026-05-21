@@ -1,12 +1,12 @@
 package org.betterx.betterend.blocks.basis;
 
-import org.betterx.bclib.behaviours.interfaces.BehaviourStone;
-import org.betterx.bclib.client.models.BCLModels;
-import org.betterx.bclib.interfaces.BlockColorProvider;
-import org.betterx.bclib.interfaces.CustomColorProvider;
-import org.betterx.bclib.interfaces.ItemColorProvider;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourStone;
+import org.aiblib.bclib.client.models.BCLModels;
+import org.aiblib.bclib.interfaces.BlockColorProvider;
+import org.aiblib.bclib.interfaces.CustomColorProvider;
+import org.aiblib.bclib.interfaces.ItemColorProvider;
 import org.betterx.betterend.registry.EndBlocks;
-import org.betterx.wover.block.api.model.WoverBlockModelGenerators;
+import org.aiblib.wover.block.api.model.WoverBlockModelGenerators;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;

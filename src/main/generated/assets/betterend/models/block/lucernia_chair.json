@@ -1,5 +1,5 @@
 {
-  "parent": "bclib:block/chair",
+  "parent": "all_is_better_lib:block/chair",
   "textures": {
     "texture": "betterend:block/lucernia_planks"
   }

@@ -8,8 +8,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.MultifaceBlock;
 import net.minecraft.world.level.material.MapColor;
-import org.betterx.bclib.api.v3.tag.BCLBlockTags;
-import org.betterx.bclib.blocks.*;
+import org.aiblib.bclib.api.v3.tag.BCLBlockTags;
+import org.aiblib.bclib.blocks.*;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.blocks.*;
 import org.betterx.betterend.blocks.basis.*;
@@ -17,9 +17,9 @@ import org.betterx.betterend.complexmaterials.*;
 import org.betterx.betterend.registry.EndTags;
 import org.betterx.betterend.item.material.EndArmorTier;
 import org.betterx.betterend.item.material.EndToolMaterial;
-import org.betterx.wover.block.api.BlockRegistry;
-import org.betterx.wover.tag.api.predefined.CommonBlockTags;
-import org.betterx.wover.tag.api.predefined.CommonPoiTags;
+import org.aiblib.wover.block.api.BlockRegistry;
+import org.aiblib.wover.tag.api.predefined.CommonBlockTags;
+import org.aiblib.wover.tag.api.predefined.CommonPoiTags;
 import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.NotNull;
 
@@ -155,6 +155,7 @@ public class EndBlocks {
     public static Block CRYSTAL_GRASS;
     public static Block SHADOW_PLANT;
     public static Block BUSHY_GRASS;
+    public static Block DUST_BUSH;
     public static Block AMBER_GRASS;
     public static Block TWISTED_UMBRELLA_MOSS;
     public static Block TWISTED_UMBRELLA_MOSS_TALL;
@@ -334,8 +335,8 @@ public class EndBlocks {
     }
 
     /**
-     * Гарантированно инициализирует все блоки (ленивая регистрация через BlockRegistry).
-     * Вызываем из других реестров, чтобы поля не оставались null во время RegisterEvent.
+     * Р“Р°СЂР°РЅС‚РёСЂРѕРІР°РЅРЅРѕ РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ РІСЃРµ Р±Р»РѕРєРё (Р»РµРЅРёРІР°СЏ СЂРµРіРёСЃС‚СЂР°С†РёСЏ С‡РµСЂРµР· BlockRegistry).
+     * Р’С‹Р·С‹РІР°РµРј РёР· РґСЂСѓРіРёС… СЂРµРµСЃС‚СЂРѕРІ, С‡С‚РѕР±С‹ РїРѕР»СЏ РЅРµ РѕСЃС‚Р°РІР°Р»РёСЃСЊ null РІРѕ РІСЂРµРјСЏ RegisterEvent.
      */
     public static void ensureRegistered() {
         getBlockRegistry();
@@ -449,6 +450,7 @@ public class EndBlocks {
         CRYSTAL_GRASS = registerBlock( "crystal_grass", new TerrainPlantBlock(CRYSTAL_MOSS) );
         SHADOW_PLANT = registerBlock( "shadow_plant", new TerrainPlantBlock(SHADOW_GRASS) );
         BUSHY_GRASS = registerBlock( "bushy_grass", new TerrainPlantBlock(PINK_MOSS) );
+        DUST_BUSH = registerBlock( "dust_bush", new DustBushBlock() );
         AMBER_GRASS = registerBlock( "amber_grass", new TerrainPlantBlock(AMBER_MOSS) );
         TWISTED_UMBRELLA_MOSS = registerBlock( "twisted_umbrella_moss", new TwistedUmbrellaMossBlock() );
         TWISTED_UMBRELLA_MOSS_TALL = registerBlock( "twisted_umbrella_moss_tall", new TwistedUmbrellaMossTallBlock() );

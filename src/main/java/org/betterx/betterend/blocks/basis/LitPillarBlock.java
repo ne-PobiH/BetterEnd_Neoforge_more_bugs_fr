@@ -1,6 +1,6 @@
 package org.betterx.betterend.blocks.basis;
 
-import org.betterx.bclib.blocks.BaseRotatedPillarBlock;
+import org.aiblib.bclib.blocks.BaseRotatedPillarBlock;
 
 import net.minecraft.resources.ResourceLocation;
 

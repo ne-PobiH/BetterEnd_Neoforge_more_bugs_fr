@@ -2,7 +2,7 @@
   "elements": [
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/streets/street_01",
         "processors": "betterend:end_street",
         "projection": "terrain_matching"
@@ -11,7 +11,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/streets/street_02",
         "processors": "betterend:end_street",
         "projection": "terrain_matching"
@@ -20,7 +20,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/streets/street_03",
         "processors": "betterend:end_street",
         "projection": "terrain_matching"
@@ -29,7 +29,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/streets/street_04",
         "processors": "betterend:end_street",
         "projection": "terrain_matching"
@@ -38,7 +38,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/streets/curve_01",
         "processors": "betterend:end_street",
         "projection": "terrain_matching"
@@ -47,7 +47,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/streets/curve_02",
         "processors": "betterend:end_street",
         "projection": "terrain_matching"
@@ -56,7 +56,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/streets/t_crossing_01",
         "processors": "betterend:end_street",
         "projection": "terrain_matching"
@@ -65,7 +65,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/streets/t_crossing_02",
         "processors": "betterend:end_street",
         "projection": "terrain_matching"

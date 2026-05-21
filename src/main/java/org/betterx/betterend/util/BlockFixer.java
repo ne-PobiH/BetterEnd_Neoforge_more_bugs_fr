@@ -1,9 +1,9 @@
 package org.betterx.betterend.util;
 
-import org.betterx.bclib.blocks.BaseDoublePlantBlock;
-import org.betterx.bclib.blocks.BaseVineBlock;
-import org.betterx.bclib.blocks.StalactiteBlock;
-import org.betterx.bclib.util.BlocksHelper;
+import org.aiblib.bclib.blocks.BaseDoublePlantBlock;
+import org.aiblib.bclib.blocks.BaseVineBlock;
+import org.aiblib.bclib.blocks.StalactiteBlock;
+import org.aiblib.bclib.util.BlocksHelper;
 import org.betterx.betterend.blocks.BlueVineBlock;
 import org.betterx.betterend.blocks.basis.FurBlock;
 import org.betterx.betterend.registry.EndBlocks;

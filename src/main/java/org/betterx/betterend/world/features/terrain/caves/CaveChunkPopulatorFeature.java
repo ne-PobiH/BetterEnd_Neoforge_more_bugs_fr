@@ -1,9 +1,9 @@
 package org.betterx.betterend.world.features.terrain.caves;
 
-import org.betterx.bclib.util.BlocksHelper;
+import org.aiblib.bclib.util.BlocksHelper;
 import org.betterx.betterend.util.BlockFixer;
 import org.betterx.betterend.world.biome.cave.EndCaveBiome;
-import org.betterx.wover.tag.api.predefined.CommonBlockTags;
+import org.aiblib.wover.tag.api.predefined.CommonBlockTags;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.BlockPos.MutableBlockPos;

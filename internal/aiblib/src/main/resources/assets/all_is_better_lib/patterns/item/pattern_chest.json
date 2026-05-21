@@ -1,0 +1,6 @@
+{
+  "parent": "all_is_better_lib:block/chest_item",
+  "textures": {
+    "texture": "%modid%:block/chest/%texture%"
+  }
+}

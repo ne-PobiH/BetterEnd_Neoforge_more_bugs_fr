@@ -1,9 +1,9 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.blocks.UpDownPlantBlock;
+import org.aiblib.bclib.blocks.UpDownPlantBlock;
 import org.betterx.betterend.registry.EndBlocks;
-import org.betterx.wover.block.api.BlockProperties;
-import org.betterx.wover.block.api.BlockProperties.TripleShape;
+import org.aiblib.wover.block.api.BlockProperties;
+import org.aiblib.wover.block.api.BlockProperties.TripleShape;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.ItemStack;

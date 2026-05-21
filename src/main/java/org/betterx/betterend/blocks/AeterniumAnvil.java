@@ -1,6 +1,6 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.items.BaseAnvilItem;
+import org.aiblib.bclib.items.BaseAnvilItem;
 import org.betterx.betterend.blocks.basis.EndAnvilBlock;
 import org.betterx.betterend.item.material.EndToolMaterial;
 import org.betterx.betterend.registry.EndBlocks;

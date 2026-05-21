@@ -1,5 +1,5 @@
 {
-  "parent": "bclib:block/bar_stool",
+  "parent": "all_is_better_lib:block/bar_stool",
   "textures": {
     "cloth": "minecraft:block/gray_wool",
     "texture": "betterend:block/mossy_glowshroom_planks"

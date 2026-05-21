@@ -1,9 +1,9 @@
 package org.betterx.betterend.world.surface;
 
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.noise.OpenSimplexNoise;
-import org.betterx.wover.surface.api.conditions.SurfaceRulesContext;
-import org.betterx.wover.surface.api.noise.NumericProvider;
+import org.aiblib.wover.surface.api.conditions.SurfaceRulesContext;
+import org.aiblib.wover.surface.api.noise.NumericProvider;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;

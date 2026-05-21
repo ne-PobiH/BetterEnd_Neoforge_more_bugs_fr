@@ -1,6 +1,6 @@
 package org.betterx.betterend.integration.byg;
 
-import org.betterx.bclib.integration.ModIntegration;
+import org.aiblib.bclib.integration.ModIntegration;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.integration.EndBiomeIntegration;
 import org.betterx.betterend.integration.byg.biomes.BYGBiomes;

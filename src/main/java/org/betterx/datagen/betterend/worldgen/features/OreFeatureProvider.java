@@ -5,9 +5,9 @@ import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndFeatures;
 import org.betterx.betterend.registry.features.EndOreFeatures;
 import org.betterx.betterend.world.features.terrain.OreLayerFeatureConfig;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.datagen.api.provider.multi.WoverFeatureProvider;
-import org.betterx.wover.feature.api.placed.PlacedFeatureKey;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.datagen.api.provider.multi.WoverFeatureProvider;
+import org.aiblib.wover.feature.api.placed.PlacedFeatureKey;
 
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.world.level.block.Block;

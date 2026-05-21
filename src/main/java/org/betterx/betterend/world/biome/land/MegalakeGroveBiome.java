@@ -1,6 +1,6 @@
 package org.betterx.betterend.world.biome.land;
 
-import org.betterx.bclib.interfaces.SurfaceMaterialProvider;
+import org.aiblib.bclib.interfaces.SurfaceMaterialProvider;
 import org.betterx.betterend.registry.*;
 import org.betterx.betterend.registry.features.EndVegetationFeatures;
 import org.betterx.betterend.world.biome.EndBiome;

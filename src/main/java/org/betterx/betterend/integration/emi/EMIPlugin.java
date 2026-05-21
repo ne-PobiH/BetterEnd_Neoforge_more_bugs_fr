@@ -2,8 +2,8 @@ package org.betterx.betterend.integration.emi;
 
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.registry.EndBlocks;
-import org.betterx.bclib.integration.emi.EMIAnvilRecipe;
-import org.betterx.bclib.recipes.AnvilRecipe;
+import org.aiblib.bclib.integration.emi.EMIAnvilRecipe;
+import org.aiblib.bclib.recipes.AnvilRecipe;
 
 import net.minecraft.core.Holder;
 import net.minecraft.world.item.crafting.RecipeManager;
@@ -27,7 +27,7 @@ public class EMIPlugin implements dev.emi.emi.api.EmiPlugin {
     public static final EmiRecipeCategory INFUSION_CATEGORY = new EmiRecipeCategory(
             BetterEnd.C.mk("infusion"),
             INFUSION_WORKSTATION,
-            org.betterx.bclib.integration.emi.EMIPlugin.getSprite(0, 16)
+            org.aiblib.bclib.integration.emi.EMIPlugin.getSprite(0, 16)
     );
 
     @Override
@@ -37,7 +37,7 @@ public class EMIPlugin implements dev.emi.emi.api.EmiPlugin {
         emiRegistry.addWorkstation(INFUSION_CATEGORY, INFUSION_WORKSTATION);
 
         EMIInfusionRecipe.addAllRecipes(emiRegistry, manager);
-        if (org.betterx.bclib.integration.emi.EMIPlugin.END_ALLOYING_CATEGORY != null) {
+        if (org.aiblib.bclib.integration.emi.EMIPlugin.END_ALLOYING_CATEGORY != null) {
             EMIBlastingRecipe.addAllRecipes(emiRegistry, manager);
         }
 
@@ -45,25 +45,25 @@ public class EMIPlugin implements dev.emi.emi.api.EmiPlugin {
         emiRegistry.addWorkstation(VanillaEmiRecipeCategories.SMELTING, SANDY_JADESTONE_FURNACE_WORKSTATION);
         emiRegistry.addWorkstation(VanillaEmiRecipeCategories.SMELTING, VIRID_JADESTONE_FURNACE_WORKSTATION);
 
-        org.betterx.bclib.integration.emi.EMIPlugin bclibPlugin = new org.betterx.bclib.integration.emi.EMIPlugin();
+        org.aiblib.bclib.integration.emi.EMIPlugin bclibPlugin = new org.aiblib.bclib.integration.emi.EMIPlugin();
         bclibPlugin.lazyInit();
-        if (org.betterx.bclib.integration.emi.EMIPlugin.ANVIL_CATEGORIES != null
-                && org.betterx.bclib.integration.emi.EMIPlugin.ANVIL_WORKSTATIONS != null) {
-            for (int i = 0; i < org.betterx.bclib.integration.emi.EMIPlugin.ANVIL_CATEGORIES.length; i++) {
-                EmiRecipeCategory category = org.betterx.bclib.integration.emi.EMIPlugin.ANVIL_CATEGORIES[i];
+        if (org.aiblib.bclib.integration.emi.EMIPlugin.ANVIL_CATEGORIES != null
+                && org.aiblib.bclib.integration.emi.EMIPlugin.ANVIL_WORKSTATIONS != null) {
+            for (int i = 0; i < org.aiblib.bclib.integration.emi.EMIPlugin.ANVIL_CATEGORIES.length; i++) {
+                EmiRecipeCategory category = org.aiblib.bclib.integration.emi.EMIPlugin.ANVIL_CATEGORIES[i];
                 if (category != null) {
                     emiRegistry.addCategory(category);
                     emiRegistry.addWorkstation(
                             category,
-                            org.betterx.bclib.integration.emi.EMIPlugin.ANVIL_WORKSTATIONS[i]
+                            org.aiblib.bclib.integration.emi.EMIPlugin.ANVIL_WORKSTATIONS[i]
                     );
                 }
             }
             Iterable<Holder<Item>> hammers = AnvilRecipe.getAllHammers();
-            org.betterx.bclib.integration.emi.EMIPlugin.addAllRecipes(
+            org.aiblib.bclib.integration.emi.EMIPlugin.addAllRecipes(
                     emiRegistry,
                     manager,
-                    org.betterx.bclib.BCLib.LOGGER,
+                    org.aiblib.bclib.BCLib.LOGGER,
                     AnvilRecipe.TYPE,
                     recipe -> StreamSupport.stream(hammers.spliterator(), false)
                                            .map(Holder::value)

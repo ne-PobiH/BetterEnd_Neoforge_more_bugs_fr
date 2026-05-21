@@ -1,7 +1,7 @@
 package org.betterx.betterend.registry;
 
 import org.betterx.betterend.BetterEnd;
-import org.betterx.wover.item.api.smithing.SmithingTemplates;
+import org.aiblib.wover.item.api.smithing.SmithingTemplates;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.SmithingTemplateItem;

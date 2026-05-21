@@ -1,6 +1,6 @@
 package org.betterx.betterend.interfaces;
 
-import org.betterx.bclib.items.elytra.BCLElytraItem;
+import org.aiblib.bclib.items.elytra.BCLElytraItem;
 
 import net.minecraft.resources.ResourceLocation;
 

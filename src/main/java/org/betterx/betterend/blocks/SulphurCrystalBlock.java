@@ -1,14 +1,14 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.blocks.BaseAttachedBlock;
-import org.betterx.bclib.client.render.BCLRenderLayer;
-import org.betterx.bclib.interfaces.RenderLayerProvider;
+import org.aiblib.bclib.blocks.BaseAttachedBlock;
+import org.aiblib.bclib.client.render.BCLRenderLayer;
+import org.aiblib.bclib.interfaces.RenderLayerProvider;
 import org.betterx.betterend.interfaces.survives.SurvivesOnBrimstone;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndItems;
-import org.betterx.wover.block.api.BlockProperties;
-import org.betterx.wover.loot.api.BlockLootProvider;
-import org.betterx.wover.loot.api.LootLookupProvider;
+import org.aiblib.wover.block.api.BlockProperties;
+import org.aiblib.wover.loot.api.BlockLootProvider;
+import org.aiblib.wover.loot.api.LootLookupProvider;
 
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.BlockPos;

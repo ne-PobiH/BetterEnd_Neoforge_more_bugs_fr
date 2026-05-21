@@ -1,12 +1,12 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.behaviours.BehaviourBuilders;
-import org.betterx.bclib.behaviours.interfaces.BehaviourWaterPlant;
-import org.betterx.bclib.interfaces.tools.AddMineableShears;
+import org.aiblib.bclib.behaviours.BehaviourBuilders;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourWaterPlant;
+import org.aiblib.bclib.interfaces.tools.AddMineableShears;
 import org.betterx.betterend.blocks.basis.EndUnderwaterPlantBlock;
 import org.betterx.betterend.interfaces.survives.SurvivesOnEndStone;
-import org.betterx.wover.block.api.model.BlockModelProvider;
-import org.betterx.wover.block.api.model.WoverBlockModelGenerators;
+import org.aiblib.wover.block.api.model.BlockModelProvider;
+import org.aiblib.wover.block.api.model.WoverBlockModelGenerators;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;

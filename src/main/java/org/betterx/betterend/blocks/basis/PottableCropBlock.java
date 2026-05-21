@@ -1,8 +1,8 @@
 package org.betterx.betterend.blocks.basis;
 
-import org.betterx.bclib.behaviours.interfaces.BehaviourSeed;
-import org.betterx.bclib.blocks.BaseCropBlock;
-import org.betterx.bclib.interfaces.SurvivesOnBlocks;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourSeed;
+import org.aiblib.bclib.blocks.BaseCropBlock;
+import org.aiblib.bclib.interfaces.SurvivesOnBlocks;
 import org.betterx.betterend.interfaces.PottablePlant;
 
 import net.minecraft.world.item.Item;

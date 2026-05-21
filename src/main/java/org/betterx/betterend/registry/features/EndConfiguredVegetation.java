@@ -6,9 +6,9 @@ import org.betterx.betterend.world.features.bushes.LargeAmaranitaFeature;
 import org.betterx.betterend.world.features.bushes.Lumecorn;
 import org.betterx.betterend.world.features.bushes.TenaneaBushFeature;
 import org.betterx.betterend.world.features.trees.*;
-import org.betterx.wover.feature.api.configured.ConfiguredFeatureKey;
-import org.betterx.wover.feature.api.configured.ConfiguredFeatureManager;
-import org.betterx.wover.feature.api.configured.configurators.WithConfiguration;
+import org.aiblib.wover.feature.api.configured.ConfiguredFeatureKey;
+import org.aiblib.wover.feature.api.configured.ConfiguredFeatureManager;
+import org.aiblib.wover.feature.api.configured.configurators.WithConfiguration;
 
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 

@@ -1,6 +1,6 @@
 package org.betterx.betterend.registry;
 
-import org.betterx.bclib.particles.BCLParticleType;
+import org.aiblib.bclib.particles.BCLParticleType;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.particle.*;
 

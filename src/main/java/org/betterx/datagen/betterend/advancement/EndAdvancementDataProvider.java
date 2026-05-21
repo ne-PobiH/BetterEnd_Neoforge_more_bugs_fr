@@ -1,8 +1,8 @@
 package org.betterx.datagen.betterend.advancement;
 
-import org.betterx.bclib.api.v2.advancement.AdvancementManager;
-import org.betterx.bclib.api.v3.datagen.AdvancementDataProvider;
-import org.betterx.bclib.complexmaterials.set.wood.WoodSlots;
+import org.aiblib.bclib.api.v2.advancement.AdvancementManager;
+import org.aiblib.bclib.api.v3.datagen.AdvancementDataProvider;
+import org.aiblib.bclib.complexmaterials.set.wood.WoodSlots;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.advancements.BECriteria;
 import org.betterx.betterend.complexmaterials.MetalMaterial;

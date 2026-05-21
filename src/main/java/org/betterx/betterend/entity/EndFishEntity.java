@@ -2,7 +2,7 @@ package org.betterx.betterend.entity;
 
 import org.betterx.betterend.registry.EndBiomes;
 import org.betterx.betterend.registry.EndItems;
-import org.betterx.wover.enchantment.api.EnchantmentUtils;
+import org.aiblib.wover.enchantment.api.EnchantmentUtils;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;

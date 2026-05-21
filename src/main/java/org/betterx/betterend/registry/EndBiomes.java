@@ -8,13 +8,13 @@ import org.betterx.betterend.world.biome.air.BiomeIceStarfield;
 import org.betterx.betterend.world.biome.cave.*;
 import org.betterx.betterend.world.biome.land.*;
 import org.betterx.betterend.world.generator.GeneratorOptions;
-import org.betterx.wover.biome.api.data.BiomeCodecRegistry;
-import org.betterx.wover.biome.api.data.BiomeDataRegistry;
-import org.betterx.wover.events.api.WorldLifecycle;
-import org.betterx.wover.generator.api.biomesource.WoverBiomePicker;
-import org.betterx.wover.generator.impl.biomesource.end.WoverEndBiomeSource;
-import org.betterx.wover.generator.impl.map.hex.HexBiomeMap;
-import org.betterx.wover.state.api.WorldState;
+import org.aiblib.wover.biome.api.data.BiomeCodecRegistry;
+import org.aiblib.wover.biome.api.data.BiomeDataRegistry;
+import org.aiblib.wover.events.api.WorldLifecycle;
+import org.aiblib.wover.generator.api.biomesource.WoverBiomePicker;
+import org.aiblib.wover.generator.impl.biomesource.end.WoverEndBiomeSource;
+import org.aiblib.wover.generator.impl.map.hex.HexBiomeMap;
+import org.aiblib.wover.state.api.WorldState;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
@@ -122,6 +122,7 @@ public class EndBiomes {
     }
 
     public static WoverBiomePicker.PickableBiome getCaveBiome(int x, int z) {
+        caveBiomeMap.clearCache();
         return caveBiomeMap.getBiome(x, 5, z);
     }
 

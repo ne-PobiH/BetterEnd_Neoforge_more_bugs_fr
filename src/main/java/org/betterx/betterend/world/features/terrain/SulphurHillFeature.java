@@ -1,9 +1,9 @@
 package org.betterx.betterend.world.features.terrain;
 
-import org.betterx.bclib.api.v2.levelgen.features.features.DefaultFeature;
-import org.betterx.wover.block.api.BlockProperties;
-import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.api.v2.levelgen.features.features.DefaultFeature;
+import org.aiblib.wover.block.api.BlockProperties;
+import org.aiblib.bclib.util.BlocksHelper;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.noise.OpenSimplexNoise;
 import org.betterx.betterend.registry.EndBlocks;
 

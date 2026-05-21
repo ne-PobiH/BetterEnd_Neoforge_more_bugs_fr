@@ -1,7 +1,7 @@
 package org.betterx.betterend.world.features;
 
-import org.betterx.bclib.blocks.BaseAttachedBlock;
-import org.betterx.bclib.util.BlocksHelper;
+import org.aiblib.bclib.blocks.BaseAttachedBlock;
+import org.aiblib.bclib.util.BlocksHelper;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

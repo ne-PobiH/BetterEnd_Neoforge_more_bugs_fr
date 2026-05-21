@@ -1,17 +1,17 @@
 package org.betterx.datagen.betterend.tags;
 
-import org.betterx.bclib.api.v2.ComposterAPI;
+import org.aiblib.bclib.api.v2.ComposterAPI;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.complexmaterials.MaterialManager;
 import org.betterx.betterend.item.tool.EndHammerItem;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndItems;
 import org.betterx.betterend.registry.EndTags;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.datagen.api.WoverTagProvider;
-import org.betterx.wover.tag.api.TagManager;
-import org.betterx.wover.tag.api.event.context.ItemTagBootstrapContext;
-import org.betterx.wover.tag.api.predefined.CommonItemTags;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.datagen.api.WoverTagProvider;
+import org.aiblib.wover.tag.api.TagManager;
+import org.aiblib.wover.tag.api.event.context.ItemTagBootstrapContext;
+import org.aiblib.wover.tag.api.predefined.CommonItemTags;
 
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.tags.ItemTags;

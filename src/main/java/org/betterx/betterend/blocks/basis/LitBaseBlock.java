@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks.basis;
 
-import org.betterx.bclib.blocks.BaseBlock;
-import org.betterx.bclib.interfaces.RuntimeBlockModelProvider;
+import org.aiblib.bclib.blocks.BaseBlock;
+import org.aiblib.bclib.interfaces.RuntimeBlockModelProvider;
 
 import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.resources.ResourceLocation;

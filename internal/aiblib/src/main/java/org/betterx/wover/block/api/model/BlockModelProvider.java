@@ -1,0 +1,9 @@
+package org.aiblib.wover.block.api.model;
+
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+
+public interface BlockModelProvider {
+    @OnlyIn(Dist.CLIENT)
+    void provideBlockModels(WoverBlockModelGenerators generator);
+}

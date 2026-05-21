@@ -12,6 +12,15 @@ authors="quiqueck, paulevs (original author), Bulldog83, Edos, Yuki, Seaward, Fi
 displayURL="https://www.curseforge.com/minecraft/mc-mods/betterend"
 logoFile="assets/betterend/icon.png"
 
+[[mods]]
+modId="all_is_better_lib"
+version="${version}"
+displayName="AiBlib"
+description="Embedded BetterEnd runtime library bundle based on BCLib, WunderLib and WorldWeaver."
+authors="quiqueck, paulevs, BetterX contributors"
+displayURL="https://github.com/ne-PobiH/BetterEnd_Neoforge_more_bugs_fr/tree/absolute"
+logoFile="assets/all_is_better_lib/icon.png"
+
 [[dependencies.${mod_id}]]
 modId="neoforge"
 mandatory=true
@@ -27,23 +36,30 @@ ordering="NONE"
 side="BOTH"
 
 [[dependencies.${mod_id}]]
-modId="bclib"
+modId="all_is_better_lib"
 mandatory=true
-versionRange="[${bclib_version},)"
+versionRange="[${version},)"
 ordering="NONE"
 side="BOTH"
 
 [[dependencies.${mod_id}]]
-modId="wover"
+modId="biolith"
+type="required"
+versionRange="[3.0.0,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.all_is_better_lib]]
+modId="neoforge"
 mandatory=true
-versionRange="[${wover_version},)"
+versionRange="[${neoforge_version},)"
 ordering="NONE"
 side="BOTH"
 
-[[dependencies.${mod_id}]]
-modId="wunderlib"
+[[dependencies.all_is_better_lib]]
+modId="minecraft"
 mandatory=true
-versionRange="[${wunderlib_version},)"
+versionRange="[${minecraft_version}]"
 ordering="NONE"
 side="BOTH"
 
@@ -52,6 +68,45 @@ config="betterend.mixins.common.json"
 
 [[mixins]]
 config="betterend.mixins.client.json"
+
+[[mixins]]
+config="all_is_better_lib.bclib.mixins.common.json"
+
+[[mixins]]
+config="all_is_better_lib.bclib.mixins.client.json"
+
+[[mixins]]
+config="all_is_better_lib.wover.core.mixins.common.json"
+
+[[mixins]]
+config="all_is_better_lib.wover.event.mixins.common.json"
+
+[[mixins]]
+config="all_is_better_lib.wover.tag.mixins.common.json"
+
+[[mixins]]
+config="all_is_better_lib.wover.item.mixins.common.json"
+
+[[mixins]]
+config="all_is_better_lib.wover.block.mixins.common.json"
+
+[[mixins]]
+config="all_is_better_lib.wover.poi.mixins.common.json"
+
+[[mixins]]
+config="all_is_better_lib.wover.recipe.mixins.common.json"
+
+[[mixins]]
+config="all_is_better_lib.wover.potion.mixins.common.json"
+
+[[mixins]]
+config="all_is_better_lib.wover.surface.mixins.common.json"
+
+[[mixins]]
+config="all_is_better_lib.wover.biome.mixins.common.json"
+
+[[mixins]]
+config="all_is_better_lib.wover.generator.mixins.common.json"
 
 [modproperties.${mod_id}]
 updater_icon="icon_updater.png"

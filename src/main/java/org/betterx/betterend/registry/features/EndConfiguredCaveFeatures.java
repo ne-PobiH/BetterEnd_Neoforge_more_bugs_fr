@@ -8,9 +8,9 @@ import org.betterx.betterend.world.features.VineFeatureConfig;
 import org.betterx.betterend.world.features.bushes.BushFeature;
 import org.betterx.betterend.world.features.bushes.BushFeatureConfig;
 import org.betterx.betterend.world.features.terrain.*;
-import org.betterx.wover.feature.api.configured.ConfiguredFeatureKey;
-import org.betterx.wover.feature.api.configured.ConfiguredFeatureManager;
-import org.betterx.wover.feature.api.configured.configurators.WithConfiguration;
+import org.aiblib.wover.feature.api.configured.ConfiguredFeatureKey;
+import org.aiblib.wover.feature.api.configured.ConfiguredFeatureManager;
+import org.aiblib.wover.feature.api.configured.configurators.WithConfiguration;
 
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;

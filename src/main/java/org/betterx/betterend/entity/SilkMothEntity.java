@@ -1,13 +1,13 @@
 package org.betterx.betterend.entity;
 
-import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.util.BlocksHelper;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.blocks.EndBlockProperties;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndEntities;
 import org.betterx.betterend.registry.EndItems;
-import org.betterx.wover.enchantment.api.EnchantmentUtils;
+import org.aiblib.wover.enchantment.api.EnchantmentUtils;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;

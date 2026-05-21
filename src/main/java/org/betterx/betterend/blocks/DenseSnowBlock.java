@@ -1,8 +1,8 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.behaviours.BehaviourBuilders;
-import org.betterx.bclib.behaviours.interfaces.BehaviourSnow;
-import org.betterx.bclib.blocks.BaseBlock;
+import org.aiblib.bclib.behaviours.BehaviourBuilders;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourSnow;
+import org.aiblib.bclib.blocks.BaseBlock;
 
 public class DenseSnowBlock extends BaseBlock implements BehaviourSnow {
     public DenseSnowBlock() {

@@ -1,8 +1,8 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.behaviours.BehaviourBuilders;
-import org.betterx.bclib.behaviours.interfaces.BehaviourPlant;
-import org.betterx.bclib.util.BlocksHelper;
+import org.aiblib.bclib.behaviours.BehaviourBuilders;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourPlant;
+import org.aiblib.bclib.util.BlocksHelper;
 import org.betterx.betterend.blocks.basis.EndPlantBlock;
 import org.betterx.betterend.interfaces.survives.SurvivesOnEndBone;
 import org.betterx.betterend.registry.features.EndConfiguredVegetation;

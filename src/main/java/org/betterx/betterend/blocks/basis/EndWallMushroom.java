@@ -1,9 +1,9 @@
 package org.betterx.betterend.blocks.basis;
 
-import org.betterx.bclib.blocks.WallMushroomBlock;
+import org.aiblib.bclib.blocks.WallMushroomBlock;
 import org.betterx.betterend.interfaces.survives.SurvivesOnEndStone;
-import org.betterx.wover.block.api.model.BlockModelProvider;
-import org.betterx.wover.block.api.model.WoverBlockModelGenerators;
+import org.aiblib.wover.block.api.model.BlockModelProvider;
+import org.aiblib.wover.block.api.model.WoverBlockModelGenerators;
 
 import net.minecraft.world.level.block.state.BlockState;
 

@@ -1,11 +1,11 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.blocks.BaseAttachedBlock;
-import org.betterx.bclib.client.render.BCLRenderLayer;
-import org.betterx.bclib.interfaces.RenderLayerProvider;
+import org.aiblib.bclib.blocks.BaseAttachedBlock;
+import org.aiblib.bclib.client.render.BCLRenderLayer;
+import org.aiblib.bclib.interfaces.RenderLayerProvider;
 import org.betterx.betterend.client.models.EndModels;
-import org.betterx.wover.block.api.model.BlockModelProvider;
-import org.betterx.wover.block.api.model.WoverBlockModelGenerators;
+import org.aiblib.wover.block.api.model.BlockModelProvider;
+import org.aiblib.wover.block.api.model.WoverBlockModelGenerators;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

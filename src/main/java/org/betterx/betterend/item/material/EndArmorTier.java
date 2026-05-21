@@ -1,7 +1,7 @@
 package org.betterx.betterend.item.material;
 
-import org.betterx.wover.complex.api.equipment.ArmorTier;
-import org.betterx.wover.complex.api.equipment.ArmorTiers;
+import org.aiblib.wover.complex.api.equipment.ArmorTier;
+import org.aiblib.wover.complex.api.equipment.ArmorTiers;
 
 public class EndArmorTier {
     public static ArmorTier THALLASIUM = ArmorTier

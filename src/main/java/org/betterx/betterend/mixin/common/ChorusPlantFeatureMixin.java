@@ -1,7 +1,7 @@
 package org.betterx.betterend.mixin.common;
 
-import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.util.BlocksHelper;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.registry.EndBlocks;
 
 import net.minecraft.core.BlockPos;

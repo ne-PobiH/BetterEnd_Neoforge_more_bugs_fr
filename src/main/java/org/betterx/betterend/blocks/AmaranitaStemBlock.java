@@ -1,6 +1,6 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.blocks.BaseRotatedPillarBlock;
+import org.aiblib.bclib.blocks.BaseRotatedPillarBlock;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.material.MapColor;

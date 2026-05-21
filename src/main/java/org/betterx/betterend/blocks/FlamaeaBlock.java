@@ -1,10 +1,10 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.behaviours.BehaviourBuilders;
-import org.betterx.bclib.behaviours.interfaces.BehaviourShearablePlant;
-import org.betterx.bclib.interfaces.SurvivesOnWater;
+import org.aiblib.bclib.behaviours.BehaviourBuilders;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourShearablePlant;
+import org.aiblib.bclib.interfaces.SurvivesOnWater;
 import org.betterx.betterend.blocks.basis.EndPlantBlock;
-import org.betterx.wover.block.api.CustomBlockItemProvider;
+import org.aiblib.wover.block.api.CustomBlockItemProvider;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;

@@ -1,6 +1,7 @@
 package org.betterx.betterend;
 
-import de.ambertation.wunderlib.network.ClientBoundPacketHandler;
+import org.aiblib.AiBlib;
+import org.aiblib.wunderlib.network.ClientBoundPacketHandler;
 import org.betterx.betterend.advancements.BECriteria;
 import org.betterx.betterend.api.BetterEndPlugin;
 import org.betterx.betterend.commands.CommandRegistry;
@@ -18,10 +19,10 @@ import org.betterx.betterend.util.LootTableUtil;
 import org.betterx.betterend.world.generator.EndLandBiomeDecider;
 import org.betterx.betterend.world.generator.GeneratorOptions;
 import org.betterx.datagen.betterend.BetterEndDatagen;
-import org.betterx.wover.core.api.Logger;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.generator.api.biomesource.end.BiomeDecider;
-import org.betterx.wover.state.api.WorldConfig;
+import org.aiblib.wover.core.api.Logger;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.generator.api.biomesource.end.BiomeDecider;
+import org.aiblib.wover.state.api.WorldConfig;
 
 import net.minecraft.resources.ResourceLocation;
 
@@ -51,6 +52,7 @@ public class BetterEnd {
             : null;
 
     public BetterEnd(IEventBus modBus) {
+        AiBlib.bootstrap(modBus);
         C.registerDatapackListener(modBus);
         modBus.addListener(EndSounds::register);
         modBus.addListener(RegisterEvent.class, EndEntities::onRegister);
@@ -71,11 +73,11 @@ public class BetterEnd {
             modBus.addListener(RegisterEvent.class, BYGFeatures::onRegister);
         }
 
-        // Гарантируем, что блоки/предметы подготавливаются до фактической регистрации, даже если порядок
-        // обработчиков событий изменится (иначе остаются незарегистрованные intrusive holders).
+        // Р“Р°СЂР°РЅС‚РёСЂСѓРµРј, С‡С‚Рѕ Р±Р»РѕРєРё/РїСЂРµРґРјРµС‚С‹ РїРѕРґРіРѕС‚Р°РІР»РёРІР°СЋС‚СЃСЏ РґРѕ С„Р°РєС‚РёС‡РµСЃРєРѕР№ СЂРµРіРёСЃС‚СЂР°С†РёРё, РґР°Р¶Рµ РµСЃР»Рё РїРѕСЂСЏРґРѕРє
+        // РѕР±СЂР°Р±РѕС‚С‡РёРєРѕРІ СЃРѕР±С‹С‚РёР№ РёР·РјРµРЅРёС‚СЃСЏ (РёРЅР°С‡Рµ РѕСЃС‚Р°СЋС‚СЃСЏ РЅРµР·Р°СЂРµРіРёСЃС‚СЂРѕРІР°РЅРЅС‹Рµ intrusive holders).
         EndBlocks.ensureRegistered();
-        org.betterx.wover.block.api.BlockRegistry.hook(modBus);
-        org.betterx.wover.item.api.ItemRegistry.hook(modBus);
+        org.aiblib.wover.block.api.BlockRegistry.hook(modBus);
+        org.aiblib.wover.item.api.ItemRegistry.hook(modBus);
         if (ModCore.isDatagen()) {
             BetterEndDatagen datagen = new BetterEndDatagen();
             modBus.addListener(datagen::onGatherData);

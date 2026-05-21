@@ -1,7 +1,7 @@
 package org.betterx.betterend.integration.emi;
 
-import org.betterx.bclib.integration.emi.EMIAbstractAlloyingRecipe;
-import org.betterx.bclib.integration.emi.EMIPlugin;
+import org.aiblib.bclib.integration.emi.EMIAbstractAlloyingRecipe;
+import org.aiblib.bclib.integration.emi.EMIPlugin;
 import org.betterx.betterend.BetterEnd;
 
 import net.minecraft.resources.ResourceLocation;

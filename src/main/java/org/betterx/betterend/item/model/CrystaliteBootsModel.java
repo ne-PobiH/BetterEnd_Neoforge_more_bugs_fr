@@ -1,6 +1,6 @@
 package org.betterx.betterend.item.model;
 
-import org.betterx.bclib.client.render.HumanoidArmorRenderer;
+import org.aiblib.bclib.client.render.HumanoidArmorRenderer;
 import org.betterx.betterend.registry.EndEntitiesRenders;
 
 import net.minecraft.client.model.HumanoidModel;

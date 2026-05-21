@@ -1,12 +1,12 @@
 package org.betterx.datagen.betterend.recipes;
 
-import org.betterx.bclib.recipes.BCLRecipeBuilder;
+import org.aiblib.bclib.recipes.BCLRecipeBuilder;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.item.material.EndToolMaterial;
 import org.betterx.betterend.registry.EndItems;
 import org.betterx.betterend.registry.EndTags;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.datagen.api.provider.WoverRecipeProvider;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.datagen.api.provider.WoverRecipeProvider;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeOutput;

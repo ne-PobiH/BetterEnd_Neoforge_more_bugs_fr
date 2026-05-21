@@ -1,9 +1,9 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.blocks.BaseBlockNotFull;
-import org.betterx.wover.block.api.BlockProperties;
-import org.betterx.bclib.client.render.BCLRenderLayer;
-import org.betterx.bclib.interfaces.RenderLayerProvider;
+import org.aiblib.bclib.blocks.BaseBlockNotFull;
+import org.aiblib.wover.block.api.BlockProperties;
+import org.aiblib.bclib.client.render.BCLRenderLayer;
+import org.aiblib.bclib.interfaces.RenderLayerProvider;
 import org.betterx.betterend.registry.EndBlocks;
 
 import net.minecraft.core.BlockPos;

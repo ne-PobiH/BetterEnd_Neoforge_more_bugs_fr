@@ -1,15 +1,15 @@
 package org.betterx.betterend.world.biome;
 
-import org.betterx.bclib.interfaces.SurfaceMaterialProvider;
+import org.aiblib.bclib.interfaces.SurfaceMaterialProvider;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.registry.EndFeatures;
 import org.betterx.betterend.registry.EndSounds;
-import org.betterx.wover.biome.api.BiomeKey;
-import org.betterx.wover.biome.api.builder.BiomeBootstrapContext;
-import org.betterx.wover.biome.api.builder.BiomeBuilder;
-import org.betterx.wover.biome.api.data.BiomeData;
-import org.betterx.wover.biome.api.data.BiomeGenerationDataContainer;
-import org.betterx.wover.generator.api.biomesource.WoverBiomeBuilder;
+import org.aiblib.wover.biome.api.BiomeKey;
+import org.aiblib.wover.biome.api.builder.BiomeBootstrapContext;
+import org.aiblib.wover.biome.api.builder.BiomeBuilder;
+import org.aiblib.wover.biome.api.data.BiomeData;
+import org.aiblib.wover.biome.api.data.BiomeGenerationDataContainer;
+import org.aiblib.wover.generator.api.biomesource.WoverBiomeBuilder;
 
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.EndPlacements;

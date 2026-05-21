@@ -1,8 +1,8 @@
 package org.betterx.datagen.betterend.recipes;
 
 import org.betterx.betterend.registry.EndBlocks;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.datagen.api.provider.WoverLootTableProvider;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.datagen.api.provider.WoverLootTableProvider;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.resources.ResourceKey;

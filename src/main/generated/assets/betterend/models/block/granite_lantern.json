@@ -1,5 +1,5 @@
 {
-  "parent": "bclib:block/stone_lantern_ceil",
+  "parent": "all_is_better_lib:block/stone_lantern_ceil",
   "textures": {
     "bottom": "betterend:block/granite_lantern_bottom",
     "glass": "betterend:block/aurora_crystal",

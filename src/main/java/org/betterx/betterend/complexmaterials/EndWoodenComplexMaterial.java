@@ -1,8 +1,8 @@
 package org.betterx.betterend.complexmaterials;
 
-import org.betterx.bclib.complexmaterials.WoodenComplexMaterial;
-import org.betterx.bclib.complexmaterials.entry.SlotMap;
-import org.betterx.bclib.complexmaterials.set.wood.WoodSlots;
+import org.aiblib.bclib.complexmaterials.WoodenComplexMaterial;
+import org.aiblib.bclib.complexmaterials.entry.SlotMap;
+import org.aiblib.bclib.complexmaterials.set.wood.WoodSlots;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndItems;

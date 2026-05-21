@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.behaviours.BehaviourBuilders;
-import org.betterx.bclib.behaviours.interfaces.BehaviourGlass;
+import org.aiblib.bclib.behaviours.BehaviourBuilders;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourGlass;
 import org.betterx.betterend.blocks.basis.LitPillarBlock;
 
 import net.minecraft.world.level.block.SoundType;

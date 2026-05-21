@@ -5,20 +5,25 @@ import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndTags;
 import org.betterx.betterend.world.biome.EndBiome;
 import org.betterx.datagen.betterend.worldgen.EndBiomesProvider;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.datagen.api.WoverTagProvider;
-import org.betterx.wover.tag.api.event.context.TagBootstrapContext;
-import org.betterx.wover.tag.api.predefined.CommonBlockTags;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.datagen.api.WoverTagProvider;
+import org.aiblib.wover.tag.api.event.context.TagBootstrapContext;
+import org.aiblib.wover.tag.api.predefined.CommonBlockTags;
 
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
+import java.util.List;
 import java.util.Set;
 
 public class BlockTagProvider extends WoverTagProvider.ForBlocks {
     public BlockTagProvider(ModCore modCore) {
-        super(modCore, Set.of(EndTags.INCORRECT_FOR_AETERNIUM_TOOL));
+        super(
+                modCore,
+                List.of(modCore.namespace, modCore.modId, "all_is_better_lib", "minecraft"),
+                Set.of(EndTags.INCORRECT_FOR_AETERNIUM_TOOL)
+        );
     }
 
 

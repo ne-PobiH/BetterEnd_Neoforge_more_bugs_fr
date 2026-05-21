@@ -1,12 +1,12 @@
 package org.betterx.betterend.world.generator;
 
-import org.betterx.bclib.sdf.SDF;
-import org.betterx.bclib.sdf.operator.SDFRadialNoiseMap;
-import org.betterx.bclib.sdf.operator.SDFScale;
-import org.betterx.bclib.sdf.operator.SDFSmoothUnion;
-import org.betterx.bclib.sdf.operator.SDFTranslate;
-import org.betterx.bclib.sdf.primitive.SDFCappedCone;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.sdf.SDF;
+import org.aiblib.bclib.sdf.operator.SDFRadialNoiseMap;
+import org.aiblib.bclib.sdf.operator.SDFScale;
+import org.aiblib.bclib.sdf.operator.SDFSmoothUnion;
+import org.aiblib.bclib.sdf.operator.SDFTranslate;
+import org.aiblib.bclib.sdf.primitive.SDFCappedCone;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.noise.OpenSimplexNoise;
 
 import net.minecraft.core.BlockPos;
@@ -109,6 +109,7 @@ public class IslandLayer {
                 RANDOM.setSeed(getSeed(pos.getX(), pos.getZ()));
                 island = new SDFScale().setScale(RANDOM.nextFloat() + 0.5F).setSource(this.island);
             }
+            clearCache();
             islands.put(pos, island);
         }
         noise.setOffset(pos.getX(), pos.getZ());

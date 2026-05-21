@@ -1,6 +1,6 @@
 package org.betterx.betterend.world.structures.piece;
 
-import org.betterx.bclib.api.v2.levelgen.structures.StructureWorld;
+import org.aiblib.bclib.api.v2.levelgen.structures.StructureWorld;
 import org.betterx.betterend.registry.EndStructures;
 
 import net.minecraft.core.BlockPos;

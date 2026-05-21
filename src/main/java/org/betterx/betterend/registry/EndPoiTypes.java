@@ -1,8 +1,8 @@
 package org.betterx.betterend.registry;
 
 import org.betterx.betterend.BetterEnd;
-import org.betterx.wover.poi.api.PoiManager;
-import org.betterx.wover.poi.api.WoverPoiType;
+import org.aiblib.wover.poi.api.PoiManager;
+import org.aiblib.wover.poi.api.WoverPoiType;
 
 import com.google.common.collect.ImmutableSet;
 

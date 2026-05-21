@@ -1,6 +1,6 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.blocks.BaseVineBlock;
+import org.aiblib.bclib.blocks.BaseVineBlock;
 
 import net.minecraft.world.level.block.state.BlockBehaviour;
 

@@ -1,8 +1,8 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.behaviours.interfaces.BehaviourStone;
-import org.betterx.bclib.blocks.BaseBlock;
-import org.betterx.bclib.interfaces.Fuel;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourStone;
+import org.aiblib.bclib.blocks.BaseBlock;
+import org.aiblib.bclib.interfaces.Fuel;
 
 import net.minecraft.world.level.block.Blocks;
 

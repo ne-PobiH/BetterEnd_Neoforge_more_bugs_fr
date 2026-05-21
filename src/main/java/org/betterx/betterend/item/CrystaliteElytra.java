@@ -1,6 +1,6 @@
 package org.betterx.betterend.item;
 
-import org.betterx.bclib.client.render.HumanoidArmorRenderer;
+import org.aiblib.bclib.client.render.HumanoidArmorRenderer;
 import org.betterx.betterend.interfaces.BetterEndElytra;
 import org.betterx.betterend.interfaces.MultiModelItem;
 import org.betterx.betterend.item.material.EndArmorTier;

@@ -3,7 +3,7 @@ package org.betterx.betterend.item;
 import org.betterx.betterend.effects.EndStatusEffects;
 import org.betterx.betterend.interfaces.MobEffectApplier;
 import org.betterx.betterend.item.material.EndArmorTier;
-import org.betterx.wover.complex.api.equipment.ArmorSlot;
+import org.aiblib.wover.complex.api.equipment.ArmorSlot;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;

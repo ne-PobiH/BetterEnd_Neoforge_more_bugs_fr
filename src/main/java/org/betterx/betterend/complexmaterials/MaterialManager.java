@@ -1,8 +1,8 @@
 package org.betterx.betterend.complexmaterials;
 
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.tag.api.event.context.ItemTagBootstrapContext;
-import org.betterx.wover.tag.api.event.context.TagBootstrapContext;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.tag.api.event.context.ItemTagBootstrapContext;
+import org.aiblib.wover.tag.api.event.context.TagBootstrapContext;
 
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.world.level.block.Block;

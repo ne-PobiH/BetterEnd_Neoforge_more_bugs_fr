@@ -1,9 +1,9 @@
 package org.betterx.betterend.mixin.client;
 
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.config.Configs;
 import org.betterx.betterend.registry.EndBlocks;
-import org.betterx.ui.ColorUtil;
+import org.aiblib.ui.ColorUtil;
 
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.core.BlockPos;

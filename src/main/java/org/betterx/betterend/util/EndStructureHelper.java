@@ -1,6 +1,6 @@
 package org.betterx.betterend.util;
 
-import org.betterx.bclib.util.StructureHelper;
+import org.aiblib.bclib.util.StructureHelper;
 import org.betterx.betterend.BetterEnd;
 
 import net.minecraft.core.registries.BuiltInRegistries;

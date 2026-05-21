@@ -1,16 +1,16 @@
 package org.betterx.betterend.blocks.basis;
 
-import org.betterx.bclib.behaviours.BehaviourBuilders;
-import org.betterx.bclib.behaviours.interfaces.BehaviourShearablePlant;
-import org.betterx.bclib.blocks.BaseAttachedBlock;
-import org.betterx.bclib.client.render.BCLRenderLayer;
-import org.betterx.bclib.interfaces.RenderLayerProvider;
-import org.betterx.wover.block.api.BlockTagProvider;
-import org.betterx.wover.block.api.model.BlockModelProvider;
-import org.betterx.wover.block.api.model.WoverBlockModelGenerators;
-import org.betterx.wover.loot.api.BlockLootProvider;
-import org.betterx.wover.loot.api.LootLookupProvider;
-import org.betterx.wover.tag.api.event.context.TagBootstrapContext;
+import org.aiblib.bclib.behaviours.BehaviourBuilders;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourShearablePlant;
+import org.aiblib.bclib.blocks.BaseAttachedBlock;
+import org.aiblib.bclib.client.render.BCLRenderLayer;
+import org.aiblib.bclib.interfaces.RenderLayerProvider;
+import org.aiblib.wover.block.api.BlockTagProvider;
+import org.aiblib.wover.block.api.model.BlockModelProvider;
+import org.aiblib.wover.block.api.model.WoverBlockModelGenerators;
+import org.aiblib.wover.loot.api.BlockLootProvider;
+import org.aiblib.wover.loot.api.LootLookupProvider;
+import org.aiblib.wover.tag.api.event.context.TagBootstrapContext;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

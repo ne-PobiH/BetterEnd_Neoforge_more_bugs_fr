@@ -1,6 +1,6 @@
 package org.betterx.betterend.mixin.common;
 
-import org.betterx.bclib.util.BlocksHelper;
+import org.aiblib.bclib.util.BlocksHelper;
 import org.betterx.betterend.world.generator.GeneratorOptions;
 
 import net.minecraft.core.BlockPos;

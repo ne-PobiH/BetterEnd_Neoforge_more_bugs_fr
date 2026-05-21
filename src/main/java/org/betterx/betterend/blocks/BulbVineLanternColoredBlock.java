@@ -1,10 +1,10 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.interfaces.BlockColorProvider;
-import org.betterx.bclib.interfaces.CustomColorProvider;
-import org.betterx.bclib.interfaces.ItemColorProvider;
-import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.ui.ColorUtil;
+import org.aiblib.bclib.interfaces.BlockColorProvider;
+import org.aiblib.bclib.interfaces.CustomColorProvider;
+import org.aiblib.bclib.interfaces.ItemColorProvider;
+import org.aiblib.bclib.util.BlocksHelper;
+import org.aiblib.ui.ColorUtil;
 
 import net.minecraft.world.level.block.state.BlockBehaviour;
 

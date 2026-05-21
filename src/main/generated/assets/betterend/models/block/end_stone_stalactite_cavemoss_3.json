@@ -1,5 +1,5 @@
 {
-  "parent": "bclib:block/cross_shaded",
+  "parent": "all_is_better_lib:block/cross_shaded",
   "textures": {
     "cross": "betterend:block/end_stone_stalactite_cavemoss_3"
   }

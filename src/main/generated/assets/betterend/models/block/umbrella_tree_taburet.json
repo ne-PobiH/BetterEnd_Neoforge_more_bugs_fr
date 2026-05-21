@@ -1,5 +1,5 @@
 {
-  "parent": "bclib:block/taburet",
+  "parent": "all_is_better_lib:block/taburet",
   "textures": {
     "texture": "betterend:block/umbrella_tree_planks"
   }

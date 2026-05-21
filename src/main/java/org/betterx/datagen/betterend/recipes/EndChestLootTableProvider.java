@@ -1,14 +1,14 @@
 package org.betterx.datagen.betterend.recipes;
 
-import org.betterx.bclib.complexmaterials.WoodenComplexMaterial;
+import org.aiblib.bclib.complexmaterials.WoodenComplexMaterial;
 import org.betterx.betterend.registry.EndBiomes;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndItems;
 import org.betterx.betterend.registry.EndTemplates;
 import org.betterx.betterend.util.LootTableUtil;
-import org.betterx.wover.biome.api.BiomeKey;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.datagen.api.provider.WoverLootTableProvider;
+import org.aiblib.wover.biome.api.BiomeKey;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.datagen.api.provider.WoverLootTableProvider;
 
 import net.minecraft.advancements.critereon.LocationPredicate;
 import net.minecraft.core.Holder;

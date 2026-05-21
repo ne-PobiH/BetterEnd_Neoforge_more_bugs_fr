@@ -1,6 +1,6 @@
 package org.betterx.betterend.portal;
 
-import org.betterx.bclib.util.BlocksHelper;
+import org.aiblib.bclib.util.BlocksHelper;
 import org.betterx.betterend.blocks.EndPortalBlock;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndPoiTypes;

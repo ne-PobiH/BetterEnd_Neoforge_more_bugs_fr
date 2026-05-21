@@ -3,10 +3,10 @@ package org.betterx.datagen.betterend.worldgen;
 import org.betterx.betterend.integration.byg.biomes.BYGBiomes;
 import org.betterx.betterend.integration.byg.biomes.NightshadeRedwoods;
 import org.betterx.betterend.integration.byg.biomes.OldBulbisGardens;
-import org.betterx.wover.biome.api.builder.BiomeBootstrapContext;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.datagen.api.provider.multi.WoverBiomeProvider;
-import org.betterx.wover.tag.api.predefined.CommonBiomeTags;
+import org.aiblib.wover.biome.api.builder.BiomeBootstrapContext;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.datagen.api.provider.multi.WoverBiomeProvider;
+import org.aiblib.wover.tag.api.predefined.CommonBiomeTags;
 
 import org.jetbrains.annotations.NotNull;
 

@@ -1,12 +1,12 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.blocks.BaseVineBlock;
+import org.aiblib.bclib.blocks.BaseVineBlock;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndItems;
-import org.betterx.wover.block.api.BlockProperties;
-import org.betterx.wover.block.api.BlockProperties.TripleShape;
-import org.betterx.wover.loot.api.BlockLootProvider;
-import org.betterx.wover.loot.api.LootLookupProvider;
+import org.aiblib.wover.block.api.BlockProperties;
+import org.aiblib.wover.block.api.BlockProperties.TripleShape;
+import org.aiblib.wover.loot.api.BlockLootProvider;
+import org.aiblib.wover.loot.api.LootLookupProvider;
 
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.BlockPos;

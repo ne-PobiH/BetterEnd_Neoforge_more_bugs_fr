@@ -1,18 +1,18 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.blocks.BaseBlock;
-import org.betterx.bclib.client.render.BCLRenderLayer;
-import org.betterx.bclib.interfaces.BlockColorProvider;
-import org.betterx.bclib.interfaces.CustomColorProvider;
-import org.betterx.bclib.interfaces.ItemColorProvider;
-import org.betterx.bclib.interfaces.RenderLayerProvider;
-import org.betterx.bclib.util.BlocksHelper;
+import org.aiblib.bclib.blocks.BaseBlock;
+import org.aiblib.bclib.client.render.BCLRenderLayer;
+import org.aiblib.bclib.interfaces.BlockColorProvider;
+import org.aiblib.bclib.interfaces.CustomColorProvider;
+import org.aiblib.bclib.interfaces.ItemColorProvider;
+import org.aiblib.bclib.interfaces.RenderLayerProvider;
+import org.aiblib.bclib.util.BlocksHelper;
 import org.betterx.betterend.particle.InfusionParticleType;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndItems;
-import org.betterx.ui.ColorUtil;
-import org.betterx.wover.block.api.BlockProperties;
-import org.betterx.wover.block.api.BlockProperties.TripleShape;
+import org.aiblib.ui.ColorUtil;
+import org.aiblib.wover.block.api.BlockProperties;
+import org.aiblib.wover.block.api.BlockProperties.TripleShape;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

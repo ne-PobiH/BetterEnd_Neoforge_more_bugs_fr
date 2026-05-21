@@ -1,6 +1,6 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.wover.block.api.BlockProperties;
+import org.aiblib.wover.block.api.BlockProperties;
 import org.betterx.betterend.registry.EndPortals;
 
 import net.minecraft.util.StringRepresentable;

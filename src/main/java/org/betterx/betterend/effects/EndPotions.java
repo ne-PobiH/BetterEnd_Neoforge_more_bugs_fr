@@ -3,7 +3,7 @@ package org.betterx.betterend.effects;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndItems;
-import org.betterx.wover.potions.api.PotionManager;
+import org.aiblib.wover.potions.api.PotionManager;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;

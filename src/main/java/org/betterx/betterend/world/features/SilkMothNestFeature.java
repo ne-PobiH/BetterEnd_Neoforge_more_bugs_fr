@@ -1,8 +1,8 @@
 package org.betterx.betterend.world.features;
 
-import org.betterx.bclib.api.v2.levelgen.features.features.DefaultFeature;
-import org.betterx.wover.block.api.BlockProperties;
-import org.betterx.bclib.util.BlocksHelper;
+import org.aiblib.bclib.api.v2.levelgen.features.features.DefaultFeature;
+import org.aiblib.wover.block.api.BlockProperties;
+import org.aiblib.bclib.util.BlocksHelper;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.util.GlobalState;
 

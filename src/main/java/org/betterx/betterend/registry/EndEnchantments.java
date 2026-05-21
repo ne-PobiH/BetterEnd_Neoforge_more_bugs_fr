@@ -2,8 +2,8 @@ package org.betterx.betterend.registry;
 
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.effects.EndStatusEffects;
-import org.betterx.wover.enchantment.api.EnchantmentKey;
-import org.betterx.wover.enchantment.api.EnchantmentManager;
+import org.aiblib.wover.enchantment.api.EnchantmentKey;
+import org.aiblib.wover.enchantment.api.EnchantmentManager;
 
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.BuiltInRegistries;

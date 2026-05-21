@@ -1,9 +1,9 @@
 package org.betterx.betterend.commands;
 
-import org.betterx.bclib.util.BlocksHelper;
+import org.aiblib.bclib.util.BlocksHelper;
 import org.betterx.betterend.registry.EndPoiTypes;
-import org.betterx.wover.poi.api.WoverPoiType;
-import org.betterx.wover.state.api.WorldState;
+import org.aiblib.wover.poi.api.WoverPoiType;
+import org.aiblib.wover.state.api.WorldState;
 
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.CommandDispatcher;

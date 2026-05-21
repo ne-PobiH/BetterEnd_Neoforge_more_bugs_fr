@@ -2,10 +2,10 @@ package org.betterx.datagen.betterend.tags;
 
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.registry.EndItems;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.datagen.api.WoverTagProvider;
-import org.betterx.wover.tag.api.TagManager;
-import org.betterx.wover.tag.api.event.context.ItemTagBootstrapContext;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.datagen.api.WoverTagProvider;
+import org.aiblib.wover.tag.api.TagManager;
+import org.aiblib.wover.tag.api.event.context.ItemTagBootstrapContext;
 
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;

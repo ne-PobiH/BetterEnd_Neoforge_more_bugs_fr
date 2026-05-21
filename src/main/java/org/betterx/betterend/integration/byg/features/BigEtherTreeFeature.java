@@ -1,12 +1,12 @@
 package org.betterx.betterend.integration.byg.features;
 
-import org.betterx.bclib.api.v2.levelgen.features.features.DefaultFeature;
-import org.betterx.bclib.sdf.SDF;
-import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.bclib.util.MHelper;
-import org.betterx.bclib.util.SplineHelper;
+import org.aiblib.bclib.api.v2.levelgen.features.features.DefaultFeature;
+import org.aiblib.bclib.sdf.SDF;
+import org.aiblib.bclib.util.BlocksHelper;
+import org.aiblib.bclib.util.MHelper;
+import org.aiblib.bclib.util.SplineHelper;
 import org.betterx.betterend.integration.Integrations;
-import org.betterx.wover.tag.api.predefined.CommonBlockTags;
+import org.aiblib.wover.tag.api.predefined.CommonBlockTags;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;

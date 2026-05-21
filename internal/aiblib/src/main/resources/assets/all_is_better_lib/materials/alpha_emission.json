@@ -1,0 +1,8 @@
+{
+  "layers": [
+    {
+      "vertexSource": "canvas:shaders/material/default.vert",
+      "fragmentSource": "all_is_better_lib:shaders/material/alpha_emission.frag"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks.basis;
 
-import org.betterx.bclib.behaviours.interfaces.BehaviourMetal;
-import org.betterx.bclib.blocks.LeveledAnvilBlock;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourMetal;
+import org.aiblib.bclib.blocks.LeveledAnvilBlock;
 import org.betterx.betterend.complexmaterials.MetalMaterial;
 
 import net.minecraft.world.level.material.MapColor;

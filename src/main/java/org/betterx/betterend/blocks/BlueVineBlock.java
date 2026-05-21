@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.wover.block.api.BlockProperties;
-import org.betterx.bclib.blocks.UpDownPlantBlock;
+import org.aiblib.wover.block.api.BlockProperties;
+import org.aiblib.bclib.blocks.UpDownPlantBlock;
 import org.betterx.betterend.registry.EndBlocks;
 
 import net.minecraft.world.level.block.Block;

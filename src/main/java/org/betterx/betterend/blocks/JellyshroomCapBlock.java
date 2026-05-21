@@ -1,16 +1,16 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.client.models.ModelsHelper;
-import org.betterx.bclib.client.render.BCLRenderLayer;
-import org.betterx.bclib.interfaces.BlockColorProvider;
-import org.betterx.bclib.interfaces.CustomColorProvider;
-import org.betterx.bclib.interfaces.ItemColorProvider;
-import org.betterx.bclib.interfaces.RenderLayerProvider;
-import org.betterx.bclib.interfaces.RuntimeBlockModelProvider;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.client.models.ModelsHelper;
+import org.aiblib.bclib.client.render.BCLRenderLayer;
+import org.aiblib.bclib.interfaces.BlockColorProvider;
+import org.aiblib.bclib.interfaces.CustomColorProvider;
+import org.aiblib.bclib.interfaces.ItemColorProvider;
+import org.aiblib.bclib.interfaces.RenderLayerProvider;
+import org.aiblib.bclib.interfaces.RuntimeBlockModelProvider;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.client.models.Patterns;
 import org.betterx.betterend.noise.OpenSimplexNoise;
-import org.betterx.ui.ColorUtil;
+import org.aiblib.ui.ColorUtil;
 
 import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.core.Vec3i;

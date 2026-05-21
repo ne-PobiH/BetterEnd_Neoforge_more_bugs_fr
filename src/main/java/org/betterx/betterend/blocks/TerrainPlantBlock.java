@@ -1,10 +1,10 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.behaviours.BehaviourBuilders;
-import org.betterx.bclib.behaviours.interfaces.BehaviourPlant;
-import org.betterx.bclib.interfaces.SurvivesOnBlocks;
+import org.aiblib.bclib.behaviours.BehaviourBuilders;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourPlant;
+import org.aiblib.bclib.interfaces.SurvivesOnBlocks;
 import org.betterx.betterend.blocks.basis.EndPlantBlock;
-import org.betterx.wover.block.api.model.BlockModelProvider;
+import org.aiblib.wover.block.api.model.BlockModelProvider;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;

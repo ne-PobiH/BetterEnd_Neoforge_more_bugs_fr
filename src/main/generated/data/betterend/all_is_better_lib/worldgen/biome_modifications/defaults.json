@@ -1,0 +1,46 @@
+{
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [
+      "betterend:crashed_ship"
+    ],
+    [],
+    [
+      "betterend:flavolite_layer",
+      "betterend:thallasium_ore",
+      "betterend:ender_ore"
+    ]
+  ],
+  "predicate": {
+    "type": "all_is_better_lib:and",
+    "predicates": [
+      {
+        "type": "all_is_better_lib:not",
+        "predicate": {
+          "type": "all_is_better_lib:is_namespace",
+          "namespace": "betterend"
+        }
+      },
+      {
+        "type": "all_is_better_lib:or",
+        "predicates": [
+          {
+            "type": "all_is_better_lib:has_tag",
+            "biome_tag": "all_is_better_lib:is_end/barrens"
+          },
+          {
+            "type": "all_is_better_lib:has_tag",
+            "biome_tag": "all_is_better_lib:is_end/midland"
+          },
+          {
+            "type": "all_is_better_lib:has_tag",
+            "biome_tag": "all_is_better_lib:is_end/highland"
+          }
+        ]
+      }
+    ]
+  }
+}

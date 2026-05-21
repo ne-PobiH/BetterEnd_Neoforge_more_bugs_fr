@@ -1,6 +1,6 @@
 package org.betterx.betterend.world.biome.land;
 
-import org.betterx.bclib.interfaces.SurfaceMaterialProvider;
+import org.aiblib.bclib.interfaces.SurfaceMaterialProvider;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndParticles;
 import org.betterx.betterend.registry.EndSounds;

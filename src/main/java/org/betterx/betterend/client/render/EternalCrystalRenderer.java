@@ -1,7 +1,7 @@
 package org.betterx.betterend.client.render;
 
-import de.ambertation.wunderlib.ui.ColorHelper;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.wunderlib.ui.ColorHelper;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.blocks.AuroraCrystalBlock;
 

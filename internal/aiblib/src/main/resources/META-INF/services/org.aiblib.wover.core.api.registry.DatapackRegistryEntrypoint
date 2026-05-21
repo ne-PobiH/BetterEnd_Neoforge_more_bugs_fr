@@ -1,0 +1,5 @@
+org.aiblib.wover.entrypoint.BiomeDatapackRegistryEntrypoint
+org.aiblib.wover.entrypoint.FeatureDatapackRegistryEntrypoint
+org.aiblib.wover.entrypoint.ItemDatapackRegistryEntrypoint
+org.aiblib.wover.entrypoint.StructureDatapackRegistryEntrypoint
+org.aiblib.wover.entrypoint.SurfaceDatapackRegistryEntrypoint

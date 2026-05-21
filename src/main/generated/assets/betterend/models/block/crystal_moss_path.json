@@ -1,5 +1,5 @@
 {
-  "parent": "bclib:block/path",
+  "parent": "all_is_better_lib:block/path",
   "textures": {
     "bottom": "minecraft:block/end_stone",
     "side": "betterend:block/crystal_moss_side",

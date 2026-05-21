@@ -1,16 +1,16 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.behaviours.BehaviourBuilders;
-import org.betterx.bclib.behaviours.interfaces.BehaviourPlant;
-import org.betterx.bclib.blocks.BaseAttachedBlock;
-import org.betterx.bclib.client.render.BCLRenderLayer;
-import org.betterx.bclib.interfaces.RenderLayerProvider;
-import org.betterx.bclib.util.BlocksHelper;
+import org.aiblib.bclib.behaviours.BehaviourBuilders;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourPlant;
+import org.aiblib.bclib.blocks.BaseAttachedBlock;
+import org.aiblib.bclib.client.render.BCLRenderLayer;
+import org.aiblib.bclib.interfaces.RenderLayerProvider;
+import org.aiblib.bclib.util.BlocksHelper;
 import org.betterx.betterend.interfaces.PottablePlant;
 import org.betterx.betterend.registry.features.EndConfiguredVegetation;
-import org.betterx.wover.loot.api.BlockLootProvider;
-import org.betterx.wover.loot.api.LootLookupProvider;
-import org.betterx.wover.tag.api.predefined.CommonBlockTags;
+import org.aiblib.wover.loot.api.BlockLootProvider;
+import org.aiblib.wover.loot.api.LootLookupProvider;
+import org.aiblib.wover.tag.api.predefined.CommonBlockTags;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

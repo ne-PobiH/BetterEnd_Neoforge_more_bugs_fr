@@ -1,13 +1,13 @@
 package org.betterx.betterend.world.biome;
 
-import org.betterx.bclib.interfaces.SurfaceMaterialProvider;
+import org.aiblib.bclib.interfaces.SurfaceMaterialProvider;
 import org.betterx.betterend.registry.EndBlocks;
-import org.betterx.wover.biome.api.BiomeKey;
-import org.betterx.wover.biome.api.data.BiomeData;
-import org.betterx.wover.biome.api.data.BiomeGenerationDataContainer;
-import org.betterx.wover.generator.api.biomesource.WoverBiomeData;
-import org.betterx.wover.generator.api.biomesource.WoverBiomePicker;
-import org.betterx.wover.surface.api.SurfaceRuleBuilder;
+import org.aiblib.wover.biome.api.BiomeKey;
+import org.aiblib.wover.biome.api.data.BiomeData;
+import org.aiblib.wover.biome.api.data.BiomeGenerationDataContainer;
+import org.aiblib.wover.generator.api.biomesource.WoverBiomeData;
+import org.aiblib.wover.generator.api.biomesource.WoverBiomePicker;
+import org.aiblib.wover.surface.api.SurfaceRuleBuilder;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;

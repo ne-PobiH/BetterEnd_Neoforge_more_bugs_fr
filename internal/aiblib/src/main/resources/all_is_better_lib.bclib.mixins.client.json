@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.aiblib.bclib.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "AnvilScreenMixin",
+    "AtlasSetMixin",
+    "BlockMixin",
+    "ClientLevelMixin",
+    "ClientRecipeBookMixin",
+    "DebugRendererMixin",
+    "FogRendererMixin",
+    "RenderSystemMixin",
+    "LevelRendererAccessor",
+    "LevelRendererMixin",
+    "ModelManagerMixin",
+    "boat.BoatRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

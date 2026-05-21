@@ -9,7 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 
 import java.util.List;
 
-public class ConfigScreen extends de.ambertation.wunderlib.ui.vanilla.ConfigScreen {
+public class ConfigScreen extends org.aiblib.wunderlib.ui.vanilla.ConfigScreen {
     public static final ResourceLocation BE_LOGO_LOCATION = BetterEnd.C.id("icon.png");
 
     public ConfigScreen(Screen parent) {

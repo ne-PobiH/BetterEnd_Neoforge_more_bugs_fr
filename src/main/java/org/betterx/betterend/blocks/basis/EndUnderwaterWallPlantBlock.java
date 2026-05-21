@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks.basis;
 
-import org.betterx.bclib.behaviours.BehaviourBuilders;
-import org.betterx.bclib.blocks.BaseUnderwaterWallPlantBlock;
+import org.aiblib.bclib.behaviours.BehaviourBuilders;
+import org.aiblib.bclib.blocks.BaseUnderwaterWallPlantBlock;
 import org.betterx.betterend.interfaces.survives.SurvivesOnEndStone;
 
 import net.minecraft.world.level.block.state.BlockState;

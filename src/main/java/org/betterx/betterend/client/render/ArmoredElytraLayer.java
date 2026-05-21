@@ -1,7 +1,7 @@
 package org.betterx.betterend.client.render;
 
-import org.betterx.bclib.items.elytra.BCLElytraItem;
-import org.betterx.bclib.items.elytra.BCLElytraUtils;
+import org.aiblib.bclib.items.elytra.BCLElytraItem;
+import org.aiblib.bclib.items.elytra.BCLElytraUtils;
 import org.betterx.betterend.item.model.ArmoredElytraModel;
 import org.betterx.betterend.registry.EndEntitiesRenders;
 

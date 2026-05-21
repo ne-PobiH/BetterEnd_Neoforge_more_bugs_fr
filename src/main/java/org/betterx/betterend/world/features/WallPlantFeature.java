@@ -1,8 +1,8 @@
 package org.betterx.betterend.world.features;
 
-import org.betterx.bclib.blocks.BaseAttachedBlock;
-import org.betterx.bclib.blocks.BaseWallPlantBlock;
-import org.betterx.bclib.util.BlocksHelper;
+import org.aiblib.bclib.blocks.BaseAttachedBlock;
+import org.aiblib.bclib.blocks.BaseWallPlantBlock;
+import org.aiblib.bclib.util.BlocksHelper;
 import org.betterx.betterend.BetterEnd;
 
 import net.minecraft.core.BlockPos;

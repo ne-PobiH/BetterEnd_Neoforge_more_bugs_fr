@@ -1,15 +1,15 @@
 package org.betterx.betterend.recipe.builders;
 
-import org.betterx.bclib.interfaces.UnknownReceipBookCategory;
-import org.betterx.bclib.recipes.BCLBaseRecipeBuilder;
-import org.betterx.bclib.recipes.BCLRecipeManager;
-import org.betterx.bclib.util.ItemUtil;
+import org.aiblib.bclib.interfaces.UnknownReceipBookCategory;
+import org.aiblib.bclib.recipes.BCLBaseRecipeBuilder;
+import org.aiblib.bclib.recipes.BCLRecipeManager;
+import org.aiblib.bclib.util.ItemUtil;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.rituals.InfusionRitual;
-import org.betterx.wover.enchantment.api.EnchantmentUtils;
-import org.betterx.wover.item.api.ItemStackHelper;
-import org.betterx.wover.recipe.api.BaseRecipeBuilder;
-import org.betterx.wover.recipe.api.BaseUnlockableRecipeBuilder;
+import org.aiblib.wover.enchantment.api.EnchantmentUtils;
+import org.aiblib.wover.item.api.ItemStackHelper;
+import org.aiblib.wover.recipe.api.BaseRecipeBuilder;
+import org.aiblib.wover.recipe.api.BaseUnlockableRecipeBuilder;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;

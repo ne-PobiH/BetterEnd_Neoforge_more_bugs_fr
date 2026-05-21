@@ -1,8 +1,8 @@
 package org.betterx.datagen.betterend.recipes;
 
 import org.betterx.betterend.registry.EndSounds;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.datagen.api.WoverRegistryContentProvider;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.datagen.api.WoverRegistryContentProvider;
 
 import net.minecraft.Util;
 import net.minecraft.core.Holder;

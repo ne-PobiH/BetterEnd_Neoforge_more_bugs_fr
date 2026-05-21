@@ -2,7 +2,7 @@ package org.betterx.betterend.integration.emi;
 
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.recipe.builders.InfusionRecipe;
-import org.betterx.ui.ColorUtil;
+import org.aiblib.ui.ColorUtil;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
@@ -54,7 +54,7 @@ public class EMIInfusionRecipe implements EmiRecipe {
     }
 
     static void addAllRecipes(EmiRegistry emiRegistry, RecipeManager manager) {
-        org.betterx.bclib.integration.emi.EMIPlugin.addAllRecipes(
+        org.aiblib.bclib.integration.emi.EMIPlugin.addAllRecipes(
                 emiRegistry, manager, BetterEnd.LOGGER,
                 InfusionRecipe.TYPE, EMIInfusionRecipe::new
         );

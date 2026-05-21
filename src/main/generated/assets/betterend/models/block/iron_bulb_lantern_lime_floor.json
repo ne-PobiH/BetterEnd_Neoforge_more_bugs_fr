@@ -1,5 +1,5 @@
 {
-  "parent": "bclib:block/bulb_lantern_floor",
+  "parent": "all_is_better_lib:block/bulb_lantern_floor",
   "textures": {
     "glow": "betterend:block/bulb_vine_lantern_bulb",
     "metal": "betterend:block/iron_bulb_vine_lantern_metal"

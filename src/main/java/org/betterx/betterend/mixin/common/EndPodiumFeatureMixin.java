@@ -3,7 +3,7 @@ package org.betterx.betterend.mixin.common;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.util.EndStructureHelper;
 import org.betterx.betterend.world.generator.GeneratorOptions;
-import org.betterx.wover.state.api.WorldConfig;
+import org.aiblib.wover.state.api.WorldConfig;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;

@@ -1,9 +1,9 @@
 package org.betterx.betterend.blocks;
 
-import de.ambertation.wunderlib.math.Float3;
-import de.ambertation.wunderlib.ui.ColorHelper;
-import org.betterx.bclib.behaviours.interfaces.BehaviourStone;
-import org.betterx.bclib.interfaces.ClientLevelAccess;
+import org.aiblib.wunderlib.math.Float3;
+import org.aiblib.wunderlib.ui.ColorHelper;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourStone;
+import org.aiblib.bclib.interfaces.ClientLevelAccess;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.blocks.basis.PedestalBlock;
 import org.betterx.betterend.blocks.entities.EternalPedestalEntity;
@@ -13,8 +13,8 @@ import org.betterx.betterend.client.render.PedestalItemRenderer;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndPortals;
 import org.betterx.betterend.rituals.EternalRitual;
-import org.betterx.wover.block.api.model.BlockModelProvider;
-import org.betterx.wover.block.api.model.WoverBlockModelGenerators;
+import org.aiblib.wover.block.api.model.BlockModelProvider;
+import org.aiblib.wover.block.api.model.WoverBlockModelGenerators;
 
 import net.minecraft.client.particle.Particle;
 import net.minecraft.core.BlockPos;

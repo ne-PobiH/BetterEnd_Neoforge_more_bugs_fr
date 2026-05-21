@@ -1,7 +1,7 @@
 package org.betterx.betterend.util;
 
-import org.betterx.bclib.api.v3.bonemeal.BonemealAPI;
-import org.betterx.bclib.api.v3.bonemeal.WaterGrassSpreader;
+import org.aiblib.bclib.api.v3.bonemeal.BonemealAPI;
+import org.aiblib.bclib.api.v3.bonemeal.WaterGrassSpreader;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndTags;
 import org.betterx.betterend.registry.features.EndConfiguredBonemealFeature;

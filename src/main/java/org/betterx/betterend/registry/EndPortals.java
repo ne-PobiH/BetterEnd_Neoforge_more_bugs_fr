@@ -1,9 +1,9 @@
 package org.betterx.betterend.registry;
 
-import org.betterx.bclib.util.JsonFactory;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.util.JsonFactory;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.BetterEnd;
-import org.betterx.ui.ColorUtil;
+import org.aiblib.ui.ColorUtil;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;

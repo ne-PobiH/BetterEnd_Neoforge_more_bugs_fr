@@ -1,8 +1,8 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.behaviours.BehaviourBuilders;
-import org.betterx.bclib.behaviours.interfaces.BehaviourWood;
-import org.betterx.bclib.blocks.BaseBlock;
+import org.aiblib.bclib.behaviours.BehaviourBuilders;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourWood;
+import org.aiblib.bclib.blocks.BaseBlock;
 import org.betterx.betterend.registry.EndBlocks;
 
 import net.minecraft.world.item.context.BlockPlaceContext;

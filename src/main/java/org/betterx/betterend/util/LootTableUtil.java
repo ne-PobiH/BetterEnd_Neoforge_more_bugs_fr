@@ -4,7 +4,7 @@ import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.registry.EndBiomes;
 import org.betterx.betterend.registry.EndItems;
 import org.betterx.betterend.registry.EndTemplates;
-import org.betterx.wover.loot.api.LootTableManager;
+import org.aiblib.wover.loot.api.LootTableManager;
 
 import net.minecraft.advancements.critereon.LocationPredicate;
 import net.minecraft.core.Holder;

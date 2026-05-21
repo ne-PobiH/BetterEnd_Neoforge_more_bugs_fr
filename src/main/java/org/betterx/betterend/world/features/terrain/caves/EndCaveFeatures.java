@@ -1,19 +1,19 @@
 package org.betterx.betterend.world.features.terrain.caves;
 
-import org.betterx.bclib.api.v2.levelgen.features.features.DefaultFeature;
-import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.api.v2.levelgen.features.features.DefaultFeature;
+import org.aiblib.bclib.util.BlocksHelper;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.registry.EndBiomes;
 import org.betterx.betterend.util.BlockFixer;
 import org.betterx.betterend.world.biome.EndBiome;
 import org.betterx.betterend.world.biome.cave.EndCaveBiome;
-import org.betterx.wover.biome.api.BiomeManager;
-import org.betterx.wover.biome.api.data.BiomeData;
-import org.betterx.wover.config.api.Configs;
-import org.betterx.wover.generator.api.biomesource.WoverBiomePicker;
-import org.betterx.wover.tag.api.predefined.CommonBiomeTags;
-import org.betterx.wover.tag.api.predefined.CommonBlockTags;
+import org.aiblib.wover.biome.api.BiomeManager;
+import org.aiblib.wover.biome.api.data.BiomeData;
+import org.aiblib.wover.config.api.Configs;
+import org.aiblib.wover.generator.api.biomesource.WoverBiomePicker;
+import org.aiblib.wover.tag.api.predefined.CommonBiomeTags;
+import org.aiblib.wover.tag.api.predefined.CommonBlockTags;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.BlockPos.MutableBlockPos;
@@ -60,6 +60,10 @@ public abstract class EndCaveFeatures extends DefaultFeature {
 
         int radius = MHelper.randRange(10, 30, random);
         BlockPos center = findPos(world, pos, radius, random);
+        while (center == null && radius > 6) {
+            radius -= 4;
+            center = findPos(world, pos, radius, random);
+        }
 
         if (center == null) {
             return false;
@@ -209,13 +213,15 @@ public abstract class EndCaveFeatures extends DefaultFeature {
         if (bpos.getY() < 10) {
             return null;
         }
-        top = (int) (bpos.getY() - (radius * 1.3F + 5));
+        int topStone = bpos.getY();
 
-        while (state.is(CommonBlockTags.END_STONES) || !state.getFluidState().isEmpty() && bpos.getY() > 5) {
+        while (state.is(CommonBlockTags.END_STONES) && bpos.getY() > 5) {
             bpos.setY(bpos.getY() - 1);
             state = world.getBlockState(bpos);
         }
-        int bottom = (int) (bpos.getY() + radius * 1.3F + 5);
+        int verticalRadius = (int) Math.ceil((radius + 5) / 1.6D);
+        top = topStone - verticalRadius - 3;
+        int bottom = bpos.getY() + verticalRadius + 3;
 
         if (top <= bottom) {
             return null;

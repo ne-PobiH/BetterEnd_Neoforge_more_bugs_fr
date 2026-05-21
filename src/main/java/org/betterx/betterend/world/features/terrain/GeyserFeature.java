@@ -1,20 +1,20 @@
 package org.betterx.betterend.world.features.terrain;
 
-import org.betterx.bclib.api.v2.levelgen.features.features.DefaultFeature;
-import org.betterx.bclib.sdf.SDF;
-import org.betterx.bclib.sdf.operator.*;
-import org.betterx.bclib.sdf.primitive.SDFCappedCone;
-import org.betterx.bclib.sdf.primitive.SDFFlatland;
-import org.betterx.bclib.sdf.primitive.SDFPrimitive;
-import org.betterx.bclib.sdf.primitive.SDFSphere;
-import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.api.v2.levelgen.features.features.DefaultFeature;
+import org.aiblib.bclib.sdf.SDF;
+import org.aiblib.bclib.sdf.operator.*;
+import org.aiblib.bclib.sdf.primitive.SDFCappedCone;
+import org.aiblib.bclib.sdf.primitive.SDFFlatland;
+import org.aiblib.bclib.sdf.primitive.SDFPrimitive;
+import org.aiblib.bclib.sdf.primitive.SDFSphere;
+import org.aiblib.bclib.util.BlocksHelper;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.blocks.HydrothermalVentBlock;
 import org.betterx.betterend.noise.OpenSimplexNoise;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.features.EndConfiguredLakeFeature;
 import org.betterx.betterend.util.BlockFixer;
-import org.betterx.wover.tag.api.predefined.CommonBlockTags;
+import org.aiblib.wover.tag.api.predefined.CommonBlockTags;
 
 import com.mojang.math.Axis;
 import net.minecraft.core.BlockPos;
@@ -49,16 +49,18 @@ public class GeyserFeature extends DefaultFeature {
         MutableBlockPos bpos = new MutableBlockPos().set(pos);
         bpos.setY(bpos.getY() - 1);
         BlockState state = world.getBlockState(bpos);
-        while (state.is(CommonBlockTags.END_STONES) || !state.getFluidState().isEmpty() && bpos.getY() > 5) {
+        while ((isEndGround(state) || !state.getFluidState().isEmpty()) && bpos.getY() > 5) {
             bpos.setY(bpos.getY() - 1);
             state = world.getBlockState(bpos);
         }
 
-        if (pos.getY() - bpos.getY() < 25) {
+        int islandDepth = pos.getY() - bpos.getY();
+        if (islandDepth < 16) {
             return false;
         }
 
-        int halfHeight = MHelper.randRange(10, 20, random);
+        int maxHalfHeight = Mth.clamp(islandDepth - 12, 8, 20);
+        int halfHeight = MHelper.randRange(8, maxHalfHeight, random);
         float radius1 = halfHeight * 0.5F;
         float radius2 = halfHeight * 0.1F + 0.5F;
         SDF sdf = new SDFCappedCone().setHeight(halfHeight)
@@ -191,7 +193,7 @@ public class GeyserFeature extends DefaultFeature {
                     mut.setY(mut.getY() - 1);
                     state = world.getBlockState(mut);
                 }
-                if (state.is(CommonBlockTags.END_STONES) && !world.getBlockState(mut.above())
+                if (isEndGround(state) && !world.getBlockState(mut.above())
                                                                   .is(EndBlocks.HYDROTHERMAL_VENT)) {
                     for (int j = 0; j <= dist; j++) {
                         BlocksHelper.setWithoutUpdate(world, mut, EndBlocks.SULPHURIC_ROCK.stone);
@@ -238,7 +240,7 @@ public class GeyserFeature extends DefaultFeature {
                     mut.setY(mut.getY() - 1);
                     state = world.getBlockState(mut);
                 }
-                if (state.is(CommonBlockTags.END_STONES)) {
+                if (isEndGround(state)) {
                     for (int j = 0; j <= dist; j++) {
                         BlocksHelper.setWithoutUpdate(world, mut, EndBlocks.SULPHURIC_ROCK.stone);
                         mut.setY(mut.getY() + 1);
@@ -268,16 +270,23 @@ public class GeyserFeature extends DefaultFeature {
     }
 
     private Function<BlockState, Boolean> replaceFunc1() {
-        return (state) -> state.isAir() || (state.is(CommonBlockTags.END_STONES));
+        return (state) -> state.isAir() || isEndGround(state);
     }
 
     private Function<BlockState, Boolean> replaceFunc2() {
         return (state) -> {
-            if (state.is(CommonBlockTags.END_STONES) || state.is(EndBlocks.HYDROTHERMAL_VENT) || state.is(EndBlocks.SULPHUR_CRYSTAL)) {
+            if (isEndGround(state) || state.is(EndBlocks.HYDROTHERMAL_VENT) || state.is(EndBlocks.SULPHUR_CRYSTAL)) {
                 return true;
             }
             return BlocksHelper.replaceableOrPlant(state);
         };
+    }
+
+    private boolean isEndGround(BlockState state) {
+        return state.is(Blocks.END_STONE)
+                || state.is(CommonBlockTags.END_STONES)
+                || state.is(EndBlocks.SULPHURIC_ROCK.stone)
+                || state.is(EndBlocks.BRIMSTONE);
     }
 
     private Function<BlockState, Boolean> ignoreFunc() {

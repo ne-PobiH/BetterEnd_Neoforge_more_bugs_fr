@@ -1,8 +1,8 @@
 package org.betterx.betterend.network;
 
-import de.ambertation.wunderlib.network.ClientBoundNetworkPayload;
-import de.ambertation.wunderlib.network.ClientBoundPacketHandler;
-import org.betterx.bclib.api.v2.dataexchange.BaseDataHandler;
+import org.aiblib.wunderlib.network.ClientBoundNetworkPayload;
+import org.aiblib.wunderlib.network.ClientBoundPacketHandler;
+import org.aiblib.bclib.api.v2.dataexchange.BaseDataHandler;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.rituals.EternalRitual;
 
@@ -16,7 +16,7 @@ import net.minecraft.server.level.ServerPlayer;
 
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
-import de.ambertation.wunderlib.network.PacketSender;
+import org.aiblib.wunderlib.network.PacketSender;
 
 public class RitualUpdate extends ClientBoundPacketHandler<RitualUpdate.Payload> {
     public static final ResourceLocation CHANNEL = BetterEnd.C.mk("ritual_update");

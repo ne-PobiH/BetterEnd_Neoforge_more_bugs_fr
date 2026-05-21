@@ -39,9 +39,6 @@ def resolveNeoformMappingFile = {
 }
 def mixinMappingsFile = layout.buildDirectory.file("mappings/${modId}-mixin-reobf.tsrg")
 def mixinOutMappingsFile = layout.buildDirectory.file("mappings/${modId}-mixin-out.tsrg")
-def local_bclib = findProject(':BCLib') != null
-def local_wunderlib = findProject(':wunderlib') != null
-def local_wover = findProject(':WorldWeaver') != null
 def simpleBuildRequested = gradle.startParameter.taskNames.contains("simpleBuild")
 def enableJeiRuntime = (project.findProperty("enable_jei_runtime")?.toString()?.toBoolean()) ?: false
 def enableJadeRuntime = (project.findProperty("enable_jade_runtime")?.toString()?.toBoolean()) ?: false
@@ -92,6 +89,12 @@ repositories {
     maven { url 'https://maven.terraformersmc.com/releases' }
     maven { url 'https://maven.terraformersmc.com' }
     maven { url 'https://maven.ambertation.de/releases' }
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
     maven { url 'https://repo.spongepowered.org/repository/maven-public/' }
     flatDir { dirs 'libs' }
 }
@@ -125,56 +128,28 @@ dependencies {
         println "Jade runtime disabled (set -Penable_jade_runtime=true to re-enable)"
     }
 
-    println "Using local BCLib: ${local_bclib}"
-    if (local_bclib) {
-        implementation project(path: ":BCLib", configuration: 'dev')
-    } else {
-        implementation "maven.modrinth:bclib-neoforge:${project.bclib_version}"
-    }
+    runtimeOnly "maven.modrinth:biolith:${project.biolith_modrinth_version_id}"
 
-    println "Using local WunderLib: ${local_wunderlib}"
-    if (local_wunderlib) {
-        implementation project(path: ":wunderlib", configuration: 'dev')
-    } else {
-        implementation "maven.modrinth:wunderlib-neoforge:${project.wunderlib_version}"
-    }
-
-    println "Using local WorldWeaver: ${local_wover}"
-    if (local_wover) {
-        implementation project(path: ":WorldWeaver", configuration: 'dev')
-        gradle.knownWoverModules.each {
-            implementation project(path: ":WorldWeaver:$it", configuration: 'dev')
-        }
-    } else {
-        implementation "maven.modrinth:worldweaver-neoforge:${project.wover_version}"
-    }
+    println "Using embedded AiBlib sources for BCLib, WunderLib and WorldWeaver"
 }
 
 
 sourceSets {
     main {
+        java {
+            srcDirs += ['internal/aiblib/src/main/java']
+        }
         resources {
-            srcDirs += ['src/main/generated']
+            srcDirs += ['src/main/generated', 'internal/aiblib/src/main/resources']
         }
     }
 }
 
 def datagenTaskDeps = [tasks.matching { it.name == "runData" }]
-if (!simpleBuildRequested) {
-    if (local_bclib) {
-        datagenTaskDeps << project(":BCLib").tasks.matching { it.name == "runData" }
-    }
-    if (local_wunderlib) {
-        datagenTaskDeps << project(":wunderlib").tasks.matching { it.name == "runData" }
-    }
-    if (local_wover) {
-        datagenTaskDeps << project(":WorldWeaver").tasks.matching { it.name == "runData" }
-    }
-}
 
 tasks.register("generateBetterXResources") {
     group = "neoforge"
-    description = "Runs datagen for BetterEnd and local BetterX libraries."
+    description = "Runs datagen for BetterEnd with embedded AiBlib libraries."
     dependsOn(datagenTaskDeps)
 }
 
@@ -207,10 +182,7 @@ processResources {
                 "mod_id": modId,
                 "version": project.mod_version,
                 "minecraft_version": project.minecraft_version,
-                "neoforge_version": project.neoforge_version,
-                "bclib_version": project.bclib_version,
-                "wover_version": project.wover_version,
-                "wunderlib_version": project.wunderlib_version
+                "neoforge_version": project.neoforge_version
         )
     }
 }
@@ -453,14 +425,10 @@ jar {
     from "LICENSE.ASSETS"
 }
 
-// Collect built jars for BetterEnd and its local BetterX libraries into one folder
+// Collect the built BetterEnd jar. BetterX libraries are embedded as AiBlib sources.
 def distDir = new File(rootProject.projectDir.parentFile, "betterx-dist")
 def modrinthModsDir = new File("C:/Users/Redmi/AppData/Roaming/ModrinthApp/profiles/1.21.1 Server ArchiTech/mods")
-def localLibraryProjects = [
-        local_bclib ? findProject(":BCLib") : null,
-        local_wover ? findProject(":WorldWeaver") : null,
-        local_wunderlib ? findProject(":wunderlib") : null
-].findAll { it != null }
+def localLibraryProjects = []
 
 tasks.register("copyDistJars", Copy) {
     dependsOn(tasks.named("jar"))

@@ -1,9 +1,9 @@
 package org.betterx.betterend.registry.features;
 
 import org.betterx.betterend.BetterEnd;
-import org.betterx.wover.feature.api.placed.PlacedConfiguredFeatureKey;
-import org.betterx.wover.feature.api.placed.PlacedFeatureKey;
-import org.betterx.wover.feature.api.placed.PlacedFeatureManager;
+import org.aiblib.wover.feature.api.placed.PlacedConfiguredFeatureKey;
+import org.aiblib.wover.feature.api.placed.PlacedFeatureKey;
+import org.aiblib.wover.feature.api.placed.PlacedFeatureManager;
 
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -93,6 +93,7 @@ public class EndVegetationFeatures {
     public static final PlacedFeatureKey SHADOW_BERRY = createVegetationKey("shadow_berry");
     public static final PlacedFeatureKey BUSHY_GRASS = createVegetationKey("bushy_grass");
     public static final PlacedFeatureKey BUSHY_GRASS_WG = createVegetationKey("bushy_grass_wg");
+    public static final PlacedFeatureKey DUST_BUSH = createVegetationKey("dust_bush");
     public static final PlacedFeatureKey AMBER_GRASS = createVegetationKey("amber_grass");
     public static final PlacedFeatureKey TWISTED_UMBRELLA_MOSS = createVegetationKey("twisted_umbrella_moss");
     public static final PlacedFeatureKey JUNGLE_GRASS = createVegetationKey("jungle_grass");

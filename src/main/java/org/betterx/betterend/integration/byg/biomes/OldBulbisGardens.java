@@ -1,15 +1,15 @@
 package org.betterx.betterend.integration.byg.biomes;
 
-import org.betterx.bclib.interfaces.SurfaceMaterialProvider;
+import org.aiblib.bclib.interfaces.SurfaceMaterialProvider;
 import org.betterx.betterend.integration.Integrations;
 import org.betterx.betterend.integration.byg.features.BYGFeatures;
 import org.betterx.betterend.registry.features.EndLakeFeatures;
 import org.betterx.betterend.registry.features.EndVegetationFeatures;
 import org.betterx.betterend.world.biome.EndBiome;
 import org.betterx.betterend.world.biome.EndBiomeBuilder;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.surface.api.Conditions;
-import org.betterx.wover.surface.api.SurfaceRuleBuilder;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.surface.api.Conditions;
+import org.aiblib.wover.surface.api.SurfaceRuleBuilder;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderSet;

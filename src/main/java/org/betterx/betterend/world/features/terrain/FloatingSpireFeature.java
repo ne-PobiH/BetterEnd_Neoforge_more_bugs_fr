@@ -1,9 +1,9 @@
 package org.betterx.betterend.world.features.terrain;
 
-import org.betterx.bclib.sdf.SDF;
-import org.betterx.bclib.sdf.operator.SDFDisplacement;
-import org.betterx.bclib.sdf.primitive.SDFSphere;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.sdf.SDF;
+import org.aiblib.bclib.sdf.operator.SDFDisplacement;
+import org.aiblib.bclib.sdf.primitive.SDFSphere;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.noise.OpenSimplexNoise;
 import org.betterx.betterend.registry.EndBiomes;
 import org.betterx.betterend.registry.features.EndConfiguredVegetation;

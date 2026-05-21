@@ -1,6 +1,6 @@
 package org.betterx.betterend.complexmaterials;
 
-import org.betterx.bclib.blocks.*;
+import org.aiblib.bclib.blocks.*;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.blocks.EndPedestal;
 import org.betterx.betterend.blocks.FlowerPotBlock;
@@ -8,11 +8,11 @@ import org.betterx.betterend.blocks.basis.StoneLanternBlock;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndItems;
 import org.betterx.datagen.betterend.recipes.EndCraftingRecipesProvider;
-import org.betterx.wover.recipe.api.RecipeBuilder;
-import org.betterx.wover.tag.api.event.context.ItemTagBootstrapContext;
-import org.betterx.wover.tag.api.event.context.TagBootstrapContext;
-import org.betterx.wover.tag.api.predefined.CommonBlockTags;
-import org.betterx.wover.tag.api.predefined.CommonItemTags;
+import org.aiblib.wover.recipe.api.RecipeBuilder;
+import org.aiblib.wover.tag.api.event.context.ItemTagBootstrapContext;
+import org.aiblib.wover.tag.api.event.context.TagBootstrapContext;
+import org.aiblib.wover.tag.api.predefined.CommonBlockTags;
+import org.aiblib.wover.tag.api.predefined.CommonItemTags;
 
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.tags.BlockTags;

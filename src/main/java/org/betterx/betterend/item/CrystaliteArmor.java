@@ -1,10 +1,10 @@
 package org.betterx.betterend.item;
 
-import org.betterx.bclib.items.BaseArmorItem;
+import org.aiblib.bclib.items.BaseArmorItem;
 import org.betterx.betterend.effects.EndStatusEffects;
 import org.betterx.betterend.item.material.EndArmorMaterial;
 import org.betterx.betterend.item.model.CrystaliteArmorRenderer;
-import org.betterx.bclib.client.render.HumanoidArmorRenderer;
+import org.aiblib.bclib.client.render.HumanoidArmorRenderer;
 
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.ChatFormatting;

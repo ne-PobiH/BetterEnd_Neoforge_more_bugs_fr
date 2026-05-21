@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks.basis;
 
-import org.betterx.bclib.blocks.BaseStripableBarkBlock;
-import org.betterx.wover.block.api.model.WoverBlockModelGenerators;
+import org.aiblib.bclib.blocks.BaseStripableBarkBlock;
+import org.aiblib.wover.block.api.model.WoverBlockModelGenerators;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

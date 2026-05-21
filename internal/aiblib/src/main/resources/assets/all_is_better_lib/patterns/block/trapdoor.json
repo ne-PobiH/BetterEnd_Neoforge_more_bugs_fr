@@ -1,0 +1,7 @@
+{
+  "parent": "all_is_better_lib:block/sided_trapdoor",
+  "textures": {
+    "texture": "%modid%:block/%texture%",
+    "side": "%modid%:block/%side%"
+  }
+}

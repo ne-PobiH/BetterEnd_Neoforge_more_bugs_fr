@@ -5,8 +5,8 @@ import org.betterx.betterend.world.surface.SplitNoiseCondition;
 import org.betterx.betterend.world.surface.SulphuricSurfaceNoiseCondition;
 import org.betterx.betterend.world.surface.UmbraSurfaceNoiseCondition;
 import org.betterx.betterend.world.surface.VerticalBandNoiseCondition;
-import org.betterx.wover.surface.api.noise.NumericProvider;
-import org.betterx.wover.surface.api.noise.NumericProviderRegistry;
+import org.aiblib.wover.surface.api.noise.NumericProvider;
+import org.aiblib.wover.surface.api.noise.NumericProviderRegistry;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.resources.ResourceKey;

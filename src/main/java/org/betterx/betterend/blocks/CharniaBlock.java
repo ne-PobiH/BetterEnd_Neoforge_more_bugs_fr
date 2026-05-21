@@ -1,8 +1,8 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.behaviours.BehaviourBuilders;
-import org.betterx.bclib.behaviours.interfaces.BehaviourWaterPlant;
-import org.betterx.bclib.interfaces.SurvivesOnSpecialGround;
+import org.aiblib.bclib.behaviours.BehaviourBuilders;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourWaterPlant;
+import org.aiblib.bclib.interfaces.SurvivesOnSpecialGround;
 import org.betterx.betterend.blocks.basis.EndUnderwaterPlantBlock;
 
 import net.minecraft.network.chat.Component;

@@ -13,9 +13,9 @@ import org.betterx.datagen.betterend.worldgen.EndBiomeModificationProvider;
 import org.betterx.datagen.betterend.worldgen.EndBiomesProvider;
 import org.betterx.datagen.betterend.worldgen.StructureDataProvider;
 import org.betterx.datagen.betterend.worldgen.features.*;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.datagen.api.PackBuilder;
-import org.betterx.wover.datagen.api.WoverDataGenEntryPoint;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.datagen.api.PackBuilder;
+import org.aiblib.wover.datagen.api.WoverDataGenEntryPoint;
 
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.data.worldgen.features.EndFeatures;

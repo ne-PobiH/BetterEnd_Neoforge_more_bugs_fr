@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-10T13:15:20.5353011	Loot Tables
+// 1.21.1	2026-05-21T19:25:52.8325479	Loot Tables
 ac9a13367a61c43f6301dc19121418ed07e8275e data/betterend/loot_table/blocks/aeridium.json
 87892ca56aab0910b5df9d2062ed29fda4f92b08 data/betterend/loot_table/blocks/aeternium_block.json
 156dc6ab73da5599c452b663d4288c6901ac6491 data/betterend/loot_table/blocks/amaranita_cap.json
@@ -103,6 +103,7 @@ db33e59fd1d930227991041b350a8f6a23022b20 data/betterend/loot_table/blocks/dragon
 c1ff7999b30275393e0751b967d445d105447405 data/betterend/loot_table/blocks/dragon_tree_trapdoor.json
 86bd58dbed21b326f3a3523f3c91fa1062735faa data/betterend/loot_table/blocks/dragon_tree_wall.json
 f8adf7fa93c51d5a1d0060fe9a6c14876e1fbf29 data/betterend/loot_table/blocks/dragon_tree_wood.json
+75f9d3d19047d490f241744c2ad91c414bae169c data/betterend/loot_table/blocks/dust_bush.json
 f40c667e623cfa2c3c4c62308e52c24fdfa5f1a9 data/betterend/loot_table/blocks/emerald_ice.json
 de83880ea3dcd70e398c02411ed5c00f049c8cb0 data/betterend/loot_table/blocks/ender_block.json
 0ca983b67cf5b1b9c584b115d01a941437de3438 data/betterend/loot_table/blocks/ender_ore.json

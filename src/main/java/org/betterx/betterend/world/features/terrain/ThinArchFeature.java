@@ -1,15 +1,15 @@
 package org.betterx.betterend.world.features.terrain;
 
-import org.betterx.bclib.api.v2.levelgen.features.features.DefaultFeature;
-import org.betterx.bclib.sdf.SDF;
-import org.betterx.bclib.sdf.operator.SDFCoordModify;
-import org.betterx.bclib.sdf.operator.SDFDisplacement;
-import org.betterx.bclib.sdf.operator.SDFRotation;
-import org.betterx.bclib.sdf.operator.SDFUnion;
-import org.betterx.bclib.sdf.primitive.SDFTorus;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.api.v2.levelgen.features.features.DefaultFeature;
+import org.aiblib.bclib.sdf.SDF;
+import org.aiblib.bclib.sdf.operator.SDFCoordModify;
+import org.aiblib.bclib.sdf.operator.SDFDisplacement;
+import org.aiblib.bclib.sdf.operator.SDFRotation;
+import org.aiblib.bclib.sdf.operator.SDFUnion;
+import org.aiblib.bclib.sdf.primitive.SDFTorus;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.noise.OpenSimplexNoise;
-import org.betterx.wover.tag.api.predefined.CommonBlockTags;
+import org.aiblib.wover.tag.api.predefined.CommonBlockTags;
 
 import com.mojang.math.Axis;
 import net.minecraft.core.BlockPos;

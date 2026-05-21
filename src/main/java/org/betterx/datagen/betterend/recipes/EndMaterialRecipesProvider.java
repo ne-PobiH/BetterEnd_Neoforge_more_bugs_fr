@@ -1,8 +1,8 @@
 package org.betterx.datagen.betterend.recipes;
 
 import org.betterx.betterend.complexmaterials.MaterialManager;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.datagen.api.provider.WoverRecipeProvider;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.datagen.api.provider.WoverRecipeProvider;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeOutput;

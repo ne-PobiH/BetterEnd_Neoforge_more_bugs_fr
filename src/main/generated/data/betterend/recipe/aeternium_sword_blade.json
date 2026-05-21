@@ -1,5 +1,5 @@
 {
-  "type": "bclib:smithing",
+  "type": "all_is_better_lib:smithing",
   "allowedTools": "betterend:anvil_tool/diamond",
   "anvilLevel": 5,
   "damage": 6,

@@ -1,6 +1,6 @@
 package org.betterx.datagen.betterend;
 
-import org.betterx.bclib.api.v3.datagen.RegistrySupplier;
+import org.aiblib.bclib.api.v3.datagen.RegistrySupplier;
 import org.betterx.betterend.BetterEnd;
 
 import java.util.List;

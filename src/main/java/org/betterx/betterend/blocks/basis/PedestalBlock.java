@@ -1,6 +1,6 @@
 package org.betterx.betterend.blocks.basis;
 
-import org.betterx.bclib.blocks.BaseBlockNotFull;
+import org.aiblib.bclib.blocks.BaseBlockNotFull;
 import org.betterx.betterend.blocks.EndBlockProperties;
 import org.betterx.betterend.blocks.EndBlockProperties.PedestalState;
 import org.betterx.betterend.blocks.InfusionPedestal;
@@ -9,11 +9,11 @@ import org.betterx.betterend.blocks.entities.PedestalBlockEntity;
 import org.betterx.betterend.client.models.EndModels;
 import org.betterx.betterend.registry.EndTags;
 import org.betterx.betterend.rituals.InfusionRitual;
-import org.betterx.wover.block.api.BlockProperties;
-import org.betterx.wover.block.api.BlockTagProvider;
-import org.betterx.wover.block.api.model.BlockModelProvider;
-import org.betterx.wover.block.api.model.WoverBlockModelGenerators;
-import org.betterx.wover.tag.api.event.context.TagBootstrapContext;
+import org.aiblib.wover.block.api.BlockProperties;
+import org.aiblib.wover.block.api.BlockTagProvider;
+import org.aiblib.wover.block.api.model.BlockModelProvider;
+import org.aiblib.wover.block.api.model.WoverBlockModelGenerators;
+import org.aiblib.wover.tag.api.event.context.TagBootstrapContext;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.BlockPos.MutableBlockPos;

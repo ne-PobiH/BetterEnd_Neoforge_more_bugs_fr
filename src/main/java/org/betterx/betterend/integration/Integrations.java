@@ -1,7 +1,7 @@
 package org.betterx.betterend.integration;
 
-import org.betterx.bclib.api.v2.ModIntegrationAPI;
-import org.betterx.bclib.integration.ModIntegration;
+import org.aiblib.bclib.api.v2.ModIntegrationAPI;
+import org.aiblib.bclib.integration.ModIntegration;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.events.PlayerAdvancementsCallback;
 import org.betterx.betterend.integration.byg.BYGIntegration;

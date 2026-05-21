@@ -1,0 +1,7 @@
+{
+  "parent": "all_is_better_lib:block/sided_door_top_rh",
+  "textures": {
+    "facade": "%modid%:block/%texture%_top",
+    "side": "%modid%:block/%texture%_side"
+  }
+}

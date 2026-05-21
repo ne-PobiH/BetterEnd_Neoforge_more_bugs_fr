@@ -8,7 +8,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/houses/small_house_01",
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -17,7 +17,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/houses/small_house_02",
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -26,7 +26,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/houses/small_house_03",
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -35,7 +35,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/houses/small_house_04",
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -44,7 +44,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/houses/small_house_05",
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -53,7 +53,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/houses/small_house_06",
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -62,7 +62,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/houses/small_house_07",
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -71,7 +71,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/houses/small_house_08",
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -80,7 +80,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/houses/small_house_09",
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -89,7 +89,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/houses/small_house_10",
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -98,7 +98,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/houses/small_house_11",
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -107,7 +107,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/houses/small_house_12",
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -116,7 +116,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/houses/small_house_13",
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -125,7 +125,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/houses/small_house_14",
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -134,7 +134,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/houses/small_house_15",
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -143,7 +143,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/houses/small_house_16",
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -152,7 +152,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/houses/small_house_17",
         "processors": "betterend:crack_and_weather",
         "projection": "rigid"
@@ -161,7 +161,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/houses/animal_pen_01",
         "processors": "minecraft:empty",
         "projection": "rigid"
@@ -170,7 +170,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/decoration/stable_01",
         "processors": "betterend:crack_20_percent",
         "projection": "rigid"
@@ -179,7 +179,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/decoration/pond_01",
         "processors": "betterend:weather_10_percent",
         "projection": "rigid"
@@ -188,7 +188,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/decoration/respawn_01",
         "processors": "betterend:end_street",
         "projection": "rigid"
@@ -197,7 +197,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/decoration/respawn_02",
         "processors": "betterend:end_street",
         "projection": "rigid"
@@ -206,7 +206,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/decoration/fountain_01",
         "processors": "betterend:end_street",
         "projection": "rigid"
@@ -215,7 +215,7 @@
     },
     {
       "element": {
-        "element_type": "wover:single_end_pool_element",
+        "element_type": "all_is_better_lib:single_end_pool_element",
         "location": "betterend:village/decoration/work_01",
         "processors": "betterend:end_street",
         "projection": "rigid"

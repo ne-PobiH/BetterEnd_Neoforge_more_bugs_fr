@@ -3,9 +3,9 @@ package org.betterx.datagen.betterend.worldgen.features;
 import org.betterx.betterend.registry.EndFeatures;
 import org.betterx.betterend.registry.features.EndConfiguredLakeFeature;
 import org.betterx.betterend.registry.features.EndLakeFeatures;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.datagen.api.provider.multi.WoverFeatureProvider;
-import org.betterx.wover.feature.api.placed.PlacedFeatureKey;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.datagen.api.provider.multi.WoverFeatureProvider;
+import org.aiblib.wover.feature.api.placed.PlacedFeatureKey;
 
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;

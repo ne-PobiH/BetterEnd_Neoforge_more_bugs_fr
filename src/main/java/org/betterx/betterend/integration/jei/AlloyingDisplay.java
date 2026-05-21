@@ -1,6 +1,6 @@
 package org.betterx.betterend.integration.jei;
 
-import org.betterx.bclib.recipes.AlloyingRecipe;
+import org.aiblib.bclib.recipes.AlloyingRecipe;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.resources.ResourceLocation;

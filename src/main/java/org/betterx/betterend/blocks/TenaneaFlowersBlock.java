@@ -1,12 +1,12 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.blocks.BaseVineBlock;
-import org.betterx.bclib.interfaces.BlockColorProvider;
-import org.betterx.bclib.interfaces.CustomColorProvider;
-import org.betterx.bclib.interfaces.ItemColorProvider;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.blocks.BaseVineBlock;
+import org.aiblib.bclib.interfaces.BlockColorProvider;
+import org.aiblib.bclib.interfaces.CustomColorProvider;
+import org.aiblib.bclib.interfaces.ItemColorProvider;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.registry.EndParticles;
-import org.betterx.ui.ColorUtil;
+import org.aiblib.ui.ColorUtil;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;

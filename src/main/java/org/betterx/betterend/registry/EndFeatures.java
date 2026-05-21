@@ -28,6 +28,7 @@ public class EndFeatures {
     public static final MengerSpongeFeature MENGER_SPONGE_FEATURE = new MengerSpongeFeature();
     public static final CaveChunkPopulatorFeature CAVE_CHUNK_POPULATOR = new CaveChunkPopulatorFeature();
     public static final SinglePlantFeature SINGLE_PLANT_FEATURE = new SinglePlantFeature();
+    public static final DustBushFeature DUST_BUSH_FEATURE = new DustBushFeature();
     public static final SingleInvertedScatterFeature SINGLE_INVERTED_SCATTER_FEATURE = new SingleInvertedScatterFeature();
     public static final DoublePlantFeature DOUBLE_PLANT_FEATURE = new DoublePlantFeature();
     public static final UnderwaterPlantFeature UNDERWATER_PLANT_FEATURE = new UnderwaterPlantFeature();
@@ -145,6 +146,7 @@ public class EndFeatures {
         helper.register(BetterEnd.C.mk("menger_sponge_feature"), MENGER_SPONGE_FEATURE);
         helper.register(BetterEnd.C.mk("cave_chunk_populator"), CAVE_CHUNK_POPULATOR);
         helper.register(BetterEnd.C.mk("single_plant_feature"), SINGLE_PLANT_FEATURE);
+        helper.register(BetterEnd.C.mk("dust_bush_feature"), DUST_BUSH_FEATURE);
         helper.register(BetterEnd.C.mk("single_inverted_scatter_feature"), SINGLE_INVERTED_SCATTER_FEATURE);
         helper.register(BetterEnd.C.mk("double_plant_feature"), DOUBLE_PLANT_FEATURE);
         helper.register(BetterEnd.C.mk("underwater_plant_feature"), UNDERWATER_PLANT_FEATURE);

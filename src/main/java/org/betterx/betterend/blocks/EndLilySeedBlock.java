@@ -1,11 +1,11 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.behaviours.interfaces.BehaviourWaterPlantSeed;
-import org.betterx.wover.block.api.BlockProperties.TripleShape;
-import org.betterx.bclib.blocks.UnderwaterPlantWithAgeBlock;
-import org.betterx.bclib.util.BlocksHelper;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourWaterPlantSeed;
+import org.aiblib.wover.block.api.BlockProperties.TripleShape;
+import org.aiblib.bclib.blocks.UnderwaterPlantWithAgeBlock;
+import org.aiblib.bclib.util.BlocksHelper;
 import org.betterx.betterend.registry.EndBlocks;
-import org.betterx.wover.tag.api.predefined.CommonBlockTags;
+import org.aiblib.wover.tag.api.predefined.CommonBlockTags;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;

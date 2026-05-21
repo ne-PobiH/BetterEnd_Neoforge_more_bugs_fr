@@ -1,7 +1,7 @@
 package org.betterx.betterend.interfaces.survives;
 
-import org.betterx.bclib.interfaces.SurvivesOnTags;
-import org.betterx.wover.tag.api.predefined.CommonBlockTags;
+import org.aiblib.bclib.interfaces.SurvivesOnTags;
+import org.aiblib.wover.tag.api.predefined.CommonBlockTags;
 
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;

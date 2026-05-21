@@ -1,11 +1,11 @@
 package org.betterx.betterend.item;
 
-import org.betterx.bclib.interfaces.ItemModelProvider;
+import org.aiblib.bclib.interfaces.ItemModelProvider;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.item.material.EndArmorTier;
 import org.betterx.betterend.registry.EndItems;
-import org.betterx.wover.complex.api.equipment.ArmorSlot;
-import org.betterx.wover.complex.api.equipment.ArmorTier;
+import org.aiblib.wover.complex.api.equipment.ArmorSlot;
+import org.aiblib.wover.complex.api.equipment.ArmorTier;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlotGroup;

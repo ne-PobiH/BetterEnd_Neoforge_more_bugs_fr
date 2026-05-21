@@ -1,11 +1,11 @@
 package org.betterx.betterend.world.features;
 
-import org.betterx.bclib.api.v2.levelgen.features.features.DefaultFeature;
-import org.betterx.bclib.sdf.SDF;
-import org.betterx.bclib.sdf.operator.SDFDisplacement;
-import org.betterx.bclib.sdf.operator.SDFTranslate;
-import org.betterx.bclib.sdf.primitive.SDFCappedCone;
-import org.betterx.bclib.util.BlocksHelper;
+import org.aiblib.bclib.api.v2.levelgen.features.features.DefaultFeature;
+import org.aiblib.bclib.sdf.SDF;
+import org.aiblib.bclib.sdf.operator.SDFDisplacement;
+import org.aiblib.bclib.sdf.operator.SDFTranslate;
+import org.aiblib.bclib.sdf.primitive.SDFCappedCone;
+import org.aiblib.bclib.util.BlocksHelper;
 import org.betterx.betterend.noise.OpenSimplexNoise;
 import org.betterx.betterend.world.biome.EndBiome;
 

@@ -1,0 +1,8 @@
+{
+  "parent": "all_is_better_lib:block/path",
+  "textures": {
+    "top": "%modid%:block/%top%",
+    "side": "%modid%:block/%side%",
+    "bottom": "%bottom%"
+  }
+}

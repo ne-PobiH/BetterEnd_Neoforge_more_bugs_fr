@@ -1,7 +1,7 @@
 package org.betterx.betterend.particle;
 
 import org.betterx.betterend.registry.EndParticles;
-import org.betterx.ui.ColorUtil;
+import org.aiblib.ui.ColorUtil;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;

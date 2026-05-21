@@ -1,6 +1,6 @@
 package org.betterx.betterend.entity.model;
 
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.entity.EndSlimeEntity;
 import org.betterx.betterend.registry.EndEntitiesRenders;
 

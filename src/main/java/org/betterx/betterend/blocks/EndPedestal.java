@@ -1,8 +1,8 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.behaviours.interfaces.BehaviourMetal;
-import org.betterx.bclib.behaviours.interfaces.BehaviourStone;
-import org.betterx.bclib.behaviours.interfaces.BehaviourWood;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourMetal;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourStone;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourWood;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.blocks.basis.PedestalBlock;
 import org.betterx.betterend.client.models.EndModels;

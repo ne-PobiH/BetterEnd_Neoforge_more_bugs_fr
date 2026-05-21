@@ -1,6 +1,6 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.blocks.StalactiteBlock;
+import org.aiblib.bclib.blocks.StalactiteBlock;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

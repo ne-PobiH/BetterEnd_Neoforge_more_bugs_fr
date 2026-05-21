@@ -1,16 +1,16 @@
 package org.betterx.betterend.world.generator;
 
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.interfaces.BETargetChecker;
 import org.betterx.betterend.mixin.common.NoiseBasedChunkGeneratorAccessor;
 import org.betterx.betterend.mixin.common.NoiseChunkAccessor;
 import org.betterx.betterend.mixin.common.NoiseInterpolatorAccessor;
 import org.betterx.betterend.noise.OpenSimplexNoise;
-import org.betterx.wover.biome.api.BiomeManager;
-import org.betterx.wover.block.api.BlockHelper;
-import org.betterx.wover.common.generator.api.biomesource.BiomeSourceWithConfig;
-import org.betterx.wover.generator.api.biomesource.WoverBiomeData;
-import org.betterx.wover.generator.api.biomesource.end.WoverEndConfig;
+import org.aiblib.wover.biome.api.BiomeManager;
+import org.aiblib.wover.block.api.BlockHelper;
+import org.aiblib.wover.common.generator.api.biomesource.BiomeSourceWithConfig;
+import org.aiblib.wover.generator.api.biomesource.WoverBiomeData;
+import org.aiblib.wover.generator.api.biomesource.end.WoverEndConfig;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;

@@ -1,6 +1,6 @@
 package org.betterx.betterend.world.biome.land;
 
-import org.betterx.bclib.interfaces.SurfaceMaterialProvider;
+import org.aiblib.bclib.interfaces.SurfaceMaterialProvider;
 import org.betterx.betterend.registry.*;
 import org.betterx.betterend.registry.features.EndLakeFeatures;
 import org.betterx.betterend.registry.features.EndTerrainFeatures;
@@ -8,8 +8,8 @@ import org.betterx.betterend.registry.features.EndVegetationFeatures;
 import org.betterx.betterend.world.biome.EndBiome;
 import org.betterx.betterend.world.biome.EndBiomeBuilder;
 import org.betterx.betterend.world.surface.SulphuricSurfaceNoiseCondition;
-import org.betterx.wover.surface.api.SurfaceRuleBuilder;
-import org.betterx.wover.surface.impl.rules.SwitchRuleSource;
+import org.aiblib.wover.surface.api.SurfaceRuleBuilder;
+import org.aiblib.wover.surface.impl.rules.SwitchRuleSource;
 
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.block.Blocks;
@@ -43,6 +43,7 @@ public class SulphurSpringsBiome extends EndBiome.Config {
                 .terrainHeight(0F)
                 .particles(EndParticles.SULPHUR_PARTICLE, 0.001F)
                 .feature(EndTerrainFeatures.GEYSER)
+                .feature(EndTerrainFeatures.SULPHUR_HILL)
                 .feature(EndTerrainFeatures.SURFACE_VENT)
                 .feature(EndLakeFeatures.SULPHURIC_LAKE)
                 .feature(EndTerrainFeatures.SULPHURIC_CAVE)

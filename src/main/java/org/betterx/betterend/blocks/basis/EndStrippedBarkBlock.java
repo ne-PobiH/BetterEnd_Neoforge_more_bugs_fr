@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks.basis;
 
-import org.betterx.bclib.blocks.BaseBarkBlock;
-import org.betterx.wover.block.api.model.WoverBlockModelGenerators;
+import org.aiblib.bclib.blocks.BaseBarkBlock;
+import org.aiblib.wover.block.api.model.WoverBlockModelGenerators;
 
 import net.minecraft.data.models.model.TextureMapping;
 import net.minecraft.data.models.model.TextureSlot;

@@ -1,15 +1,15 @@
 package org.betterx.betterend.complexmaterials;
 
-import org.betterx.bclib.complexmaterials.ComplexMaterial;
-import org.betterx.bclib.complexmaterials.WoodenComplexMaterial;
-import org.betterx.bclib.complexmaterials.entry.MaterialSlot;
-import org.betterx.bclib.complexmaterials.entry.RecipeEntry;
-import org.betterx.bclib.complexmaterials.entry.SlotMap;
-import org.betterx.bclib.complexmaterials.set.wood.HangingSign;
-import org.betterx.bclib.complexmaterials.set.wood.WoodSlots;
+import org.aiblib.bclib.complexmaterials.ComplexMaterial;
+import org.aiblib.bclib.complexmaterials.WoodenComplexMaterial;
+import org.aiblib.bclib.complexmaterials.entry.MaterialSlot;
+import org.aiblib.bclib.complexmaterials.entry.RecipeEntry;
+import org.aiblib.bclib.complexmaterials.entry.SlotMap;
+import org.aiblib.bclib.complexmaterials.set.wood.HangingSign;
+import org.aiblib.bclib.complexmaterials.set.wood.WoodSlots;
 import org.betterx.betterend.registry.EndBlocks;
-import org.betterx.wover.recipe.api.CraftingRecipeBuilder;
-import org.betterx.wover.recipe.api.RecipeBuilder;
+import org.aiblib.wover.recipe.api.CraftingRecipeBuilder;
+import org.aiblib.wover.recipe.api.RecipeBuilder;
 
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.world.item.Items;

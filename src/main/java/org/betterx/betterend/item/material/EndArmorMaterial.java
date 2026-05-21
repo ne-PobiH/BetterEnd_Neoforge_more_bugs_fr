@@ -3,7 +3,7 @@ package org.betterx.betterend.item.material;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndItems;
-import org.betterx.wover.item.api.armor.CustomArmorMaterial;
+import org.aiblib.wover.item.api.armor.CustomArmorMaterial;
 
 import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvents;

@@ -2,7 +2,7 @@ package org.betterx.betterend.item;
 
 import org.betterx.betterend.item.material.EndArmorTier;
 import org.betterx.betterend.registry.EndAttributes;
-import org.betterx.wover.complex.api.equipment.ArmorSlot;
+import org.aiblib.wover.complex.api.equipment.ArmorSlot;
 
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;

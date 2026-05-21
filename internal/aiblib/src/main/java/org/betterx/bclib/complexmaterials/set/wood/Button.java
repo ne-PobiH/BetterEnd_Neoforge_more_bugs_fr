@@ -1,0 +1,43 @@
+package org.aiblib.bclib.complexmaterials.set.wood;
+
+import org.aiblib.bclib.blocks.BaseButtonBlock;
+import org.aiblib.bclib.complexmaterials.ComplexMaterial;
+import org.aiblib.bclib.complexmaterials.WoodenComplexMaterial;
+import org.aiblib.bclib.complexmaterials.entry.SimpleMaterialSlot;
+import org.aiblib.wover.recipe.api.RecipeBuilder;
+
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+public class Button extends SimpleMaterialSlot<WoodenComplexMaterial> {
+    public Button() {
+        super("button");
+    }
+
+    @Override
+    protected @NotNull Block createBlock(
+            WoodenComplexMaterial parentMaterial, BlockBehaviour.Properties settings
+    ) {
+        return new BaseButtonBlock.Wood(
+                parentMaterial.getBlock(WoodSlots.PLANKS),
+                parentMaterial.woodType.setType()
+        );
+    }
+
+    @Override
+    protected @Nullable void makeRecipe(RecipeOutput context, ComplexMaterial parentMaterial, ResourceLocation id) {
+        RecipeBuilder
+                .crafting(id, parentMaterial.getBlock(suffix))
+                .shapeless()
+                .addMaterial('#', parentMaterial.getBlock(WoodSlots.PLANKS))
+                .group("button")
+                .category(RecipeCategory.REDSTONE)
+                .build(context);
+    }
+}

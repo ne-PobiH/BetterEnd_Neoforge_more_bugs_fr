@@ -3,8 +3,8 @@ package org.betterx.betterend.registry;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.world.structures.features.*;
 import org.betterx.betterend.world.structures.piece.*;
-import org.betterx.wover.structure.api.StructureKey;
-import org.betterx.wover.structure.api.StructureManager;
+import org.aiblib.wover.structure.api.StructureKey;
+import org.aiblib.wover.structure.api.StructureManager;
 
 import net.minecraft.world.level.levelgen.GenerationStep.Decoration;
 import net.minecraft.world.level.levelgen.structure.pieces.StructurePieceType;

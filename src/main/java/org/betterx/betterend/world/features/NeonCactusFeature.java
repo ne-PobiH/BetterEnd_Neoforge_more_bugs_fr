@@ -1,6 +1,6 @@
 package org.betterx.betterend.world.features;
 
-import org.betterx.bclib.api.v2.levelgen.features.features.DefaultFeature;
+import org.aiblib.bclib.api.v2.levelgen.features.features.DefaultFeature;
 import org.betterx.betterend.blocks.NeonCactusPlantBlock;
 import org.betterx.betterend.registry.EndBlocks;
 

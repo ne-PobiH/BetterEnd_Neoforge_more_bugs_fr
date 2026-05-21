@@ -1,12 +1,12 @@
 package org.betterx.betterend.world.features;
 
-import org.betterx.bclib.api.v2.levelgen.features.features.DefaultFeature;
-import org.betterx.bclib.util.MHelper;
-import org.betterx.bclib.util.StructureErode;
-import org.betterx.bclib.util.StructureHelper;
+import org.aiblib.bclib.api.v2.levelgen.features.features.DefaultFeature;
+import org.aiblib.bclib.util.MHelper;
+import org.aiblib.bclib.util.StructureErode;
+import org.aiblib.bclib.util.StructureHelper;
 import org.betterx.betterend.util.BlockFixer;
 import org.betterx.betterend.util.EndStructureHelper;
-import org.betterx.wover.tag.api.predefined.CommonBlockTags;
+import org.aiblib.wover.tag.api.predefined.CommonBlockTags;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;

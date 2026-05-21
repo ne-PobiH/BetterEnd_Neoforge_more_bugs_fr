@@ -1,11 +1,11 @@
 package org.betterx.betterend.integration;
 
-import org.betterx.bclib.integration.ModIntegration;
+import org.aiblib.bclib.integration.ModIntegration;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.blocks.HydraluxPetalColoredBlock;
 import org.betterx.betterend.complexmaterials.ColoredMaterial;
 import org.betterx.betterend.registry.EndBlocks;
-import org.betterx.ui.ColorUtil;
+import org.aiblib.ui.ColorUtil;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.ItemLike;

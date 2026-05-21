@@ -1,5 +1,5 @@
 {
-  "parent": "wover:block/composter",
+  "parent": "all_is_better_lib:block/composter",
   "textures": {
     "bottom": "betterend:block/lacugrove_composter_bottom",
     "side": "betterend:block/lacugrove_composter_side",

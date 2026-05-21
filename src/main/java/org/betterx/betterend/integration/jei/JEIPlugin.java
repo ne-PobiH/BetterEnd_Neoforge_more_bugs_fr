@@ -1,7 +1,7 @@
 package org.betterx.betterend.integration.jei;
 
-import org.betterx.bclib.recipes.AlloyingRecipe;
-import org.betterx.bclib.recipes.AnvilRecipe;
+import org.aiblib.bclib.recipes.AlloyingRecipe;
+import org.aiblib.bclib.recipes.AnvilRecipe;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.blocks.basis.EndAnvilBlock;
 import org.betterx.betterend.blocks.entities.EndStoneSmelterBlockEntity;

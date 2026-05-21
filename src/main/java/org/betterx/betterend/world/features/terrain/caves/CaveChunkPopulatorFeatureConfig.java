@@ -1,7 +1,7 @@
 package org.betterx.betterend.world.features.terrain.caves;
 
 import org.betterx.betterend.world.biome.cave.EndCaveBiome;
-import org.betterx.wover.biome.api.BiomeManager;
+import org.aiblib.wover.biome.api.BiomeManager;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;

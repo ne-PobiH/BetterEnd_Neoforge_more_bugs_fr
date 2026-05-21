@@ -1,6 +1,6 @@
 package org.betterx.betterend.particle;
 
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.util.MHelper;
 
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.*;

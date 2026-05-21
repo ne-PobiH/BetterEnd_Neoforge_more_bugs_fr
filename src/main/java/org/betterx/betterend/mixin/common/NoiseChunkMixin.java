@@ -1,6 +1,6 @@
 package org.betterx.betterend.mixin.common;
 
-import org.betterx.bclib.BCLib;
+import org.aiblib.bclib.BCLib;
 import org.betterx.betterend.interfaces.BETargetChecker;
 import org.betterx.betterend.world.generator.TerrainGenerator;
 

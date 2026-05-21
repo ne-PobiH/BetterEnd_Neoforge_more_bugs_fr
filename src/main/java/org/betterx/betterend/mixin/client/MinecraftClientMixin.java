@@ -1,6 +1,6 @@
 package org.betterx.betterend.mixin.client;
 
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.util.MHelper;
 
 import net.minecraft.client.main.GameConfig;
 import net.minecraft.client.Minecraft;

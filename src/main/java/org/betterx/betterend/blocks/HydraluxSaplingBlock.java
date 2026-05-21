@@ -1,10 +1,10 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.behaviours.interfaces.BehaviourWaterPlantSapling;
-import org.betterx.bclib.blocks.UnderwaterPlantWithAgeBlock;
-import org.betterx.bclib.interfaces.SurvivesOnSpecialGround;
-import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourWaterPlantSapling;
+import org.aiblib.bclib.blocks.UnderwaterPlantWithAgeBlock;
+import org.aiblib.bclib.interfaces.SurvivesOnSpecialGround;
+import org.aiblib.bclib.util.BlocksHelper;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.interfaces.survives.SurvivesOnSulphuricRock;
 import org.betterx.betterend.registry.EndBlocks;
 

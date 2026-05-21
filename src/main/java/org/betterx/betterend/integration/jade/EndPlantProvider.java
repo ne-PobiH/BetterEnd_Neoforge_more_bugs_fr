@@ -1,6 +1,6 @@
 package org.betterx.betterend.integration.jade;
 
-import org.betterx.bclib.blocks.BasePlantWithAgeBlock;
+import org.aiblib.bclib.blocks.BasePlantWithAgeBlock;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.blocks.basis.EndPlantWithAgeBlock;
 

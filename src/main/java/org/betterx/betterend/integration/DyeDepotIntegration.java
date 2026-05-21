@@ -1,9 +1,9 @@
 package org.betterx.betterend.integration;
 
-import org.betterx.bclib.integration.ModIntegration;
+import org.aiblib.bclib.integration.ModIntegration;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.registry.EndBlocks;
-import org.betterx.wover.recipe.api.RecipeBuilder;
+import org.aiblib.wover.recipe.api.RecipeBuilder;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.recipes.RecipeOutput;

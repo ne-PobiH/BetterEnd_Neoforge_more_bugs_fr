@@ -1,0 +1,5 @@
+{
+  "disable": [
+    "all_is_better_lib:test_star"
+  ]
+}

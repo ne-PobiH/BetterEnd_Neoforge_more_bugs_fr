@@ -41,6 +41,7 @@
     [],
     [
       "minecraft:end_gateway_return",
+      "betterend:sulphur_hill",
       "betterend:surface_vent",
       "betterend:crashed_ship"
     ],

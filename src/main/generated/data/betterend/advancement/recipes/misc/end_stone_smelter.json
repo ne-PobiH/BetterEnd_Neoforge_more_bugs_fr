@@ -11,11 +11,11 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_tag_wover_furnaces": {
+    "has_tag_all_is_better_lib_furnaces": {
       "conditions": {
         "items": [
           {
-            "items": "#wover:furnaces"
+            "items": "#all_is_better_lib:furnaces"
           }
         ]
       },
@@ -42,7 +42,7 @@
     [
       "has_the_recipe",
       "has_thallasium_ingot",
-      "has_tag_wover_furnaces",
+      "has_tag_all_is_better_lib_furnaces",
       "has_end_stone_bricks"
     ]
   ],

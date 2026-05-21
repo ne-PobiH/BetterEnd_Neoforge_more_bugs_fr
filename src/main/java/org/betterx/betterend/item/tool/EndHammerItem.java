@@ -1,11 +1,11 @@
 package org.betterx.betterend.item.tool;
 
-import org.betterx.bclib.interfaces.ItemModelProvider;
+import org.aiblib.bclib.interfaces.ItemModelProvider;
 import org.betterx.betterend.BetterEnd;
-import org.betterx.wover.item.api.ItemTagProvider;
-import org.betterx.wover.tag.api.event.context.ItemTagBootstrapContext;
-import org.betterx.wover.tag.api.predefined.CommonItemTags;
-import org.betterx.wover.tag.api.predefined.MineableTags;
+import org.aiblib.wover.item.api.ItemTagProvider;
+import org.aiblib.wover.tag.api.event.context.ItemTagBootstrapContext;
+import org.aiblib.wover.tag.api.predefined.CommonItemTags;
+import org.aiblib.wover.tag.api.predefined.MineableTags;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;

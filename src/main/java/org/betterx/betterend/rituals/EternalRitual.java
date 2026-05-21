@@ -9,7 +9,7 @@ import org.betterx.betterend.network.RitualUpdate;
 import org.betterx.betterend.portal.PortalBuilder;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndPortals;
-import org.betterx.wover.block.api.BlockProperties;
+import org.aiblib.wover.block.api.BlockProperties;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

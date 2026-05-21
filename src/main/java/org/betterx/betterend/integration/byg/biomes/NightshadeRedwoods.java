@@ -1,13 +1,13 @@
 package org.betterx.betterend.integration.byg.biomes;
 
-import org.betterx.bclib.BCLib;
-import org.betterx.bclib.interfaces.SurfaceMaterialProvider;
+import org.aiblib.bclib.BCLib;
+import org.aiblib.bclib.interfaces.SurfaceMaterialProvider;
 import org.betterx.betterend.integration.Integrations;
 import org.betterx.betterend.integration.byg.features.BYGFeatures;
 import org.betterx.betterend.registry.features.EndLakeFeatures;
 import org.betterx.betterend.world.biome.EndBiome;
 import org.betterx.betterend.world.biome.EndBiomeBuilder;
-import org.betterx.wover.surface.api.SurfaceRuleBuilder;
+import org.aiblib.wover.surface.api.SurfaceRuleBuilder;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.particles.ParticleTypes;

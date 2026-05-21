@@ -1,16 +1,16 @@
 package org.betterx.betterend.world.biome.cave;
 
-import org.betterx.bclib.interfaces.SurfaceMaterialProvider;
-import org.betterx.bclib.util.WeightedList;
+import org.aiblib.bclib.interfaces.SurfaceMaterialProvider;
+import org.aiblib.bclib.util.WeightedList;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndParticles;
 import org.betterx.betterend.registry.features.EndConfiguredCaveFeatures;
 import org.betterx.betterend.world.biome.EndBiome;
 import org.betterx.betterend.world.biome.EndBiomeBuilder;
 import org.betterx.betterend.world.biome.EndBiomeKey;
-import org.betterx.wover.biome.api.BiomeKey;
-import org.betterx.wover.biome.api.data.BiomeData;
-import org.betterx.wover.biome.api.data.BiomeGenerationDataContainer;
+import org.aiblib.wover.biome.api.BiomeKey;
+import org.aiblib.wover.biome.api.data.BiomeData;
+import org.aiblib.wover.biome.api.data.BiomeGenerationDataContainer;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.Holder;

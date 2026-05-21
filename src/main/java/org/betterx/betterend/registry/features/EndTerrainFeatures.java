@@ -1,8 +1,8 @@
 package org.betterx.betterend.registry.features;
 
 import org.betterx.betterend.BetterEnd;
-import org.betterx.wover.feature.api.placed.PlacedFeatureKey;
-import org.betterx.wover.feature.api.placed.PlacedFeatureManager;
+import org.aiblib.wover.feature.api.placed.PlacedFeatureKey;
+import org.aiblib.wover.feature.api.placed.PlacedFeatureManager;
 
 import net.minecraft.world.level.levelgen.GenerationStep;
 

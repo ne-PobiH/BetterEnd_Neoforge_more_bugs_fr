@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks.entities;
 
-import org.betterx.bclib.recipes.AlloyingRecipe;
-import org.betterx.bclib.recipes.AlloyingRecipeInput;
+import org.aiblib.bclib.recipes.AlloyingRecipe;
+import org.aiblib.bclib.recipes.AlloyingRecipeInput;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.blocks.EndStoneSmelter;
 import org.betterx.betterend.client.gui.EndStoneSmelterMenu;

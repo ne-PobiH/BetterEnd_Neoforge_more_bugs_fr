@@ -1,12 +1,12 @@
 package org.betterx.betterend.complexmaterials;
 
-import org.betterx.bclib.blocks.*;
-import org.betterx.bclib.items.ModelProviderItem;
-import org.betterx.bclib.items.tool.BaseAxeItem;
-import org.betterx.bclib.items.tool.BaseHoeItem;
-import org.betterx.bclib.items.tool.BaseShovelItem;
-import org.betterx.bclib.items.tool.BaseSwordItem;
-import org.betterx.bclib.recipes.BCLRecipeBuilder;
+import org.aiblib.bclib.blocks.*;
+import org.aiblib.bclib.items.ModelProviderItem;
+import org.aiblib.bclib.items.tool.BaseAxeItem;
+import org.aiblib.bclib.items.tool.BaseHoeItem;
+import org.aiblib.bclib.items.tool.BaseShovelItem;
+import org.aiblib.bclib.items.tool.BaseSwordItem;
+import org.aiblib.bclib.recipes.BCLRecipeBuilder;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.blocks.BulbVineLanternBlock;
 import org.betterx.betterend.blocks.BulbVineLanternColoredBlock;
@@ -18,12 +18,12 @@ import org.betterx.betterend.item.tool.EndPickaxe;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndItems;
 import org.betterx.betterend.registry.EndTemplates;
-import org.betterx.wover.complex.api.equipment.ArmorSlot;
-import org.betterx.wover.complex.api.equipment.ArmorTier;
-import org.betterx.wover.recipe.api.RecipeBuilder;
-import org.betterx.wover.tag.api.TagManager;
-import org.betterx.wover.tag.api.event.context.ItemTagBootstrapContext;
-import org.betterx.wover.tag.api.event.context.TagBootstrapContext;
+import org.aiblib.wover.complex.api.equipment.ArmorSlot;
+import org.aiblib.wover.complex.api.equipment.ArmorTier;
+import org.aiblib.wover.recipe.api.RecipeBuilder;
+import org.aiblib.wover.tag.api.TagManager;
+import org.aiblib.wover.tag.api.event.context.ItemTagBootstrapContext;
+import org.aiblib.wover.tag.api.event.context.TagBootstrapContext;
 
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.tags.BlockTags;

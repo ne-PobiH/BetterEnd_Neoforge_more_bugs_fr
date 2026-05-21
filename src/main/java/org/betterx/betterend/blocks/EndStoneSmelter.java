@@ -1,8 +1,8 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.behaviours.BehaviourBuilders;
-import org.betterx.bclib.blocks.BaseBlockWithEntity;
-import org.betterx.bclib.interfaces.AlloyingRecipeWorkstation;
+import org.aiblib.bclib.behaviours.BehaviourBuilders;
+import org.aiblib.bclib.blocks.BaseBlockWithEntity;
+import org.aiblib.bclib.interfaces.AlloyingRecipeWorkstation;
 import org.betterx.betterend.blocks.entities.EndStoneSmelterBlockEntity;
 import org.betterx.betterend.registry.EndBlockEntities;
 

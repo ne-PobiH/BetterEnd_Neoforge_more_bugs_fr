@@ -1,18 +1,18 @@
 package org.betterx.betterend.complexmaterials;
 
-import org.betterx.bclib.blocks.BaseSlabBlock;
-import org.betterx.bclib.blocks.BaseStairsBlock;
-import org.betterx.bclib.blocks.BaseWallBlock;
+import org.aiblib.bclib.blocks.BaseSlabBlock;
+import org.aiblib.bclib.blocks.BaseStairsBlock;
+import org.aiblib.bclib.blocks.BaseWallBlock;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.blocks.EndPedestal;
 import org.betterx.betterend.blocks.basis.LitBaseBlock;
 import org.betterx.betterend.blocks.basis.LitPillarBlock;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.datagen.betterend.recipes.EndCraftingRecipesProvider;
-import org.betterx.wover.recipe.api.CraftingRecipeBuilder;
-import org.betterx.wover.recipe.api.RecipeBuilder;
-import org.betterx.wover.tag.api.event.context.ItemTagBootstrapContext;
-import org.betterx.wover.tag.api.event.context.TagBootstrapContext;
+import org.aiblib.wover.recipe.api.CraftingRecipeBuilder;
+import org.aiblib.wover.recipe.api.RecipeBuilder;
+import org.aiblib.wover.tag.api.event.context.ItemTagBootstrapContext;
+import org.aiblib.wover.tag.api.event.context.TagBootstrapContext;
 
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.tags.BlockTags;

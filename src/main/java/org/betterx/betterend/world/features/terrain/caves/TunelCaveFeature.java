@@ -1,16 +1,16 @@
 package org.betterx.betterend.world.features.terrain.caves;
 
-import org.betterx.bclib.util.BlocksHelper;
+import org.aiblib.bclib.util.BlocksHelper;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.noise.OpenSimplexNoise;
 import org.betterx.betterend.registry.EndBiomes;
 import org.betterx.betterend.world.biome.EndBiome;
 import org.betterx.betterend.world.biome.cave.EndCaveBiome;
-import org.betterx.wover.biome.api.BiomeManager;
-import org.betterx.wover.biome.api.data.BiomeData;
-import org.betterx.wover.config.api.Configs;
-import org.betterx.wover.generator.api.biomesource.WoverBiomePicker;
-import org.betterx.wover.tag.api.predefined.CommonBlockTags;
+import org.aiblib.wover.biome.api.BiomeManager;
+import org.aiblib.wover.biome.api.data.BiomeData;
+import org.aiblib.wover.config.api.Configs;
+import org.aiblib.wover.generator.api.biomesource.WoverBiomePicker;
+import org.aiblib.wover.tag.api.predefined.CommonBlockTags;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.BlockPos.MutableBlockPos;
@@ -52,7 +52,7 @@ public class TunelCaveFeature extends EndCaveFeatures {
     private Set<BlockPos> generate(WorldGenLevel world, BlockPos center, RandomSource random) {
         int cx = center.getX() >> 4;
         int cz = center.getZ() >> 4;
-        if ((long) cx * (long) cx + (long) cz + (long) cz < 256) {
+        if ((long) cx * (long) cx + (long) cz * (long) cz < 256) {
             return Sets.newHashSet();
         }
 
@@ -83,7 +83,7 @@ public class TunelCaveFeature extends EndCaveFeatures {
             float dz = z / 16F;
             pos.setX(x + x1);
             pos.setZ(z + z1);
-            boolean canOpenToSurface = noiseD.eval(pos.getX() * 0.035, pos.getZ() * 0.035) > TUNNEL_SURFACE_OPENING_NOISE_THRESHOLD;
+            boolean canOpenToSurface = false;
             float da = Mth.lerp(dx, a, b);
             float db = Mth.lerp(dx, c, d);
             float density = 1 - Mth.lerp(dz, da, db);

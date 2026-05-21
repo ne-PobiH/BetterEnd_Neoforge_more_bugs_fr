@@ -1,14 +1,14 @@
 package org.betterx.betterend.world.features.terrain;
 
-import org.betterx.bclib.api.v2.levelgen.features.features.DefaultFeature;
-import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.api.v2.levelgen.features.features.DefaultFeature;
+import org.aiblib.bclib.util.BlocksHelper;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.blocks.EndBlockProperties;
 import org.betterx.betterend.blocks.SulphurCrystalBlock;
 import org.betterx.betterend.noise.OpenSimplexNoise;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.util.BlockFixer;
-import org.betterx.wover.tag.api.predefined.CommonBlockTags;
+import org.aiblib.wover.tag.api.predefined.CommonBlockTags;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.BlockPos.MutableBlockPos;
@@ -38,35 +38,18 @@ public class SulphuricCaveFeature extends DefaultFeature {
         BlockPos pos = featureConfig.origin();
         final WorldGenLevel world = featureConfig.level();
         int radius = MHelper.randRange(10, 30, random);
-
-        int top = world.getHeight(Heightmap.Types.WORLD_SURFACE_WG, pos.getX(), pos.getZ());
-        MutableBlockPos bpos = new MutableBlockPos();
-        bpos.setX(pos.getX());
-        bpos.setZ(pos.getZ());
-        bpos.setY(top - 1);
-
-        BlockState state = world.getBlockState(bpos);
-        while (!state.is(CommonBlockTags.END_STONES) && bpos.getY() > 5) {
-            bpos.setY(bpos.getY() - 1);
-            state = world.getBlockState(bpos);
+        CavePlacement placement = findCavePlacement(world, pos, radius);
+        while (placement == null && radius > 6) {
+            radius -= 4;
+            placement = findCavePlacement(world, pos, radius);
         }
-        if (bpos.getY() < 10) {
-            return false;
-        }
-        top = (int) (bpos.getY() - (radius * 1.3F + 5));
 
-        while (state.is(CommonBlockTags.END_STONES) || !state.getFluidState().isEmpty() && bpos.getY() > 5) {
-            bpos.setY(bpos.getY() - 1);
-            state = world.getBlockState(bpos);
-        }
-        int bottom = (int) (bpos.getY() + radius * 1.3F + 5);
-
-        if (top <= bottom) {
+        if (placement == null) {
             return false;
         }
 
         MutableBlockPos mut = new MutableBlockPos();
-        pos = new BlockPos(pos.getX(), MHelper.randRange(bottom, top, random), pos.getZ());
+        pos = new BlockPos(pos.getX(), MHelper.randRange(placement.bottom(), placement.top(), random), pos.getZ());
 
         OpenSimplexNoise noise = new OpenSimplexNoise(MHelper.getSeed(534, pos.getX(), pos.getZ()));
 
@@ -81,6 +64,7 @@ public class SulphuricCaveFeature extends DefaultFeature {
         double nr = radius * 0.25;
 
         Set<BlockPos> brimstone = Sets.newHashSet();
+        BlockState state;
         BlockState rock = EndBlocks.SULPHURIC_ROCK.stone.defaultBlockState();
         int waterLevel = pos.getY() + MHelper.randRange(MHelper.floor(radius * 0.8), radius, random);
         for (int x = x1; x <= x2; x++) {
@@ -106,7 +90,7 @@ public class SulphuricCaveFeature extends DefaultFeature {
                         }
                     } else if (dist < r2 * r2) {
                         state = world.getBlockState(mut);
-                        if (state.is(CommonBlockTags.END_STONES) || state.is(Blocks.AIR)) {
+                        if (isEndGround(state) || state.is(Blocks.AIR)) {
                             double v = noise.eval(x * 0.1, y * 0.1, z * 0.1) + noise.eval(
                                     x * 0.03,
                                     y * 0.03,
@@ -145,7 +129,7 @@ public class SulphuricCaveFeature extends DefaultFeature {
                         mut.setY(mut.getY() - 1);
                         state = world.getBlockState(mut);
                     }
-                    if (state.is(CommonBlockTags.END_STONES) && !world.getBlockState(mut.above())
+                    if (isEndGround(state) && !world.getBlockState(mut.above())
                                                                       .is(EndBlocks.HYDROTHERMAL_VENT)) {
                         for (int j = 0; j <= dist; j++) {
                             BlocksHelper.setWithoutUpdate(world, mut, EndBlocks.SULPHURIC_ROCK.stone);
@@ -186,8 +170,42 @@ public class SulphuricCaveFeature extends DefaultFeature {
         return true;
     }
 
+    private CavePlacement findCavePlacement(WorldGenLevel world, BlockPos pos, int radius) {
+        int top = world.getHeight(Heightmap.Types.WORLD_SURFACE_WG, pos.getX(), pos.getZ());
+        MutableBlockPos bpos = new MutableBlockPos();
+        bpos.setX(pos.getX());
+        bpos.setZ(pos.getZ());
+        bpos.setY(top - 1);
+
+        BlockState state = world.getBlockState(bpos);
+        while (!isEndGround(state) && bpos.getY() > 5) {
+            bpos.setY(bpos.getY() - 1);
+            state = world.getBlockState(bpos);
+        }
+        if (bpos.getY() < 10) {
+            return null;
+        }
+        int topStone = bpos.getY();
+
+        while (isEndGround(state) && bpos.getY() > 5) {
+            bpos.setY(bpos.getY() - 1);
+            state = world.getBlockState(bpos);
+        }
+        int verticalRadius = (int) Math.ceil((radius + 5) / 1.6D);
+        top = topStone - verticalRadius - 1;
+        int bottom = bpos.getY() + verticalRadius + 1;
+
+        if (top <= bottom) {
+            return null;
+        }
+
+        return new CavePlacement(bottom, top);
+    }
+
+    private record CavePlacement(int bottom, int top) {}
+
     private boolean isReplaceable(BlockState state) {
-        return state.is(CommonBlockTags.END_STONES)
+        return isEndGround(state)
                 || state.is(EndBlocks.HYDROTHERMAL_VENT)
                 || state.is(EndBlocks.VENT_BUBBLE_COLUMN)
                 || state.is(EndBlocks.SULPHUR_CRYSTAL)
@@ -195,6 +213,13 @@ public class SulphuricCaveFeature extends DefaultFeature {
                 || state.is(CommonBlockTags.WATER_PLANT)
                 || state.is(BlockTags.LEAVES)
                 ;
+    }
+
+    private boolean isEndGround(BlockState state) {
+        return state.is(Blocks.END_STONE)
+                || state.is(CommonBlockTags.END_STONES)
+                || state.is(EndBlocks.SULPHURIC_ROCK.stone)
+                || state.is(EndBlocks.BRIMSTONE);
     }
 
     private void placeBrimstone(WorldGenLevel world, BlockPos pos, RandomSource random) {

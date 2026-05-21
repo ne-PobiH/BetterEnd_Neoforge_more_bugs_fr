@@ -8,8 +8,8 @@ import org.betterx.betterend.world.features.VineFeatureConfig;
 import org.betterx.betterend.world.features.bushes.BushFeatureConfig;
 import org.betterx.betterend.world.features.terrain.StalactiteFeatureConfig;
 import org.betterx.datagen.betterend.worldgen.EndBiomesProvider;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.datagen.api.provider.multi.WoverFeatureProvider;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.datagen.api.provider.multi.WoverFeatureProvider;
 
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.world.level.block.Blocks;

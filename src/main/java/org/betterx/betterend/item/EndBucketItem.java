@@ -1,6 +1,6 @@
 package org.betterx.betterend.item;
 
-import org.betterx.bclib.interfaces.ItemModelProvider;
+import org.aiblib.bclib.interfaces.ItemModelProvider;
 import org.betterx.betterend.registry.EndItems;
 
 import net.minecraft.sounds.SoundEvents;

@@ -1,11 +1,11 @@
 package org.betterx.betterend.world.structures.features;
 
-import org.betterx.bclib.sdf.SDF;
-import org.betterx.bclib.sdf.operator.SDFRotation;
-import org.betterx.bclib.sdf.operator.SDFTranslate;
-import org.betterx.bclib.sdf.operator.SDFUnion;
-import org.betterx.bclib.sdf.primitive.SDFCappedCone;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.sdf.SDF;
+import org.aiblib.bclib.sdf.operator.SDFRotation;
+import org.aiblib.bclib.sdf.operator.SDFTranslate;
+import org.aiblib.bclib.sdf.operator.SDFUnion;
+import org.aiblib.bclib.sdf.primitive.SDFCappedCone;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndStructures;
 import org.betterx.betterend.world.structures.piece.VoxelPiece;

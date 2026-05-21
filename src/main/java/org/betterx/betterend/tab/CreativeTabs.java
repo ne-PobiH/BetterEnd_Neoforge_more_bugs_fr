@@ -1,6 +1,6 @@
 package org.betterx.betterend.tab;
 
-import org.betterx.bclib.behaviours.interfaces.BehaviourPlantLike;
+import org.aiblib.bclib.behaviours.interfaces.BehaviourPlantLike;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndItems;
@@ -16,8 +16,8 @@ public class CreativeTabs {
         if (!event.getRegistryKey().equals(Registries.CREATIVE_MODE_TAB)) return;
         if (registered) return;
         registered = true;
-        // гарантируем доступность блоков/предметов для иконок
-        org.betterx.wover.tabs.api.CreativeTabs
+        // РіР°СЂР°РЅС‚РёСЂСѓРµРј РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ Р±Р»РѕРєРѕРІ/РїСЂРµРґРјРµС‚РѕРІ РґР»СЏ РёРєРѕРЅРѕРє
+        org.aiblib.wover.tabs.api.CreativeTabs
                 .start(BetterEnd.C)
                 .createTab("nature")
                 .setPredicate(item -> BehaviourPlantLike.TAB_PREDICATE.contains(item)

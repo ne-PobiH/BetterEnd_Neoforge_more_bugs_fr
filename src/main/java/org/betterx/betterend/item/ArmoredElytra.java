@@ -1,13 +1,13 @@
 package org.betterx.betterend.item;
 
-import org.betterx.bclib.items.BaseArmorItem;
+import org.aiblib.bclib.items.BaseArmorItem;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.interfaces.BetterEndElytra;
 import org.betterx.betterend.interfaces.MultiModelItem;
-import org.betterx.wover.complex.api.equipment.ArmorSlot;
-import org.betterx.wover.complex.api.equipment.ArmorTier;
-import org.betterx.wover.item.api.ItemTagProvider;
-import org.betterx.wover.tag.api.event.context.ItemTagBootstrapContext;
+import org.aiblib.wover.complex.api.equipment.ArmorSlot;
+import org.aiblib.wover.complex.api.equipment.ArmorTier;
+import org.aiblib.wover.item.api.ItemTagProvider;
+import org.aiblib.wover.tag.api.event.context.ItemTagBootstrapContext;
 
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;

@@ -1,10 +1,10 @@
 package org.betterx.betterend.world.features;
 
-import org.betterx.bclib.api.v2.levelgen.features.features.DefaultFeature;
-import org.betterx.bclib.api.v2.levelgen.structures.templatesystem.DestructionStructureProcessor;
-import org.betterx.bclib.util.BlocksHelper;
+import org.aiblib.bclib.api.v2.levelgen.features.features.DefaultFeature;
+import org.aiblib.bclib.api.v2.levelgen.structures.templatesystem.DestructionStructureProcessor;
+import org.aiblib.bclib.util.BlocksHelper;
 import org.betterx.betterend.world.biome.EndBiome;
-import org.betterx.wover.tag.api.predefined.CommonBlockTags;
+import org.aiblib.wover.tag.api.predefined.CommonBlockTags;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.core.BlockPos;

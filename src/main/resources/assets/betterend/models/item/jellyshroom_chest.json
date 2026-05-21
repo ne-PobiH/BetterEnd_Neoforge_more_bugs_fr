@@ -1,5 +1,5 @@
 {
-  "parent": "bclib:block/chest_item",
+  "parent": "all_is_better_lib:block/chest_item",
   "textures": {
     "texture": "betterend:block/chest/jellyshroom_chest"
   }

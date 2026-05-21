@@ -1,12 +1,12 @@
 package org.betterx.betterend.world.structures.features;
 
-import org.betterx.bclib.api.v2.levelgen.structures.StructurePlacementType;
-import org.betterx.bclib.api.v2.levelgen.structures.TemplateStructure;
+import org.aiblib.bclib.api.v2.levelgen.structures.StructurePlacementType;
+import org.aiblib.bclib.api.v2.levelgen.structures.TemplateStructure;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.registry.EndStructures;
 import org.betterx.betterend.util.EndStructureHelper;
 import org.betterx.betterend.world.structures.piece.NBTPiece;
-import org.betterx.wover.structure.api.StructureUtils;
+import org.aiblib.wover.structure.api.StructureUtils;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;

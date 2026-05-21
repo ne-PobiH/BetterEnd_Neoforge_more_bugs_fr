@@ -1,5 +1,5 @@
 {
-  "parent": "bclib:block/ladder",
+  "parent": "all_is_better_lib:block/ladder",
   "textures": {
     "texture": "betterend:block/mossy_glowshroom_ladder"
   }

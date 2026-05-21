@@ -1,0 +1,6 @@
+{
+  "parent": "all_is_better_lib:block/ladder",
+  "textures": {
+    "texture": "%modid%:block/%texture%"
+  }
+}

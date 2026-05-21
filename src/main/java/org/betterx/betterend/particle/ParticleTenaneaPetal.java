@@ -1,8 +1,8 @@
 package org.betterx.betterend.particle;
 
-import org.betterx.bclib.interfaces.BlockColorProvider;
-import org.betterx.bclib.interfaces.CustomColorProvider;
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.interfaces.BlockColorProvider;
+import org.aiblib.bclib.interfaces.CustomColorProvider;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.registry.EndBlocks;
 
 import net.minecraft.client.multiplayer.ClientLevel;

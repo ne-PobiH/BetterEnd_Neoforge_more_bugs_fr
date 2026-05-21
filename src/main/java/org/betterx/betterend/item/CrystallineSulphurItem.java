@@ -1,6 +1,6 @@
 package org.betterx.betterend.item;
 
-import org.betterx.bclib.items.ModelProviderItem;
+import org.aiblib.bclib.items.ModelProviderItem;
 import org.betterx.betterend.blocks.SulphurCrystalBlock;
 import org.betterx.betterend.registry.EndBlocks;
 

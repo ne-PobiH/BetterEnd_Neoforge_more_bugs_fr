@@ -1,6 +1,6 @@
 package org.betterx.betterend.blocks.basis;
 
-import org.betterx.bclib.blocks.BaseStripableLogBlock;
+import org.aiblib.bclib.blocks.BaseStripableLogBlock;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

@@ -2,11 +2,11 @@ package org.betterx.betterend.world.generator;
 
 
 import org.betterx.betterend.registry.EndTags;
-import org.betterx.wover.generator.api.biomesource.WoverBiomeSource;
-import org.betterx.wover.generator.api.biomesource.end.BiomeDecider;
-import org.betterx.wover.generator.api.biomesource.end.WoverEndConfig;
-import org.betterx.wover.generator.impl.biomesource.end.WoverEndBiomeSource;
-import org.betterx.wover.tag.api.predefined.CommonBiomeTags;
+import org.aiblib.wover.generator.api.biomesource.WoverBiomeSource;
+import org.aiblib.wover.generator.api.biomesource.end.BiomeDecider;
+import org.aiblib.wover.generator.api.biomesource.end.WoverEndConfig;
+import org.aiblib.wover.generator.impl.biomesource.end.WoverEndBiomeSource;
+import org.aiblib.wover.tag.api.predefined.CommonBiomeTags;
 
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.biome.Biome;

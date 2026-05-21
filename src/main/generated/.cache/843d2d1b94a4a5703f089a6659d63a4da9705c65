@@ -1,4 +1,11 @@
-// 1.21.1	2026-05-08T18:11:59.760363	betterend/AutoItemTagProvider (Tags for minecraft:item mod id betterend)
+// 1.21.1	2026-05-20T17:02:18.2725736	betterend/AutoItemTagProvider (Tags for minecraft:item mod id betterend)
+b53157c5d07044089e7d8af0faae44d81bada0a7 data/all_is_better_lib/tags/item/compostable.json
+95b08129583a22c240b8ff303d031d27276d8d5e data/all_is_better_lib/tags/item/furnaces.json
+3ca43acaa12ced6047b8184f18f3e425084c4ab0 data/all_is_better_lib/tags/item/tools/hammers.json
+1105e04e133fcf8a8b90d671af132a1ee9d86ad5 data/all_is_better_lib/tags/item/vegetation/leaves.json
+7b326505ba3fd360ea88afee1b36aa7d07330883 data/all_is_better_lib/tags/item/vegetation/saplings.json
+f63389945ef798f163d6e9c3bb305b53867cf919 data/all_is_better_lib/tags/item/vegetation/seeds.json
+d17ed53a7b7409faf1d3e31bb652e11dbf5a94a5 data/all_is_better_lib/tags/item/workbench.json
 4d7c6091765514991d96210a1a2529215c660065 data/betterend/tags/item/alloying_copper.json
 261f726871e869a0ab55f03c51638d5209083e2c data/betterend/tags/item/alloying_gold.json
 608cf5238b413613c5830226c34959ef09aac8d4 data/betterend/tags/item/alloying_iron.json
@@ -60,10 +67,3 @@ e45bf19748f241c6ff570f001fe2a9fe7e75b577 data/minecraft/tags/item/wooden_fences.
 d576d2f96db40143751211b623429568db37f234 data/minecraft/tags/item/wooden_pressure_plates.json
 05e3aaa0d18377854000988a9f67dd8873c812ca data/minecraft/tags/item/wooden_trapdoors.json
 587125d421897fcae07f38112c3d420f00a37ee1 data/trinkets/tags/item/chest/cape.json
-b53157c5d07044089e7d8af0faae44d81bada0a7 data/wover/tags/item/compostable.json
-95b08129583a22c240b8ff303d031d27276d8d5e data/wover/tags/item/furnaces.json
-3ca43acaa12ced6047b8184f18f3e425084c4ab0 data/wover/tags/item/tools/hammers.json
-1105e04e133fcf8a8b90d671af132a1ee9d86ad5 data/wover/tags/item/vegetation/leaves.json
-7b326505ba3fd360ea88afee1b36aa7d07330883 data/wover/tags/item/vegetation/saplings.json
-f63389945ef798f163d6e9c3bb305b53867cf919 data/wover/tags/item/vegetation/seeds.json
-d17ed53a7b7409faf1d3e31bb652e11dbf5a94a5 data/wover/tags/item/workbench.json

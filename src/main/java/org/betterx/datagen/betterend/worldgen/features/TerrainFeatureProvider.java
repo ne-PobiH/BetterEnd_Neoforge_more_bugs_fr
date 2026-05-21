@@ -11,9 +11,9 @@ import org.betterx.betterend.world.features.terrain.IceStarFeatureConfig;
 import org.betterx.betterend.world.features.terrain.ThinArchFeatureConfig;
 import org.betterx.betterend.world.structures.village.VillagePools;
 import org.betterx.datagen.betterend.worldgen.EndBiomesProvider;
-import org.betterx.wover.core.api.ModCore;
-import org.betterx.wover.datagen.api.provider.multi.WoverFeatureProvider;
-import org.betterx.wover.feature.api.placed.PlacedFeatureKey;
+import org.aiblib.wover.core.api.ModCore;
+import org.aiblib.wover.datagen.api.provider.multi.WoverFeatureProvider;
+import org.aiblib.wover.feature.api.placed.PlacedFeatureKey;
 
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -79,7 +79,7 @@ public class TerrainFeatureProvider extends WoverFeatureProvider {
                 .inlineConfiguration(context)
                 .withFeature(EndFeatures.SULPHURIC_CAVE_FEATURE)
                 .inlinePlace()
-                .count(2)
+                .onceEvery(8)
                 .squarePlacement()
                 .onlyInBiome()
                 .register();

@@ -1,6 +1,6 @@
 package org.betterx.betterend.item.tool;
 
-import org.betterx.bclib.items.tool.BasePickaxeItem;
+import org.aiblib.bclib.items.tool.BasePickaxeItem;
 
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.ItemStack;

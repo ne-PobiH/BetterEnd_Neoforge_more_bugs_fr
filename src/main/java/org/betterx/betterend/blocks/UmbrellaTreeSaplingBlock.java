@@ -1,6 +1,6 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.client.render.BCLRenderLayer;
+import org.aiblib.bclib.client.render.BCLRenderLayer;
 import org.betterx.betterend.blocks.basis.PottableFeatureSapling;
 import org.betterx.betterend.interfaces.survives.SurvivesOnJungleMoss;
 import org.betterx.betterend.registry.features.EndConfiguredVegetation;

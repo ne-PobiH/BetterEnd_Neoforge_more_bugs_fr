@@ -1,14 +1,14 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.interfaces.BlockColorProvider;
-import org.betterx.bclib.interfaces.CustomColorProvider;
-import org.betterx.bclib.interfaces.ItemColorProvider;
-import org.betterx.bclib.util.BlocksHelper;
+import org.aiblib.bclib.interfaces.BlockColorProvider;
+import org.aiblib.bclib.interfaces.CustomColorProvider;
+import org.aiblib.bclib.interfaces.ItemColorProvider;
+import org.aiblib.bclib.util.BlocksHelper;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.client.models.EndModels;
-import org.betterx.wover.block.api.model.BlockModelProvider;
-import org.betterx.wover.block.api.model.WoverBlockModelGenerators;
-import org.betterx.wover.block.api.model.WoverBlockModelGeneratorsAccess;
+import org.aiblib.wover.block.api.model.BlockModelProvider;
+import org.aiblib.wover.block.api.model.WoverBlockModelGenerators;
+import org.aiblib.wover.block.api.model.WoverBlockModelGeneratorsAccess;
 
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.model.TextureMapping;

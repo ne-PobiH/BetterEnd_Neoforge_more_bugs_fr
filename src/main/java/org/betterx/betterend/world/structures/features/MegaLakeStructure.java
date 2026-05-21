@@ -1,6 +1,6 @@
 package org.betterx.betterend.world.structures.features;
 
-import org.betterx.bclib.util.MHelper;
+import org.aiblib.bclib.util.MHelper;
 import org.betterx.betterend.registry.EndStructures;
 import org.betterx.betterend.world.structures.piece.LakePiece;
 

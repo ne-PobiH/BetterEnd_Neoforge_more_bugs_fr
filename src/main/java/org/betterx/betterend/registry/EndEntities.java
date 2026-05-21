@@ -1,10 +1,10 @@
 package org.betterx.betterend.registry;
 
-import org.betterx.bclib.api.v2.spawning.SpawnRuleBuilder;
-import org.betterx.bclib.entity.BCLEntityWrapper;
+import org.aiblib.bclib.api.v2.spawning.SpawnRuleBuilder;
+import org.aiblib.bclib.entity.BCLEntityWrapper;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.entity.*;
-import org.betterx.ui.ColorUtil;
+import org.aiblib.ui.ColorUtil;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
