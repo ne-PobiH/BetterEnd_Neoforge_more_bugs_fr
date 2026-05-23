@@ -67,6 +67,25 @@ public abstract class ServerLevelMixin extends Level {
         return resourceKey;
     }
 
+    @Inject(method = "<init>*", at = @At("HEAD"))
+    private static void be_prepareEndBiomeSource(
+            MinecraftServer minecraftServer,
+            Executor executor,
+            LevelStorageAccess levelStorageAccess,
+            ServerLevelData serverLevelData,
+            ResourceKey resourceKey,
+            LevelStem levelStem,
+            ChunkProgressListener chunkProgressListener,
+            boolean bl,
+            long seed,
+            List list,
+            boolean bl2,
+            RandomSequences randomSequences,
+            CallbackInfo ci
+    ) {
+        TerrainGenerator.prepareLevelStem(resourceKey, levelStem, seed);
+    }
+
     @Inject(method = "<init>*", at = @At("TAIL"))
     private void be_onServerWorldInit(
             MinecraftServer minecraftServer,

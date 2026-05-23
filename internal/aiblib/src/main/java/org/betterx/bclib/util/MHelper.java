@@ -8,65 +8,69 @@ import net.minecraft.world.level.levelgen.PositionalRandomFactory;
 
 import org.joml.Vector3f;
 
+import java.util.Arrays;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class MHelper {
     public static final Vector3f YP = Float3.Y_AXIS.toVector3();
 
     static class ThreadLocalRandomSource implements RandomSource {
-        ThreadLocalRandomSource(long seed) {
+        private final long seed;
+        private final ThreadLocal<RandomSource> random;
 
+        ThreadLocalRandomSource(long seed) {
+            this.seed = seed;
+            this.random = ThreadLocal.withInitial(() -> RandomSource.create(seed ^ Thread.currentThread().threadId()));
         }
 
         @Override
         public RandomSource fork() {
-            return this;
+            return random.get().fork();
         }
 
         @Override
         public PositionalRandomFactory forkPositional() {
-            return null;
+            return random.get().forkPositional();
         }
 
         @Override
         public void setSeed(long l) {
-            ThreadLocalRandom.current().setSeed(l);
+            random.get().setSeed(l);
         }
 
         @Override
         public int nextInt() {
-            return ThreadLocalRandom.current().nextInt();
+            return random.get().nextInt();
         }
 
         @Override
         public int nextInt(int i) {
-            return ThreadLocalRandom.current().nextInt(i);
+            return random.get().nextInt(i);
         }
 
         @Override
         public long nextLong() {
-            return ThreadLocalRandom.current().nextLong();
+            return random.get().nextLong();
         }
 
         @Override
         public boolean nextBoolean() {
-            return ThreadLocalRandom.current().nextBoolean();
+            return random.get().nextBoolean();
         }
 
         @Override
         public float nextFloat() {
-            return ThreadLocalRandom.current().nextFloat();
+            return random.get().nextFloat();
         }
 
         @Override
         public double nextDouble() {
-            return ThreadLocalRandom.current().nextDouble();
+            return random.get().nextDouble();
         }
 
         @Override
         public double nextGaussian() {
-            return ThreadLocalRandom.current().nextGaussian();
+            return random.get().nextGaussian();
         }
     }
 
@@ -268,8 +272,9 @@ public class MHelper {
     }
 
     public static Vec3i[] getOffsets(RandomSource random) {
-        shuffle(RANDOM_OFFSETS, random);
-        return RANDOM_OFFSETS;
+        Vec3i[] offsets = Arrays.copyOf(RANDOM_OFFSETS, RANDOM_OFFSETS.length);
+        shuffle(offsets, random);
+        return offsets;
     }
 
     static {

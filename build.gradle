@@ -128,8 +128,6 @@ dependencies {
         println "Jade runtime disabled (set -Penable_jade_runtime=true to re-enable)"
     }
 
-    runtimeOnly "maven.modrinth:biolith:${project.biolith_modrinth_version_id}"
-
     println "Using embedded AiBlib sources for BCLib, WunderLib and WorldWeaver"
 }
 

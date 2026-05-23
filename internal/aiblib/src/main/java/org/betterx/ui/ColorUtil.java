@@ -20,6 +20,7 @@ import net.neoforged.api.distmarker.OnlyIn;
 import com.google.common.collect.Maps;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -313,7 +314,7 @@ public class ColorUtil {
         NativeImage image = loadImage(texture, 16, 16);
         List<Integer> colors = new ArrayList<>();
         for (int i = 0; i < image.getWidth(); i++) {
-            for (int j = 0; j < 16; j++) {
+            for (int j = 0; j < image.getHeight(); j++) {
                 int col = image.getPixelRGBA(i, j);
                 if (((col >> 24) & 255) > 0) {
                     colors.add(ABGRtoARGB(col));
@@ -337,8 +338,8 @@ public class ColorUtil {
         ResourceManager resourceManager = minecraft.getResourceManager();
         var imgResource = resourceManager.getResource(image);
         if (imgResource.isPresent()) {
-            try {
-                return NativeImage.read(imgResource.get().open());
+            try (InputStream stream = imgResource.get().open()) {
+                return NativeImage.read(stream);
             } catch (IOException e) {
                 BCLib.LOGGER.warn("Can't load texture image: {}. Will be created empty image.", image);
                 BCLib.LOGGER.warn("Cause: {}.", e.getMessage());

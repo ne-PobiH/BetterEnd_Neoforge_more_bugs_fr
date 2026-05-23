@@ -1,4 +1,4 @@
-package org.betterx.betterend.world.generator;
+package org.aiblib.wover.generator.impl.end;
 
 import org.aiblib.bclib.sdf.SDF;
 import org.aiblib.bclib.sdf.operator.SDFRadialNoiseMap;
@@ -7,7 +7,7 @@ import org.aiblib.bclib.sdf.operator.SDFSmoothUnion;
 import org.aiblib.bclib.sdf.operator.SDFTranslate;
 import org.aiblib.bclib.sdf.primitive.SDFCappedCone;
 import org.aiblib.bclib.util.MHelper;
-import org.betterx.betterend.noise.OpenSimplexNoise;
+import org.aiblib.wover.math.api.noise.OpenSimplexNoise;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
@@ -20,13 +20,13 @@ import java.util.List;
 import java.util.Map;
 
 public class IslandLayer {
-    private static final RandomSource RANDOM = new LegacyRandomSource(MHelper.RANDOM.nextLong());
     private final SDFRadialNoiseMap noise;
     private final SDF island;
 
     private final List<BlockPos> positions = new ArrayList<>(9);
     private final Map<BlockPos, SDF> islands = Maps.newHashMap();
     private final OpenSimplexNoise density;
+    private final RandomSource random;
     private final int seed;
     private int lastX = Integer.MIN_VALUE;
     private int lastZ = Integer.MIN_VALUE;
@@ -34,6 +34,7 @@ public class IslandLayer {
 
     public IslandLayer(int seed, LayerOptions options) {
         this.density = new OpenSimplexNoise(seed);
+        this.random = new LegacyRandomSource(seed);
         this.options = options;
         this.seed = seed;
 
@@ -70,10 +71,10 @@ public class IslandLayer {
                 for (int poz = -1; poz < 2; poz++) {
                     int pz = poz + iz;
                     if ((long) px * (long) px + (long) pz * (long) pz > options.centerDist) {
-                        RANDOM.setSeed(getSeed(px, pz));
-                        double posX = (px + RANDOM.nextFloat()) * options.distance;
-                        double posY = MHelper.randRange(options.minY, options.maxY, RANDOM) * maxHeight;
-                        double posZ = (pz + RANDOM.nextFloat()) * options.distance;
+                        random.setSeed(getSeed(px, pz));
+                        double posX = (px + random.nextFloat()) * options.distance;
+                        double posY = MHelper.randRange(options.minY, options.maxY, random) * maxHeight;
+                        double posZ = (pz + random.nextFloat()) * options.distance;
                         if (density.eval(posX * 0.01, posZ * 0.01) > options.coverage) {
                             positions.add(new BlockPos((int) posX, (int) posY, (int) posZ));
                         }
@@ -83,12 +84,14 @@ public class IslandLayer {
         }
 
 
-        if (GeneratorOptions.hasCentralIsland() && Math.abs(ix) < TerrainGenerator.config.centerBiomesSize && Math.abs(iz) < TerrainGenerator.config.centerBiomesSize) {
+        if (EndIslandTerrainGenerator.hasCentralIsland()
+                && Math.abs(ix) < EndIslandTerrainGenerator.config().centerBiomesSize
+                && Math.abs(iz) < EndIslandTerrainGenerator.config().centerBiomesSize) {
             int count = positions.size();
             for (int n = 0; n < count; n++) {
                 BlockPos pos = positions.get(n);
                 long d = (long) pos.getX() * (long) pos.getX() + (long) pos.getZ() * (long) pos.getZ();
-                if (d < TerrainGenerator.config.innerVoidRadiusSquared) {
+                if (d < EndIslandTerrainGenerator.config().innerVoidRadiusSquared) {
                     positions.remove(n);
                     count--;
                     n--;
@@ -106,8 +109,8 @@ public class IslandLayer {
             if (pos.getX() == 0 && pos.getZ() == 0) {
                 island = new SDFScale().setScale(1.3F).setSource(this.island);
             } else {
-                RANDOM.setSeed(getSeed(pos.getX(), pos.getZ()));
-                island = new SDFScale().setScale(RANDOM.nextFloat() + 0.5F).setSource(this.island);
+                random.setSeed(getSeed(pos.getX(), pos.getZ()));
+                island = new SDFScale().setScale(random.nextFloat() + 0.5F).setSource(this.island);
             }
             clearCache();
             islands.put(pos, island);

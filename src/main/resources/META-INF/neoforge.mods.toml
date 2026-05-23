@@ -42,13 +42,6 @@ versionRange="[${version},)"
 ordering="NONE"
 side="BOTH"
 
-[[dependencies.${mod_id}]]
-modId="biolith"
-type="required"
-versionRange="[3.0.0,)"
-ordering="AFTER"
-side="BOTH"
-
 [[dependencies.all_is_better_lib]]
 modId="neoforge"
 mandatory=true

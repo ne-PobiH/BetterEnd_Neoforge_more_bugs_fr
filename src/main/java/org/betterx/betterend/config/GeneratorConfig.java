@@ -2,7 +2,7 @@ package org.betterx.betterend.config;
 
 import org.aiblib.wunderlib.configs.ConfigFile;
 import org.betterx.betterend.BetterEnd;
-import org.betterx.betterend.world.generator.LayerOptions;
+import org.aiblib.wover.generator.impl.end.LayerOptions;
 import org.aiblib.wover.config.api.MainConfig;
 
 import net.minecraft.core.BlockPos;

@@ -1,4 +1,4 @@
-package org.betterx.betterend.mixin.common;
+package org.aiblib.wover.generator.mixin.generator;
 
 import net.minecraft.world.level.levelgen.NoiseChunk;
 import net.minecraft.world.level.levelgen.NoiseSettings;
@@ -9,17 +9,17 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 @Mixin(NoiseChunk.class)
 public interface NoiseChunkAccessor {
     @Accessor("noiseSettings")
-    NoiseSettings bnv_getNoiseSettings();
+    NoiseSettings all_is_better_lib$getNoiseSettings();
 
     @Accessor("cellCountXZ")
-    int bnv_getCellCountXZ();
+    int all_is_better_lib$getCellCountXZ();
 
     @Accessor("cellCountY")
-    int bnv_getCellCountY();
+    int all_is_better_lib$getCellCountY();
 
     @Accessor("firstCellZ")
-    int bnv_getFirstCellZ();
+    int all_is_better_lib$getFirstCellZ();
 
     @Accessor("cellNoiseMinY")
-    int bnv_getCellNoiseMinY();
+    int all_is_better_lib$getCellNoiseMinY();
 }

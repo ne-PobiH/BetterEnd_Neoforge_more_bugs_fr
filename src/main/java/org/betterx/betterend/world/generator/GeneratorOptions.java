@@ -1,6 +1,8 @@
 package org.betterx.betterend.world.generator;
 
 import org.betterx.betterend.config.Configs;
+import org.aiblib.wover.generator.impl.end.EndIslandGeneratorOptions;
+import org.aiblib.wover.generator.impl.end.LayerOptions;
 
 import net.minecraft.core.BlockPos;
 
@@ -119,5 +121,14 @@ public class GeneratorOptions {
         return generateCentralIsland;
     }
 
+    public static EndIslandGeneratorOptions islandGeneratorOptions() {
+        return new EndIslandGeneratorOptions(
+                useNewGenerator(),
+                hasCentralIsland(),
+                bigOptions,
+                mediumOptions,
+                smallOptions
+        );
+    }
 
 }

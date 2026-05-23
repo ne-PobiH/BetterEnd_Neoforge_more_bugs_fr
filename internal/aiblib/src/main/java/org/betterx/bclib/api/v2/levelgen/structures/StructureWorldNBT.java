@@ -69,7 +69,7 @@ public class StructureWorldNBT extends StructureNBT {
             StructurePlacementType type,
             float chance
     ) {
-        String key = location.toString() + "::" + offsetY + "::" + type.getSerializedName();
+        String key = location + "::" + offsetY + "::" + type.getSerializedName() + "::" + chance;
         return READER_CACHE.computeIfAbsent(key, r -> new StructureWorldNBT(location, offsetY, type, chance));
     }
 
@@ -78,6 +78,10 @@ public class StructureWorldNBT extends StructureNBT {
             BlockPos pos,
             RandomSource random
     ) {
+        if (chance <= 0.0f || (chance < 1.0f && random.nextFloat() > chance)) {
+            return false;
+        }
+
         return generateIfPlaceable(
                 level,
                 pos,

@@ -13,6 +13,10 @@
     "biomesource.ServerLevelMixin",
     "generator.ChunkGeneratorMixin",
     "generator.ChunkGeneratorPrintMixin",
-    "generator.NoiseBasedChunkGeneratorMixin"
+    "generator.NoiseBasedChunkGeneratorMixin",
+    "generator.NoiseChunkAccessor",
+    "generator.NoiseChunkMixin",
+    "generator.NoiseGeneratorSettingsMixin",
+    "generator.NoiseInterpolatorAccessor"
   ]
 }

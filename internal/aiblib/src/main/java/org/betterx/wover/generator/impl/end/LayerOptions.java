@@ -1,4 +1,4 @@
-package org.betterx.betterend.world.generator;
+package org.aiblib.wover.generator.impl.end;
 
 import net.minecraft.util.Mth;
 

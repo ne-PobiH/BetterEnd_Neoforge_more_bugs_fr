@@ -1,4 +1,4 @@
-package org.betterx.betterend.world.generator;
+package org.aiblib.wover.generator.impl.end;
 
 public class TerrainBoolCache {
     private final byte[] data = new byte[16384];

@@ -5,6 +5,7 @@ import org.aiblib.wover.common.generator.api.biomesource.BiomeSourceWithConfig;
 import org.aiblib.wover.core.api.ModCore;
 import org.aiblib.wover.entrypoint.LibWoverWorldGenerator;
 import org.aiblib.wover.generator.api.biomesource.WoverBiomePicker;
+import org.aiblib.wover.generator.api.biomesource.WoverBiomeData;
 import org.aiblib.wover.generator.api.biomesource.WoverBiomeSource;
 import org.aiblib.wover.generator.api.biomesource.end.BiomeDecider;
 import org.aiblib.wover.generator.api.biomesource.end.WoverEndConfig;
@@ -12,6 +13,7 @@ import org.aiblib.wover.generator.api.client.biomesource.client.BiomeSourceConfi
 import org.aiblib.wover.generator.api.client.biomesource.client.BiomeSourceWithConfigScreen;
 import org.aiblib.wover.generator.api.map.BiomeMap;
 import org.aiblib.wover.generator.impl.client.EndConfigPage;
+import org.aiblib.wover.generator.impl.end.EndWorldgenProfiler;
 import org.aiblib.wover.state.api.WorldState;
 import org.aiblib.wover.tag.api.predefined.CommonBiomeTags;
 
@@ -35,7 +37,9 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 
 import java.awt.*;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import org.jetbrains.annotations.NotNull;
 
 public class WoverEndBiomeSource extends WoverBiomeSource implements
@@ -70,7 +74,17 @@ public class WoverEndBiomeSource extends WoverBiomeSource implements
             CommonBiomeTags.IS_END_MIDLAND,
             BiomeTags.IS_END
     );
+    private static final int MAX_PICK_CACHE_ENTRIES = 262144;
+    private static final long BIOME_XZ_MASK = 0x1FFFFFFL;
+    private static final long BIOME_Y_MASK = 0x3FFFL;
     private final Point pos;
+    private final Object pickCacheLock = new Object();
+    private final Map<Long, WoverBiomePicker.PickableBiome> pickCache = new LinkedHashMap<>(1024, 0.75F, true) {
+        @Override
+        protected boolean removeEldestEntry(Map.Entry<Long, WoverBiomePicker.PickableBiome> eldest) {
+            return size() > MAX_PICK_CACHE_ENTRIES;
+        }
+    };
     private BiomeMap mapLand;
     private BiomeMap mapVoid;
     private BiomeMap mapCenter;
@@ -169,6 +183,7 @@ public class WoverEndBiomeSource extends WoverBiomeSource implements
 
     @Override
     protected void onInitMap(long newSeed) {
+        clearPickCache();
         for (BiomeDecider decider : deciders) {
             decider.createMap((picker, size) -> config.mapVersion.mapBuilder.create(
                     newSeed,
@@ -246,10 +261,71 @@ public class WoverEndBiomeSource extends WoverBiomeSource implements
 
     @Override
     public @NotNull Holder<Biome> getNoiseBiome(int biomeX, int biomeY, int biomeZ, Climate.@NotNull Sampler sampler) {
+        long profileStart = EndWorldgenProfiler.start();
+        try {
+            WoverBiomePicker.PickableBiome picked = pickBiomeEntryCached(biomeX, biomeY, biomeZ, sampler);
+            if (picked == null)
+                return applyFallbackBiomeSource(this.possibleBiomes().stream().findFirst().orElseThrow(), biomeX, biomeY, biomeZ, sampler);
+            return applyFallbackBiomeSource(picked.biome, biomeX, biomeY, biomeZ, sampler);
+        } finally {
+            EndWorldgenProfiler.biomeSource(profileStart);
+        }
+    }
+
+    public @NotNull WoverBiomeData getWoverBiomeData(int biomeX, int biomeY, int biomeZ, Climate.@NotNull Sampler sampler) {
+        WoverBiomePicker.PickableBiome picked = pickBiomeEntryCached(biomeX, biomeY, biomeZ, sampler);
+        if (picked != null && picked.biomeData instanceof WoverBiomeData data) {
+            return data;
+        }
+        return WoverBiomeData.of(fallbackBiome());
+    }
+
+    private WoverBiomePicker.PickableBiome pickBiomeEntryCached(
+            int biomeX,
+            int biomeY,
+            int biomeZ,
+            Climate.@NotNull Sampler sampler
+    ) {
+        long key = pickCacheKey(biomeX, biomeY, biomeZ);
+        synchronized (pickCacheLock) {
+            WoverBiomePicker.PickableBiome cached = pickCache.get(key);
+            if (cached != null) {
+                EndWorldgenProfiler.biomeSourceCache(true);
+                return cached;
+            }
+        }
+        EndWorldgenProfiler.biomeSourceCache(false);
+        WoverBiomePicker.PickableBiome picked = pickBiomeEntry(biomeX, biomeY, biomeZ, sampler);
+        if (picked != null) {
+            synchronized (pickCacheLock) {
+                pickCache.put(key, picked);
+            }
+        }
+        return picked;
+    }
+
+    private static long pickCacheKey(int biomeX, int biomeY, int biomeZ) {
+        return ((long) biomeX & BIOME_XZ_MASK) << 39
+                | (((long) biomeZ & BIOME_XZ_MASK) << 14)
+                | ((long) biomeY & BIOME_Y_MASK);
+    }
+
+    private void clearPickCache() {
+        synchronized (pickCacheLock) {
+            pickCache.clear();
+        }
+    }
+
+    private WoverBiomePicker.PickableBiome pickBiomeEntry(
+            int biomeX,
+            int biomeY,
+            int biomeZ,
+            Climate.@NotNull Sampler sampler
+    ) {
         if (!wasBound()) reloadBiomes(false);
 
         if (mapLand == null || mapVoid == null || mapCenter == null || mapBarrens == null)
-            return applyFallbackBiomeSource(this.possibleBiomes().stream().findFirst().orElseThrow(), biomeX, biomeY, biomeZ, sampler);
+            return null;
 
         int posX = QuartPos.toBlock(biomeX);
         int posY = QuartPos.toBlock(biomeY);
@@ -259,19 +335,7 @@ public class WoverEndBiomeSource extends WoverBiomeSource implements
                 ? ((long) config.innerVoidRadiusSquared + 1)
                 : (long) posX * (long) posX + (long) posZ * (long) posZ;
 
-
-        if ((biomeX & 63) == 0 || (biomeZ & 63) == 0) {
-            mapLand.clearCache();
-            mapVoid.clearCache();
-            mapCenter.clearCache();
-            mapBarrens.clearCache();
-            for (BiomeDecider decider : deciders) {
-                decider.clearMapCache();
-            }
-        }
-
         TagKey<Biome> suggestedType;
-
 
         int x = (SectionPos.blockToSectionCoord(posX) * 2 + 1) * 8;
         int z = (SectionPos.blockToSectionCoord(posZ) * 2 + 1) * 8;
@@ -303,21 +367,19 @@ public class WoverEndBiomeSource extends WoverBiomeSource implements
         for (BiomeDecider decider : deciders) {
             if (decider.canProvideBiome(suggestedType)) {
                 result = decider.provideBiome(suggestedType, posX, posY, posZ);
-                if (result != null) return applyFallbackBiomeSource(result.biome, biomeX, biomeY, biomeZ, sampler);
+                if (result != null) return result;
             }
         }
 
-        final Holder<Biome> pickedBiome;
         if (suggestedType == CommonBiomeTags.IS_END_CENTER) {
-            pickedBiome = mapCenter.getBiome(posX, posY, posZ).biome;
+            return mapCenter.getBiome(posX, posY, posZ);
         } else if (suggestedType == CommonBiomeTags.IS_SMALL_END_ISLAND) {
-            pickedBiome = mapVoid.getBiome(posX, posY, posZ).biome;
+            return mapVoid.getBiome(posX, posY, posZ);
         } else if (suggestedType == CommonBiomeTags.IS_END_BARRENS) {
-            pickedBiome = mapBarrens.getBiome(posX, posY, posZ).biome;
+            return mapBarrens.getBiome(posX, posY, posZ);
         } else {
-            pickedBiome = mapLand.getBiome(posX, posY, posZ).biome;
+            return mapLand.getBiome(posX, posY, posZ);
         }
-        return applyFallbackBiomeSource(pickedBiome, biomeX, biomeY, biomeZ, sampler);
     }
 
     @Override
@@ -328,6 +390,7 @@ public class WoverEndBiomeSource extends WoverBiomeSource implements
     @Override
     public void setBiomeSourceConfig(WoverEndConfig newConfig) {
         this.config = newConfig;
+        clearPickCache();
         rebuildBiomes(true);
         this.initMap(currentSeed);
     }

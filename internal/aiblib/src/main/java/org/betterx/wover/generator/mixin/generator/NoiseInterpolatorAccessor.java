@@ -1,4 +1,4 @@
-package org.betterx.betterend.mixin.common;
+package org.aiblib.wover.generator.mixin.generator;
 
 import net.minecraft.world.level.levelgen.NoiseChunk;
 
@@ -8,8 +8,8 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 @Mixin(NoiseChunk.NoiseInterpolator.class)
 public interface NoiseInterpolatorAccessor {
     @Accessor("slice0")
-    double[][] be_getSlice0();
+    double[][] all_is_better_lib$getSlice0();
 
     @Accessor("slice1")
-    double[][] be_getSlice1();
+    double[][] all_is_better_lib$getSlice1();
 }

@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-21T19:41:08.9010201	Registries
+// 1.21.1	2026-05-21T22:35:27.170428	Registries
 50cbae60483c592835c9598886009668f7bf24de data/betterend/all_is_better_lib/worldgen/biome_data/amber_land.json
 5bdb2dfe8b10bc92298e44ad3aec4dd076932dcc data/betterend/all_is_better_lib/worldgen/biome_data/blossoming_spires.json
 e4d26d0446972f7be79abf826d42fa04661bbc24 data/betterend/all_is_better_lib/worldgen/biome_data/chorus_forest.json
@@ -18,7 +18,7 @@ c452f13f569aa5daa43d9da79dd54a0ac210ce43 data/betterend/all_is_better_lib/worldg
 5b4429579cd851fffaac67087f7d51cebeb76e06 data/betterend/all_is_better_lib/worldgen/biome_data/lush_smaragdant_cave.json
 ac05e7046e46a27764b398664cabb28c07ad0405 data/betterend/all_is_better_lib/worldgen/biome_data/megalake.json
 f307e4b102b6f706f9ac16427b819308599f9795 data/betterend/all_is_better_lib/worldgen/biome_data/megalake_grove.json
-c4daae95d3fe0186bcd0784131e254a89712629a data/betterend/all_is_better_lib/worldgen/biome_data/neon_oasis.json
+4d556d2cdf44446a3ef85b1addb498d6209867b2 data/betterend/all_is_better_lib/worldgen/biome_data/neon_oasis.json
 e7a60550638adfc5f71bdd9ed28d8d18236ae66a data/betterend/all_is_better_lib/worldgen/biome_data/painted_mountains.json
 257d0d3583a7a2785954c920f8faec563aa0365e data/betterend/all_is_better_lib/worldgen/biome_data/shadow_forest.json
 beb78849e10c6ad76327243e8858bb823efc462a data/betterend/all_is_better_lib/worldgen/biome_data/sulphur_springs.json

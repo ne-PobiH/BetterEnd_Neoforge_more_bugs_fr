@@ -52,7 +52,7 @@ public class EndBiomes {
     public static final EndBiomeKey<UmbraValleyBiome, ?> UMBRA_VALLEY = EndBiomeBuilder.createKey("umbra_valley");
 
     public static final EndBiomeKey<MegalakeGroveBiome, MegalakeBiome> MEGALAKE_GROVE = EndBiomeBuilder.createKey("megalake_grove", MEGALAKE);
-    public static final EndBiomeKey<NeonOasisBiome, DustWastelandsBiome> NEON_OASIS = EndBiomeBuilder.createKey("neon_oasis", DUST_WASTELANDS);
+    public static final EndBiomeKey<NeonOasisBiome, ?> NEON_OASIS = EndBiomeBuilder.createKey("neon_oasis");
     public static final EndBiomeKey<PaintedMountainsBiome, DustWastelandsBiome> PAINTED_MOUNTAINS = EndBiomeBuilder.createKey("painted_mountains", DUST_WASTELANDS);
 
     public static final EndBiomeKey<EmptyEndCaveBiome, ?> EMPTY_END_CAVE = EndBiomeBuilder.createKey("empty_end_cave");
