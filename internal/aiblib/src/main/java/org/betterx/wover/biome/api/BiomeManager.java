@@ -108,7 +108,9 @@ public class BiomeManager {
         final int sectionY = (pos.getY() - chunk.getMinBuildHeight()) >> 4;
         final PalettedContainerRO<Holder<Biome>> biomes = chunk.getSection(sectionY).getBiomes();
         if (biomes instanceof PalettedContainer<Holder<Biome>> palette) {
-            palette.set((pos.getX() & 15) >> 2, (pos.getY() & 15) >> 2, (pos.getZ() & 15) >> 2, biome);
+            synchronized (palette) {
+                palette.set((pos.getX() & 15) >> 2, (pos.getY() & 15) >> 2, (pos.getZ() & 15) >> 2, biome);
+            }
         } else {
             LibWoverBiome.C.LOG.warn("Unable to change Biome at " + pos);
         }
