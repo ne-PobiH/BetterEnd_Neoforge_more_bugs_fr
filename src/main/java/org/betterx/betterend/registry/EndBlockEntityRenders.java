@@ -1,5 +1,6 @@
 package org.betterx.betterend.registry;
 
+import org.betterx.betterend.client.render.EndPortalBlockRenderer;
 import org.betterx.betterend.client.render.PedestalItemRenderer;
 
 import net.neoforged.api.distmarker.Dist;
@@ -12,5 +13,6 @@ public class EndBlockEntityRenders {
         event.registerBlockEntityRenderer(EndBlockEntities.PEDESTAL, PedestalItemRenderer::new);
         event.registerBlockEntityRenderer(EndBlockEntities.ETERNAL_PEDESTAL, PedestalItemRenderer::new);
         event.registerBlockEntityRenderer(EndBlockEntities.INFUSION_PEDESTAL, PedestalItemRenderer::new);
+        event.registerBlockEntityRenderer(EndBlockEntities.END_PORTAL, EndPortalBlockRenderer::new);
     }
 }

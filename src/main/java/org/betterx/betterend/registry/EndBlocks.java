@@ -123,7 +123,6 @@ public class EndBlocks {
     public static Block TENANEA_SAPLING;
     public static Block TENANEA_LEAVES;
     public static Block TENANEA_FLOWERS;
-    public static Block TENANEA_OUTER_LEAVES;
     public static EndWoodenComplexMaterial TENANEA;
 
     public static Block HELIX_TREE_SAPLING;
@@ -141,7 +140,6 @@ public class EndBlocks {
 
     public static Block LUCERNIA_SAPLING;
     public static Block LUCERNIA_LEAVES;
-    public static Block LUCERNIA_OUTER_LEAVES;
     public static EndWoodenComplexMaterial LUCERNIA;
 
     public static EndWoodenComplexMaterial LUCERNIA_JELLY;
@@ -425,7 +423,6 @@ public class EndBlocks {
         TENANEA_SAPLING = registerBlock("tenanea_sapling", new TenaneaSaplingBlock());
         TENANEA_LEAVES = registerBlock( "tenanea_leaves", new PottableLeavesBlock( TENANEA_SAPLING, MapColor.COLOR_PINK ) );
         TENANEA_FLOWERS = registerBlock("tenanea_flowers", new TenaneaFlowersBlock());
-        TENANEA_OUTER_LEAVES = registerBlock( "tenanea_outer_leaves", new FurBlock(MapColor.COLOR_PINK, TENANEA_SAPLING, 32) );
         TENANEA = new EndWoodenComplexMaterial( "tenanea", MapColor.COLOR_BROWN, MapColor.COLOR_PINK, Blocks.PINK_WOOL ).init();
         HELIX_TREE_SAPLING = registerBlock("helix_tree_sapling", new HelixTreeSaplingBlock());
         HELIX_TREE_LEAVES = registerBlock("helix_tree_leaves", new HelixTreeLeavesBlock());
@@ -439,7 +436,6 @@ public class EndBlocks {
         JELLYSHROOM = new EndWoodenComplexMaterial( "jellyshroom", MapColor.COLOR_PURPLE, MapColor.COLOR_LIGHT_BLUE, Blocks.PURPLE_WOOL ).init();
         LUCERNIA_SAPLING = registerBlock("lucernia_sapling", new LucerniaSaplingBlock());
         LUCERNIA_LEAVES = registerBlock( "lucernia_leaves", new PottableLeavesBlock( LUCERNIA_SAPLING, MapColor.COLOR_ORANGE ) );
-        LUCERNIA_OUTER_LEAVES = registerBlock( "lucernia_outer_leaves", new FurBlock(MapColor.COLOR_RED, LUCERNIA_SAPLING, 32) );
         LUCERNIA = new EndWoodenComplexMaterial( "lucernia", MapColor.COLOR_ORANGE, MapColor.COLOR_ORANGE, Blocks.WHITE_WOOL ).init();
         LUCERNIA_JELLY = new JellyLucerniaWoodMaterial().init();
         UMBRELLA_MOSS = registerBlock("umbrella_moss", new UmbrellaMossBlock());

@@ -5,9 +5,11 @@ import org.betterx.betterend.config.Configs;
 import org.betterx.betterend.registry.EndBlocks;
 import org.aiblib.ui.ColorUtil;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.BlockPos.MutableBlockPos;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.chunk.MissingPaletteEntryException;
 
@@ -29,6 +31,9 @@ public class BiomeColorsMixin {
     @Inject(method = "getAverageWaterColor", at = @At("RETURN"), cancellable = true)
     private static void be_getWaterColor(BlockAndTintGetter world, BlockPos pos, CallbackInfoReturnable<Integer> info) {
         if (Configs.CLIENT_CONFIG.sulfurWaterColor.get()) {
+            if (Minecraft.getInstance().level == null || Minecraft.getInstance().level.dimension() != Level.END) {
+                return;
+            }
             if (isDistantHorizonsTintContext(world)) {
                 // DH uses its own tint getters for LOD rendering; avoid world-state probing here.
                 return;

@@ -84,7 +84,7 @@ public class EndEntities {
         }
         // Air //
         SpawnRuleBuilder.start(DRAGONFLY).aboveGround(2).maxNearby(4, 32).buildNoRestrictions(Types.MOTION_BLOCKING);
-        SpawnRuleBuilder.start(SILK_MOTH).aboveGround(2).maxNearby(4, 32).buildNoRestrictions(Types.MOTION_BLOCKING);
+        SpawnRuleBuilder.start(SILK_MOTH).aboveGround(2).maxNearby(8, 32).buildNoRestrictions(Types.MOTION_BLOCKING);
 
         // Land //
         SpawnRuleBuilder

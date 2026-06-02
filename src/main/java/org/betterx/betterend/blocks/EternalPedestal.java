@@ -40,6 +40,8 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
@@ -54,6 +56,7 @@ import com.google.common.collect.Lists;
 import java.util.ArrayList;
 import java.util.List;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public class EternalPedestal extends PedestalBlock implements BehaviourStone, BlockModelProvider {
     public static final BooleanProperty ACTIVATED = EndBlockProperties.ACTIVE;
@@ -65,25 +68,26 @@ public class EternalPedestal extends PedestalBlock implements BehaviourStone, Bl
 
     @Override
     public void checkRitual(Level sourceLevel, Player player, BlockPos pos) {
+        if (sourceLevel.isClientSide()) return;
         BlockEntity blockEntity = sourceLevel.getBlockEntity(pos);
         if (blockEntity instanceof EternalPedestalEntity pedestal) {
             BlockState updatedState = sourceLevel.getBlockState(pos);
             if (pedestal.isEmpty()) {
+                int portalId = getPortalIdFor(pedestal);
                 if (pedestal.hasRitual()) {
                     EternalRitual ritual = pedestal.getRitual();
-                    if (ritual.isActive()) {
-                        if (ritual.getWorld() == null) ritual.setWorld(sourceLevel);
-                        ResourceLocation targetWorld = ritual.getTargetWorldId();
-                        int portalId;
-                        if (targetWorld != null) {
-                            portalId = EndPortals.getPortalIdByWorld(targetWorld);
-                        } else {
-                            portalId = EndPortals.getPortalIdByWorld(EndPortals.OVERWORLD_ID);
-                        }
-                        ritual.disablePortal(portalId);
-                    }
+                    if (ritual.getWorld() == null) ritual.setWorld(sourceLevel);
+                    ritual.cancelOrDisable(portalId);
                 }
-                sourceLevel.setBlockAndUpdate(pos, updatedState.setValue(ACTIVATED, false).setValue(HAS_LIGHT, false));
+                EternalRitual fallback = new EternalRitual(sourceLevel, pos);
+                fallback.cancelOrDisable(portalId);
+                sourceLevel.setBlockAndUpdate(
+                        pos,
+                        updatedState
+                                .setValue(ACTIVATED, false)
+                                .setValue(HAS_ITEM, false)
+                                .setValue(HAS_LIGHT, false)
+                );
             } else {
                 ItemStack itemStack = pedestal.getItem(0);
                 ResourceLocation id = BuiltInRegistries.ITEM.getKey(itemStack.getItem());
@@ -103,6 +107,16 @@ public class EternalPedestal extends PedestalBlock implements BehaviourStone, Bl
                 }
             }
         }
+    }
+
+    private int getPortalIdFor(EternalPedestalEntity pedestal) {
+        if (pedestal.hasRitual()) {
+            ResourceLocation targetWorld = pedestal.getRitual().getTargetWorldId();
+            if (targetWorld != null) {
+                return EndPortals.getPortalIdByWorld(targetWorld);
+            }
+        }
+        return EndPortals.getPortalIdByWorld(EndPortals.OVERWORLD_ID);
     }
 
     @Override
@@ -171,6 +185,16 @@ public class EternalPedestal extends PedestalBlock implements BehaviourStone, Bl
     @Override
     public boolean hasUniqueEntity() {
         return true;
+    }
+
+    @Override
+    @Nullable
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(
+            @NotNull Level level,
+            @NotNull BlockState blockState,
+            @NotNull BlockEntityType<T> blockEntityType
+    ) {
+        return EternalPedestalEntity::tickEntity;
     }
 
     @OnlyIn(Dist.CLIENT)

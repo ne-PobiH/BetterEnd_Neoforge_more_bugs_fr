@@ -23,7 +23,7 @@ public class SilkMothNestFeature extends DefaultFeature {
         BlockState state = world.getBlockState(pos.above());
         if (state.is(BlockTags.LEAVES) || state.is(BlockTags.LOGS)) {
             state = world.getBlockState(pos);
-            if ((state.isAir() || state.is(EndBlocks.TENANEA_OUTER_LEAVES)) && world.isEmptyBlock(pos.below())) {
+            if (state.isAir() && world.isEmptyBlock(pos.below())) {
                 for (Direction dir : BlocksHelper.HORIZONTAL) {
                     return !world.getBlockState(pos.below().relative(dir)).blocksMotion();
                 }

@@ -112,5 +112,10 @@
   "tag.c.saplings": "РџР°СЂРѕСЃС‚РєРё",
   "tag.c.hammers": "РњРѕР»РѕС‚Рё",
   "tag.c.leaves": "Р›РёСЃС‚СЏ",
-  "tag.c.soul_ground": "Р—РµРјР»СЏ РґСѓС€"
+  "tag.c.soul_ground": "Р—РµРјР»СЏ РґСѓС€",
+  "tooltip.bclib.place_on": "Survives on: %s",
+  "tooltip.bclib.pottable_on": "Pottable on: %s",
+  "tooltip.bclib.place_underwater": "Can be placed underwater",
+  "tooltip.bclib.place_underwater_depth": "Can be placed underwater at depth: %s",
+  "tooltip.bclib.place_underwater_on": "Can be placed underwater on: %s"
 }

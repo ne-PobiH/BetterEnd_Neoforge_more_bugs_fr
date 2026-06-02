@@ -51,5 +51,10 @@
   "message.aiblib.bclib.datafixer.progress": "м‚¬мљ©мћђ н™кІЅм—ђ лЄЁл“  нЊЁм№лҐј м Ѓмљ©н•кі  мћ€мЉµл‹€л‹¤.",
   "title.aiblib.bclib.datafixer.error": "м›”л“њлҐј м€м •н•лЉ” м¤‘ м¤лҐ л°њмѓќ",
   "message.aiblib.bclib.datafixer.error": "м›”л“њлҐј м€л¦¬н•лЉ” лЏ™м•€ м¤лҐк°Ђ л°њмѓќн–€мЉµл‹€л‹¤. м¦‰, мќґ м€м¤ЂмќЂ мќјм№н•м§Ђ м•ЉлЉ” мѓЃнѓњмќґлЇЂлЎњ мћ¬мѓќн•м§Ђ м•Љм•„м•ј н•©л‹€л‹¤. л°±м—…мќ„ ліµкµ¬н•кі  м•„лћ м¤лҐлҐј м€м •н•њ н›„ л‹¤м‹њ м‹њлЏ„н•м‹­м‹њм¤.",
-  "title.aiblib.bclib.datafixer.error.continue": "кі„м†Ќ м§„н–‰ л°Џ м€м •лђЁ"
+  "title.aiblib.bclib.datafixer.error.continue": "кі„м†Ќ м§„н–‰ л°Џ м€м •лђЁ",
+  "tooltip.bclib.place_on": "Survives on: %s",
+  "tooltip.bclib.pottable_on": "Pottable on: %s",
+  "tooltip.bclib.place_underwater": "Can be placed underwater",
+  "tooltip.bclib.place_underwater_depth": "Can be placed underwater at depth: %s",
+  "tooltip.bclib.place_underwater_on": "Can be placed underwater on: %s"
 }

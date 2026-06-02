@@ -59,7 +59,7 @@ public class TerrainFeatureProvider extends WoverFeatureProvider {
         registerChanced(context, EndTerrainFeatures.UMBRALITH_ARCH, EndFeatures.ARCH_FEATURE, new ArchFeatureConfig(EndBlocks.UMBRALITH.stone, ArchFeatureConfig.SurfaceFunction.UMBRA_VALLEY), 10);
         registerChanced(context, EndTerrainFeatures.THIN_UMBRALITH_ARCH, EndFeatures.THIN_ARCH_FEATURE, new ThinArchFeatureConfig(EndBlocks.UMBRALITH.stone), 15);
         registerChanced(context, EndTerrainFeatures.CRASHED_SHIP, EndFeatures.CRASHED_SHIP_FEATURE, new NBTFeatureConfig(EndBiome.Config.DEFAULT_MATERIAL.getTopMaterial()), 500);
-        registerChanced(context, EndTerrainFeatures.SILK_MOTH_NEST, EndFeatures.SILK_MOTH_NEST_FEATURE, FeatureConfiguration.NONE, 2);
+        registerChanced(context, EndTerrainFeatures.SILK_MOTH_NEST, EndFeatures.SILK_MOTH_NEST_FEATURE, FeatureConfiguration.NONE, 1);
 
         registerChanced(context, EndTerrainFeatures.ROUND_CAVE, EndFeatures.ROUND_CAVE_FEATURE, FeatureConfiguration.NONE, 8);
         registerChanced(context, EndTerrainFeatures.SPIRE, EndFeatures.SPIRE_FEATURE, FeatureConfiguration.NONE, 4);

@@ -9,7 +9,6 @@ import org.aiblib.bclib.sdf.primitive.SDFSphere;
 import org.aiblib.bclib.util.BlocksHelper;
 import org.aiblib.bclib.util.MHelper;
 import org.aiblib.bclib.util.SplineHelper;
-import org.betterx.betterend.blocks.basis.FurBlock;
 import org.betterx.betterend.noise.OpenSimplexNoise;
 import org.betterx.betterend.registry.EndBlocks;
 
@@ -105,8 +104,6 @@ public class TenaneaFeature extends DefaultFeature {
                                                      .setValue(BlockProperties.TRIPLE_SHAPE, TripleShape.MIDDLE);
         BlockState bottom = EndBlocks.TENANEA_FLOWERS.defaultBlockState()
                                                      .setValue(BlockProperties.TRIPLE_SHAPE, TripleShape.BOTTOM);
-        BlockState outer = EndBlocks.TENANEA_OUTER_LEAVES.defaultBlockState();
-
         List<BlockPos> support = Lists.newArrayList();
         sphere.addPostProcess((info) -> {
             if (random.nextInt(6) == 0 && info.getStateDown().isAir()) {
@@ -121,13 +118,6 @@ public class TenaneaFeature extends DefaultFeature {
                     }
                 }
                 info.setState(EndBlocks.TENANEA.getBark().defaultBlockState());
-            }
-
-            MHelper.shuffle(DIRECTIONS, random);
-            for (Direction d : DIRECTIONS) {
-                if (info.getState(d).isAir()) {
-                    info.setBlockPos(info.getPos().relative(d), outer.setValue(FurBlock.FACING, d));
-                }
             }
 
             if (EndBlocks.TENANEA.isTreeLog(info.getState())) {
@@ -161,7 +151,7 @@ public class TenaneaFeature extends DefaultFeature {
 
         support.forEach((bpos) -> {
             BlockState state = world.getBlockState(bpos);
-            if (state.isAir() || state.is(EndBlocks.TENANEA_OUTER_LEAVES)) {
+            if (state.isAir()) {
                 int count = MHelper.randRange(3, 8, random);
                 mut.set(bpos);
                 if (world.getBlockState(mut.above()).is(EndBlocks.TENANEA_LEAVES)) {

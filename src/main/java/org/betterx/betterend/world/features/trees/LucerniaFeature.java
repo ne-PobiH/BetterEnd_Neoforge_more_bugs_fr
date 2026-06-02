@@ -9,7 +9,6 @@ import org.aiblib.bclib.sdf.primitive.SDFSphere;
 import org.aiblib.bclib.util.BlocksHelper;
 import org.aiblib.bclib.util.MHelper;
 import org.aiblib.bclib.util.SplineHelper;
-import org.betterx.betterend.blocks.basis.FurBlock;
 import org.betterx.betterend.noise.OpenSimplexNoise;
 import org.betterx.betterend.registry.EndBlocks;
 import org.aiblib.wover.tag.api.predefined.CommonBlockTags;
@@ -110,8 +109,6 @@ public class LucerniaFeature extends DefaultFeature {
                                              .setValue(BlockProperties.TRIPLE_SHAPE, TripleShape.MIDDLE);
         BlockState bottom = EndBlocks.FILALUX.defaultBlockState()
                                              .setValue(BlockProperties.TRIPLE_SHAPE, TripleShape.BOTTOM);
-        BlockState outer = EndBlocks.LUCERNIA_OUTER_LEAVES.defaultBlockState();
-
         List<BlockPos> support = Lists.newArrayList();
         sphere.addPostProcess((info) -> {
             if (natural && random.nextInt(6) == 0 && info.getStateDown().isAir()) {
@@ -126,13 +123,6 @@ public class LucerniaFeature extends DefaultFeature {
                     }
                 }
                 info.setState(EndBlocks.LUCERNIA.getBark().defaultBlockState());
-            }
-
-            MHelper.shuffle(DIRECTIONS, random);
-            for (Direction d : DIRECTIONS) {
-                if (info.getState(d).isAir()) {
-                    info.setBlockPos(info.getPos().relative(d), outer.setValue(FurBlock.FACING, d));
-                }
             }
 
             if (EndBlocks.LUCERNIA.isTreeLog(info.getState())) {
@@ -166,7 +156,7 @@ public class LucerniaFeature extends DefaultFeature {
 
         support.forEach((bpos) -> {
             BlockState state = world.getBlockState(bpos);
-            if (state.isAir() || state.is(EndBlocks.LUCERNIA_OUTER_LEAVES)) {
+            if (state.isAir()) {
                 int count = MHelper.randRange(3, 8, random);
                 mut.set(bpos);
                 if (world.getBlockState(mut.above()).is(EndBlocks.LUCERNIA_LEAVES)) {

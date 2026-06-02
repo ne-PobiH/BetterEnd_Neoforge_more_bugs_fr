@@ -1,12 +1,11 @@
 package org.betterx.betterend.blocks;
 
-import org.aiblib.bclib.client.render.BCLRenderLayer;
 import org.aiblib.bclib.interfaces.BlockColorProvider;
 import org.aiblib.bclib.interfaces.CustomColorProvider;
 import org.aiblib.bclib.interfaces.ItemColorProvider;
-import org.aiblib.bclib.interfaces.RenderLayerProvider;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.advancements.BECriteria;
+import org.betterx.betterend.blocks.entities.EndPortalBlockEntity;
 import org.betterx.betterend.portal.PortalBuilder;
 import org.betterx.betterend.registry.EndParticles;
 import org.betterx.betterend.registry.EndPortals;
@@ -26,8 +25,11 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.NetherPortalBlock;
 import net.minecraft.world.level.block.Portal;
+import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -44,7 +46,9 @@ import net.neoforged.api.distmarker.OnlyIn;
 
 import java.util.Optional;
 
-public class EndPortalBlock extends NetherPortalBlock implements RenderLayerProvider, CustomColorProvider, Portal {
+import org.jetbrains.annotations.Nullable;
+
+public class EndPortalBlock extends NetherPortalBlock implements EntityBlock, CustomColorProvider, Portal {
     public static final IntegerProperty PORTAL = EndBlockProperties.PORTAL;
 
     public EndPortalBlock() {
@@ -120,8 +124,13 @@ public class EndPortalBlock extends NetherPortalBlock implements RenderLayerProv
     }
 
     @Override
-    public BCLRenderLayer getRenderLayer() {
-        return BCLRenderLayer.TRANSLUCENT;
+    public RenderShape getRenderShape(BlockState state) {
+        return RenderShape.ENTITYBLOCK_ANIMATED;
+    }
+
+    @Override
+    public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return new EndPortalBlockEntity(pos, state);
     }
 
     @Override

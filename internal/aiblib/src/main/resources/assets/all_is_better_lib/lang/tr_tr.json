@@ -95,7 +95,8 @@
   "title.config.aiblib.bclib.client.version.check": "SГјrГјm KontrolГјnГј EtkinleЕџtir",
   "title.config.aiblib.bclib.client.ui.showUpdateInfo": "GГјncelleme HatД±rlatma EkranД±nД± GГ¶ster",
   "title.config.aiblib.bclib.client.rendering.FogDensity": "Sis YoДџunluДџu",
-  "description.config.aiblib.bclib.client.ui.suppressExperimentalDialogOnLoad": "Bu seГ§enek etkinleЕџtirildiДџinde, mevcut bir dГјnya yГјklediДџinizde uyarД± ekranД± gГ¶rГјntГјlenmez. Bu uyarД± ekranД±, dГјnyanД±zД±n vanilla sГјrГјm ayarlarД±nД± kullanmadД±ДџД± durumlarda ortaya Г§Д±kar. Bu durum, Г¶nizleme sГјrГјmГјnde bir dГјnya baЕџlattД±ДџД±nД±zda veya dГјnya oluЕџturmak iГ§in modlarД± kullandД±ДџД±nД±zda gerГ§ekleЕџebilir. Yeni bir dГјnya oluЕџturulduДџunda hatД±rlatma olarak yine gГ¶sterilir.",  "title.config.aiblib.bclib.client.ui.forceBetterXPreset": "Use BetterX as Default World-Type",
+  "description.config.aiblib.bclib.client.ui.suppressExperimentalDialogOnLoad": "Bu seГ§enek etkinleЕџtirildiДџinde, mevcut bir dГјnya yГјklediДџinizde uyarД± ekranД± gГ¶rГјntГјlenmez. Bu uyarД± ekranД±, dГјnyanД±zД±n vanilla sГјrГјm ayarlarД±nД± kullanmadД±ДџД± durumlarda ortaya Г§Д±kar. Bu durum, Г¶nizleme sГјrГјmГјnde bir dГјnya baЕџlattД±ДџД±nД±zda veya dГјnya oluЕџturmak iГ§in modlarД± kullandД±ДџД±nД±zda gerГ§ekleЕџebilir. Yeni bir dГјnya oluЕџturulduДџunda hatД±rlatma olarak yine gГ¶sterilir.",
+  "title.config.aiblib.bclib.client.ui.forceBetterXPreset": "Use BetterX as Default World-Type",
   "warning.config.aiblib.bclib.client.ui.forceBetterXPreset": "HER ZAMANKД° GД°BД° BU AYARI AГ‡IK BIRAKMAYACAKSIN.\n",
   "description.config.aiblib.bclib.client.ui.forceBetterXPreset": "DГјnya tГјrГј, bir dГјnyanД±n nasД±l oluЕџturulduДџunu belirler. Г‡oДџu durumda, BetterX varsayД±lan olarak kalmasД± gereken bir seГ§enektir (dГјnya oluЕџturma ekranД±nda her zaman tГјrГј deДџiЕџtirebilirsiniz). Bu tГјr, DataPack'ler, kendi modumuz ve diДџer NeoForge modlarД± arasД±nda maksimum uyumluluk iГ§in optimize edilmiЕџtir. AyrД±ca BetterNether ve BetterEnd iГ§in bazД± benzersiz Г¶zellikler sunar. Bu seГ§eneДџi yalnД±zca bir nedeniniz varsa devre dД±ЕџД± bД±rakmalД±sД±nД±z!",
   "emi.category.aiblib.bclib.alloying": "AlaЕџД±m HazД±rlama",
@@ -112,5 +113,10 @@
   "tag.c.saplings": "Fidanlar",
   "tag.c.hammers": "Г‡ekiГ§ler",
   "tag.c.leaves": "Yapraklar",
-  "tag.c.soul_ground": "Ruh Zemini"
+  "tag.c.soul_ground": "Ruh Zemini",
+  "tooltip.bclib.place_on": "Survives on: %s",
+  "tooltip.bclib.pottable_on": "Pottable on: %s",
+  "tooltip.bclib.place_underwater": "Can be placed underwater",
+  "tooltip.bclib.place_underwater_depth": "Can be placed underwater at depth: %s",
+  "tooltip.bclib.place_underwater_on": "Can be placed underwater on: %s"
 }

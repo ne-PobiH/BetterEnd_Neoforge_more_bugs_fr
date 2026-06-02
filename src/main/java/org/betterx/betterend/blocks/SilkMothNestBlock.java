@@ -140,9 +140,6 @@ public class SilkMothNestBlock extends BaseBlock implements RenderLayerProvider,
         if (!state.getValue(ACTIVE)) {
             return;
         }
-        if (random.nextBoolean()) {
-            return;
-        }
         Direction dir = state.getValue(FACING);
         BlockPos spawn = pos.relative(dir);
         if (!world.getBlockState(spawn).isAir()) {
@@ -151,7 +148,7 @@ public class SilkMothNestBlock extends BaseBlock implements RenderLayerProvider,
         int count = world.getEntities(EndEntities.SILK_MOTH.type(), new AABB(pos).inflate(16), (entity) -> {
             return true;
         }).size();
-        if (count > 6) {
+        if (count > 10) {
             return;
         }
         SilkMothEntity moth = new SilkMothEntity(EndEntities.SILK_MOTH.type(), world);

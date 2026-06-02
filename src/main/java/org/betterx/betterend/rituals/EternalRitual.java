@@ -39,6 +39,7 @@ import java.awt.*;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
+import java.util.UUID;
 import org.jetbrains.annotations.Nullable;
 
 public class EternalRitual {
@@ -53,6 +54,7 @@ public class EternalRitual {
 
     private final static Block PEDESTAL = EndBlocks.ETERNAL_PEDESTAL;
     public final static BooleanProperty ACTIVE = BlockProperties.ACTIVE;
+    private static final int ACTIVATION_DELAY = 80;
 
     private Level world;
     private Direction.Axis axis;
@@ -61,6 +63,10 @@ public class EternalRitual {
     private BlockPos exit;
     private boolean active = false;
     private boolean willActivate = false;
+    private int activationTicks = 0;
+    private Item pendingKeyItem;
+    private UUID pendingPlayerId;
+    private long lastActivationTick = Long.MIN_VALUE;
 
     public EternalRitual(Level world) {
         this.world = world;
@@ -125,10 +131,7 @@ public class EternalRitual {
             }
         }
         if (valid && item != null) {
-            activatePortal(player, item);
-            if (player instanceof ServerPlayer sp) {
-                BECriteria.PORTAL_ON.trigger(sp);
-            }
+            queueActivation(player, item);
         }
     }
 
@@ -164,9 +167,14 @@ public class EternalRitual {
             checkPos.move(moveX, pos.x).move(moveY, pos.y);
             if (world.getBlockEntity(checkPos) instanceof EternalPedestalEntity pedestal) {
                 if (pedestal.hasRitual()) {
-                    if (fallback == null) fallback = pedestal.getRitual();
-                    pedestal.getRitual().active = active;
-                    pedestal.getRitual().willActivate = willActivate;
+                    if (fallback == null) {
+                        fallback = pedestal.getRitual();
+                    } else if (!fallback.equals(pedestal.getRitual())) {
+                        pedestal.linkRitual(fallback);
+                    }
+                    EternalRitual ritual = pedestal.getRitual();
+                    ritual.active = active;
+                    ritual.willActivate = willActivate;
                 } else {
                     if (fallback == null) {
                         fallback = new EternalRitual(world);
@@ -203,16 +211,90 @@ public class EternalRitual {
         return willActivate;
     }
 
-    private void activatePortal(Player player, Item keyItem) {
-        if (active) return;
-        willActivate = true;
+    public void cancelActivation() {
+        if (isInvalid() || active || !willActivate) return;
+        willActivate = false;
+        activationTicks = 0;
+        pendingKeyItem = null;
+        pendingPlayerId = null;
         updateActiveStateOnPedestals();
+    }
 
+    public void cancelOrDisable(int portalId) {
+        if (isInvalid()) return;
+        if (active) {
+            disablePortal(portalId);
+            return;
+        }
+        if (willActivate) {
+            cancelActivation();
+            return;
+        }
+        if (hasPortalBlocks(world, center)) {
+            removePortal(getTargetWorld(portalId), exit);
+            removePortal(world, center);
+        } else {
+            active = false;
+            willActivate = false;
+            updateActiveStateOnPedestals();
+        }
+    }
+
+    public void tickActivation() {
+        if (isInvalid() || active || !willActivate) return;
+        long gameTime = world.getGameTime();
+        if (lastActivationTick == gameTime) return;
+        lastActivationTick = gameTime;
+
+        if (pendingKeyItem == null || !hasMatchingPedestals(pendingKeyItem)) {
+            cancelActivation();
+            return;
+        }
+
+        if (--activationTicks > 0) return;
+
+        Player player = null;
+        if (world instanceof ServerLevel serverLevel && pendingPlayerId != null) {
+            player = serverLevel.getServer().getPlayerList().getPlayer(pendingPlayerId);
+        }
+        if (player == null) {
+            cancelActivation();
+            return;
+        }
+
+        activatePortal(player, pendingKeyItem);
+        if (active && player instanceof ServerPlayer sp) {
+            BECriteria.PORTAL_ON.trigger(sp);
+        }
+    }
+
+    private void queueActivation(Player player, Item keyItem) {
+        if (active) return;
+        if (willActivate) {
+            if (!hasMatchingPedestals(keyItem)) {
+                cancelActivation();
+            }
+            return;
+        }
+        willActivate = true;
+        activationTicks = ACTIVATION_DELAY;
+        pendingKeyItem = keyItem;
+        pendingPlayerId = player.getUUID();
+        updateActiveStateOnPedestals();
+    }
+
+    private void activatePortal(Player player, Item keyItem) {
+        if (active || !willActivate) return;
+        if (!hasMatchingPedestals(keyItem)) {
+            cancelActivation();
+            return;
+        }
         ResourceLocation itemId = BuiltInRegistries.ITEM.getKey(keyItem);
         int portalId = EndPortals.getPortalIdByItem(itemId);
         Level targetWorld = getTargetWorld(portalId);
         ResourceLocation worldId = targetWorld.dimension().location();
         try {
+            boolean activateTargetPortal = exit != null;
             if (exit == null) {
                 initPortal(player, worldId, portalId);
             } else {
@@ -222,6 +304,13 @@ public class EternalRitual {
                     Direction.Axis portalAxis = (Direction.Axis.X == axis) ? Direction.Axis.Z : Direction.Axis.X;
                     PortalBuilder.generatePortal(targetWorld, exit, portalAxis, portalId);
                 }
+            }
+            if (!hasMatchingPedestals(keyItem)) {
+                willActivate = false;
+                updateActiveStateOnPedestals();
+                return;
+            }
+            if (activateTargetPortal) {
                 activatePortal(targetWorld, exit, portalId);
             }
             activatePortal(world, center, portalId);
@@ -229,6 +318,9 @@ public class EternalRitual {
                 doEffects(serverLevel, center);
             }
             willActivate = false;
+            activationTicks = 0;
+            pendingKeyItem = null;
+            pendingPlayerId = null;
             active = true;
             updateActiveStateOnPedestals();
         } catch (Exception ex) {
@@ -236,9 +328,35 @@ public class EternalRitual {
             removePortal(targetWorld, exit);
             removePortal(world, center);
             willActivate = false;
+            activationTicks = 0;
+            pendingKeyItem = null;
+            pendingPlayerId = null;
             active = false;
             updateActiveStateOnPedestals();
         }
+    }
+
+    private boolean hasMatchingPedestals(Item keyItem) {
+        if (isInvalid() || !checkFrame(world, center.below())) return false;
+
+        Direction moveX, moveY;
+        if (Direction.Axis.X == axis) {
+            moveX = Direction.EAST;
+            moveY = Direction.NORTH;
+        } else {
+            moveX = Direction.SOUTH;
+            moveY = Direction.EAST;
+        }
+
+        for (Point pos : PEDESTAL_POSITIONS) {
+            BlockPos.MutableBlockPos checkPos = center.mutable();
+            checkPos.move(moveX, pos.x).move(moveY, pos.y);
+            BlockState state = world.getBlockState(checkPos);
+            if (!state.is(PEDESTAL) || !state.getValue(ACTIVE)) return false;
+            if (!(world.getBlockEntity(checkPos) instanceof EternalPedestalEntity pedestal)) return false;
+            if (pedestal.isEmpty() || !pedestal.getItem(0).is(keyItem)) return false;
+        }
+        return true;
     }
 
     private void initPortal(Player player, ResourceLocation worldId, int portalId) {
@@ -386,7 +504,23 @@ public class EternalRitual {
             }
         });
         this.active = false;
+        this.willActivate = false;
+        this.activationTicks = 0;
+        this.pendingKeyItem = null;
+        this.pendingPlayerId = null;
         updateActiveStateOnPedestals();
+    }
+
+    private boolean hasPortalBlocks(Level world, BlockPos center) {
+        if (world == null || center == null) return false;
+        Direction moveDir = Direction.Axis.X == axis ? Direction.NORTH : Direction.EAST;
+        for (Point point : PortalBuilder.PORTAL_POSITIONS) {
+            BlockPos pos = center.mutable().move(moveDir, point.x).move(Direction.UP, point.y);
+            if (world.getBlockState(pos).is(PortalBuilder.PORTAL)) return true;
+            pos = center.mutable().move(moveDir, -point.x).move(Direction.UP, point.y);
+            if (world.getBlockState(pos).is(PortalBuilder.PORTAL)) return true;
+        }
+        return false;
     }
 
     private Level getTargetWorld(int state) {

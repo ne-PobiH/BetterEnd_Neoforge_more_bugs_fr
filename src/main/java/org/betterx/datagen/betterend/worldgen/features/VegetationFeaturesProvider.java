@@ -6,7 +6,6 @@ import org.betterx.betterend.registry.features.EndConfiguredVegetation;
 import org.betterx.betterend.registry.features.EndVegetationFeatures;
 import org.betterx.betterend.world.features.*;
 import org.betterx.betterend.world.features.bushes.BushFeatureConfig;
-import org.betterx.betterend.world.features.bushes.BushWithOuterFeatureConfig;
 import org.aiblib.wover.core.api.ModCore;
 import org.aiblib.wover.datagen.api.provider.multi.WoverFeatureProvider;
 import org.aiblib.wover.feature.api.placed.PlacedConfiguredFeatureKey;
@@ -69,8 +68,8 @@ public class VegetationFeaturesProvider extends WoverFeatureProvider {
         registerVegetation(context, EndVegetationFeatures.NEON_CACTUS, EndFeatures.NEON_CACTUS_FEATURE, 2);
         registerVegetation(context, EndVegetationFeatures.PYTHADENDRON_BUSH, EndFeatures.BUSH_FEATURE, new BushFeatureConfig(EndBlocks.PYTHADENDRON_LEAVES, EndBlocks.PYTHADENDRON.getBark()), 3);
         registerVegetation(context, EndVegetationFeatures.DRAGON_TREE_BUSH, EndFeatures.BUSH_FEATURE, new BushFeatureConfig(EndBlocks.DRAGON_TREE_LEAVES, EndBlocks.DRAGON_TREE.getBark()), 5);
-        registerVegetation(context, EndVegetationFeatures.LUCERNIA_BUSH, EndFeatures.BUSH_WITH_OUTER_FEATURE, new BushWithOuterFeatureConfig(EndBlocks.LUCERNIA_LEAVES, EndBlocks.LUCERNIA_OUTER_LEAVES, EndBlocks.LUCERNIA.getBark()), 10);
-        registerVegetation(context, EndVegetationFeatures.LUCERNIA_BUSH_RARE, EndFeatures.BUSH_WITH_OUTER_FEATURE, new BushWithOuterFeatureConfig(EndBlocks.LUCERNIA_LEAVES, EndBlocks.LUCERNIA_OUTER_LEAVES, EndBlocks.LUCERNIA.getBark()), 1);
+        registerVegetation(context, EndVegetationFeatures.LUCERNIA_BUSH, EndFeatures.BUSH_FEATURE, new BushFeatureConfig(EndBlocks.LUCERNIA_LEAVES, EndBlocks.LUCERNIA.getBark()), 10);
+        registerVegetation(context, EndVegetationFeatures.LUCERNIA_BUSH_RARE, EndFeatures.BUSH_FEATURE, new BushFeatureConfig(EndBlocks.LUCERNIA_LEAVES, EndBlocks.LUCERNIA.getBark()), 1);
 
         //Vines
         registerVegetation(context, EndVegetationFeatures.DENSE_VINE, EndFeatures.VINE_FEATURE, new VineFeatureConfig(EndBlocks.DENSE_VINE, 24), 3);

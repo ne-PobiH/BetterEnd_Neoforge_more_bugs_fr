@@ -81,7 +81,7 @@ public class SilkMothHiveBlock extends BaseBlock.Wood {
         int count = world.getEntities(EndEntities.SILK_MOTH.type(), new AABB(pos).inflate(16), (entity) -> {
             return true;
         }).size();
-        if (count > 6) {
+        if (count > 10) {
             return;
         }
         SilkMothEntity moth = new SilkMothEntity(EndEntities.SILK_MOTH.type(), world);

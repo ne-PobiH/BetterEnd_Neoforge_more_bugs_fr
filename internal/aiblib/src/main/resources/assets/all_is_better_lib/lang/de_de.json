@@ -13,5 +13,10 @@
   "wover.updates.curseforge_link": "[Curseforge]",
   "wover.updates.title": "Mod-Updates",
   "wover.welcome.description": "... und ein riesiges herzliches **DankeschГ¶n** fГјr das Herunterladen und Spielen unserer Mods. Wir hoffen, dass sie euch genauso viel SpaГџ machen wie uns.\n\nBevor wir anfangen, gibt es ein paar Dinge, die wir einrichten mГјssen, also lest bitte den folgenden langweiligen Teil weiter.",
-  "wover.welcome.title": "Wilkommen bei "
+  "wover.welcome.title": "Wilkommen bei ",
+  "tooltip.bclib.place_on": "Survives on: %s",
+  "tooltip.bclib.pottable_on": "Pottable on: %s",
+  "tooltip.bclib.place_underwater": "Can be placed underwater",
+  "tooltip.bclib.place_underwater_depth": "Can be placed underwater at depth: %s",
+  "tooltip.bclib.place_underwater_on": "Can be placed underwater on: %s"
 }

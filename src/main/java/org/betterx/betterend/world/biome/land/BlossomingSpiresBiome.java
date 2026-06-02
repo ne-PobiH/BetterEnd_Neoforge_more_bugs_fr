@@ -47,7 +47,7 @@ public class BlossomingSpiresBiome extends EndBiome.Config {
                 .feature(EndVegetationFeatures.TWISTED_MOSS_WOOD)
                 .feature(EndTerrainFeatures.SILK_MOTH_NEST)
                 .spawn(EntityType.ENDERMAN, 50, 1, 4)
-                .spawn(EndEntities.SILK_MOTH.type(), 5, 1, 2);
+                .spawn(EndEntities.SILK_MOTH.type(), 20, 1, 3);
     }
 
     @Override

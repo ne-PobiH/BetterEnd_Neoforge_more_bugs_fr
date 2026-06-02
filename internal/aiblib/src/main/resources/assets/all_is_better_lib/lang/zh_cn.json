@@ -101,5 +101,10 @@
   "tag.c.saplings": "ж ‘и‹—",
   "tag.c.hammers": "й”¤е­ђ",
   "tag.c.leaves": "ж ‘еЏ¶",
-  "tag.c.soul_ground": "зЃµй­‚д№‹ењ°"
+  "tag.c.soul_ground": "зЃµй­‚д№‹ењ°",
+  "tooltip.bclib.place_on": "Survives on: %s",
+  "tooltip.bclib.pottable_on": "Pottable on: %s",
+  "tooltip.bclib.place_underwater": "Can be placed underwater",
+  "tooltip.bclib.place_underwater_depth": "Can be placed underwater at depth: %s",
+  "tooltip.bclib.place_underwater_on": "Can be placed underwater on: %s"
 }

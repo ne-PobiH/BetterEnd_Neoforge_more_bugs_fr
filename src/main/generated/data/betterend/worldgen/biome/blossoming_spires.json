@@ -62,9 +62,9 @@
     "ambient": [
       {
         "type": "betterend:silk_moth",
-        "maxCount": 2,
+        "maxCount": 3,
         "minCount": 1,
-        "weight": 5
+        "weight": 20
       }
     ],
     "axolotls": [],

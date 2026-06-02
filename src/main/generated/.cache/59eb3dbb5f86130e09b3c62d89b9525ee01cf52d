@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-21T19:25:52.8325479	Loot Tables
+// 1.21.1	2026-05-27T22:32:45.0328577	Loot Tables
 ac9a13367a61c43f6301dc19121418ed07e8275e data/betterend/loot_table/blocks/aeridium.json
 87892ca56aab0910b5df9d2062ed29fda4f92b08 data/betterend/loot_table/blocks/aeternium_block.json
 156dc6ab73da5599c452b663d4288c6901ac6491 data/betterend/loot_table/blocks/amaranita_cap.json
@@ -316,7 +316,6 @@ fa64528e1c70285f5d875a041047981491482230 data/betterend/loot_table/blocks/lucern
 4868333d87371b937413d52059a59cc3953927d1 data/betterend/loot_table/blocks/lucernia_ladder.json
 1fa458904c3f5fbec5b6bf66e0cd6ddf211aa7d6 data/betterend/loot_table/blocks/lucernia_leaves.json
 d4b8e6862eaf327ea03f01e52939014d9b4bc631 data/betterend/loot_table/blocks/lucernia_log.json
-d0afd897d5ebe483b2dfa853e1c0ccdb5abd197c data/betterend/loot_table/blocks/lucernia_outer_leaves.json
 4c8d68421a87750b7fa667c43720bd61ee583309 data/betterend/loot_table/blocks/lucernia_planks.json
 21d3233107a50021650c62218cd53de51bc64a71 data/betterend/loot_table/blocks/lucernia_plate.json
 468e06f872489cc5317f0b11cd4bb67a658fcb17 data/betterend/loot_table/blocks/lucernia_sapling.json
@@ -500,7 +499,6 @@ e770bbebccc9fddb6ccd6f5e497c4f26a2291cce data/betterend/loot_table/blocks/tenane
 14672bd83e79c18d4574d9d36a3903d15dc5c0c5 data/betterend/loot_table/blocks/tenanea_ladder.json
 63dddbdb5449fb4537b7d24146bca3d92c0233d4 data/betterend/loot_table/blocks/tenanea_leaves.json
 81df1fcb1f4cf9dd802706d648cbd0d155c2eca3 data/betterend/loot_table/blocks/tenanea_log.json
-0fb01fd236fd5e735f89c808616ccd5f38d17a9a data/betterend/loot_table/blocks/tenanea_outer_leaves.json
 d7ef39a2fa3bd01939379882e3125f19c1d45d16 data/betterend/loot_table/blocks/tenanea_planks.json
 1f8b2473541ce0659900aabf598ba0736867ca2a data/betterend/loot_table/blocks/tenanea_plate.json
 d7b06a839b6c37e4b057422e632f22d08bb88b99 data/betterend/loot_table/blocks/tenanea_sapling.json

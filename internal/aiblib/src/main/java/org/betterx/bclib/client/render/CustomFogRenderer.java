@@ -44,26 +44,22 @@ public class CustomFogRenderer {
             return false;
         }
         Entity entity = camera.getEntity();
+        Level level = entity.level();
 
-        if (!isForcedDimension(entity.level()) && shouldIgnoreArea(
-                entity.level(),
-                (int) entity.getX(),
-                (int) entity.getEyeY(),
-                (int) entity.getZ()
-        )) {
+        if (!isForcedDimension(level) && !hasCustomFogAt(level, (int) entity.getX(), (int) entity.getEyeY(), (int) entity.getZ())) {
             BackgroundInfo.fogDensity = 1;
             return false;
         }
 
         float fog = getFogDensity(
-                entity.level(),
+                level,
                 entity.getX(),
                 entity.getEyeY(),
                 entity.getZ()
         ) * Configs.CLIENT_CONFIG.fogDensity();
         BackgroundInfo.fogDensity = fog;
 
-        if (thickFog(thickFog, entity.level())) {
+        if (thickFog(thickFog, level)) {
             fogStart = viewDistance * 0.05F / fog;
             fogEnd = Math.min(viewDistance, 192.0F) * 0.5F / fog;
         } else {
@@ -110,20 +106,10 @@ public class CustomFogRenderer {
         return level.dimension() == Level.END || level.dimension() == Level.NETHER;
     }
 
-    private static boolean shouldIgnoreArea(Level level, int x, int y, int z) {
-        for (int i = -8; i <= 8; i += 8) {
-            for (int j = -8; j <= 8; j += 8) {
-                if (!shouldIgnore(level, x + i, y, z + j)) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
-    private static boolean shouldIgnore(Level level, int x, int y, int z) {
+    private static boolean hasCustomFogAt(Level level, int x, int y, int z) {
         Holder<Biome> biome = level.getBiome(MUT_POS.set(x, y, z));
-        return BiomeManager.biomeDataForHolder(biome) != null;
+        BiomeData renderBiome = BiomeManager.biomeDataForHolder(biome);
+        return renderBiome != null && renderBiome.fogDensity != 1.0F;
     }
 
     private static float getFogDensityI(Level level, int x, int y, int z) {

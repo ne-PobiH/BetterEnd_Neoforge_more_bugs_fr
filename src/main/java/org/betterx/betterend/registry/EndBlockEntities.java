@@ -18,6 +18,7 @@ public class EndBlockEntities {
     public static BlockEntityType<EternalPedestalEntity> ETERNAL_PEDESTAL;
     public static BlockEntityType<InfusionPedestalEntity> INFUSION_PEDESTAL;
     public static BlockEntityType<BlockEntityHydrothermalVent> HYDROTHERMAL_VENT;
+    public static BlockEntityType<EndPortalBlockEntity> END_PORTAL;
 
     public static void register() {
         // no-op; registration happens via RegisterEvent
@@ -55,6 +56,12 @@ public class EndBlockEntities {
                     EndBlocks.HYDROTHERMAL_VENT
             ).build(null);
             helper.register(BetterEnd.C.mk("hydrother_malvent"), HYDROTHERMAL_VENT);
+
+            END_PORTAL = BlockEntityType.Builder.of(
+                    EndPortalBlockEntity::new,
+                    EndBlocks.END_PORTAL_BLOCK
+            ).build(null);
+            helper.register(BetterEnd.C.mk("end_portal_block"), END_PORTAL);
         });
     }
 

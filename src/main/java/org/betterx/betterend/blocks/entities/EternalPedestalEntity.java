@@ -7,6 +7,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class EternalPedestalEntity extends PedestalBlockEntity {
@@ -51,5 +52,17 @@ public class EternalPedestalEntity extends PedestalBlockEntity {
             linkedRitual.fromTag(tag.getCompound("ritual"));
         }
         super.loadAdditional(tag, provider);
+    }
+
+    public static <T extends BlockEntity> void tickEntity(
+            Level level,
+            BlockPos blockPos,
+            BlockState blockState,
+            T uncastedEntity
+    ) {
+        if (level.isClientSide()) return;
+        if (uncastedEntity instanceof EternalPedestalEntity pedestal && pedestal.hasRitual()) {
+            pedestal.linkedRitual.tickActivation();
+        }
     }
 }

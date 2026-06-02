@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-21T14:03:01.1203677	betterend/AutoBlockTagProvider (Tags for minecraft:block mod id betterend)
+// 1.21.1	2026-05-27T22:32:45.0102312	betterend/AutoBlockTagProvider (Tags for minecraft:block mod id betterend)
 b059f333d3b748c8d43565fe6fb3af40114cf2f6 data/all_is_better_lib/tags/block/bonemeal/source/end_stone.json
 68e18833d5ac8d7529b38ca16a7aa31ed2b8b658 data/all_is_better_lib/tags/block/bonemeal/source/obsidian.json
 308c8d1a48154c831e79425aa931d793490fab1e data/all_is_better_lib/tags/block/composters.json
@@ -6,12 +6,12 @@ b059f333d3b748c8d43565fe6fb3af40114cf2f6 data/all_is_better_lib/tags/block/bonem
 68e18833d5ac8d7529b38ca16a7aa31ed2b8b658 data/all_is_better_lib/tags/block/immobile.json
 68e18833d5ac8d7529b38ca16a7aa31ed2b8b658 data/all_is_better_lib/tags/block/is_obsidian.json
 60ef6d2f82ae677a33b834148f9d9e39467b2fec data/all_is_better_lib/tags/block/mineable/hammer.json
-d0d5f5f604e39346937f752298c48407b926fdb7 data/all_is_better_lib/tags/block/mineable/shears.json
+ca404874bc060dc92e983419acaaa028a779b2a3 data/all_is_better_lib/tags/block/mineable/shears.json
 dafbcf418b92b9ad51d3fd96335b6cb68b6475fd data/all_is_better_lib/tags/block/poi/workstation/armorer.json
 308c8d1a48154c831e79425aa931d793490fab1e data/all_is_better_lib/tags/block/poi/workstation/farmer.json
 b38cc8d0e291178dc79a540ceda4aa9fcf85cde8 data/all_is_better_lib/tags/block/surfaces/end/stones.json
 1105e04e133fcf8a8b90d671af132a1ee9d86ad5 data/all_is_better_lib/tags/block/vegetation/leaves.json
-65a732b19960ad6852b57447757efcedabe87cad data/all_is_better_lib/tags/block/vegetation/plant.json
+0b8d0a830f2ee7e0d84e12a593294e3e5feaaea4 data/all_is_better_lib/tags/block/vegetation/plant.json
 7b326505ba3fd360ea88afee1b36aa7d07330883 data/all_is_better_lib/tags/block/vegetation/saplings.json
 f63389945ef798f163d6e9c3bb305b53867cf919 data/all_is_better_lib/tags/block/vegetation/seeds.json
 691b015816b3ac91e452c1c64546d84df1387b05 data/all_is_better_lib/tags/block/vegetation/vine.json
@@ -49,7 +49,7 @@ dd71012a8a167cd909a9589368f48b864ea0c6f4 data/minecraft/tags/block/climbable.jso
 527652c7fab4f3f1d938a7109476749798a3895c data/minecraft/tags/block/dragon_immune.json
 e45bf19748f241c6ff570f001fe2a9fe7e75b577 data/minecraft/tags/block/fences.json
 179d72747dd350f73773344c4fcf0235dbc98e62 data/minecraft/tags/block/fence_gates.json
-c5c9da7d0a9d9e43ada6d3f9bc752e51666fe92a data/minecraft/tags/block/leaves.json
+ead00e4c363fac1c4f46018e900f83008630a7b4 data/minecraft/tags/block/leaves.json
 0f2817669ab5d01d5bfd32511e0345cdca3852ee data/minecraft/tags/block/logs.json
 0f2817669ab5d01d5bfd32511e0345cdca3852ee data/minecraft/tags/block/logs_that_burn.json
 61676cd0077582a0064ba227601a1aa38d3cdf3d data/minecraft/tags/block/mineable/axe.json
